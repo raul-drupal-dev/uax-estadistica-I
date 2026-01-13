@@ -1,0 +1,77 @@
+Este es el resumen estructurado por unidades, incluyendo términos, descripciones cortas, ejemplos y anotaciones, diseñado para facilitar la expansión posterior de la documentación de estudio.
+
+---
+
+## Resumen de Términos y Métodos para el Estudio (Unidades 1, 2 y 3)
+
+### Unidad 1: Elementos del Análisis de Datos
+
+Esta unidad introduce los conceptos fundamentales, tipos de datos, escalas de medida, visualización y el flujo de trabajo estándar en análisis de datos e Inteligencia Artificial (IA).
+
+| Término/Método | Descripción Corta | Ejemplo | Anotaciones para Expansión |
+| :--- | :--- | :--- | :--- |
+| **Observación / Registro** | Una fila o instancia individual del conjunto de datos. | Una persona, un sensor, o la fila que contiene (Ana, 19, 8). | **Objetivo:** Representar una entidad. **Contexto:** Se tienen $n$ observaciones. |
+| **Variable / Atributo** | Una columna o característica del conjunto de datos. | Edad (años), Color de ojos, Nota final (0–10). | **Objetivo:** Describir una característica. **Contexto:** Se tienen $p$ variables. |
+| **Dataset** | Tabla de datos organizada con $n$ observaciones y $p$ variables (matriz $X \in \mathbb{R}^{n \times p}$). | Tabla con 3 estudiantes (Ana, Juan, Marta) y 3 variables (Nombre, Edad, Nota). | **Objetivo:** Entrada para algoritmos de IA/ML. **Relación:** Álgebra lineal y matrices. |
+| **Dato Cualitativo** | Describe cualidades, no permite operaciones aritméticas directas. | Color de ojos (azul, marrón), Etiquetas de clase (spam/ham). | **Tipos:** Nominal y Ordinal. |
+| **Dato Cuantitativo** | Valores numéricos donde sumar o restar tiene sentido. | Altura, Peso, Número de compras. | **Tipos:** Discreto (conteo) o Continuo (medición). |
+| **Escala Nominal** | Categorías sin orden inherente. | Género (masculino/femenino/otro). | **Operaciones:** Conteos, Moda. **Codificación ML:** **One-hot encoding**. |
+| **Escala Ordinal** | Categorías con un orden, pero sin distancias definidas. | Puntuación de satisfacción en escala 1–5 (bajo/medio/alto). | **Operaciones:** Orden relativo. **Codificación ML:** Asignar enteros (ordinal encoding). |
+| **Escala de Intervalo** | Diferencias significativas, no tiene un cero absoluto natural. | Temperatura en grados Celsius. | **Operaciones:** Diferencias. **Codificación ML:** **Escalado estándar** (normalización). |
+| **Escala de Razón (Ratio)** | Posee intervalos y un cero absoluto. | Peso, Distancia, Número de llamadas. | **Operaciones:** Proporciones y diferencias. **Codificación ML:** **Normalización/Estandarización**. |
+| **Media Aritmética ($\bar{x}$)** | Valor promedio de los datos; suma de valores dividida por N. | Datos {2, 4, 7, 9}: $\bar{x} = 5,5$. | **Objetivo:** Tendencia central. **Fórmula:** $\bar{x} = \frac{1}{N} \sum x_i$. **Sensibilidad:** Alta a *outliers*. |
+| **Mediana ($\text{Me}$)** | Valor central de los datos ordenados (divide el 50%). | Datos {2, 4, 7, 9}: $\text{Me} = 5,5$. | **Objetivo:** Tendencia central. **Propiedad:** **Robusta** a *outliers*. **Fórmula:** Depende si N es par o impar. |
+| **Moda** | Valor que aparece con mayor frecuencia. | No especificado en el ejemplo numérico. | **Objetivo:** Tendencia central. **Uso:** Útil para datos nominales. |
+| **Varianza ($s^2$ o $\sigma^2$)** | Medida de la dispersión de los datos respecto a la media (unidades cuadradas). | Poblacional para {2, 4, 7, 9}: $\sigma^2 = 7,25$. | **Objetivo:** Cuantificar dispersión. **Fórmula:** $\sigma^2 = \frac{1}{N} \sum (x_i - \bar{x})^2$. |
+| **Desviación Típica ($s$ o $\sigma$)** | Raíz cuadrada de la varianza. | Poblacional para {2, 4, 7, 9}: $\sigma \approx 2,6926$. | **Objetivo:** Dispersión en las unidades originales. **Fórmula:** $\sigma = \sqrt{\sigma^2}$. |
+| **Coeficiente de Variación ($g$)** | Mide la dispersión relativa, ratio de desviación típica a media. | $g = (s / \bar{x}) \times 100\%$. | **Objetivo:** Comparar dispersión entre datasets con medias diferentes. **Condición:** $\bar{x} \neq 0$. |
+| **Exploración de Datos (EDA)** | Proceso de visualización, resumen y búsqueda de patrones e hipótesis. | Un *scatter plot* de horas de estudio vs nota muestra una relación positiva. | **Objetivo:** Detectar *outliers*, distribuciones, errores y correlaciones. **Métodos:** Histogramas, *Boxplots*, Diagramas de dispersión. |
+| **Limpieza de Datos** | Proceso para manejar valores faltantes, duplicados, inconsistencias y errores de formato. | Imputar valores faltantes usando la media o mediana. | **Objetivo:** Asegurar la calidad del dato (crucial para evitar modelos sesgados). **Práctica:** Documentar cada cambio. |
+| **Muestra Representativa** | Conjunto de entrenamiento que refleja con precisión la población objetivo. | El conjunto de entrenamiento para estimar altura media debe evitar el **sesgo de muestreo** (ej. medir solo jugadores de baloncesto). | **Objetivo:** Evitar modelos injustos o ineficaces. |
+| **Media Geométrica ($G$)** | Utilizada para promediar tasas o ratios. Producto de los valores elevado a $1/N$. | $G = \sqrt[N]{x_1 x_2 \dots x_N}$. | **Objetivo:** Medida de tendencia central, útil en finanzas/crecimiento. **Fórmula:** Datos no agrupados. |
+| **Media Armónica ($H$)** | Utilizada para promediar velocidades o tasas. | $H = N / \sum (1/x_i)$, con $x_i > 0$. | **Objetivo:** Medida de tendencia central. **Fórmula:** Datos no agrupados. |
+
+---
+
+### Unidad 2: Estadística Descriptiva Bivariante
+
+Esta unidad se centra en el estudio de la relación entre dos variables, introduciendo la covarianza, la correlación y la regresión lineal simple.
+
+| Término/Método | Descripción Corta | Ejemplo | Anotaciones para Expansión |
+| :--- | :--- | :--- | :--- |
+| **Covarianza ($S_{xy}$)** | Mide la variación conjunta de dos variables X e Y respecto a sus medias. | $S_{xy} > 0$ indica que si X aumenta, Y tiende a aumentar (relación directa). | **Objetivo:** Determinar la dirección de la relación lineal. **Limitación:** Depende de las unidades. **Fórmula:** $S_{xy} = \frac{1}{n-1} \sum (x_i - \bar{x})(y_i - \bar{y})$. |
+| **Coeficiente de Correlación de Pearson ($r$)** | Medida estandarizada (adimensional) de la fuerza de la relación lineal entre X e Y. | $r = 0,96$ indica una correlación positiva muy fuerte (Horas de estudio vs Puntuación). | **Objetivo:** Cuantificar la asociación lineal. **Rango:** $[-1, 1]$. **Advertencia:** **Correlación no implica causalidad**. **Fórmula:** $r = S_{xy} / (S_x \cdot S_y)$. |
+| **Regresión Lineal Simple** | Método para modelar la relación lineal y predecir Y (dependiente) a partir de X (independiente). | Predicción de la puntuación ($\hat{y}$) basada en las horas de estudio ($x$): $\hat{y} = 43,580 + 2,265x$. | **Objetivo:** Construir un modelo predictivo (fundamento de ML). **Ecuación:** $\hat{y} = \alpha + \beta x$. |
+| **Método de Mínimos Cuadrados** | Principio utilizado para calcular la recta óptima, minimizando el error vertical al cuadrado entre los puntos y la recta. | Se minimiza $\sum (y_i - \hat{y}_i)^2$. | **Objetivo:** Obtener los parámetros $\alpha$ (intercepto) y $\beta$ (pendiente). |
+| **Pendiente ($\beta$ o $b$)** | Representa el cambio esperado en Y por cada unidad de incremento en X. | $b = 2,265$: Por cada hora extra de estudio, la puntuación predicha aumenta 2,265 puntos. | **Objetivo:** Interpretar el efecto de X sobre Y. **Fórmula:** $b = S_{xy} / S^2_x$. |
+| **Ordenada en el Origen ($\alpha$ o $a$)** | Valor predicho de Y cuando X es igual a cero. | $a = 43,580$: Puntuación predicha con 0 horas de estudio (posible extrapolación sin sentido). | **Propiedad:** Asegura que la recta pase por el punto $(\bar{x}, \bar{y})$. |
+| **Coeficiente de Determinación ($R^2$)** | Mide la bondad de ajuste; proporción de la variabilidad de Y explicada por X. | $R^2 = 0,9239$ significa que el 92,39% de la variabilidad de la puntuación es explicada por las horas de estudio. | **Objetivo:** Evaluar la calidad del modelo. **Fórmula:** $R^2 = r^2$. **Rango:** $$. |
+| **Supuestos del Modelo Lineal** | Condiciones que deben verificarse para que el modelo sea válido. | **Linealidad** (la relación es lineal), **Independencia** (las observaciones son independientes), **Homocedasticidad** (varianza constante de errores). | **Objetivo:** Diagnóstico del modelo. **Método de Verificación:** Análisis de residuos. |
+
+---
+
+### Unidad 3: Variables Aleatorias (Fundamentos y Medidas)
+
+Esta unidad establece el marco probabilístico para modelar la incertidumbre, fundamental para la IA moderna.
+
+| Término/Método | Descripción Corta | Ejemplo | Anotaciones para Expansión |
+| :--- | :--- | :--- | :--- |
+| **Espacio Muestral ($\Omega$)** | El conjunto de todos los resultados posibles de un experimento aleatorio. | Lanzar un dado: $\Omega = \{1, 2, 3, 4, 5, 6\}$. | **Objetivo:** Definir el universo de resultados. **Elemento:** Un resultado elemental ($\omega$). |
+| **Probabilidad ($P(A)$)** | Medida cuantitativa del grado de incertidumbre sobre la ocurrencia de un suceso A. | $P(\text{Lluvia}) = 0,7$ (Probabilidad total 1,0). | **Objetivo:** Cuantificar la incertidumbre (base de la toma de decisiones en IA). **Interpretaciones:** Frecuentista, Bayesiana. |
+| **Variable Aleatoria ($X$)** | Función que asigna un valor numérico a cada resultado del espacio muestral. | Clasificador de spam: $X=1$ (spam), $X=0$ (no spam). | **Objetivo:** Modelar la incertidumbre numérica de las salidas de un modelo. **Mapeo:** $X: \Omega \rightarrow \mathbb{R}$. |
+| **V.A. Discreta** | Variable aleatoria que toma valores en un conjunto contable o finito. | Número de imágenes correctamente clasificadas en un lote. | **Objetivo:** Modelar conteos. |
+| **V.A. Continua** | Variable aleatoria que puede tomar cualquier valor dentro de un intervalo real. | Valor de activación de una neurona (ej. en $$ después de una función sigmoide). | **Objetivo:** Modelar mediciones (como pesos o tasas). |
+| **Función de Distribución (CDF, $F_X(x)$)** | Probabilidad acumulada de que $X$ sea menor o igual que un valor específico $x$: $P(X \le x)$. | $F_X(5) = 0,8$: 80% de probabilidad de que el tiempo de entrenamiento sea $\le 5$ horas. | **Objetivo:** Calcular probabilidades de intervalos: $P(a < X \le b) = F_X(b) - F_X(a)$. |
+| **Función de Masa de Probabilidad (PMF, $p_X(x)$)** | Para V.A. Discreta, es la probabilidad de que $X$ tome exactamente el valor $x$: $P(X = x)$. | Dado justo: $p_X(1) = 1/6$. | **Propiedad:** La suma de todas las probabilidades es 1 ($\sum p_X(x) = 1$). **Uso en IA:** Salidas Softmax. |
+| **Función de Densidad (PDF, $f_X(x)$)** | Para V.A. Continua, indica la concentración de probabilidad cerca de $x$. | Inicialización de pesos $W$ en redes neuronales usando la densidad Gaussiana. | **Propiedad:** El área bajo la curva es 1 ($\int f_X(x) dx = 1$). **Nota:** $P(X = x) = 0$ para cualquier $x$. |
+| **Esperanza Matemática ($E[X]$)** | Valor promedio o medio de la variable aleatoria en infinitas realizaciones. | Dado justo: $E[X] = 3,5$. | **Objetivo:** Medida de tendencia central probabilística. **Propiedad:** **Linealidad** ($E[aX + bY] = aE[X] + bE[Y]$), crucial en el análisis de NN. **Fórmulas:** Discreta ($\sum x_i P(X=x_i)$) y Continua ($\int x f(x) dx$). |
+| **Varianza ($\text{Var}(X)$)** | Medida de la dispersión de la V.A. respecto a su valor esperado. | Dado justo: $\text{Var}(X) \approx 2,92$. | **Objetivo:** Cuantificar la incertidumbre o dispersión. **Propiedad:** $\text{Var}(aX + b) = a^2 \text{Var}(X)$. **Fórmula:** $\text{Var}(X) = E[X^2] - (E[X])^2$. |
+| **Desviación Típica ($\sigma_X$)** | Raíz cuadrada de la varianza. | Para el dado: $\sigma_X = \sqrt{2,92}$. | **Objetivo:** Dispersión en las unidades originales. **Uso en IA:** Medir la sensibilidad del modelo a fluctuaciones. |
+
+---
+
+### Analogía Final para Solidificar Conceptos Clave
+
+Los conceptos de la Unidad 3 (Variables Aleatorias) son como planos de arquitectura para construir modelos de IA.
+
+Si la **Esperanza Matemática** es la ubicación óptima que esperas para tu casa (el valor promedio), la **Varianza** es la cantidad de terreno extra que necesitas alrededor de ella para asegurar que, si hay un pequeño error en la medición (incertidumbre), tu casa siga cayendo dentro de tu propiedad. Una varianza pequeña significa que tu modelo es muy "seguro" sobre dónde debe estar el resultado.

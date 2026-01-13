@@ -1,0 +1,6 @@
+mkdocs
+mkdocs-material
+watchdog
+watchdog[watchmedo]
+mkdocs_quiz
+mkdocs-pdf

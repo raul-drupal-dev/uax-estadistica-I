@@ -1,0 +1,129 @@
+site_name: Guia de aprendizaje de estadística UAX
+site_description: Una guía completa para aprender estadística en la Universidad Alfonso X el Sabio.
+site_url: https://raul-drupal-dev.github.io/uax_estadistica_I/
+extra_css:
+  - ./assets/stylesheets/extra.css
+theme:
+  name: material
+  logo: ./assets/img/theme/raul.png
+  favicon: ./assets/img/theme/raul.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - content.tabs.link
+    - search.share
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocs-pdf
+  - mkdocs_quiz:
+      shuffle_questions: true
+      shuffle_answers: true
+      show_results: true
+      per_question_feedback: true
+      quiz_prefix: "Quiz: "
+      results_prefix: "Resultados"
+      question_prefix: "Pregunta "
+      correct_prefix: "Correcto"
+      incorrect_prefix: "Incorrecto"
+      score_prefix: "Puntuación"
+      max_score_prefix: "Puntuación máxima"
+      feedback_correct: "¡Respuesta correcta!"
+      feedback_incorrect: "Respuesta incorrecta."
+      auto_submit: true
+      auto_number: true
+      language: "es"
+
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+
+extra_javascript:
+  # MathJax v3 para renderizar LaTeX ($...$, $$...$$) en el sitio generado.
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+copyright: Copyright &copy; 2025 Creado por Raul Jimenez Morales.
+
+nav:
+  - Inicio:
+      - Introducción: index.md
+      - Temario: temario.md
+      - UD1 - introducción a la Estadística: ud1/introduccion.md
+      - UD2 - Probabilidad y distribuciones: ud2/eventos-y-probabilidad.md
+      - UD3 - Inferencia y regresión: ud3/estimacion-y-intervalos.md
+      - UD4 - Modelos de probabilidad: ud4/resumen.md
+  - UD1 — Introducción a la Estadística:
+      - Introducción: ud1/introduccion.md
+      - Tipos de datos: ud1/tipos-datos.md
+      - Escalas de medición: ud1/escalas-medicion.md
+      - Observación / Registro: ud1/observacion-registro.md
+      - Limpieza de datos: ud1/limpieza-de-datos.md
+      - "Proceso estándar de análisis de datos": ud1/proceso-analisis-datos.md
+      - Muestra representativa (muestreo): ud1/muestra-representativa.md
+      - Medidas de tendencia y dispersión: ud1/medidas-tendencia-dispersion.md
+      - "Medias: geométrica y armónica": ud1/medias-geometricas.md
+      - Representación gráfica: ud1/representacion-visual.md
+      - Ejercicios — UD1: ud1/ejercicios.md
+  - UD2 — Probabilidad y distribuciones:
+      - Eventos y probabilidad: ud2/eventos-y-probabilidad.md
+      - Distribuciones discretas: ud2/distribuciones-discretas.md
+      - Distribuciones continuas: ud2/distribuciones-continuas.md
+      - Variables aleatorias: ud2/variables-aleatorias.md
+      - Ejercicios — UD2: ud2/ejercicios.md
+  - UD3 — Inferencia y regresión:
+      - Estimación e intervalos: ud3/estimacion-y-intervalos.md
+      - Pruebas de hipótesis: ud3/pruebas-hipotesis.md
+      - Regresión lineal simple: ud3/regresion-simple.md
+      - Ejercicios — UD3: ud3/ejercicios.md
+  - UD4 — Modelos de probabilidad:
+      - Resumen: ud4/resumen.md
+      - Distribuciones discretas: ud4/distribuciones-discretas.md
+      - Distribuciones continuas: ud4/distribuciones-continuas.md
+      - Derivadas de la normal (χ², t, F): ud4/distribuciones-derivadas-normal.md
+      - Ejercicios — UD4: ud4/ejercicios.md
+      - Examen UD4 (medio): ud4/examen-ud4.md
+  - UD5 — Inferencia avanzada:
+    - Resumen: ud5/resumen.md
+    - Estimación puntual: ud5/estimacion-puntual.md
+    - Métodos de estimación (MLE y momentos): ud5/metodos-estimacion.md
+    - Intervalos de confianza: ud5/intervalos-confianza.md
+    - Contrastes de hipótesis: ud5/contrastes-hipotesis.md
+    - Ejercicios — UD5: ud5/ejercicios.md
+    - Examen UD5 (medio): ud5/examen-ud5.md
+  - Recursos:
+      - Descriptiva bivariante: recursos/desc_div.md
+      - Examen 1: recursos/examen1.md
