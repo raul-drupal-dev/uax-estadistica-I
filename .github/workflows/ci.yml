@@ -26,5 +26,6 @@ jobs:
       - run: pip install pymdown-extensions
       - run: pip install mkdocs-dracula-theme
       - run: pip install mkdocs-quiz
+      - run: pip install mkdocs-pdf
       - run: mkdocs gh-deploy --force
       
