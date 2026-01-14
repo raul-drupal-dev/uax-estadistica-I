@@ -20,6 +20,7 @@ Entender qué son los contrastes de hipótesis, cómo se plantean y la diferenci
 Un **contraste de hipótesis** (o prueba de hipótesis) es un procedimiento estadístico que nos permite tomar decisiones sobre parámetros poblacionales basándonos en información muestral. Es decir, **usamos datos muestrales para evaluar si una afirmación sobre la población es plausible o no**.
 
 !!! note "💡 Idea clave"
+    
     Los contrastes de hipótesis no prueban que algo es verdadero. Más bien, utilizan la evidencia muestral para decidir si rechazamos o no una afirmación inicial (hipótesis nula).
 
 ---
@@ -28,15 +29,16 @@ Un **contraste de hipótesis** (o prueba de hipótesis) es un procedimiento esta
 
 El curso sigue el **enfoque frecuentista**, que tiene características muy específicas:
 
-| Característica | Frecuentista | Bayesiano |
-|---|---|---|
-| **Parámetros poblacionales** | Fijos, desconocidos | Aleatorios, con distribución |
-| **Datos observados** | Variables aleatorias | Observados (constantes) |
-| **Probabilidad** | Frecuencia en repeticiones infinitas | Grado de creencia |
-| **Información previa** | NO se usa | Sí, distribución a priori |
-| **Conclusión** | P-valores e intervalos de confianza | Distribución posterior del parámetro |
+| Característica               | Frecuentista                         | Bayesiano                            |
+| ---------------------------- | ------------------------------------ | ------------------------------------ |
+| **Parámetros poblacionales** | Fijos, desconocidos                  | Aleatorios, con distribución         |
+| **Datos observados**         | Variables aleatorias                 | Observados (constantes)              |
+| **Probabilidad**             | Frecuencia en repeticiones infinitas | Grado de creencia                    |
+| **Información previa**       | NO se usa                            | Sí, distribución a priori            |
+| **Conclusión**               | P-valores e intervalos de confianza  | Distribución posterior del parámetro |
 
 !!! important "✅ Enfoque de este curso"
+    
     **Trabajamos con el enfoque frecuentista**, donde el parámetro es fijo pero desconocido, y evaluamos qué tan consistentes son los datos muestrales con la hipótesis que planteamos inicialmente.
 
 ---
@@ -51,6 +53,7 @@ La perspectiva frecuentista nos dice que **si realizáramos el experimento mucha
 Esto significa que **controlamos la tasa de error a largo plazo**, no la probabilidad de que nuestra decisión específica sea correcta.
 
 !!! tip "📊 Analogía práctica"
+
     Es como un sistema de filtrado: establecemos un umbral (α = 0.05) que rechaza el 5% de casos cuando H₀ es cierta. Si repetimos el experimento muchas veces en esas condiciones, erraríamos en el 5% de los casos.
 
 ---
@@ -60,9 +63,13 @@ Esto significa que **controlamos la tasa de error a largo plazo**, no la probabi
 Todo contraste de hipótesis sigue este esquema:
 
 ### 1. Plantear las hipótesis (H₀ y H₁)
+
 ### 2. Fijar el nivel de significación (α)
+
 ### 3. Calcular el estadístico de prueba
+
 ### 4. Determinar el p-valor o la región crítica
+
 ### 5. Tomar una decisión
 
 En los apartados siguientes desarrollaremos cada paso en detalle.
@@ -73,11 +80,13 @@ En los apartados siguientes desarrollaremos cada paso en detalle.
 
 Imaginemos que hemos desarrollado un nuevo algoritmo de clasificación y queremos saber si mejora el que usamos actualmente:
 
-**Situación:** 
+**Situación:**
+
 - Algoritmo actual: precisión = 0.85
 - Nuevo algoritmo: no sabemos su precisión
 
 **Planteamiento:**
+
 - **H₀ (hipótesis nula):** El nuevo algoritmo tiene la misma precisión que el actual (μ = 0.85). Es decir, "no hay mejora".
 - **H₁ (hipótesis alternativa):** El nuevo algoritmo tiene mayor precisión (μ > 0.85). Es decir, "sí hay mejora".
 

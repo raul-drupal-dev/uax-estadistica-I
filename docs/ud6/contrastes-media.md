@@ -24,13 +24,14 @@ Los **contrastes paramétricos** asumen que:
 
 ### Ventajas y Desventajas
 
-| Aspecto | Ventaja/Desventaja |
-|---|---|
-| **Potencia** | ✅ Mayor potencia si se cumplen supuestos |
-| **Fiabilidad** | ❌ Resultados poco fiables si se violan supuestos |
-| **Aplicabilidad** | ✅ Válidos para muestras grandes por TLC |
+| Aspecto           | Ventaja/Desventaja                                |
+| ----------------- | ------------------------------------------------- |
+| **Potencia**      | ✅ Mayor potencia si se cumplen supuestos         |
+| **Fiabilidad**    | ❌ Resultados poco fiables si se violan supuestos |
+| **Aplicabilidad** | ✅ Válidos para muestras grandes por TLC          |
 
 !!! important "💡 En este curso"
+
     Trabajaremos con contrastes paramétricos asumiendo que los datos son aproximadamente normales. Para muestras grandes (n > 30), el Teorema del Límite Central justifica esta suposición.
 
 ---
@@ -48,6 +49,7 @@ Los **contrastes paramétricos** asumen que:
 $$Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$$
 
 Donde:
+
 - $\bar{x}$ = media muestral
 - $\mu_0$ = media bajo H₀
 - $\sigma$ = desviación típica poblacional
@@ -57,11 +59,11 @@ Bajo H₀, **Z sigue una distribución Normal estándar** N(0, 1).
 
 ### Valores Críticos (para α = 0.05)
 
-| Tipo de Contraste | Región de Rechazo |
-|---|---|
-| Bilateral: $H_1: \mu \ne \mu_0$ | $\|Z\| > 1.96$ |
-| Unilateral derecha: $H_1: \mu > \mu_0$ | $Z > 1.645$ |
-| Unilateral izquierda: $H_1: \mu < \mu_0$ | $Z < -1.645$ |
+| Tipo de Contraste                        | Región de Rechazo |
+| ---------------------------------------- | ----------------- |
+| Bilateral: $H_1: \mu \ne \mu_0$          | $\|Z\| > 1.96$    |
+| Unilateral derecha: $H_1: \mu > \mu_0$   | $Z > 1.645$       |
+| Unilateral izquierda: $H_1: \mu < \mu_0$ | $Z < -1.645$      |
 
 ---
 
@@ -71,26 +73,26 @@ Bajo H₀, **Z sigue una distribución Normal estándar** N(0, 1).
 
     **Problema:**
     Un nuevo algoritmo de clasificación se prueba en una muestra de 50 instancias. La precisión observada es $\bar{x} = 0.88$. Sabemos que la desviación típica es σ = 0.03 y queremos saber si difiere de la precisión anterior (μ₀ = 0.85) con α = 0.05 (bilateral).
-    
+
     **Datos:**
     - $\bar{x} = 0.88$
     - $\mu_0 = 0.85$
     - $\sigma = 0.03$
     - $n = 50$
     - $\alpha = 0.05$ (bilateral)
-    
+
     ### Paso 1: Plantear hipótesis
     $$H_0: \mu = 0.85 \quad \text{vs} \quad H_1: \mu \ne 0.85$$
-    
+
     ### Paso 2: Calcular el estadístico Z
     $$Z = \frac{0.88 - 0.85}{0.03 / \sqrt{50}} = \frac{0.03}{0.03 / 7.071} = \frac{0.03}{0.004243} \approx 7.07$$
-    
+
     ### Paso 3: Determinar el valor crítico
     Para bilateral con α = 0.05: $z_{0.025} = 1.96$
-    
+
     ### Paso 4: Comparar
     $$|7.07| > 1.96 \Rightarrow \text{Rechazamos H}_0$$
-    
+
     ### Paso 5: Conclusión
     **El nuevo algoritmo tiene una precisión significativamente distinta a 0.85** (p < 0.0001). La evidencia es muy fuerte de que la precisión ha mejorado.
 
@@ -109,6 +111,7 @@ Bajo H₀, **Z sigue una distribución Normal estándar** N(0, 1).
 $$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$$
 
 Donde:
+
 - $s$ = desviación típica muestral
 - Todos los demás símbolos son iguales al contraste Z
 
@@ -129,23 +132,23 @@ La distribución **t es más dispersa** que Z (tiene colas más pesadas) porque 
     - $\bar{x} = 42.3$ ms
     - $s = 5.8$ ms
     - Queremos saber si el tiempo medio es distinto a 45 ms (μ₀ = 45) con α = 0.05
-    
+
     **Datos:**
     - $n = 15$ → g.l. = 14
     - Bilateral
-    
+
     ### Paso 1: Hipótesis
     $$H_0: \mu = 45 \quad \text{vs} \quad H_1: \mu \ne 45$$
-    
+
     ### Paso 2: Calcular t
     $$t = \frac{42.3 - 45}{5.8 / \sqrt{15}} = \frac{-2.7}{1.497} \approx -1.80$$
-    
+
     ### Paso 3: Valor crítico
     Para bilateral, α = 0.05, g.l. = 14: $t_{14, 0.025} = 2.145$
-    
+
     ### Paso 4: Comparar
     $$|-1.80| < 2.145 \Rightarrow \text{NO rechazamos H}_0$$
-    
+
     ### Paso 5: Conclusión
     **No hay evidencia de que el tiempo medio sea distinto a 45 ms**. El tiempo observado es consistente con μ = 45.
 
@@ -170,7 +173,7 @@ $$S_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}$$
 Los **grados de libertad** son: $\text{g.l.} = n_1 + n_2 - 2$
 
 !!! note "💡 Varianzas desiguales"
-    Si las varianzas parecen distintas, existe una variante (contraste de Welch) que no asume igualdad. Los pasos son similares pero el cálculo de g.l. es más complejo.
+Si las varianzas parecen distintas, existe una variante (contraste de Welch) que no asume igualdad. Los pasos son similares pero el cálculo de g.l. es más complejo.
 
 ---
 
@@ -178,32 +181,32 @@ Los **grados de libertad** son: $\text{g.l.} = n_1 + n_2 - 2$
 
     **Problema:**
     Comparamos dos implementaciones de un algoritmo:
-    
+
     | Algoritmo | n | Media | Desviación |
     |---|---|---|---|
     | A | 20 | 0.87 | 0.04 |
     | B | 20 | 0.83 | 0.05 |
-    
+
     ¿Hay diferencia significativa (α = 0.05)?
-    
+
     ### Paso 1: Hipótesis
     $$H_0: \mu_A = \mu_B \quad \text{vs} \quad H_1: \mu_A \ne \mu_B$$
-    
+
     ### Paso 2: Varianza combinada
     $$S_p^2 = \frac{(20-1)(0.04)^2 + (20-1)(0.05)^2}{20 + 20 - 2}$$
     $$= \frac{19 \times 0.0016 + 19 \times 0.0025}{38} = \frac{0.0304 + 0.0475}{38} = \frac{0.0779}{38} \approx 0.00205$$
-    
+
     $$S_p = \sqrt{0.00205} \approx 0.0453$$
-    
+
     ### Paso 3: Estadístico t
     $$t = \frac{0.87 - 0.83}{0.0453 \sqrt{1/20 + 1/20}} = \frac{0.04}{0.0453 \times 0.3162} = \frac{0.04}{0.01432} \approx 2.80$$
-    
+
     ### Paso 4: Valor crítico
     g.l. = 20 + 20 - 2 = 38; para bilateral, α = 0.05: $t_{38, 0.025} \approx 2.024$
-    
+
     ### Paso 5: Comparar
     $$2.80 > 2.024 \Rightarrow \text{Rechazamos H}_0$$
-    
+
     ### Paso 6: Conclusión
     **Hay diferencia significativa entre los algoritmos** (p ≈ 0.007). El Algoritmo A tiene mayor precisión.
 
@@ -222,6 +225,7 @@ Luego:
 $$t = \frac{\bar{d}}{s_d / \sqrt{n}}$$
 
 Donde:
+
 - $\bar{d}$ = media de las diferencias
 - $s_d$ = desviación típica de las diferencias
 - $n$ = número de pares
@@ -233,26 +237,26 @@ Donde:
 
     **Problema:**
     Probamos una mejora en el tiempo de respuesta de un algoritmo. Medimos el tiempo en 12 instancias antes y después de aplicar la mejora:
-    
+
     - Media de diferencias: $\bar{d} = 0.032$ segundos (mejora)
     - Desv. típica de diferencias: $s_d = 0.018$ segundos
     - n = 12
     - α = 0.05 (bilateral)
-    
+
     ### Paso 1: Hipótesis
     $$H_0: \mu_d = 0 \quad \text{vs} \quad H_1: \mu_d \ne 0$$
-    
+
     (H₀ = no hay cambio; H₁ = hay cambio)
-    
+
     ### Paso 2: Estadístico t
     $$t = \frac{0.032}{0.018 / \sqrt{12}} = \frac{0.032}{0.00520} \approx 6.16$$
-    
+
     ### Paso 3: Valor crítico
     g.l. = 12 - 1 = 11; para bilateral, α = 0.05: $t_{11, 0.025} = 2.201$
-    
+
     ### Paso 4: Comparar
     $$6.16 > 2.201 \Rightarrow \text{Rechazamos H}_0$$
-    
+
     ### Paso 5: Conclusión
     **La mejora es estadísticamente significativa** (p < 0.001). El tiempo de respuesta ha disminuido significativamente después de la optimización.
 

@@ -26,6 +26,7 @@ La **hipótesis nula** es la afirmación que asumimos cierta **por defecto** al 
 La idea es que vamos a recopilar datos para **tratar de rechazar esta afirmación**. Si no conseguimos rechazarla, no significa que sea verdadera, sino que **no hay evidencia suficiente en contra**.
 
 !!! warning "⚠️ Cuidado"
+    
     No rechazar H₀ **NO significa que H₀ sea verdadera**. Solo significa que los datos observados son consistentes con ella.
 
 ---
@@ -80,11 +81,11 @@ $$H_0: \mu = \mu_0 \quad \text{vs} \quad H_1: \mu < \mu_0$$
 
 ## Tabla Resumen
 
-| Tipo | Hipótesis Nula | Hipótesis Alternativa | Pregunta | Región de rechazo |
-|---|---|---|---|---|
-| **Bilateral** | $\mu = \mu_0$ | $\mu \ne \mu_0$ | ¿Es distinto? | Ambas colas |
-| **Unilateral derecha** | $\mu = \mu_0$ | $\mu > \mu_0$ | ¿Es mayor? | Cola derecha |
-| **Unilateral izquierda** | $\mu = \mu_0$ | $\mu < \mu_0$ | ¿Es menor? | Cola izquierda |
+| Tipo                     | Hipótesis Nula | Hipótesis Alternativa | Pregunta      | Región de rechazo |
+| ------------------------ | -------------- | --------------------- | ------------- | ----------------- |
+| **Bilateral**            | $\mu = \mu_0$  | $\mu \ne \mu_0$       | ¿Es distinto? | Ambas colas       |
+| **Unilateral derecha**   | $\mu = \mu_0$  | $\mu > \mu_0$         | ¿Es mayor?    | Cola derecha      |
+| **Unilateral izquierda** | $\mu = \mu_0$  | $\mu < \mu_0$         | ¿Es menor?    | Cola izquierda    |
 
 ---
 
@@ -95,6 +96,7 @@ $$H_0: \mu = \mu_0 \quad \text{vs} \quad H_1: \mu < \mu_0$$
 **Contexto:** Queremos verificar si el algoritmo de recomendación tiene un tiempo de respuesta diferente a 100 ms.
 
 $$H_0: \mu = 100 \text{ ms}$$
+
 $$H_1: \mu \ne 100 \text{ ms}$$
 
 **Por qué bilateral:** No sabemos si será más rápido o más lento; solo queremos saber si hay diferencia.
@@ -106,6 +108,7 @@ $$H_1: \mu \ne 100 \text{ ms}$$
 **Contexto:** Un nuevo método de entrenamiento se sospecha que aumenta la precisión del modelo. La precisión actual es 0.82.
 
 $$H_0: \mu = 0.82$$
+
 $$H_1: \mu > 0.82$$
 
 **Por qué unilateral derecha:** Esperamos específicamente una mejora (aumento).
@@ -117,6 +120,7 @@ $$H_1: \mu > 0.82$$
 **Contexto:** Queremos garantizar que la tasa de error en el procesamiento no supera el 2%.
 
 $$H_0: \mu = 0.02$$
+
 $$H_1: \mu < 0.02$$
 
 **Por qué unilateral izquierda:** Buscamos evidencia de que el error es aceptablemente bajo.
@@ -126,21 +130,26 @@ $$H_1: \mu < 0.02$$
 ## 🧠 Regla Práctica para Plantear H₀ y H₁
 
 ### Paso 1: Identifica el parámetro
+
 ¿Hablamos de la media (μ), la varianza (σ²), una proporción (p)?
 
 ### Paso 2: Identifica el valor de referencia
+
 ¿Cuál es el valor que queremos comparar o investigar?
 
 ### Paso 3: Pregúntate qué esperas demostrar
+
 - **Si esperas una diferencia (dirección desconocida):** Bilateral
 - **Si esperas un aumento/mejora:** Unilateral derecha
 - **Si esperas una disminución/control:** Unilateral izquierda
 
 ### Paso 4: Formula H₀ y H₁
+
 - **H₀** es la negación de lo que esperas (el "estatus quo")
 - **H₁** es lo que esperas demostrar
 
 !!! tip "💡 Consejo"
+    
     La hipótesis nula siempre contiene el signo "=" (igualdad). La alternativa contiene "$\ne$", "$>$" o "$<$".
 
 ---

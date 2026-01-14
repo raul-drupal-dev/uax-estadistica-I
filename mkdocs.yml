@@ -87,6 +87,7 @@ nav:
       - UD3 - Inferencia y regresión: ud3/estimacion-y-intervalos.md
       - UD4 - Modelos de probabilidad: ud4/resumen.md
       - UD5 - Inferencia avanzada: ud5/resumen.md
+      - UD6 - Contrastes de hipótesis: ud6/introduccion-contrastes-hipotesis.md
   - UD1 — Introducción a la Estadística:
       - Introducción: ud1/introduccion.md
       - Tipos de datos: ud1/tipos-datos.md
@@ -136,6 +137,7 @@ nav:
       - Contrastes para la media: ud6/contrastes-media.md
       - Contrastes para la varianza: ud6/contrastes-varianza.md
       - Ejercicios — UD6: ud6/ejercicios.md
+      - Examen UD6 (medio): ud6/examen-ud6-practica.md
   - Recursos:
       - Descriptiva bivariante: recursos/desc_div.md
       - Examen 1: recursos/examen1.md

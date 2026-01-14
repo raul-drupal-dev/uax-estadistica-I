@@ -19,10 +19,10 @@ Entender los dos tipos de error que pueden ocurrir en un contraste de hipótesis
 
 En cualquier contraste, nos enfrentamos a dos realidades (H₀ es verdadera o falsa) y dos decisiones (rechazamos o no rechazamos H₀). Esto genera cuatro combinaciones:
 
-|  | **H₀ es verdadera** | **H₀ es falsa** |
-|---|---|---|
-| **Rechazamos H₀** | ❌ Error Tipo I (α) | ✅ Decisión correcta (Potencia = 1 - β) |
-| **No rechazamos H₀** | ✅ Decisión correcta (1 - α) | ❌ Error Tipo II (β) |
+|                      | **H₀ es verdadera**          | **H₀ es falsa**                         |
+| -------------------- | ---------------------------- | --------------------------------------- |
+| **Rechazamos H₀**    | ❌ Error Tipo I (α)          | ✅ Decisión correcta (Potencia = 1 - β) |
+| **No rechazamos H₀** | ✅ Decisión correcta (1 - α) | ❌ Error Tipo II (β)                    |
 
 ---
 
@@ -45,6 +45,7 @@ En otras palabras, **detectamos un efecto que en realidad no existe**.
 Puede llevar a decisiones costosas o perjudiciales: invertir en un método que no funciona, implementar cambios innecesarios, etc.
 
 !!! warning "⚠️ Es grave cuando..."
+    
     Los falsos positivos son especialmente peligrosos en medicina (dar un tratamiento innecesario) o seguridad crítica.
 
 ---
@@ -68,6 +69,7 @@ En otras palabras, **no detectamos un efecto que realmente existe**.
 Puede significar perder oportunidades: descartar un método que sí funciona, no implementar cambios beneficiosos, etc.
 
 !!! warning "⚠️ Es grave cuando..."
+    
     Los falsos negativos son especialmente peligrosos cuando buscamos detectar enfermedades (diagnóstico errado) o problemas de calidad.
 
 ---
@@ -84,13 +86,14 @@ $$\text{α} = P(\text{Rechazar } H_0 \mid H_0 \text{ es verdadera})$$
 
 ### Valores Típicos
 
-| Nivel | Tolerancia | Uso |
-|---|---|---|
-| **α = 0.05** | 5% | Estándar en muchos campos |
-| **α = 0.01** | 1% | Cuando queremos ser más estrictos |
-| **α = 0.10** | 10% | Exploratorio, menos riguroso |
+| Nivel        | Tolerancia | Uso                               |
+| ------------ | ---------- | --------------------------------- |
+| **α = 0.05** | 5%         | Estándar en muchos campos         |
+| **α = 0.01** | 1%         | Cuando queremos ser más estrictos |
+| **α = 0.10** | 10%        | Exploratorio, menos riguroso      |
 
 !!! important "✅ Decisión en el proyecto"
+    
     Por defecto, usaremos **α = 0.05**, lo que significa que toleramos un 5% de falsos positivos a largo plazo.
 
 ---
@@ -118,17 +121,18 @@ Donde **β = P(Error Tipo II)**.
 4. **Menor variabilidad:** Si los datos son menos dispersos, es más fácil detectar patrones
 
 !!! tip "💡 Balance"
+    
     Existe un **trade-off entre α y β**: si reducimos α (menos falsos positivos), típicamente aumenta β (más falsos negativos). El tamaño muestral y el tamaño del efecto son cruciales para mantener una buena potencia.
 
 ---
 
 ## Tabla Comparativa: Errores y Potencia
 
-| Término | Símbolo | Definición | Control |
-|---|---|---|---|
-| **Error Tipo I** | α | Rechazar H₀ siendo verdadera | Fijar α antes del contraste |
-| **Error Tipo II** | β | No rechazar H₀ siendo falsa | Aumentar n, tamaño del efecto |
-| **Potencia** | 1 - β | Detectar cuando H₀ es falsa | Aumentar n, disminuir β |
+| Término           | Símbolo | Definición                   | Control                       |
+| ----------------- | ------- | ---------------------------- | ----------------------------- |
+| **Error Tipo I**  | α       | Rechazar H₀ siendo verdadera | Fijar α antes del contraste   |
+| **Error Tipo II** | β       | No rechazar H₀ siendo falsa  | Aumentar n, tamaño del efecto |
+| **Potencia**      | 1 - β   | Detectar cuando H₀ es falsa  | Aumentar n, disminuir β       |
 
 ---
 
@@ -141,6 +145,7 @@ Supongamos que repetimos el siguiente contraste 100 veces:
 - **Realidad:** H₀ es verdadera (precisión real = 0.85)
 
 **Esperado:**
+
 - En aproximadamente **95 casos**, NO rechazaremos H₀ (decisión correcta)
 - En aproximadamente **5 casos**, rechazaremos H₀ falsamente (Error Tipo I)
 
@@ -160,8 +165,9 @@ Ahora supongamos que la **realidad es que H₀ es falsa** (precisión real = 0.9
 ## 🧱 Admonition: Equilibrio de Errores
 
 !!! important "⚖️ No podemos eliminar ambos errores"
-    Con un tamaño muestral fijo, **reducir α necesariamente aumenta β**, y viceversa.
     
+    Con un tamaño muestral fijo, **reducir α necesariamente aumenta β**, y viceversa.
+
     La solución es:
     1. **Fijar α según la severidad de falsos positivos** (típicamente 0.05)
     2. **Aumentar n para controlar β** (diseñar el estudio con potencia adecuada)
