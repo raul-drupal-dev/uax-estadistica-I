@@ -165,29 +165,22 @@ $$
 
 ## Ejercicios rápidos
 
-???+ example "Ejercicio 1 — Binomial"
+Ejercicio 1 — Binomial: en un lote, la probabilidad de pieza defectuosa es $p=0.05$. Para $n=20$, calcula $P(X\le 1)$.
 
-    En un lote, la probabilidad de pieza defectuosa es $p=0.05$. Para $n=20$, calcula $P(X\le 1)$.
-
-    <details>
-    <summary>Ver solución (clic)</summary>
+???- example "Solución"
 
     $$
-    P(X=0)=0.95^{20}=0.3585,\quad P(X=1)=\binom{20}{1}0.05\cdot0.95^{19}=0.3774.\\
+    P(X=0)=0.95^{20}=0.3585,\quad P(X=1)=\binom{20}{1}0.05\cdot0.95^{19}=0.3774.
+    $$
+
+    $$
     P(X\le1)=0.3585+0.3774=0.7359.
     $$
 
-    </details>
+Ejercicio 2 — Geométrica: con $p=0.3$, calcula $P(X\ge 4)$.
 
-???+ example "Ejercicio 2 — Geométrica"
-
-    Con $p=0.3$, calcula $P(X\ge 4)$.
-
-    <details>
-    <summary>Ver solución (clic)</summary>
+???- example "Solución"
 
     $$
     P(X\ge4)=P(X>3)=(1-p)^3=0.7^3=0.343.
     $$
-
-    </details>

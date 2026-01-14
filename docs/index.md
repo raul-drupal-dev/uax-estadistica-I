@@ -41,3 +41,13 @@
   - [Contrastes de hipótesis](ud5/contrastes-hipotesis.md)
   - [Ejercicios — UD5](ud5/ejercicios.md)
   - [Examen UD5 (medio)](ud5/examen-ud5.md)
+
+- UD6 — Contrastes de hipótesis
+
+  - [Introducción a los contrastes de hipótesis](ud6/introduccion-contrastes-hipotesis.md)
+  - [Hipótesis nula y alternativa](ud6/hipotesis-nula-alternativa.md)
+  - [Errores en contrastes: Tipo I, Tipo II y potencia](ud6/errores-nivel-significacion.md)
+  - [P-valor y regla de decisión](ud6/p-valor.md)
+  - [Contrastes de hipótesis para la media](ud6/contrastes-media.md)
+  - [Contrastes de hipótesis para la varianza](ud6/contrastes-varianza.md)
+  - [Ejercicios — UD6](ud6/ejercicios.md)

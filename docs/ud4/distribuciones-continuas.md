@@ -137,28 +137,22 @@ $$
 
 ## Ejercicios rápidos
 
-???+ example "Ejercicio 1 — Uniforme"
+Ejercicio 1 — Uniforme: sea $X\sim U(1,5)$. Calcula $P(2\le X\le 4)$ y $E[X]$.
 
-    Sea $X\sim U(1,5)$. Calcula $P(2\le X\le 4)$ y $E[X]$.
-
-    <details>
-    <summary>Ver solución (clic)</summary>
+???+ example "Solución"
 
     $$
     P(2\le X\le4)=\frac{4-2}{5-1}=\frac{2}{4}=0.5,\quad E[X]=\frac{1+5}{2}=3.
     $$
 
-    </details>
+Ejercicio 2 — Normal: $X\sim N(70,8^2)$. Calcula $P(62\le X\le 78)$.
 
-???+ example "Ejercicio 2 — Normal"
-
-    $X\sim N(70,8^2)$. Calcula $P(62\le X\le 78)$.
-
-    <details>
-    <summary>Ver solución (clic)</summary>
+???+ example "Solución"
 
     $$
-    z_1=\frac{62-70}{8}=-1,\; z_2=\frac{78-70}{8}=1.\; P=\Phi(1)-\Phi(-1)\approx0.8413-0.1587=0.6826.
+    z_1=\frac{62-70}{8}=-1,\; z_2=\frac{78-70}{8}=1.
     $$
 
-    </details>
+    $$
+    P=\Phi(1)-\Phi(-1)\approx0.8413-0.1587=0.6826.
+    $$
