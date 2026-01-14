@@ -11,10 +11,11 @@
 - UD2 — Probabilidad y distribuciones
 
   - [Eventos y probabilidad básica](ud2/eventos-y-probabilidad.md)
+  - [Variables aleatorias](ud2/variables-aleatorias.md)
   - [Distribuciones discretas: Binomial y Poisson](ud2/distribuciones-discretas.md)
   - [Distribuciones continuas: Normal y Exponencial](ud2/distribuciones-continuas.md)
-  - [Variables aleatorias](ud2/variables-aleatorias.md)
   - [Ejercicios — UD2](ud2/ejercicios.md)
+  - [Resumen UD2 — Quick Reference](ud2/resumen.md)
 
 - UD3 — Inferencia y regresión
 

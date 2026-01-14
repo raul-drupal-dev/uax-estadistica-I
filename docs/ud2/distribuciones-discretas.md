@@ -1,88 +1,285 @@
 title: "Distribuciones discretas: Binomial y Poisson"
 slug: "ud2-distribuciones-discretas"
-date: "2025-11-16"
-authors: ["Profesor Ejemplo"]
-tags: ["ud2","binomial","poisson"]
+date: "2026-01-14"
+authors: ["Profesor UAX"]
+tags: ["ud2", "binomial", "poisson", "distribuciones", "discretas"]
 difficulty: "intermedio"
 type: "definicion"
-prerequisitos: ["ud2-eventos-probabilidad"]
+prerequisitos: ["ud2-eventos-probabilidad", "ud2-variables-aleatorias"]
 
 ---
 
 ## Objetivo
 
-:bar_chart: Aprender las fórmulas y usos de la distribución binomial y la de Poisson.
+✨ Dominar las **dos distribuciones discretas más importantes** en estadística: binomial (intentos fijos) y Poisson (eventos raros en tiempo/espacio).
 
-## Binomial
+## Idea Clave 💡
 
-:dart: **Qué modela:** número de éxitos en $n$ intentos independientes, cada uno con probabilidad $p$ de éxito (p.ej., lanzar 10 veces una moneda cargada y contar caras).
+**Distinguir entre "n intentos fijos" y "eventos raros en intervalo" es la clave.** Muchos errores vienen de confundir cuándo usar cada distribución. Una vez identificado el escenario, todo lo demás sigue de fórmulas estándar.
 
-### Fórmula y momentos
+---
 
-Si $X\sim Bin(n,p)$, entonces
+## Distribución Binomial
 
-$$
-P(X=k)=\binom{n}{k} p^k (1-p)^{n-k},\quad k=0,1,\dots,n.
-$$
+### Definición y Caracterización
 
-Media $E[X]=np$ y varianza $Var(X)=np(1-p)$.
+**Modelo:** Repetir **n intentos independientes**, cada uno con **probabilidad p de éxito**, contar número total de éxitos.
 
-### Cuándo usarla
+**Ejemplos:**
 
-- Número **fijo** de intentos $n$.
-- Cada intento solo tiene **éxito/fracaso** y es independiente.
-- La probabilidad $p$ es **constante** en todos los intentos.
-- Queremos la probabilidad de exactamente $k$ éxitos o de un rango de ellos.
+- 🪙 Lanzar una moneda 10 veces, contar caras
+- ✅ En una muestra de 50, contar defectuosos (p=2%)
+- 🎯 En 20 disparos, contar blancos acertados (p=0.7)
+- 📊 En 100 clientes, contar satisfechos (p=0.8)
 
-!!! tip "Truco rápido"
+**Condiciones (criterios MUST):**
 
-    Si $n$ es grande ($n>30$) y $p$ está lejos de 0 y 1, la binomial se acerca a una normal con media $np$ y desviación $\sqrt{np(1-p)}$. Útil para aproximar sin calcular coeficientes grandes.
+1. ✅ Número **fijo** de intentos (n)
+2. ✅ Cada intento: **éxito (p) o fracaso (1-p)**
+3. ✅ Intentos **independientes**
+4. ✅ Probabilidad **constante** en todos
 
-!!! warning "No usar si..."
+### Fórmula
 
-    - El número de intentos **no es fijo** (mejor Poisson o geométrica según el caso).
-    - $p$ cambia entre intentos (necesitas otro modelo o estratificar los datos).
-    - Los intentos se influyen entre sí (no hay independencia).
+Si $X \sim \text{Binomial}(n, p)$:
 
-## Poisson
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, n$$
 
-:triangular_flag_on_post: **Qué modela:** el conteo de eventos **raros** que ocurren en un intervalo continuo (tiempo, espacio, longitud) con tasa constante $\lambda$ y eventos independientes (p.ej., número de llamadas en 1 hora, defectos por metro de cable).
+Donde $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ = número de formas de elegir k de n
 
-### Fórmula y momentos
+**Media y Varianza:**
+$$E[X] = np, \quad \text{Var}(X) = np(1-p)$$
 
-Si los eventos ocurren con tasa $\lambda$ por unidad, entonces
+???+ example "Ejemplo 1: Moneda Justa"
 
-$$
-P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!},\quad k=0,1,2,\dots
-$$
+    Lanzar moneda 5 veces, X = número de caras
 
-Media y varianza: $\lambda$.
+    n = 5, p = 0.5
 
-### Cuándo usarla
+    P(X = 3) = $\binom{5}{3}$ × 0.5³ × 0.5² = 10 × 0.03125 = 0.3125
 
-- Conteos en un **intervalo continuo** (tiempo/espacio) con tasa estable.
-- Eventos son **independientes** y la probabilidad de dos eventos simultáneos es prácticamente nula.
-- Para **eventos raros** y $n$ grande con $p$ pequeño, la binomial $Bin(n,p)$ se aproxima a Poisson con $\lambda=np$.
+    E[X] = 5 × 0.5 = 2.5 (esperamos ~2-3 caras)
 
-!!! tip "Detectar Poisson"
+    Var(X) = 5 × 0.5 × 0.5 = 1.25
 
-    - Si la varianza de los conteos es similar a la media, Poisson encaja bien.
-    - Si la varianza >> media, puede haber **sobre-dispersión** (quizá necesitas binomial negativa u otro modelo).
+???+ example "Ejemplo 2: Control de Calidad"
 
-!!! note "Regla de bolsillo"
+    Fábrica: 2% de piezas defectuosas
 
-    Usa Poisson si el enunciado habla de *tasa por unidad* o *llegadas por minuto*; usa binomial si habla de *$n$ intentos* con probabilidad $p$ fija.
+    Revisar lote de 10 piezas, X = número defectuosas
 
-## Ejercicios
+    n = 10, p = 0.02
 
-1. En una fábrica 2% de piezas salen defectuosas. Si revisamos 10 piezas, ¿cuál es la probabilidad de encontrar exactamente 1 defectuosa? (binomial)
+    P(X = 0) = $\binom{10}{0}$ × 0.02⁰ × 0.98¹⁰ ≈ 0.8171
 
-2. Si en una hora llegan en promedio 3 clientes a una tienda (Poisson), ¿probabilidad de que lleguen 5?
+    P(X = 1) = $\binom{10}{1}$ × 0.02¹ × 0.98⁹ ≈ 0.1667
 
-??? example "Respuestas ejercicio"
+    E[X] = 10 × 0.02 = 0.2 (esperamos ~0 defectos)
 
-    1) $P(X=1)=\binom{10}{1}(0.02)^1(0.98)^9 \approx 10\cdot0.02\cdot0.834 = 0.167$ (aprox).
+---
 
-    2) $P(X=5)=e^{-3}3^5/5! \approx 0.1008$.
+### Cuándo Usarla
 
-**Nota:** usa binomial cuando el número de ensayos es fijo y Poisson para eventos raros en intervalos continuos.
+✅ **USA BINOMIAL SI:**
+
+- Hay **número fijo** de intentos
+- Cada intento es **sí/no** (binario)
+- Intentos son **independientes**
+- p es **constante**
+
+???+ warning "NO USES BINOMIAL SI:"
+
+    - ❌ El número de intentos NO es fijo ("hasta obtener 3 éxitos")
+    - ❌ p cambia entre intentos
+    - ❌ Los intentos no son independientes
+    - ❌ Habla de "tasa" o "eventos por unidad" (usa Poisson)
+
+---
+
+### Aproximación a Normal
+
+**Regla Práctica:** Si $n > 30$ y $0.1 < p < 0.9$:
+
+$$\text{Binomial}(n, p) \approx N(\mu = np, \sigma^2 = np(1-p))$$
+
+**Ventaja:** Calcular probabilidades sin números enormes (factoriales).
+
+???+ example "Ejemplo: Encuesta Grande"
+
+    n = 100, p = 0.6
+
+    X ~ Binomial(100, 0.6)
+
+    Aproximar a: X ~ N(60, 24)
+
+    P(X < 65) ≈ P(Z < (65-60)/√24) ≈ P(Z < 1.02)
+
+---
+
+## Distribución Poisson
+
+### Definición y Caracterización
+
+**Modelo:** Contar **eventos raros** que ocurren en un intervalo (tiempo, espacio, longitud) con **tasa constante λ**.
+
+**Ejemplos:**
+
+- 📞 Número de llamadas en 1 hora (λ = 3 llamadas/hora)
+- 🐛 Defectos en 10 metros de cable (λ = 0.5 defectos/metro)
+- 🚗 Accidentes en una carretera por mes (λ = 2 accidentes/mes)
+- 💻 Errores de servidor en 1 día (λ = 5 errores/día)
+
+**Condiciones:**
+
+1. ✅ Eventos ocurren con **tasa λ constante**
+2. ✅ Eventos **independientes**
+3. ✅ **No hay "simultaneidad"** (2+ eventos mismo instante improbable)
+4. ✅ Intervalo es **continuo** (tiempo/espacio)
+
+### Fórmula
+
+Si $X \sim \text{Poisson}(\lambda)$:
+
+$$P(X = k) = e^{-\lambda} \frac{\lambda^k}{k!}, \quad k = 0, 1, 2, \ldots$$
+
+**Nota:** e ≈ 2.71828
+
+**Media y Varianza (¡iguales!):**
+$$E[X] = \lambda, \quad \text{Var}(X) = \lambda$$
+
+**¡Característica unique!** En Poisson, media = varianza.
+
+???+ example "Ejemplo 1: Llamadas Telefónicas"
+
+    Tasa: λ = 3 llamadas/hora
+
+    ¿Probabilidad de 5 llamadas en una hora?
+
+    P(X = 5) = e⁻³ × 3⁵ / 5! = 0.0498 × 243 / 120 ≈ 0.1008
+
+    E[X] = 3, Var(X) = 3
+
+???+ example "Ejemplo 2: Defectos en Cable"
+
+    Tasa: λ = 2 defectos por 100 metros
+
+    ¿Probabilidad de 0 defectos en 100 metros?
+
+    P(X = 0) = e⁻² × 2⁰ / 0! = 0.1353 ≈ 13.53%
+
+---
+
+### Cuándo Usarla
+
+✅ **USA POISSON SI:**
+
+- Hay **tasa λ** (eventos por unidad: tiempo/espacio)
+- Eventos son **independientes**
+- Queremos contar eventos en **intervalo continuo**
+- Para **eventos raros** (p pequeño, n grande)
+
+???+ tip "Regla Rápida"
+
+    **Si el enunciado dice "por hora", "por metro", "por día"** → Piensa Poisson
+
+    **Si dice "en n intentos con prob p"** → Piensa Binomial
+
+!!! note "Poisson como Límite de Binomial"
+
+    Si n → ∞ y p → 0, pero np = λ es constante:
+
+    Binomial(n, p) → Poisson(λ)
+
+    **Práctica:** Usa Poisson si n > 100 y p < 0.01
+
+---
+
+## Tabla Comparativa: Binomial vs Poisson
+
+| **Aspecto**      | **Binomial**              | **Poisson**                   |
+| :--------------- | :------------------------ | :---------------------------- |
+| **Parámetros**   | n (intentos), p (prob)    | λ (tasa)                      |
+| **¿Qué modela?** | n intentos, contar éxitos | Eventos raros, contar eventos |
+| **Rango**        | 0 a n                     | 0 a ∞                         |
+| **Media**        | np                        | λ                             |
+| **Varianza**     | np(1-p)                   | λ                             |
+| **Cuándo**       | n fijo                    | Intervalo continuo            |
+| **Ejemplo**      | 10 lanzamientos           | Llamadas por hora             |
+
+---
+
+## Diagrama de Decisión: ¿Binomial o Poisson?
+
+```mermaid
+graph TD
+    A["¿Cuál es el escenario?"] -->|Número fijo de intentos| B["¿Cada intento es<br/>éxito/fracaso?"]
+    A -->|Eventos en intervalo<br/>continuo| C["¿Tasa constante?"]
+
+    B -->|SÍ| D["BINOMIAL<br/>Parámetros: n, p"]
+    B -->|NO| E["Otro modelo"]
+
+    C -->|SÍ| F["POISSON<br/>Parámetro: λ"]
+    C -->|NO| G["Otro modelo"]
+```
+
+---
+
+## ⚠️ Trampas Comunes
+
+### Trampa 1: Confundir "n intentos" con "tasa"
+
+❌ **INCORRECTO:** "Un servidor recibe 5 solicitudes. ¿Prob de 3 solicitudes?" → No está claro si son fijas o por unidad tiempo
+
+✅ **CORRECTO:** "Un servidor recibe 5 solicitudes/minuto (λ=5). ¿Prob de 3 en un minuto?" → Poisson
+
+### Trampa 2: Asumir Poisson cuando hay n pequeño
+
+❌ **INCORRECTO:** "5 lanzamientos de moneda, 1% de caras" → No es Poisson (n pequeño)
+
+✅ **CORRECTO:** "1000 lanzamientos de moneda, 0.1% de caras" → Poisson aproximadamente
+
+### Trampa 3: Olvidar que Var(X) = λ en Poisson
+
+Si observas **media ≈ varianza**, es fuerte indicador de Poisson.
+
+Si observas **varianza >> media**, podría ser sobre-dispersión (binomial negativa u otro).
+
+---
+
+## 💡 Checklist: Identificar Distribución
+
+!!! tip "Antes de Calcular"
+
+    1. **¿Hay "n intentos"?**
+       - Sí → Binomial
+       - No → Poisson
+
+    2. **Si Binomial:**
+       - [ ] n es fijo
+       - [ ] p es constante
+       - [ ] Intentos independientes
+       - [ ] Cada intento es sí/no
+
+    3. **Si Poisson:**
+       - [ ] Hay tasa λ (eventos/unidad)
+       - [ ] Intervalo continuo (tiempo/espacio)
+       - [ ] Eventos independientes
+       - [ ] Sin simultaneidad probable
+
+---
+
+## 📝 Ejercicios Prácticos
+
+!!! tip "Práctica"
+
+    1. 20 monedas, P(X=10 caras)? → Binomial
+    2. Centro de llamadas recibe 4 llamadas/minuto, P(X>5)? → Poisson
+    3. 1000 emails, 2% spam, P(exactamente 20 spam)? → Binomial o Poisson (ambos aproximan)
+
+---
+
+## 📖 Enlaces Relacionados
+
+- [Eventos y probabilidad](./eventos-y-probabilidad.md) — Fundamentos
+- [Variables aleatorias](./variables-aleatorias.md) — Conceptos base
+- [Distribuciones continuas](./distribuciones-continuas.md) — Normal y otras

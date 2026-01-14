@@ -1,6 +1,6 @@
 title: "UD5 — Contraste de hipótesis"
 slug: "ud5-contrastes-hipotesis"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo","Raul Jimenez"]
 tags: ["ud5","contrastes","hipotesis","z","t","proporcion","varianza","f"]
 difficulty: "intermedio"
@@ -11,7 +11,7 @@ prerequisitos: ["ud5/intervalos-confianza.md","ud4/distribuciones-derivadas-norm
 
 ## Objetivo
 
-Aprender a formular $H_0$ y $H_1$, elegir el estadístico adecuado (Z, t, $\chi^2$, F), calcular el valor crítico/p-valor y tomar decisiones sobre el parámetro.
+✨ Formular y ejecutar contrastes de hipótesis para media, proporción y varianza. Interpretar p-valores, calcular potencia y tomar decisiones estadísticas correctamente.
 
 ---
 

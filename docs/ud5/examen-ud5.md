@@ -1,7 +1,7 @@
 ---
 title: "Examen UD5 (medio)"
 slug: "examen-ud5"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo", "Raul Jimenez"]
 tags: ["ud5", "examen", "auto-evaluacion"]
 difficulty: "medio"
@@ -139,41 +139,41 @@ Explicación: Error tipo I = rechazar una hipótesis verdadera, con probabilidad
 ## Soluciones desarrolladas
 
 ???- details "Solución pregunta 1 — IC media con $\sigma$ conocida"
-    
+
     Se conoce $\sigma$, por lo que el pivote es $Z=\dfrac{\bar{X}-\mu}{\sigma/\sqrt{n}}$ y el IC al 95% es $\bar{x}\pm Z_{0.975}\,\sigma/\sqrt{n}$. Las fórmulas con $t$ se usan cuando $\sigma$ es desconocida.
 
 ???- details "Solución pregunta 2 — Criterio MLE"
-    
+
     La MLE define $\hat{\theta}=\arg\max_{\theta} L(\theta|x)$ (o su log-verosimilitud). No exige minimizar sesgo ni ECM de forma directa.
 
 ???- details "Solución pregunta 3 — Estadístico de proporción"
-    
+
     Bajo $H_0: p=p_0$, $\hat{p}\sim N\left(p_0,\dfrac{p_0(1-p_0)}{n}\right)$ si $n$ es grande. El estadístico estandarizado es $Z=\dfrac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}$.
 
 ???- details "Solución pregunta 4 — Regla en dos colas"
-    
+
     Para dos colas con nivel $\alpha$, la región crítica es $|Z|>Z_{\alpha/2}$. Las reglas $Z>Z_\alpha$ o $Z<-Z_\alpha$ corresponden a pruebas unilaterales.
 
 ???- details "Solución pregunta 5 — IC de proporción"
-    
+
     La proporción muestral es media de Bernoullis; con $n$ grande su distribución se aproxima a Normal, de donde se deriva el IC $\hat{p}\pm Z_{1-\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n}$.
 
 ???- details "Solución pregunta 6 — Contraste de varianza"
-    
+
     El estadístico $\chi^2=\dfrac{(n-1)S^2}{\sigma_0^2}$ sigue $\chi^2_{n-1}$ bajo $H_0$. Las otras opciones no corresponden a la distribución exacta de $S^2$.
 
 ???- details "Solución pregunta 7 — Media con $\sigma$ desconocida"
-    
+
     Si $\sigma$ no se conoce y $n$ es pequeño, se sustituye por $S$ y el pivote es $T=\dfrac{\bar{X}-\mu_0}{S/\sqrt{n}}\sim t_{n-1}$. El Z es válido solo con $\sigma$ conocida o $n$ grande.
 
 ???- details "Solución pregunta 8 — Varianza de $\hat{p}$"
-    
+
     $\hat{p}=\dfrac{1}{n}\sum X_i$ con $X_i\sim \text{Bernoulli}(p)$. Entonces $\operatorname{Var}(\hat{p})=\dfrac{p(1-p)}{n}$. Las expresiones con $\hat{p}$ son aproximaciones para IC pero la varianza exacta usa $p$.
 
 ???- details "Solución pregunta 9 — Dos varianzas"
-    
+
     Con muestras normales e independientes, $F=\dfrac{S_1^2}{S_2^2}\sim F(n_1-1,n_2-1)$. $\chi^2$ se usa para una sola varianza; Z y t son para medias.
 
 ???- details "Solución pregunta 10 — Error tipo I"
-    
+
     Error de tipo I = rechazar $H_0$ siendo verdadera. Su probabilidad se fija en $\alpha$; el error tipo II es no rechazar $H_0$ siendo falsa.

@@ -69,12 +69,18 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
 
 extra_javascript:
   # MathJax v3 para renderizar LaTeX ($...$, $$...$$) en el sitio generado.
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Mermaid para diagramas (flujos, árboles, etc.)
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
 copyright: Copyright &copy; 2025 Creado por Raul Jimenez Morales.
 
@@ -103,10 +109,11 @@ nav:
       - Examen UD1 (medio): ud1/examen-ud1-practica.md
   - UD2 — Probabilidad y distribuciones:
       - Eventos y probabilidad: ud2/eventos-y-probabilidad.md
+      - Variables aleatorias: ud2/variables-aleatorias.md
       - Distribuciones discretas: ud2/distribuciones-discretas.md
       - Distribuciones continuas: ud2/distribuciones-continuas.md
-      - Variables aleatorias: ud2/variables-aleatorias.md
       - Ejercicios — UD2: ud2/ejercicios.md
+      - Resumen UD2: ud2/resumen.md
       - Examen UD2 (medio): ud2/examen-ud2-practica.md
   - UD3 — Inferencia y regresión:
       - Estimación e intervalos: ud3/estimacion-y-intervalos.md

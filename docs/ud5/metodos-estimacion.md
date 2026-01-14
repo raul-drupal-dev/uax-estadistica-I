@@ -1,6 +1,6 @@
 title: "UD5 — Métodos de estimación: Máxima verosimilitud y momentos"
 slug: "ud5-metodos-estimacion"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo","Raul Jimenez"]
 tags: ["ud5","inferencias","mle","momentos","estimacion"]
 difficulty: "intermedio"
@@ -11,7 +11,7 @@ prerequisitos: ["ud5/estimacion-puntual.md","ud4/distribuciones-continuas.md"]
 
 ## Objetivo
 
-Aplicar los dos métodos clásicos para construir estimadores: **Máxima Verosimilitud (MLE)** y **Método de los Momentos (MM)**, con ejemplos típicos.
+✨ Aplicar los métodos de Máxima Verosimilitud (MV) y Momentos para obtener estimadores con buenas propiedades (insesgadez, consistencia, eficiencia).
 
 ---
 
@@ -74,15 +74,17 @@ $$
 
 ## Ejercicios rápidos
 
+Para datos $x_1,\dots,x_n\sim \mathrm{Poisson}(\lambda)$, deriva $\hat{\lambda}_{MLE}$.
+
 ???- example "Ejercicio 1 — MLE en Poisson"
 
-    Para datos $x_1,\dots,x_n\sim \mathrm{Poisson}(\lambda)$, deriva $\hat{\lambda}_{MLE}$.
 
     **Solución:** $\ell(\lambda)=\sum x_i\log\lambda - n\lambda + \text{cte} \Rightarrow \partial/\partial\lambda=\frac{\sum x_i}{\lambda}-n=0 \Rightarrow \hat{\lambda}=\bar{x}$.
 
+Con $E[X]=k\theta$, $\mathrm{Var}(X)=k\theta^2$. Muestra $\bar{x}=8$, $s^2=32$. Estima $k,\theta$ por MM.
+
 ???- example "Ejercicio 2 — Momentos en Gamma($k,\theta$)"
 
-    Con $E[X]=k\theta$, $\mathrm{Var}(X)=k\theta^2$. Muestra $\bar{x}=8$, $s^2=32$. Estima $k,\theta$ por MM.
 
     **Solución:**
 
