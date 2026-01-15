@@ -11,8 +11,6 @@
 
 ---
 
-# Bienvenido a Estadística I 📊
-
 !!! info "Sobre este curso"
 
     Guía completa de aprendizaje para la asignatura de **Estadística I** — Universidad Alfonso X el Sabio, Curso 2025-26.
