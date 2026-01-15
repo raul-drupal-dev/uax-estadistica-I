@@ -1,4 +1,369 @@
-Términos y Puntos Clave Enfoque Frecuentista: Interpreta la probabilidad como la frecuencia relativa de un evento en un número infinito de repeticiones del experimento (p. 3).Parámetros poblacionales: Valores fijos desconocidos (p. 3).Datos muestrales: Variables aleatorias (p. 3).Conclusiones: Se basan en el comportamiento a largo plazo (p. 3).Control de error: Se controla la probabilidad de error en decisiones repetidas (p. 3).Frecuentista vs Bayesiano:Frecuentista: Parámetros fijos, datos aleatorios, probabilidad = frecuencia, no usa información previa, usa p-valores e IC (p. 4).Bayesiano: Parámetros aleatorios, datos observados, probabilidad = creencia, usa distribuciones a priori, usa distribuciones posteriores (p. 4).Hipótesis Nula (H₀): Afirmación que se asume cierta por defecto ("no hay efecto" o "no hay diferencia") (p. 5).Hipótesis Alternativa (H₁ o Ha): Afirmación que se quiere demostrar (el cambio o diferencia) (p. 5).Tipos de H₁: Bilateral (\(\mu \ne \mu _{0}\)) (p. 5), Unilateral derecha (\(\mu >\mu _{0}\)) (p. 5), Unilateral izquierda (\(\mu <\mu _{0}\)) (p. 5).Errores:Tipo I (\(\alpha \)): Rechazar H₀ siendo cierta ("falso positivo") (p. 6). Se controla fijando \(\alpha \) (típicamente 0.05 o 0.01) (p. 6).Tipo II (\(\beta \)): No rechazar H₀ siendo falsa ("falso negativo") (p. 6). Relacionado con la potencia (Potencia = \(1-\beta \)) (p. 6).Nivel de Significación (\(\alpha \)): Probabilidad máxima de cometer Error Tipo I que se está dispuesto a tolerar (p. 7).Región Crítica: Valores muestrales que conducen a rechazar la H₀ (p. 8).Región de Aceptación/No rechazo: Valores muestrales que llevan a no rechazar H₀ (p. 8).P-valor: Probabilidad, bajo H₀, de obtener un estadístico tan extremo o más que el observado (p. 9). Si p-valor < \(\alpha \), se rechaza H₀ (p. 9).Potencia del Contraste: Probabilidad de rechazar H₀ cuando esta es falsa (Potencia = \(1-\beta \)) (p. 10). Aumenta con mayor tamaño muestral, mayor \(\alpha \), mayor tamaño del efecto y menor variabilidad (p. 10).Contrastes Paramétricos: Asumen que los datos provienen de una distribución específica (usualmente Normal) y que los parámetros poblacionales son desconocidos (p. 11).Ventaja: Mayor potencia si se cumplen supuestos (p. 11).Desventaja: Resultados no fiables si se violan supuestos (p. 11).Tipos de Contrastes Paramétricos cubiertos:Contraste Z para Media (\(\sigma \) conocida, \(n\) grande) (pp. 11-12).Contraste t de Student para Media (\(\sigma \) desconocida, normalidad) (pp. 11, 13).Contraste F para Varianzas (normalidad en ambas muestras) (pp. 11, 17).Contraste \(\chi ^{2}\) para Varianza (normalidad) (pp. 11, 18). Ejercicios y Ejemplos Ejemplo en IA (H₀/H₁):H₀: El nuevo algoritmo tiene la misma precisión que el actual (0.85) (p. 5).H₁: El nuevo algoritmo tiene mayor precisión que el actual (p. 5).Ejemplo Contraste Z para la Media (pág. 12):\(\sigma =0,03\) conocida, \(n=50\), \(\={x}=0,88\), \(\mu _{0}=0,85\), \(\alpha =0,05\) (bilateral) (p. 12).Estadístico: \(Z=\frac{0,88-0,85}{0,03/\sqrt{50}}=7,07\) (p. 12).Decisión: \(|7,07|>1,96\) (valor crítico) \(\Rightarrow \) rechazo H₀ (p. 12).Ejemplo Contraste t de Student (Una Muestra) (pág. 13):\(n=15\), \(\={x}=42,3\) ms, \(s=5,8\) ms, \(\mu _{0}=45\) ms, \(\alpha =0,05\) (bilateral) (p. 13).Estadístico: \(t=\frac{42,3-45}{5,8/\sqrt{15}}\approx -1,80\) (p. 13).Decisión: \(|-1,80|<2,145\) (valor crítico \(t_{14,0,025}\)) \(\Rightarrow \) no rechazo H₀ (p. 13).Ejemplo Contraste t (Dos Muestras Independientes) (pág. 14):Algoritmo A: \(n_{1}=20\), \(\={x}_{1}=0,87\), \(s_{1}=0,04\). Algoritmo B: \(n_{2}=20\), \(\={x}_{2}=0,83\), \(s_{2}=0,05\) (p. 14).Varianza combinada: \(S_{p}^{2}=\frac{19(0,04)^{2}+19(0,05)^{2}}{38}=0,00205\) (p. 14).Estadístico: \(t=\frac{0,87-0,83}{0,0453\sqrt{1/20+1/20}}\approx 2,80\) (p. 14).Decisión: \(2,80>2,024\) (valor crítico \(t_{38,0,025}\)) \(\Rightarrow \) rechazo H₀ (p. 14).Ejemplo Contraste t (Muestras Pareadas) (pág. 16):\(\={d}=0,032\), \(s_{d}=0,018\), \(n=12\) (p. 16).Estadístico: \(t=\frac{0,032}{0,018/\sqrt{12}}\approx 6,16\) (p. 16).Decisión: \(6,16>2,201\) (valor crítico \(t_{11,0,025}\)) \(\Rightarrow \) rechazo H₀ (p. 16).Ejemplo Contraste F para Varianzas (pág. 17):Impl. 1: \(n_{1}=25\), \(s_{1}^{2}=12,5\). Impl. 2: \(n_{2}=20\), \(s_{2}^{2}=6,8\) (p. 17).Estadístico: \(F=\frac{12,5}{6,8}\approx 1,838\) (p. 17).Decisión: \(1,838<2,41\) (valor crítico \(F_{0,025;24,19}\)) \(\Rightarrow \) no rechazo H₀ (p. 17).Ejemplo Contraste \(\chi ^{2}\) para Varianza (pág. 18):\(\sigma _{0}^{2}\le 0,04\). \(n=30\), \(s^{2}=0,052\). \(\alpha =0,05\) (unilateral derecha) (p. 18).Estadístico: \(\chi ^{2}=\frac{29\times 0,052}{0,04}=37,70\) (p. 18).Decisión: \(37,70<42,56\) (valor crítico \(\chi _{0,05;29}^{2}\)) \(\Rightarrow \) no rechazo H₀ (p. 18). 
+---
+title: "UD6 — Resumen: Contrastes de Hipótesis"
+slug: "ud6-resumen"
+date: "2026-01-15"
+authors: ["Profesor UAX"]
+tags: ["ud6", "resumen", "contrastes", "hipotesis", "inferencia"]
+difficulty: "intermedio"
+type: "definicion"
+prerequisitos: ["ud3-resumen", "ud4-resumen", "ud5-resumen"]
+---
 
+## ✨ Mapa Conceptual UD6
 
-Términos y Puntos Clave Escala del P-valor: Un rango de valores (normalmente de 0 a 1) utilizado para tomar una decisión en un contraste de hipótesis, comparándolo con el nivel de significación (\(\alpha \)) fijado.Regla de decisión (general):Si P-valor < \(\alpha \): Se rechaza la hipótesis nula (H₀). El resultado es estadísticamente significativo.Si P-valor \(\ge \) \(\alpha \): NO se rechaza la hipótesis nula (H₀). El resultado podría deberse al azar.Interpretación visual (según diagrama):Valores cercanos a 0: Fuerte evidencia para rechazar H₀.Valores cercanos a 1: Fuerte evidencia para no rechazar H₀.Ejemplo de umbrales comunes:\(\alpha =0,05\) (o 5%): Umbral estándar.\(\alpha =0,01\) (o 1%): Umbral más estricto.Aplicación en el diagrama (pág. 1):Con p-valor = 0,03: Se rechaza H₀ al nivel \(\alpha =0,05\) (ya que \(0,03<0,05\)), pero no se rechaza al nivel \(\alpha =0,01\) (ya que \(0,03\ge 0,01\)).Con p-valor = 0,07: No se rechaza H₀ a ningún nivel \(\alpha \) típico como 0,05 ó 0,01. 
+```mermaid
+graph LR
+    A["<b>UD6<br/>Contrastes de<br/>Hipótesis</b>"]
+
+    A --> B["<b>Conceptos</b><br/>H₀, H₁, α,<br/>P-valor"]
+    A --> C["<b>Errores</b><br/>Tipo I, Tipo II,<br/>Potencia"]
+    A --> D["<b>Tests</b><br/>Z, t, F,<br/>χ²"]
+
+    B --> B1["H₀: Status quo"]
+    B --> B2["H₁: Afirmación"]
+    B --> B3["α: 0.05 o 0.01"]
+
+    C --> C1["Error I: α<br/>Falso +"]
+    C --> C2["Error II: β<br/>Falso -"]
+    C --> C3["Potencia: 1-β"]
+
+    D --> D1["Z: σ conocida"]
+    D --> D2["t: σ desconocida"]
+    D --> D3["F: varianzas"]
+    D --> D4["χ²: varianza"]
+
+    style A fill:#ffcccc
+    style B fill:#fff3e0
+    style C fill:#ffe6cc
+    style D fill:#ccffcc
+```
+
+---
+
+## 🎯 Proceso Completo de Contraste
+
+```mermaid
+graph TD
+    Start["Inicio: Problema"] --> Step1["1. Formular Hipótesis<br/>H₀ y H₁"]
+    Step1 --> Step2["2. Elegir nivel α<br/>(0.05 o 0.01)"]
+    Step2 --> Step3["3. Seleccionar test<br/>Z, t, F o χ²"]
+    Step3 --> Step4["4. Calcular estadístico<br/>de prueba"]
+    Step4 --> Step5["5. Calcular p-valor"]
+    Step5 --> Decision{"6. Comparar<br/>p-valor vs α"}
+
+    Decision -->|p < α| Rechazar["✅ Rechazar H₀<br/>Significativo"]
+    Decision -->|p ≥ α| NoRechazar["❌ NO rechazar H₀<br/>Evidencia insuficiente"]
+
+    Rechazar --> Conclusion1["Hay evidencia<br/>para H₁"]
+    NoRechazar --> Conclusion2["NO hay evidencia<br/>suficiente"]
+
+    style Rechazar fill:#ffcccc
+    style NoRechazar fill:#ccffcc
+```
+
+---
+
+## 🔀 Árbol de Decisión: Tipo de Hipótesis
+
+```mermaid
+graph TD
+    Start["¿Tipo de contraste?"] --> Q1{"Dirección"}
+
+    Q1 -->|Sin dirección| Bilateral["BILATERAL<br/>H₁: μ ≠ μ₀"]
+    Q1 -->|Mayor| Derecha["UNILATERAL DERECHA<br/>H₁: μ > μ₀"]
+    Q1 -->|Menor| Izquierda["UNILATERAL IZQUIERDA<br/>H₁: μ < μ₀"]
+
+    Bilateral --> B1["Región crítica:<br/>Ambas colas"]
+    Derecha --> D1["Región crítica:<br/>Cola derecha"]
+    Izquierda --> I1["Región crítica:<br/>Cola izquierda"]
+
+    B1 --> Ej1["Ej: ¿Es diferente?"]
+    D1 --> Ej2["Ej: ¿Es mayor?"]
+    I1 --> Ej3["Ej: ¿Es menor?"]
+
+    style Bilateral fill:#ffe6cc
+    style Derecha fill:#ffcccc
+    style Izquierda fill:#cce5ff
+```
+
+---
+
+## ⚠️ Matriz de Errores
+
+```mermaid
+graph TB
+    subgraph " "
+        R1["REALIDAD: H₀ Verdadera"]
+        R2["REALIDAD: H₀ Falsa"]
+
+        D1["DECISIÓN: Rechazar H₀"]
+        D2["DECISIÓN: NO rechazar H₀"]
+    end
+
+    R1 -->|Rechazar| E1["❌ ERROR TIPO I<br/>Falso Positivo<br/>P = α"]
+    R1 -->|No Rechazar| C1["✅ CORRECTO<br/>P = 1-α"]
+
+    R2 -->|No Rechazar| E2["❌ ERROR TIPO II<br/>Falso Negativo<br/>P = β"]
+    R2 -->|Rechazar| C2["✅ CORRECTO<br/>POTENCIA = 1-β"]
+
+    style E1 fill:#ff6666
+    style E2 fill:#ffcc66
+    style C1 fill:#66ff66
+    style C2 fill:#66ff66
+```
+
+### Tabla Resumen de Errores
+
+|                    | **H₀ Verdadera**    | **H₀ Falsa**               |
+| :----------------- | :------------------ | :------------------------- |
+| **Rechazar H₀**    | ❌ Error Tipo I (α) | ✅ Correcto (Potencia 1-β) |
+| **NO Rechazar H₀** | ✅ Correcto (1-α)   | ❌ Error Tipo II (β)       |
+
+!!! warning "Control de Errores" - **α:** Se fija previamente (0.05 o 0.01) - **β:** Depende de n y tamaño del efecto - **Potencia = 1-β:** Detectar efecto cuando existe - **Balance:** ↓α → ↑β (para ↓ambos → ↑n)
+
+---
+
+## 🧪 Árbol: Elegir Test Apropiado
+
+```mermaid
+graph TD
+    Start["¿Qué parámetro?"] --> Q1{"Tipo"}
+
+    Q1 -->|Media μ| Q2{"¿σ conocida?"}
+    Q1 -->|Proporción p| TP["Test Z proporción"]
+    Q1 -->|Varianza σ²| Q3{"¿Cuántas?"}
+
+    Q2 -->|SÍ| TZ["Test Z<br/>Z = (x̄-μ₀)/(σ/√n)"]
+    Q2 -->|NO| Q4{"¿n ≥ 30?"}
+
+    Q4 -->|SÍ| TZA["Test Z aprox<br/>(usar s)"]
+    Q4 -->|NO| TT["Test t<br/>t = (x̄-μ₀)/(s/√n)"]
+
+    Q3 -->|Una| TChi["Test χ²<br/>χ² = (n-1)s²/σ₀²"]
+    Q3 -->|Dos| TF["Test F<br/>F = s₁²/s₂²"]
+
+    style TZ fill:#ccffcc
+    style TT fill:#ffffcc
+    style TP fill:#ffcccc
+    style TChi fill:#cce5ff
+    style TF fill:#ffe6cc
+```
+
+---
+
+## 🔑 Fórmulas Clave
+
+### Test Z para Media (σ conocida)
+
+$$
+Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \sim N(0,1)
+$$
+
+**Condiciones:** n ≥ 30 o población normal, σ conocida
+
+---
+
+### Test t para Media (σ desconocida)
+
+$$
+t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \sim t_{n-1}
+$$
+
+**Condiciones:** n < 30, población normal, σ desconocida
+
+---
+
+### Test t para Dos Medias
+
+$$
+t = \frac{\bar{x}_1 - \bar{x}_2}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t_{n_1+n_2-2}
+$$
+
+Varianza combinada:
+
+$$
+s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}
+$$
+
+---
+
+### Test t Pareado
+
+$$
+t = \frac{\bar{d}}{s_d / \sqrt{n}} \sim t_{n-1}
+$$
+
+Donde $\bar{d}$ = media de diferencias, $s_d$ = desv. típica
+
+---
+
+### Test F para Varianzas
+
+$$
+F = \frac{s_1^2}{s_2^2} \sim F_{n_1-1, n_2-1}
+$$
+
+**Convención:** Varianza mayor en numerador
+
+---
+
+### Test χ² para Varianza
+
+$$
+\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} \sim \chi^2_{n-1}
+$$
+
+**Uso:** Contrastar H₀: σ² = σ₀²
+
+---
+
+## 📊 Interpretación del P-valor
+
+```mermaid
+graph LR
+    P["P-valor"] --> E["Escala 0 a 1"]
+
+    E --> R1["0.00-0.01<br/>Evidencia MUY FUERTE"]
+    E --> R2["0.01-0.05<br/>Evidencia FUERTE"]
+    E --> R3["0.05-0.10<br/>Evidencia DÉBIL"]
+    E --> R4["0.10-1.00<br/>INSUFICIENTE"]
+
+    style R1 fill:#ff4444
+    style R2 fill:#ff8844
+    style R3 fill:#ffcc44
+    style R4 fill:#88ff88
+```
+
+> "Si H₀ fuera cierta, la probabilidad de observar un resultado tan extremo o más es p-valor"
+
+!!! danger "❌ Interpretación INCORRECTA" - "P(H₀ es cierta) = p-valor" — **¡FALSO!** - "P(H₁ es cierta) = 1 - p-valor" — **¡FALSO!**
+
+---
+
+## 📚 Tabla de Contrastes
+
+| Contraste        | Parámetro | Condiciones      | Estadístico                                             | Distribución      |
+| :--------------- | :-------- | :--------------- | :------------------------------------------------------ | :---------------- |
+| **Z media**      | μ         | σ conocida, n≥30 | $Z = \frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}$             | N(0,1)            |
+| **t media**      | μ         | σ desc., normal  | $t = \frac{\bar{x}-\mu_0}{s/\sqrt{n}}$                  | $t_{n-1}$         |
+| **t dos medias** | μ₁-μ₂     | Indep., normales | $t = \frac{\bar{x}_1-\bar{x}_2}{s_p\sqrt{1/n_1+1/n_2}}$ | $t_{n_1+n_2-2}$   |
+| **t pareado**    | μ_d       | Pareadas         | $t = \frac{\bar{d}}{s_d/\sqrt{n}}$                      | $t_{n-1}$         |
+| **F varianzas**  | σ₁²/σ₂²   | Indep., normales | $F = \frac{s_1^2}{s_2^2}$                               | $F_{n_1-1,n_2-1}$ |
+| **χ² varianza**  | σ²        | Normal           | $\chi^2 = \frac{(n-1)s^2}{\sigma_0^2}$                  | $\chi^2_{n-1}$    |
+
+---
+
+## ✅ Checklist para Contrastes
+
+???+ tip "Pasos sistemáticos"
+
+    **1. Formular Hipótesis**
+
+    - [ ] Escribir H₀ (status quo)
+    - [ ] Escribir H₁ (afirmación a probar)
+    - [ ] Determinar: bilateral/unilateral
+
+    **2. Nivel de Significación**
+
+    - [ ] Elegir α (0.05 o 0.01)
+
+    **3. Identificar Test**
+
+    - [ ] ¿Qué parámetro?
+    - [ ] ¿Se cumplen supuestos?
+    - [ ] Elegir: Z, t, F o χ²
+
+    **4. Calcular Estadístico**
+
+    - [ ] Obtener x̄, s, etc.
+    - [ ] Calcular valor prueba
+
+    **5. P-valor**
+
+    - [ ] Usar tabla o software
+    - [ ] Considerar uni/bilateral
+
+    **6. Decisión**
+
+    - [ ] Comparar p vs α
+    - [ ] Si p < α → Rechazar H₀
+    - [ ] Si p ≥ α → NO rechazar H₀
+
+    **7. Conclusión**
+
+    - [ ] Expresar en contexto
+    - [ ] Indicar nivel confianza
+    - [ ] Mencionar limitaciones
+
+---
+
+## 🎓 Errores Comunes
+
+!!! danger "❌ Evitar"
+
+    1. **"NO rechazar H₀" ≠ "Aceptar H₀"**
+       - Correcto: Evidencia insuficiente
+
+    2. **Mal interpretar p-valor**
+       - ❌ "P(H₀ cierta)"
+       - ✅ "P(datos | H₀ cierta)"
+
+    3. **Test incorrecto**
+       - σ conocida → Z
+       - σ desc. + n<30 → t
+       - Verificar normalidad
+
+    4. **Confundir uni/bilateral**
+       - "¿Diferente?" → Bilateral
+       - "¿Mayor?" → Unilateral derecha
+       - "¿Menor?" → Unilateral izquierda
+
+    5. **Olvidar grados libertad**
+       - t: gl = n-1
+       - t dos muestras: gl = n₁+n₂-2
+       - F: gl = (n₁-1, n₂-1)
+
+---
+
+## 🚀 Ejemplo Completo
+
+**Problema:** ¿El tiempo medio de ejecución es 45 ms? Muestra: n=15, $\bar{x}=42.3$ ms, $s=5.8$ ms. Usar α=0.05.
+
+**Solución:**
+
+1. **Hipótesis:**
+
+   - H₀: μ = 45 ms
+   - H₁: μ ≠ 45 ms (bilateral)
+
+2. **Nivel:** α = 0.05
+
+3. **Test:** t de Student (σ desc., n<30)
+
+4. **Estadístico:**
+
+$$
+t = \frac{42.3 - 45}{5.8/\sqrt{15}} = \frac{-2.7}{1.498} \approx -1.80
+$$
+
+5. **GL:** n-1 = 14
+
+6. **Valor crítico:** $t_{0.025,14} = 2.145$
+
+7. **Decisión:** $|t| = 1.80 < 2.145$ → NO rechazar H₀
+
+8. **Conclusión:**
+
+> "Con α=0.05, NO hay evidencia suficiente para afirmar que el tiempo medio difiere de 45 ms."
+
+---
+
+## 📚 Para Profundizar
+
+- [Introducción a contrastes](introduccion-contrastes-hipotesis.md) — Conceptos básicos
+- [Hipótesis nula/alternativa](hipotesis-nula-alternativa.md) — Formulación
+- [Errores y significación](errores-nivel-significacion.md) — Tipos I y II
+- [P-valor](p-valor.md) — Interpretación detallada
+- [Contrastes media](contrastes-media.md) — Tests Z y t
+- [Contrastes varianza](contrastes-varianza.md) — Tests F y χ²
+- [Ejercicios UD6](ejercicios.md) — Práctica con soluciones
