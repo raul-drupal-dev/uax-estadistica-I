@@ -52,3 +52,13 @@
   - [Contrastes de hipótesis para la media](ud6/contrastes-media.md)
   - [Contrastes de hipótesis para la varianza](ud6/contrastes-varianza.md)
   - [Ejercicios — UD6](ud6/ejercicios.md)
+
+- UD7 — Introducción a R y RStudio
+
+  - [¿Qué es R y por qué lo usamos?](ud7/introduccion.md)
+  - [Instalación y configuración de R y RStudio](ud7/instalacion-configuracion.md)
+  - [Comandos básicos en R](ud7/comandos-basicos.md)
+  - [Ejercicios prácticos](ud7/ejercicios.md)
+  - [Comandos avanzados: vectores, dataframes y listas](ud7/comandos-avanzados.md)
+  - [Resumen UD7](ud7/resumen.md)
+  - [Examen UD7 (medio)](ud7/examen-ud7-practica.md)

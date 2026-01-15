@@ -94,6 +94,9 @@ nav:
       - UD4 - Modelos de probabilidad: ud4/resumen.md
       - UD5 - Inferencia avanzada: ud5/resumen.md
       - UD6 - Contrastes de hipótesis: ud6/introduccion-contrastes-hipotesis.md
+      - UD7 - Introducción a R y RStudio: ud7/introduccion.md
+      - Recursos: recursos/desc_div.md
+      - Examenes: examenes/examen-guia-estudio.md
   - UD1 — Introducción a la Estadística:
       - Introducción: ud1/introduccion.md
       - Tipos de datos: ud1/tipos-datos.md
@@ -145,6 +148,18 @@ nav:
       - Contrastes para la varianza: ud6/contrastes-varianza.md
       - Ejercicios — UD6: ud6/ejercicios.md
       - Examen UD6 (medio): ud6/examen-ud6-practica.md
+  - UD7 — Introducción a R y RStudio:
+      - ¿Qué es R y por qué lo usamos?: ud7/introduccion.md
+      - Instalación y configuración: ud7/instalacion-configuracion.md
+      - Comandos básicos: ud7/comandos-basicos.md
+      - Ejercicios prácticos: ud7/ejercicios.md
+      - Comandos avanzados: ud7/comandos-avanzados.md
+      - Resumen UD7: ud7/resumen.md
+      - Examen UD7 (medio): ud7/examen-ud7-practica.md
   - Recursos:
       - Descriptiva bivariante: recursos/desc_div.md
       - Examen 1: recursos/examen1.md
+  - Examen General Final:
+      - Guía de Estudio: examenes/examen-guia-estudio.md
+      - Examen Completo: examenes/examen-general-final.md
+      - Examen Alternativo: examenes/examen-general-alternativo.md
