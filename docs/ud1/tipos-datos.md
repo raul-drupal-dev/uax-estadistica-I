@@ -1,8 +1,8 @@
 title: "Tipos de datos: cualitativos y cuantitativos"
 slug: "ud1-tipos-datos"
-date: "2025-11-16"
-authors: ["Profesor Ejemplo"]
-tags: ["ud1","datos","tipos"]
+date: "2026-01-14"
+authors: ["Profesor UAX"]
+tags: ["ud1", "tipos-datos", "cualitativo", "cuantitativo", "variables"]
 difficulty: "intro"
 type: "definicion"
 prerequisitos: ["ud1-introduccion"]
@@ -11,72 +11,169 @@ prerequisitos: ["ud1-introduccion"]
 
 ## Objetivo
 
-:mag: Diferenciar datos cualitativos y cuantitativos y sus subtipos, con ejemplos y ejercicios variados.
+✨ Clasificar correctamente los datos como **cualitativos o cuantitativos** y sus subtipos, entendiendo qué técnicas de análisis se aplican a cada uno.
 
-## Definición
+## Idea Clave 💡
 
-Los datos se clasifican en dos grandes grupos: cualitativos (categóricos) y cuantitativos (numéricos). A continuación se describen brevemente sus subgrupos y ejemplos.
+El **tipo de dato determina qué análisis puedes hacer**. No puedes calcular una media de colores (cualitativo), ni hacer un gráfico de barras tiene sentido para tiempo exacto (cuantitativo continuo). Esta clasificación es el **primer paso** en cualquier análisis estadístico.
 
-- **Datos cualitativos (categóricos)**: describen cualidades o categorías.
+---
 
-    - **Nominales**: categorías sin orden inherente (p. ej., color de ojos: azul, verde, marrón). Útiles para tablas de frecuencia y gráficos de barras/pastel.
-    - **Ordinales**: categorías con un orden significativo pero sin magnitud numérica precisa entre niveles (p. ej., nivel educativo: primaria < secundaria < universidad, o escalas de satisfacción 1–5). Pueden resumirse con medianas/percentiles o tablas ordenadas; en algunos análisis se tratan como numéricos si se asume intervalo aproximado.
+## Datos Cualitativos (Categóricos)
 
-- **Datos cuantitativos (numéricos)**: representan cantidades y permiten operaciones aritméticas.
-    - **Discretos**: toman valores enteros contables (p. ej., número de hijos, número de llamadas). Se resumen con conteos, media, mediana y desviación típica si procede.
-    - **Continuos**: pueden tomar cualquier valor dentro de un intervalo (p. ej., altura en cm, tiempo en segundos). Se resumen con media, mediana, desviación estándar, histogramas y densidades.
+### Nominales
 
-Nota: la elección de técnicas de resumen y análisis depende del tipo de dato y del objetivo del estudio.
+**Definición:** Categorías **sin orden inherente**. Son simplemente etiquetas que clasifican en grupos distintos.
 
-Para una descripción más sistemática de las escalas de medición (nominal, ordinal, intervalo, razón) y recomendaciones prácticas sobre transformaciones para análisis y ML, ver la página dedicada: [Escalas de medición](./escalas-medicion.md).
+**Característica clave:** No existe relación de magnitud entre categorías.
 
-## Intuición y ejemplos
+**Ejemplos:**
+- 🎨 Color de ojos: azul, verde, marrón
+- 🚗 Marca de coche: Toyota, BMW, Audi
+- 🌍 País de residencia: España, Francia, Alemania
+- 💼 Sector industrial: tecnología, salud, manufactura
 
-- Cualitativo nominal: color de coche (rojo, azul, negro).
-- Cualitativo ordinal: nivel educativo (primaria, secundaria, universidad).
-- Cuantitativo discreto: número de hijos (0,1,2...).
-- Cuantitativo continuo: altura en cm, peso en kg.
+**Análisis apropiado:**
+- Tabla de frecuencias
+- Gráfico de barras o pastel
+- Moda (valor más frecuente)
+- NO: media, mediana, desviación típica
 
-## Ejercicios (variados)
+---
 
-1.  Clasifica las siguientes variables como cualitativa/cuantitativa y, si procede, su subtipo:
+### Ordinales
 
-    a) Número de llamadas telefónicas recibidas por día.
+**Definición:** Categorías **con orden significativo**, pero **sin magnitud numérica precisa** entre niveles.
 
-    b) Estado civil (soltero, casado, divorciado).
+**Característica clave:** Hay un ranking, pero las "distancias" entre niveles no son iguales.
 
-    c) Temperatura ambiente en ºC.
+**Ejemplos:**
+- 📚 Nivel educativo: Primaria < Secundaria < Universidad < Doctorado
+- ⭐ Satisfacción del cliente: Muy Insatisfecho < Insatisfecho < Neutro < Satisfecho < Muy Satisfecho
+- 🏆 Clasificación de películas: Mala < Regular < Buena < Excelente
+- 🏥 Severidad de enfermedad: Leve < Moderada < Severa
 
-    d) Nivel de satisfacción del cliente en escala 1–5.
+**Análisis apropiado:**
+- Tabla de frecuencias **ordenada**
+- Gráfico de barras con orden respetado
+- **Mediana** y percentiles (sí)
+- Media (controversial, solo si asumimos intervalos iguales)
+- NO: desviación típica estándar
 
-    ??? example "Respuestas ejercicio 1"
+!!! warning "Cuidado"
+    Muchos análisis tratan escalas de satisfacción 1–5 **como si fueran cuantitativas** asumiendo que la diferencia entre 1 y 2 es la misma que entre 4 y 5. Esto es una **simplificación** útil pero técnicamente incorrecta.
 
-        a) Número de llamadas telefónicas: cuantitativa discreta.
+---
 
-        b) Estado civil: cualitativa nominal.
+## Datos Cuantitativos (Numéricos)
 
-        c) Temperatura: cuantitativa continua.
+### Discretos
 
-        d) Nivel de satisfacción 1–5: cualitativa ordinal (aunque a veces la tratamos como cuantitativa si asumimos intervalos equidistantes).
+**Definición:** Valores **enteros contables**. Representan conteos de elementos indivisibles.
 
-2.  Para cada una de las siguientes situaciones di si la variable es cuantitativa o cualitativa y propone una forma adecuada de resumirla:
+**Característica clave:** Solo ciertos valores específicos son posibles (0, 1, 2, ...). No hay valores intermedios.
 
-    a) Colores preferidos en una encuesta sobre diseño.
+**Ejemplos:**
+- 👨‍👩‍👧‍👦 Número de hijos: 0, 1, 2, 3...
+- 📞 Llamadas telefónicas recibidas: 0, 1, 2, 3...
+- 🛒 Número de compras por cliente: 0, 1, 2, 3...
+- ❌ Errores en un texto: 0, 1, 2, 3...
 
-    b) Tiempo que tarda un envío (en horas).
+**Análisis apropiado:**
+- Media, mediana, desviación típica ✅
+- Gráfico de barras (no histograma)
+- Distribuciones especiales: Poisson, Binomial
+- Frecuencias absolutas y relativas
 
-    ??? example "Respuestas ejercicio 2"
+**Fórmulas aplicables:** Cualquier análisis numérico normal
 
-        a) Colores preferidos: cualitativa nominal — resumen: tabla de frecuencias y gráfico de barras / pastel.
+---
 
-        b) Tiempo de envío: cuantitativa continua — resumen: media, mediana, desviación típica, histograma.
+### Continuos
 
-3.  Clasifica y justifica para cada caso: "edad en años", "número de errores en un texto", "opinión sobre una película (malo/regular/bueno)".
+**Definición:** Valores que pueden ser **cualquier número dentro de un intervalo**. Teóricamente infinitas posibilidades.
 
-    ??? example "Respuestas ejercicio 3"
+**Característica clave:** Precisión limitada por el instrumento de medición (decimales).
 
-        - Edad en años: cuantitativa discreta (si se registra en años enteros) o continua si se registra en decimales.
+**Ejemplos:**
+- 📏 Altura en cm: 170.5, 175.2, 182.1... (infinitas posibilidades)
+- ⏱️ Tiempo en segundos: 12.34, 45.678, 89.012... 
+- 🌡️ Temperatura en ºC: 20.5, 22.3, 25.8...
+- 💰 Salario mensual en €: 1234.56, 2567.89...
 
-        - Número de errores en un texto: cuantitativa discreta.
+**Análisis apropiado:**
+- Media, mediana, desviación típica, varianza ✅
+- Histograma o gráfico de densidad
+- Distribuciones continuas: Normal, t, F, Chi-cuadrado
+- Intervalos de confianza
+- Regresión lineal
+
+---
+
+## Tabla Comparativa: Clasificación Completa
+
+| **Tipo** | **Subtipo** | **Orden** | **Magnitud** | **Ejemplo** | **Análisis** |
+|:---:|:---:|:---:|:---:|:---|:---|
+| 🔤 Cualitativo | Nominal | ❌ | ❌ | Color ojos | Frecuencias, moda, gráfico barras |
+| 🔤 Cualitativo | Ordinal | ✅ | ❌ | Satisfacción 1-5 | Mediana, percentiles, tablas |
+| 🔢 Cuantitativo | Discreto | - | ✅ | Nº hijos | Media, desv. típica, Poisson |
+| 🔢 Cuantitativo | Continuo | - | ✅ | Altura en cm | Media, histograma, regresión |
+
+---
+
+## Flujo de Decisión: ¿Qué tipo es mi variable?
+
+```mermaid
+graph TD
+    A["¿Es contable/cuantificable?"] -->|NO| B["🔤 CUALITATIVO"]
+    A -->|SÍ| C["🔢 CUANTITATIVO"]
+    B --> D{"¿Existe orden<br/>entre categorías?"}
+    D -->|NO| E["📍 NOMINAL<br/>(colores, marcas, países)"]
+    D -->|SÍ| F["📊 ORDINAL<br/>(educación, satisfacción)"]
+    C --> G{"¿Solo números<br/>enteros?"}
+    G -->|SÍ| H["🔢 DISCRETO<br/>(conteos, errores)"]
+    G -->|NO| I["📈 CONTINUO<br/>(altura, tiempo, temperatura)"]
+```
+
+---
+
+## Ejemplos Prácticos: Clasificación Paso a Paso
+
+### Ejemplo 1: Número de horas estudiadas
+- ¿Cuantitativo? ✅ Sí, es un número
+- ¿Discreto o continuo? Se registra en horas/minutos → **Continuo**
+- ✅ Análisis: media, histograma, regresión
+
+### Ejemplo 2: Satisfacción con un producto (escala 1-5)
+- ¿Cuantitativo? 📊 Parece numérico pero son categorías ordenadas → **Ordinal**
+- ¿Análisis? Mediana es mejor que media (aunque muchos usan media por simplicidad)
+
+### Ejemplo 3: Número de defectos en un lote
+- ¿Cuantitativo? ✅ Sí, es contable
+- ¿Discreto o continuo? Solo números enteros → **Discreto**
+- ✅ Análisis: media, Poisson, control de calidad
+
+### Ejemplo 4: Temperatura ambiente
+- ¿Cuantitativo? ✅ Sí
+- ¿Discreto o continuo? Puede tomar decimales → **Continuo**
+- ✅ Análisis: media, desv. típica, histograma
+
+---
+
+## 💡 Tips Prácticos
+
+!!! tip "Pregunta Clave"
+    **¿Tiene sentido calcular la media de mi variable?**
+    - Sí → Cuantitativa (continua o discreta)
+    - No → Cualitativa (nominal u ordinal)
+
+!!! note "Relación con Escalas de Medición"
+    Esta clasificación se complementa con las **escalas de medición** (nominal, ordinal, intervalo, razón). Ver [Escalas de medición](./escalas-medicion.md) para más detalles.
+
+!!! warning "Error Común"
+    Los códigos numéricos (1=Bajo, 2=Medio, 3=Alto) **no son cuantitativos** solo porque sean números. Sigue siendo **ordinal** porque los números son solo etiquetas con orden.
+
+!!! tip "Análisis Apropiado"
+    Elige siempre el análisis según el tipo de datos, no según lo que "se pueda" hacer. La media de códigos ordinales puede ser matemáticamente correcta pero **estadísticamente sin sentido**.
 
         - Opinión sobre una película: cualitativa ordinal.

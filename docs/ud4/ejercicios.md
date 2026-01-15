@@ -1,6 +1,6 @@
 title: "UD4 — Ejercicios de modelos de probabilidad"
 slug: "ud4-ejercicios"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo","Raul Jimenez"]
 tags: ["ud4","ejercicios","discretas","continuas","chi-cuadrado","t","f"]
 difficulty: "intermedio"
@@ -9,9 +9,13 @@ prerequisitos: ["ud4/distribuciones-discretas.md","ud4/distribuciones-continuas.
 
 ---
 
-## Tarea
+## Objetivo
 
-Resuelve los siguientes ejercicios. Cada solución está desplegable. Refiérete a las fórmulas clave en los artículos de la UD4.
+✨ Practicar el cálculo de probabilidades con distribuciones discretas, continuas y derivadas de la normal. Aplicar conceptos clave: binomial, Poisson, Normal, TCL, χ², t y F.
+
+## Instrucciones
+
+Resuelve cada ejercicio mostrando todos tus cálculos. Haz clic en "Solución" para ver la respuesta. Consulta las fórmulas en los artículos correspondientes de UD4.
 
 ---
 

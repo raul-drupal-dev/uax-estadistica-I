@@ -69,12 +69,18 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
 
 extra_javascript:
   # MathJax v3 para renderizar LaTeX ($...$, $$...$$) en el sitio generado.
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Mermaid para diagramas (flujos, árboles, etc.)
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
 copyright: Copyright &copy; 2025 Creado por Raul Jimenez Morales.
 
@@ -86,6 +92,11 @@ nav:
       - UD2 - Probabilidad y distribuciones: ud2/eventos-y-probabilidad.md
       - UD3 - Inferencia y regresión: ud3/estimacion-y-intervalos.md
       - UD4 - Modelos de probabilidad: ud4/resumen.md
+      - UD5 - Inferencia avanzada: ud5/resumen.md
+      - UD6 - Contrastes de hipótesis: ud6/introduccion-contrastes-hipotesis.md
+      - UD7 - Introducción a R y RStudio: ud7/introduccion.md
+      - Recursos: recursos/desc_div.md
+      - Examenes: examenes/examen-guia-estudio.md
   - UD1 — Introducción a la Estadística:
       - Introducción: ud1/introduccion.md
       - Tipos de datos: ud1/tipos-datos.md
@@ -101,10 +112,11 @@ nav:
       - Examen UD1 (medio): ud1/examen-ud1-practica.md
   - UD2 — Probabilidad y distribuciones:
       - Eventos y probabilidad: ud2/eventos-y-probabilidad.md
+      - Variables aleatorias: ud2/variables-aleatorias.md
       - Distribuciones discretas: ud2/distribuciones-discretas.md
       - Distribuciones continuas: ud2/distribuciones-continuas.md
-      - Variables aleatorias: ud2/variables-aleatorias.md
       - Ejercicios — UD2: ud2/ejercicios.md
+      - Resumen UD2: ud2/resumen.md
       - Examen UD2 (medio): ud2/examen-ud2-practica.md
   - UD3 — Inferencia y regresión:
       - Estimación e intervalos: ud3/estimacion-y-intervalos.md
@@ -127,6 +139,27 @@ nav:
       - Contrastes de hipótesis: ud5/contrastes-hipotesis.md
       - Ejercicios — UD5: ud5/ejercicios.md
       - Examen UD5 (medio): ud5/examen-ud5.md
+  - UD6 — Contrastes de hipótesis:
+      - Introducción a los contrastes: ud6/introduccion-contrastes-hipotesis.md
+      - Hipótesis nula y alternativa: ud6/hipotesis-nula-alternativa.md
+      - Errores y nivel de significación: ud6/errores-nivel-significacion.md
+      - P-valor y regla de decisión: ud6/p-valor.md
+      - Contrastes para la media: ud6/contrastes-media.md
+      - Contrastes para la varianza: ud6/contrastes-varianza.md
+      - Ejercicios — UD6: ud6/ejercicios.md
+      - Examen UD6 (medio): ud6/examen-ud6-practica.md
+  - UD7 — Introducción a R y RStudio:
+      - ¿Qué es R y por qué lo usamos?: ud7/introduccion.md
+      - Instalación y configuración: ud7/instalacion-configuracion.md
+      - Comandos básicos: ud7/comandos-basicos.md
+      - Ejercicios prácticos: ud7/ejercicios.md
+      - Comandos avanzados: ud7/comandos-avanzados.md
+      - Resumen UD7: ud7/resumen.md
+      - Examen UD7 (medio): ud7/examen-ud7-practica.md
   - Recursos:
       - Descriptiva bivariante: recursos/desc_div.md
       - Examen 1: recursos/examen1.md
+  - Examen General Final:
+      - Guía de Estudio: examenes/examen-guia-estudio.md
+      - Examen Completo: examenes/examen-general-final.md
+      - Examen Alternativo: examenes/examen-general-alternativo.md

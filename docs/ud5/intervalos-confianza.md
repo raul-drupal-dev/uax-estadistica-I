@@ -1,6 +1,6 @@
 title: "UD5 — Intervalos de confianza"
 slug: "ud5-intervalos-confianza"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo","Raul Jimenez"]
 tags: ["ud5","intervalos","ic","media","proporcion","varianza","tamanio-muestral"]
 difficulty: "intermedio"
@@ -11,7 +11,7 @@ prerequisitos: ["ud5/estimacion-puntual.md","ud4/distribuciones-derivadas-normal
 
 ## Objetivo
 
-Construir intervalos de confianza para media, proporción y varianza, interpretar correctamente el nivel de confianza y estimar tamaños muestrales.
+✨ Construir intervalos de confianza (IC) para media, proporción y varianza. Interpretar correctamente el nivel de confianza y estimar tamaños muestrales para diseño de estudios.
 
 ---
 

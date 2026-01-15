@@ -1,15 +1,23 @@
 ---
 title: "Examen UD4 — Modelos de probabilidad (medio)"
+slug: "ud4-examen"
+date: "2026-01-14"
+authors: ["Profesor Ejemplo"]
+tags: ["ud4", "examen", "evaluación", "probabilidad"]
+difficulty: "intermedio"
+type: "examen"
 ---
 
 # Examen UD4 — Modelos de probabilidad
 
-Duración estimada: 45 minutos.
+**Duración:** 45 minutos | **Dificultad:** Media | **Formato:** Opción múltiple
 
-**Instrucciones**
+## Instrucciones
 
-- Responde marcando la opción correcta (a, b, c, d). Puede haber más de una correcta: marca todas las que correspondan.
-- En las preguntas de cálculo se pide elegir la(s) opción(es) correcta(s); debajo de cada pregunta se incluye la solución desarrollada para estudiar.
+- Responde marcando la(s) opción(es) correcta(s) (puede haber más de una).
+- Cada pregunta tiene un cálculo desarrollado para estudiar.
+- Consulta fórmulas en artículos UD4 si es necesario.
+- **Consejo:** Revisa las trampas comunes en cada distribución antes de responder.
 
 ---
 

@@ -1,6 +1,6 @@
 title: "UD5 — Ejercicios"
 slug: "ud5-ejercicios"
-date: "2025-12-29"
+date: "2026-01-14"
 authors: ["Profesor Ejemplo","Raul Jimenez"]
 tags: ["ud5","ejercicios","estimacion","contrastes"]
 difficulty: "medio"
@@ -8,6 +8,10 @@ type: "ejercicios"
 prerequisitos: ["ud5/estimacion-puntual.md","ud5/intervalos-confianza.md","ud5/contrastes-hipotesis.md"]
 
 ---
+
+## Objetivo
+
+✨ Practicar cálculos de estimadores puntuales, intervalos de confianza y contrastes de hipótesis. Aplicar conceptos en problemas reales de inferencia estadística.
 
 ## Práctica guiada
 
