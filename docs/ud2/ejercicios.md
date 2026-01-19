@@ -97,18 +97,25 @@ Una variable aleatoria X toma valores:
 ???+ example "Solución — Ejercicio 3"
 
     **Esperanza:**
+
     $$E[X] = 1(0.1) + 2(0.3) + 3(0.4) + 4(0.2)$$
+
     $$= 0.1 + 0.6 + 1.2 + 0.8 = 2.7$$
 
     **Segundo momento:**
+
     $$E[X^2] = 1^2(0.1) + 2^2(0.3) + 3^2(0.4) + 4^2(0.2)$$
+
     $$= 1(0.1) + 4(0.3) + 9(0.4) + 16(0.2)$$
+
     $$= 0.1 + 1.2 + 3.6 + 3.2 = 8.1$$
 
     **Varianza:**
+
     $$\text{Var}(X) = E[X^2] - (E[X])^2 = 8.1 - (2.7)^2 = 8.1 - 7.29 = 0.81$$
 
     **Desviación típica:**
+
     $$\sigma = \sqrt{0.81} = 0.9$$
 
 ---
@@ -130,21 +137,29 @@ Lanzas una moneda justa 10 veces. X = número de caras.
     X ~ Binomial(n=10, p=0.5)
 
     **a) P(X = 5):**
+
     $$P(X=5) = \binom{10}{5} (0.5)^5 (0.5)^5 = 252 \times (0.5)^{10}$$
+
     $$= 252 \times 0.00098 ≈ 0.246$$
 
     **b) P(X ≤ 3):**
+
     $$P(X \leq 3) = P(X=0) + P(X=1) + P(X=2) + P(X=3)$$
 
     $$P(X=0) = \binom{10}{0}(0.5)^{10} ≈ 0.00098$$
+
     $$P(X=1) = \binom{10}{1}(0.5)^{10} = 10 \times 0.00098 ≈ 0.00977$$
+
     $$P(X=2) = \binom{10}{2}(0.5)^{10} = 45 \times 0.00098 ≈ 0.04395$$
+
     $$P(X=3) = \binom{10}{3}(0.5)^{10} = 120 \times 0.00098 ≈ 0.11719$$
 
     $$P(X \leq 3) ≈ 0.00098 + 0.00977 + 0.04395 + 0.11719 ≈ 0.172$$
 
     **c) Momentos:**
+
     $$E[X] = np = 10 \times 0.5 = 5$$
+
     $$\text{Var}(X) = np(1-p) = 10 \times 0.5 \times 0.5 = 2.5$$
 
 ---
@@ -164,18 +179,25 @@ En una fábrica, 3% de piezas salen defectuosas. Revisas un lote de 50 piezas.
     X ~ Binomial(n=50, p=0.03)
 
     **a) Esperanza:**
+
     $$E[X] = np = 50 \times 0.03 = 1.5$$
 
     Esperamos 1-2 defectos por lote.
 
     **b) P(X = 2):**
+
     $$P(X=2) = \binom{50}{2}(0.03)^2(0.97)^{48}$$
+
     $$= \frac{50 \times 49}{2} \times 0.0009 \times 0.2223$$
+
     $$= 1225 \times 0.0009 \times 0.2223 ≈ 0.245$$
 
     **c) P(X ≥ 1):**
+
     $$P(X \geq 1) = 1 - P(X=0)$$
+
     $$P(X=0) = \binom{50}{0}(0.03)^0(0.97)^{50} = (0.97)^{50} ≈ 0.222$$
+
     $$P(X \geq 1) ≈ 1 - 0.222 = 0.778$$
 
 ---
@@ -197,15 +219,19 @@ Un call center recibe en promedio 5 llamadas por minuto. X = número de llamadas
     X ~ Poisson(λ = 5)
 
     **a) P(X = 3):**
+
     $$P(X=3) = e^{-5} \frac{5^3}{3!} = e^{-5} \times \frac{125}{6}$$
+
     $$= 0.0067 \times 20.83 ≈ 0.140$$
 
     **b) P(X = 0):**
+
     $$P(X=0) = e^{-5} \times \frac{5^0}{0!} = e^{-5} ≈ 0.0067$$
 
     Muy raro (0.67%) que no haya llamadas en 1 minuto.
 
     **c) P(X > 5):**
+
     $$P(X > 5) = 1 - P(X \leq 5)$$
 
     Calcular P(X ≤ 5) sumando P(0) + P(1) + ... + P(5):
@@ -217,6 +243,7 @@ Un call center recibe en promedio 5 llamadas por minuto. X = número de llamadas
     - P(5) = e^(-5) × 3125/120 ≈ 0.1755
 
     $$P(X \leq 5) ≈ 0.616$$
+    
     $$P(X > 5) ≈ 0.384$$
 
 ---

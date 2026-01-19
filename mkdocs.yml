@@ -109,6 +109,7 @@ nav:
       - "Medias: geométrica y armónica": ud1/medias-geometricas.md
       - Representación gráfica: ud1/representacion-visual.md
       - Ejercicios — UD1: ud1/ejercicios.md
+      - Resumen UD1: ud1/resumen.md
       - Examen UD1 (medio): ud1/examen-ud1-practica.md
   - UD2 — Probabilidad y distribuciones:
       - Eventos y probabilidad: ud2/eventos-y-probabilidad.md
@@ -123,6 +124,7 @@ nav:
       - Pruebas de hipótesis: ud3/pruebas-hipotesis.md
       - Regresión lineal simple: ud3/regresion-simple.md
       - Ejercicios — UD3: ud3/ejercicios.md
+      - Resumen UD3: ud3/resumen.md
       - Examen UD3 (medio): ud3/examen-ud3-practica.md
   - UD4 — Modelos de probabilidad:
       - Resumen: ud4/resumen.md
@@ -147,6 +149,7 @@ nav:
       - Contrastes para la media: ud6/contrastes-media.md
       - Contrastes para la varianza: ud6/contrastes-varianza.md
       - Ejercicios — UD6: ud6/ejercicios.md
+      - Resumen UD6: ud6/resumen.md
       - Examen UD6 (medio): ud6/examen-ud6-practica.md
   - UD7 — Introducción a R y RStudio:
       - ¿Qué es R y por qué lo usamos?: ud7/introduccion.md
