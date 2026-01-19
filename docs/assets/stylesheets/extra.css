@@ -6,6 +6,7 @@
     -webkit-overflow-scrolling: touch; /* Suavidad en móviles */
 }
 
+/* Permite scroll vertical en el menú de navegación lateral (sidebar) */
 /* Reglas del sidebar: aplicar solo en pantallas grandes para no romper el colapso mobile */
 @media (min-width: 768px) {
     .md-sidebar--primary .md-sidebar__scrollwrap {
@@ -27,17 +28,25 @@
         width: 6px;
     }
 
-    .md-sidebar--primary .md-sidebar__scrollwrap::-webk    .md-sidebar--primary .md-sidebar__scrollwrap::-webk   }
-    .md-sidebarr-    .md-sidebarr-bar__scrollwrap::-webkit-scrollbar-thumb {
-                                                           us: 3px;
-    }    }    }    }    }    }    }    }    }    }    }    }    }    }    }    }    }    }    }  background: rgba(0, 0, 0, 0.3);
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3);
     }
 
     /* Para modo oscuro */
     [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    [data-md-color-schea(2    [data-md-color-schea(
+        background: rgba(255, 255, 255, 0.2);
+    }
 
-    [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__sc    wrap::-webkit-scrollbar-thumb:hover {
+    [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.3);
     }
 }
