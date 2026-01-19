@@ -427,6 +427,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Concepto clave:** En un análisis de regresión, la variable independiente (o explicativa) es aquella que se usa para explicar o predecir otra variable.
 
     **Análisis:**
+    
     - Experiencia laboral → Influye sobre el salario (variable independiente) ✓
     - Salario mensual → Es lo que queremos explicar (variable dependiente)
     - Edad y nivel educativo → Podrían ser covariables, pero el problema pregunta sobre la relación principal
@@ -436,11 +437,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 2 — Diferencia entre Distribuciones Discreta y Continua"
 
     **Distribución Discreta:**
+    
     - Toma valores aislados y contables
     - Ejemplo: Número de clientes (0, 1, 2, 3, ...)
     - Función de probabilidad: P(X = k)
 
     **Distribución Continua:**
+    
     - Toma cualquier valor dentro de un rango
     - Ejemplo: Altura (170.5, 170.543, 170.5432, ...)
     - Función de densidad: f(x), P(a < X < b)
@@ -452,10 +455,12 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Fórmula:** X ~ N(μ, σ²)
 
     **Interpretación de σ:**
+    
     - σ pequeña → Datos concentrados alrededor de μ → Campana estrecha
     - σ grande → Datos dispersos → Campana ancha
 
     **Visualización:**
+    
     ```
     σ = 1: [pico muy estrecho]
     σ = 5: [pico muy ancho]
@@ -468,11 +473,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Contraste bilateral:** H₁: μ ≠ μ₀
 
     **Distribución:**
+    
     - Total α = 0.05
     - Se divide en dos colas simétricamente
     - Cada cola: α/2 = 0.025
 
     **Regla de decisión:**
+    
     - Rechazar H₀ si t < -t₀.₀₂₅ o t > t₀.₀₂₅
 
     **Respuesta:** 0.025 en la cola derecha, 0.025 en la cola izquierda
@@ -480,11 +487,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 5 — Parámetro vs Estadístico"
 
     **Parámetro:** Característica de la POBLACIÓN
+    
     - Notación: μ (media), σ (desviación típica), ρ (correlación)
     - Es fijo pero desconocido
     - Se estima con muestras
 
     **Estadístico:** Característica de la MUESTRA
+    
     - Notación: x̄ (media muestral), s (desviación muestral), r (correlación muestral)
     - Varía según la muestra
     - Se usa para estimar parámetros
@@ -496,15 +505,18 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 6 — Ordenada en Regresión ŷ = β₀ + β₁x"
 
     **Componentes:**
+    
     - β₀ = Ordenada en el origen (intercept)
     - β₁ = Pendiente (slope)
 
     **Interpretación de β₀:**
+    
     $$\hat{y} = \beta_0 + \beta_1(0) = \beta_0$$
 
     Es el valor predicho cuando x = 0.
 
     **Ejemplo:** Si ŷ = 10 + 2x:
+    
     - Cuando x = 0: ŷ = 10 (ordenada)
     - Cuando x = 5: ŷ = 20 (predicción)
 
@@ -515,11 +527,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Definición:** $$R^2 = \frac{\text{Varianza explicada por modelo}}{\text{Varianza total}}$$
 
     **Propiedades:**
+    
     - Rango: 0 ≤ R² ≤ 1
     - Interpretación: Porcentaje de variabilidad explicada
     - R² = 0.75 → 75% explicado, 25% por otros factores
 
     **Ejemplos:**
+    
     - R² = 0.95 → Excelente ajuste
     - R² = 0.50 → Ajuste moderado
     - R² = 0.10 → Ajuste muy pobre
@@ -529,11 +543,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 8 — Gráfico de Barras vs Histograma"
 
     **Histograma:**
+    
     - Para datos CONTINUOS agrupados en intervalos
     - Barras adyacentes sin espacios
     - Ejemplo: Distribución de alturas en intervalos [160-170), [170-180), etc.
 
     **Gráfico de Barras:**
+    
     - Para datos CATEGÓRICOS o DISCRETOS
     - Barras separadas
     - Ejemplo: Preferencia por marca (A, B, C), género (H, M, NB)
@@ -561,15 +577,18 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Problema de extrapolación:**
 
     Dentro del rango observado [a, b]:
+    
     - La recta se ajusta bien a los datos
     - Las predicciones son confiables
 
     Fuera del rango [a, b] (extrapolación):
+    
     - La recta continúa indefinidamente
     - Pueden violarse restricciones naturales (ej. predicción negativa para precios)
     - El patrón real puede no ser lineal
 
     **Ejemplo:**
+    
     - Datos de altura vs. edad: 5-20 años
     - Predicción para 100 años → absurda
 
@@ -578,14 +597,17 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 11 — Interpretación Frecuentista de IC"
 
     **Interpretación CORRECTA (frecuentist):**
+    
     "Si repetiéramos el muestreo 100 veces, ~90 intervalos contendrían la media poblacional."
 
     **Interpretación INCORRECTA (bayesiana):**
     "Hay 90% de probabilidad de que la media esté en [45, 55]"
+    
     - Incorrecta: El parámetro es fijo, no variable aleatoria
     - Es el intervalo el que varía, no la media
 
     **Visualización:**
+    
     ```
     Muestra 1: [45, 55] contiene μ ✓
     Muestra 2: [44, 54] contiene μ ✓
@@ -601,6 +623,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Fórmula:** $$SE = \frac{\sigma}{\sqrt{n}}$$
 
     **Ejemplo numérico:**
+    
     - Si σ = 10 y n = 100: SE = 10/10 = 1
     - Si σ = 10 y n = 400: SE = 10/20 = 0.5 (reducción)
     - Si σ = 10 y n = 900: SE = 10/30 ≈ 0.33 (más reducción)
@@ -616,11 +639,13 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Prueba t de Student:** Diseñada para muestras pequeñas (n < 30) con σ desconocida
 
     **Supuestos principales:**
+    
     1. **CRÍTICO: Normalidad aproximada** → Los datos deben provenir ~N
     2. Independencia de observaciones
     3. σ desconocida (pero estimada con s)
 
     **Robustez:**
+    
     - La prueba t es robusta a desviaciones moderadas de normalidad
     - Con muestras más grandes, es más tolerante
     - Muy sensible a valores atípicos extremos
@@ -630,12 +655,15 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 14 — Media de Datos Agrupados"
 
     **Datos:**
+
     | Intervalo | [10, 15) | [15, 20) | [20, 25) | [25, 30) | [30, 35) | [35, 40) |
+    |:--------:|:-----:|:-----:|:---------------:|:-----:|:-----:|:---------------:|
     | Frecuencia | 15 | 35 | 65 | 50 | 25 | 10 |
 
     **Tabla auxiliar (usando puntos medios):**
-    | Intervalo | xi | fi | fi·xi |
-    |:-:|:-:|:-:|:-:|
+
+    | Intervalo | $x_i$ | $f_i$ | $f_i \cdot x_i$ |
+    |:--------:|:-----:|:-----:|:---------------:|
     | [10, 15) | 12.5 | 15 | 187.5 |
     | [15, 20) | 17.5 | 35 | 612.5 |
     | [20, 25) | 22.5 | 65 | 1,462.5 |
@@ -645,6 +673,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     | **Total** | | **200** | **4,825.0** |
 
     **Cálculo:**
+
     $$\bar{x} = \frac{\sum f_i x_i}{N} = \frac{4,825}{200} = 24.125 \text{ minutos}$$
 
     **Respuesta:** 24.125 minutos
@@ -654,12 +683,14 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Posición:** N/2 = 200/2 = 100
 
     **Localización:** La frecuencia acumulada:
+    
     - Hasta [15, 20): 15 + 35 = 50 (insuficiente)
     - Hasta [20, 25): 50 + 65 = 115 (contiene posición 100) ✓
 
     **Clase mediana:** [20, 25)
 
     **Fórmula de interpolación:**
+
     $$\text{Med} = L + \frac{\frac{N}{2} - F_a}{f_m} \cdot h$$
 
     Donde:
@@ -670,6 +701,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     - h = 5 (amplitud)
 
     **Cálculo:**
+    
     $$\text{Med} = 20 + \frac{100 - 50}{65} \cdot 5 = 20 + \frac{250}{65} = 20 + 3.846 = 23.846 \approx 23.85$$
 
     **Respuesta:** 23.85 minutos
@@ -679,6 +711,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Fórmula:** $$\sigma^2 = \frac{\sum f_i x_i^2}{N} - \bar{x}^2$$
 
     **Tabla auxiliar (extensión anterior):**
+    
     | Intervalo | xi | fi | xi² | fi·xi² |
     |:-:|:-:|:-:|:-:|:-:|
     | [10, 15) | 12.5 | 15 | 156.25 | 2,343.75 |
@@ -690,6 +723,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     | **Total** | | **200** | | **124,250.0** |
 
     **Cálculo:**
+    
     $$\sigma^2 = \frac{124,250}{200} - (24.125)^2 = 621.25 - 582.016 = 39.234$$
 
     **Desviación típica:** $\sigma = \sqrt{39.234} \approx 6.26$ minutos
@@ -701,14 +735,17 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Distribución:** X ~ N(μ=50, σ=2)
 
     **Estandarización:**
+    
     $$Z = \frac{X - \mu}{\sigma} = \frac{53 - 50}{2} = \frac{3}{2} = 1.5$$
 
     **Cálculo de probabilidad:**
+    
     $$P(X > 53) = P(Z > 1.5) = 1 - P(Z \leq 1.5) = 1 - \Phi(1.5)$$
 
     **Tabla de normal estándar:** Φ(1.5) ≈ 0.9332
 
     **Resultado:**
+    
     $$P(X > 53) = 1 - 0.9332 = 0.0668 \approx 6.68\%$$
 
     **Respuesta:** 0.0668
@@ -718,18 +755,22 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Distribución:** X ~ N(μ=50, σ=2)
 
     **Estandarización de límites:**
+    
     $$Z_1 = \frac{48 - 50}{2} = \frac{-2}{2} = -1$$
     $$Z_2 = \frac{52 - 50}{2} = \frac{2}{2} = 1$$
 
     **Cálculo:**
+    
     $$P(48 < X < 52) = P(-1 < Z < 1) = \Phi(1) - \Phi(-1)$$
 
     **Uso de simetría:**
+    
     $$\Phi(-1) = 1 - \Phi(1)$$
 
     **Tabla:** Φ(1) ≈ 0.8413
 
     **Resultado:**
+    
     $$P(-1 < Z < 1) = 0.8413 - (1 - 0.8413) = 0.8413 - 0.1587 = 0.6826 \approx 68.26\%$$
 
     **Interpretación:** Esta es la regla empírica: ~68% de datos dentro de ±σ.
@@ -745,9 +786,11 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     **Distribución:** X ~ Binomial(n=100, p=0.05)
 
     **Esperanza de Binomial:**
+    
     $$E[X] = n \cdot p = 100 \times 0.05 = 5$$
 
     **Varianza (información extra):**
+    
     $$\text{Var}(X) = np(1-p) = 100 \times 0.05 \times 0.95 = 4.75$$
 
     **Interpretación:** En promedio, esperamos 5 fallos de cada 100 transmisiones.
@@ -757,6 +800,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
 ???- details "Solución pregunta 20 — Correlación de Pearson en Regresión Inmuebles"
 
     **Datos (8 pisos):**
+    
     | x (m²) | 60 | 75 | 80 | 90 | 100 | 110 | 120 | 130 |
     | y (k€) | 120 | 150 | 160 | 190 | 210 | 240 | 270 | 310 |
 
@@ -769,24 +813,31 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     - n = 8
 
     **Fórmula de Pearson:**
+    
     $$r = \frac{n\sum xy - (\sum x)(\sum y)}{\sqrt{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]}}$$
 
     **Numerador:**
+    
     $$8 \times 168,450 - 765 \times 1,650 = 1,347,600 - 1,262,250 = 85,350$$
 
     **Denominador (x):**
+    
     $$8 \times 77,125 - (765)^2 = 617,000 - 585,225 = 31,775$$
 
     **Denominador (y):**
+    
     $$8 \times 369,300 - (1,650)^2 = 2,954,400 - 2,722,500 = 231,900$$
 
     **Producto:**
+    
     $$31,775 \times 231,900 = 7,370,542,500$$
 
     **Raíz:**
+    
     $$\sqrt{7,370,542,500} \approx 85,851$$
 
     **Resultado:**
+    
     $$r = \frac{85,350}{85,851} \approx 0.9942$$
 
     **Interpretación:** Correlación positiva muy fuerte (cercana a 1). El modelo lineal explica casi toda la variación.
@@ -838,6 +889,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     | `->` | Asignación derecha | `5 -> x` (poco usado) |
 
     **Atajo de teclado en RStudio:**
+    
     - `Alt + -` (Windows/Linux)
     - `Option + -` (Mac)
     - Genera automáticamente ` <- `
@@ -957,6 +1009,7 @@ Explicación: La función `summary()` proporciona un resumen estadístico de 6 n
     ```
 
     **Resultado:**
+    
     ```
           edad            nota
      Min.   :19.0   Min.   :6.00

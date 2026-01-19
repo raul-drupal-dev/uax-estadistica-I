@@ -12,7 +12,7 @@ prerequisitos: []
 ## ✨ Mapa Rápido de Conceptos UD2
 
 ```mermaid
-graph TD
+graph LR
     A["UD2: Probabilidad y Distribuciones"] --> B["Conceptos Básicos"]
     A --> C["Distribuciones Discretas"]
     A --> D["Distribuciones Continuas"]
@@ -44,16 +44,16 @@ graph TD
 
 ### Probabilidad
 
-- **Básica:** P(A) = (casos favorables) / (casos totales)
-- **Condicional:** P(A\|B) = P(A∩B) / P(B) = "prob de A sabiendo que B ocurre"
-- **Bayes:** P(A\|B) = P(B\|A) · P(A) / P(B)
-- **Falacia Fiscal:** P(B\|A) ≠ P(A\|B) — ¡casi siempre diferentes!
+- **Básica:** $P(A) = \frac{\text{casos favorables}}{\text{casos totales}}$
+- **Condicional:** $P(A|B) = \frac{P(A \cap B)}{P(B)}$ = "prob de A sabiendo que B ocurre"
+- **Bayes:** $P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$
+- **Falacia Fiscal:** $P(B|A) \neq P(A|B)$ — ¡casi siempre diferentes!
 
 ### Variables Aleatorias
 
-- **Esperanza:** E[X] = Σ x · P(X=x) (valor promedio)
-- **Varianza:** Var(X) = E[X²] - (E[X])² (dispersión)
-- **Trampa:** E[X²] ≠ (E[X])²
+- **Esperanza:** $E[X] = \sum x \cdot P(X=x)$ (valor promedio)
+- **Varianza:** $\text{Var}(X) = E[X^2] - (E[X])^2$ (dispersión)
+- **Trampa:** $E[X^2] \neq (E[X])^2$
 
 ---
 
@@ -63,15 +63,15 @@ graph TD
 
 **Cuándo:** n intentos **fijos**, cada uno éxito (prob p) o fracaso
 
-| Aspecto      | Fórmula / Valor                              |
-| :----------- | :------------------------------------------- |
-| Probabilidad | P(X=k) = (n/k) · p^k · (1-p)^(n-k)           |
-| Media        | μ = n·p                                      |
-| Varianza     | σ² = n·p·(1-p)                               |
-| Requisitos   | n fijo, p constante, intentos independientes |
-| Aproximación | Si n>30 y p ≈ 0.5, usa Normal                |
+| Aspecto      | Fórmula / Valor                                     |
+| :----------- | :-------------------------------------------------- |
+| Probabilidad | $P(X=k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$ |
+| Media        | $\mu = n \cdot p$                                   |
+| Varianza     | $\sigma^2 = n \cdot p \cdot (1-p)$                  |
+| Requisitos   | n fijo, p constante, intentos independientes        |
+| Aproximación | Si $n>30$ y $p \approx 0.5$, usa Normal             |
 
-**Ejemplo:** 10 monedas, ¿prob de 3 caras? → Bin(10, 0.5), P(X=3) = 0.117
+**Ejemplo:** 10 monedas, ¿prob de 3 caras? → $\text{Bin}(10, 0.5)$, $P(X=3) = 0.117$
 
 ### Distribución Poisson
 
@@ -79,13 +79,13 @@ graph TD
 
 | Aspecto      | Fórmula / Valor                                           |
 | :----------- | :-------------------------------------------------------- |
-| Probabilidad | P(X=k) = e^(-λ) · λ^k / k!                                |
-| Media        | E[X] = λ                                                  |
-| Varianza     | Var(X) = λ                                                |
+| Probabilidad | $P(X=k) = \frac{e^{-\lambda} \cdot \lambda^k}{k!}$        |
+| Media        | $E[X] = \lambda$                                          |
+| Varianza     | $\text{Var}(X) = \lambda$                                 |
 | Cuándo       | Tasa constante, eventos independientes, sin simultaneidad |
-| Regla        | Si P(+\|+) de Poisson: media ≈ varianza                   |
+| Regla        | Si P(+\|+) de Poisson: media $\approx$ varianza           |
 
-**Ejemplo:** 5 llamadas/hora, ¿prob de 3 en una hora? → P(λ=5, k=3) = 0.140
+**Ejemplo:** 5 llamadas/hora, ¿prob de 3 en una hora? → $P(\lambda=5, k=3) = 0.140$
 
 ---
 
@@ -95,44 +95,44 @@ graph TD
 
 **Cuándo:** Campana simétrica, muchos procesos naturales
 
-| Aspecto          | Fórmula / Valor                                                |
-| :--------------- | :------------------------------------------------------------- |
-| Notación         | X ~ N(μ, σ²)                                                   |
-| Estandarizar     | Z = (X - μ) / σ → Z ~ N(0,1)                                   |
-| Regla 68-95-99.7 | 68% dentro ±1σ, 95% ±2σ, 99.7% ±3σ                             |
-| Críticos         | z₀.₀₅ = 1.645 (90%), z₀.₀₂₅ = 1.96 (95%), z₀.₀₀₅ = 2.576 (99%) |
-| Cálculo          | P(a < X < b) = P((a-μ)/σ < Z < (b-μ)/σ) → tabla Z              |
+| Aspecto          | Fórmula / Valor                                                               |
+| :--------------- | :---------------------------------------------------------------------------- |
+| Notación         | $X \sim N(\mu, \sigma^2)$                                                     |
+| Estandarizar     | $Z = \frac{X - \mu}{\sigma} \rightarrow Z \sim N(0,1)$                        |
+| Regla 68-95-99.7 | 68% dentro $\pm 1\sigma$, 95% $\pm 2\sigma$, 99.7% $\pm 3\sigma$              |
+| Críticos         | $z_{0.05} = 1.645$ (90%), $z_{0.025} = 1.96$ (95%), $z_{0.005} = 2.576$ (99%) |
+| Cálculo          | $P(a < X < b) = P(\frac{a-\mu}{\sigma} < Z < \frac{b-\mu}{\sigma})$ → tabla Z |
 
-**Ejemplo:** Altura ~ N(170, 8²). P(altura < 178) = P(Z < 1) = 0.8413
+**Ejemplo:** Altura $\sim N(170, 8^2)$. $P(\text{altura} < 178) = P(Z < 1) = 0.8413$
 
 ### Distribución Exponencial
 
 **Cuándo:** Tiempo hasta evento, relación Poisson (eventos/tasa) ↔ Exponencial (tiempos)
 
-| Aspecto   | Fórmula / Valor                             |
-| :-------- | :------------------------------------------ |
-| Parámetro | λ = tasa                                    |
-| Media     | E[X] = 1/λ                                  |
-| Varianza  | Var(X) = 1/λ²                               |
-| CDF       | P(X ≤ t) = 1 - e^(-λt)                      |
-| Propiedad | Sin memoria: P(X > s+t \| X > s) = P(X > t) |
+| Aspecto   | Fórmula / Valor                                 |
+| :-------- | :---------------------------------------------- |
+| Parámetro | $\lambda$ = tasa                                |
+| Media     | $E[X] = \frac{1}{\lambda}$                      |
+| Varianza  | $\text{Var}(X) = \frac{1}{\lambda^2}$           |
+| CDF       | $P(X \leq t) = 1 - e^{-\lambda t}$              |
+| Propiedad | Sin memoria: $P(X > s+t \mid X > s) = P(X > t)$ |
 
-**Ejemplo:** Tiempo medio espera = 10 min → λ = 0.1, P(espera < 5) = 1 - e^(-0.5) = 0.39
+**Ejemplo:** Tiempo medio espera = 10 min → $\lambda = 0.1$, $P(\text{espera} < 5) = 1 - e^{-0.5} = 0.39$
 
 ---
 
 ## Tabla Comparativa: Toda UD2
 
-| Característica |    Binomial     |     Poisson     |  Normal  |     Exponencial     |
-| :------------- | :-------------: | :-------------: | :------: | :-----------------: |
-| **Tipo**       |    Discreta     |    Discreta     | Continua |      Continua       |
-| **Parámetros** |      n, p       |        λ        |   μ, σ   |          λ          |
-| **Media**      |       np        |        λ        |    μ     |         1/λ         |
-| **Varianza**   |     np(1-p)     |        λ        |    σ²    |        1/λ²         |
-| **Rango**      |      0 a n      |    0,1,2,...    | (-∞,+∞)  |       [0,+∞)        |
-| **Fórmula**    |    Binomial     |     Poisson     | Campana  |       e^(-λx)       |
-| **Cuándo**     |   n intentos    | Tasa/intervalo  | Campana  | Tiempo hasta evento |
-| **Ejemplo**    | 20 lanzamientos | 5 llamadas/hora | Alturas  | Tiempo entre fallas |
+| Característica |    Binomial     |     Poisson     |       Normal        |      Exponencial      |
+| :------------- | :-------------: | :-------------: | :-----------------: | :-------------------: |
+| **Tipo**       |    Discreta     |    Discreta     |      Continua       |       Continua        |
+| **Parámetros** |     $n, p$      |    $\lambda$    |    $\mu, \sigma$    |       $\lambda$       |
+| **Media**      |      $np$       |    $\lambda$    |        $\mu$        |  $\frac{1}{\lambda}$  |
+| **Varianza**   |    $np(1-p)$    |    $\lambda$    |     $\sigma^2$      | $\frac{1}{\lambda^2}$ |
+| **Rango**      |    $0$ a $n$    |   $0,1,2,...$   | $(-\infty,+\infty)$ |     $[0,+\infty)$     |
+| **Fórmula**    |    Binomial     |     Poisson     |       Campana       |   $e^{-\lambda x}$    |
+| **Cuándo**     |   n intentos    | Tasa/intervalo  |       Campana       |  Tiempo hasta evento  |
+| **Ejemplo**    | 20 lanzamientos | 5 llamadas/hora |       Alturas       |  Tiempo entre fallas  |
 
 ---
 
@@ -142,7 +142,7 @@ graph TD
 
 "Si un test da positivo, tengo 95% prob de tener la enfermedad" ❌
 
-**Verdad:** Usá Bayes. Si enfermedad rara (1%), P(E|+) puede ser solo ~30%.
+**Verdad:** Usá Bayes. Si enfermedad rara (1%), $P(E|+)$ puede ser solo ~30%.
 
 **Clave:** Baja prevalencia + sensibilidad/especificidad finitas = muchos falsos positivos
 
@@ -151,21 +151,21 @@ graph TD
 - **Binomial:** "En 50 intentos, ¿cuántos éxitos?" → n es FIJO
 - **Poisson:** "Eventos por hora" → TASA, no n fijo
 
-### 🔴 Trampa 3: E[X²] vs (E[X])²
+### 🔴 Trampa 3: $E[X^2]$ vs $(E[X])^2$
 
-E[X²] = 6.5, pero (E[X])² = 6.25 → ¡NO son iguales!
+$E[X^2] = 6.5$, pero $(E[X])^2 = 6.25$ → ¡NO son iguales!
 
-**Varianza siempre es:** Var(X) = E[X²] - (E[X])²
+**Varianza siempre es:** $\text{Var}(X) = E[X^2] - (E[X])^2$
 
 ### 🔴 Trampa 4: Olvidar Estandarizar en Normal
 
-P(X < 175) cuando X ~ N(170, 8²)?
+$P(X < 175)$ cuando $X \sim N(170, 8^2)$?
 
-**Correcto:** Primero Z = (175-170)/8 = 0.625, luego tabla Z
+**Correcto:** Primero $Z = \frac{175-170}{8} = 0.625$, luego tabla Z
 
-### 🔴 Trampa 5: z = 1.96 siempre
+### 🔴 Trampa 5: $z = 1.96$ siempre
 
-z = 1.96 es para **95% confianza**. Para 90% usa 1.645, para 99% usa 2.576.
+$z = 1.96$ es para **95% confianza**. Para 90% usa $1.645$, para 99% usa $2.576$.
 
 ---
 
@@ -175,14 +175,14 @@ z = 1.96 es para **95% confianza**. Para 90% usa 1.645, para 99% usa 2.576.
 
 - [ ] Entiendo qué es X (el qué contar)
 - [ ] Distingo Discreta (conteo) vs Continua (medida)
-- [ ] Puedo calcular E[X] y Var(X)
-- [ ] Sé que E[X²] ≠ (E[X])²
+- [ ] Puedo calcular $E[X]$ y $\text{Var}(X)$
+- [ ] Sé que $E[X^2] \neq (E[X])^2$
 
 ✅ **Probabilidad:**
 
 - [ ] Conozco fórmula Bayes
-- [ ] Entiendo falacia fiscal: P(A|B) ≠ P(B|A)
-- [ ] Recuerdo axiomas: P(Ω)=1, P(∅)=0
+- [ ] Entiendo falacia fiscal: $P(A|B) \neq P(B|A)$
+- [ ] Recuerdo axiomas: $P(\Omega)=1$, $P(\emptyset)=0$
 
 ✅ **Distribuciones:**
 
@@ -193,9 +193,9 @@ z = 1.96 es para **95% confianza**. Para 90% usa 1.645, para 99% usa 2.576.
 
 ✅ **Tabla Normal:**
 
-- [ ] z = 1.645 para 90%
-- [ ] z = 1.96 para 95%
-- [ ] z = 2.576 para 99%
+- [ ] $z = 1.645$ para 90%
+- [ ] $z = 1.96$ para 95%
+- [ ] $z = 2.576$ para 99%
 - [ ] Sé buscar en tabla Z
 
 ---
