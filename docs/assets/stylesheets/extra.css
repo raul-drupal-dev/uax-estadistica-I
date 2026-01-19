@@ -7,43 +7,46 @@
 }
 
 /* Permite scroll vertical en el menú de navegación lateral (sidebar) */
-.md-sidebar--primary .md-sidebar__scrollwrap {
-    max-height: calc(100vh - 5rem); /* Altura máxima: altura de ventana menos header */
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch; /* Suavidad en móviles */
-}
+/* Reglas del sidebar: aplicar solo en pantallas grandes para no romper el colapso mobile */
+@media (min-width: 768px) {
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        max-height: calc(100vh - 5rem); /* Altura máxima: altura de ventana menos header */
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch; /* Suavidad en móviles */
+    }
 
-/* Asegura que el menú de navegación lateral tenga scroll cuando sea necesario */
-.md-sidebar--primary {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-}
+    /* Asegura que el menú de navegación lateral tenga scroll cuando sea necesario */
+    .md-sidebar--primary {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
 
-/* Mejora visual del scrollbar (opcional, solo para navegadores webkit) */
-.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
-    width: 6px;
-}
+    /* Mejora visual del scrollbar (opcional, solo para navegadores webkit) */
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
+        width: 6px;
+    }
 
-.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-track {
-    background: transparent;
-}
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+        background: transparent;
+    }
 
-.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-}
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
 
-.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
+    .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
 
-/* Para modo oscuro */
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-}
+    /* Para modo oscuro */
+    [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+    }
 
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
 }
