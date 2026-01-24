@@ -41,19 +41,19 @@ Fundamentos de estadística, tipos de datos, escalas de medición y medidas desc
 
 ---
 
-### :material-dice-multiple: UD2 — Probabilidad y distribuciones
+### :material-dice-multiple: UD2 — Probabilidad y análisis bivariante
 
-Eventos, probabilidad, variables aleatorias y distribuciones discretas y continuas.
+Eventos, probabilidad, correlación, covarianza, regresión lineal simple y análisis de datos categóricos.
 
-[:octicons-arrow-right-24: Empezar UD2](ud2/eventos-y-probabilidad.md){ .md-button .md-button--primary }
+[:octicons-arrow-right-24: Empezar UD2](ud2/bivariante-intro.md){ .md-button .md-button--primary }
 
 ---
 
-### :material-chart-bell-curve: UD3 — Inferencia y regresión
+### :material-chart-bell-curve: UD3 — Variables aleatorias
 
-Estimación de parámetros, intervalos de confianza, pruebas de hipótesis y regresión lineal.
+Fundamentos de probabilidad, tipos de variables aleatorias, funciones de distribución (CDF, PMF, PDF), esperanza, varianza y aplicaciones en IA.
 
-[:octicons-arrow-right-24: Empezar UD3](ud3/estimacion-y-intervalos.md){ .md-button .md-button--primary }
+[:octicons-arrow-right-24: Empezar UD3](ud3/fundamentos-probabilidad.md){ .md-button .md-button--primary }
 
 ---
 
@@ -124,13 +124,26 @@ Material adicional para profundizar en temas específicos.
 
 ---
 
+### :material-table: Tablas de distribuciones (PDF)
+
+Consulta las tablas estadísticas para resolver ejercicios y exámenes.
+
+- [Tabla Distribución Normal](ud4/tablas/TABLA_DISTRIBUCION_NORMAL.pdf)
+- [Tabla t de Student](ud4/tablas/Tabla_t_Student.pdf)
+- [Tabla Chi-cuadrado (χ²)](ud4/tablas/Tabla_Chi_Cuadrado.pdf)
+- [Tabla F de Snedecor](ud4/tablas/Tabla_F_Snedecor.pdf)
+- [Tabla Distribución Binomial](ud4/tablas/TABLA_DISTRIBUCION_BINOMIAL.pdf)
+- [Tabla Distribución Poisson](ud4/tablas/TABLA_DISTRIBUCION_POISSON.pdf)
+
+---
+
 ### :material-book-check: Resúmenes rápidos
 
 Consulta rápida de conceptos clave por unidad con diagramas y árboles de decisión.
 
 - [Resumen UD1](ud1/resumen.md) — Introducción a la Estadística
-- [Resumen UD2](ud2/resumen.md) — Probabilidad y Distribuciones
-- [Resumen UD3](ud3/resumen.md) — Inferencia y Regresión
+- [Resumen UD2](ud2/resumen.md) — Probabilidad y Análisis Bivariante
+- [Resumen UD3](ud3/resumen.md) — Variables Aleatorias
 - [Resumen UD4](ud4/resumen.md) — Modelos de Probabilidad
 - [Resumen UD5](ud5/resumen.md) — Inferencia Avanzada
 - [Resumen UD6](ud6/resumen.md) — Contrastes de Hipótesis

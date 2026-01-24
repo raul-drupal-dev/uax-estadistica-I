@@ -1,4 +1,4 @@
-title: "UD2 — Ejercicios completos"
+title: "UD2 â Ejercicios completos"
 slug: "ud2-ejercicios"
 date: "2026-01-14"
 authors: ["Profesor UAX"]
@@ -11,7 +11,7 @@ prerequisitos: ["ud2-eventos-probabilidad", "ud2-variables-aleatorias", "ud2-dis
 
 ## Objetivo
 
-✨ Practicar cálculos de probabilidades, aplicar distribuciones y usar fórmulas en contextos reales.
+â¨ Practicar cÃ¡lculos de probabilidades, aplicar distribuciones y usar fÃ³rmulas en contextos reales.
 
 ---
 
@@ -21,9 +21,9 @@ prerequisitos: ["ud2-eventos-probabilidad", "ud2-variables-aleatorias", "ud2-dis
 
 Una empresa fabrica componentes. El 2% tiene defecto, y el 90% de defectos se detectan en control.
 
-**Pregunta:** Si un componente pasó el control (sin detectar defecto), ¿cuál es la probabilidad de que realmente esté defectuoso?
+**Pregunta:** Si un componente pasÃ³ el control (sin detectar defecto), Â¿cuÃ¡l es la probabilidad de que realmente estÃ© defectuoso?
 
-???+ example "Solución — Ejercicio 1"
+???+ example "SoluciÃ³n â Ejercicio 1"
 
     Definir eventos:
     - D = componente defectuoso
@@ -32,35 +32,35 @@ Una empresa fabrica componentes. El 2% tiene defecto, y el 90% de defectos se de
     Datos:
     - P(D) = 0.02
     - P(+|D) = 0.90 (sensibilidad)
-    - P(-|¬D) = 0.99 (especificidad, aproximada)
+    - P(-|Â¬D) = 0.99 (especificidad, aproximada)
 
     Usamos Bayes para P(D|-):
     $$P(D|-) = \frac{P(-|D) \cdot P(D)}{P(-)}$$
 
     P(-|D) = 1 - 0.90 = 0.10
 
-    P(-) = P(-|D)·P(D) + P(-|¬D)·P(¬D)
-         = 0.10 × 0.02 + 0.99 × 0.98
+    P(-) = P(-|D)Â·P(D) + P(-|Â¬D)Â·P(Â¬D)
+         = 0.10 Ã 0.02 + 0.99 Ã 0.98
          = 0.002 + 0.9702
          = 0.9722
 
-    $$P(D|-) = \frac{0.10 \times 0.02}{0.9722} = \frac{0.002}{0.9722} ≈ 0.00206$$
+    $$P(D|-) = \frac{0.10 \times 0.02}{0.9722} = \frac{0.002}{0.9722} â 0.00206$$
 
-    **Interpretación:** Aunque solo 2% es defectuoso, si un componente pasó el control, la probabilidad de que sea realmente defectuoso es ~0.2%. El control es muy efectivo.
+    **InterpretaciÃ³n:** Aunque solo 2% es defectuoso, si un componente pasÃ³ el control, la probabilidad de que sea realmente defectuoso es ~0.2%. El control es muy efectivo.
 
 ---
 
-### Ejercicio 2: Teorema de Bayes con Test Médico
+### Ejercicio 2: Teorema de Bayes con Test MÃ©dico
 
 Un test para covid-19 tiene:
 
 - Sensibilidad: 95% (P(+|E) = 0.95)
-- Especificidad: 98% (P(-|¬E) = 0.98)
-- Prevalencia en población: 1% (P(E) = 0.01)
+- Especificidad: 98% (P(-|Â¬E) = 0.98)
+- Prevalencia en poblaciÃ³n: 1% (P(E) = 0.01)
 
-**Pregunta:** Si das positivo, ¿cuál es la probabilidad de que realmente tengas covid?
+**Pregunta:** Si das positivo, Â¿cuÃ¡l es la probabilidad de que realmente tengas covid?
 
-???+ example "Solución — Ejercicio 2"
+???+ example "SoluciÃ³n â Ejercicio 2"
 
     Definir:
     - E = tienes covid
@@ -68,17 +68,17 @@ Un test para covid-19 tiene:
 
     P(E|+) = ?
 
-    $$P(E|+) = \frac{P(+|E) \cdot P(E)}{P(+|E) \cdot P(E) + P(+|¬E) \cdot P(¬E)}$$
+    $$P(E|+) = \frac{P(+|E) \cdot P(E)}{P(+|E) \cdot P(E) + P(+|Â¬E) \cdot P(Â¬E)}$$
 
-    P(+|¬E) = 1 - 0.98 = 0.02 (tasa falsos positivos)
+    P(+|Â¬E) = 1 - 0.98 = 0.02 (tasa falsos positivos)
 
     $$P(E|+) = \frac{0.95 \times 0.01}{0.95 \times 0.01 + 0.02 \times 0.99}$$
 
-    $$= \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} ≈ 0.324$$
+    $$= \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} â 0.324$$
 
-    **¡SOLO 32.4%!** Aunque el test es muy bueno (95% sensibilidad), como covid es raro (1%), más de 2/3 de positivos son falsos.
+    **Â¡SOLO 32.4%!** Aunque el test es muy bueno (95% sensibilidad), como covid es raro (1%), mÃ¡s de 2/3 de positivos son falsos.
 
-    **Lección clave:** Cuando P(E) es bajo, incluso tests buenos tienen muchos falsos positivos.
+    **LecciÃ³n clave:** Cuando P(E) es bajo, incluso tests buenos tienen muchos falsos positivos.
 
 ---
 
@@ -92,9 +92,9 @@ Una variable aleatoria X toma valores:
 | :--- | :-: | :-: | :-: | :-: |
 | P(X) | 0.1 | 0.3 | 0.4 | 0.2 |
 
-**Pregunta:** Calcula E[X], E[X²], Var(X).
+**Pregunta:** Calcula E[X], E[XÂ²], Var(X).
 
-???+ example "Solución — Ejercicio 3"
+???+ example "SoluciÃ³n â Ejercicio 3"
 
     **Esperanza:**
 
@@ -114,25 +114,25 @@ Una variable aleatoria X toma valores:
 
     $$\text{Var}(X) = E[X^2] - (E[X])^2 = 8.1 - (2.7)^2 = 8.1 - 7.29 = 0.81$$
 
-    **Desviación típica:**
+    **DesviaciÃ³n tÃ­pica:**
 
     $$\sigma = \sqrt{0.81} = 0.9$$
 
 ---
 
-## Distribución Binomial
+## DistribuciÃ³n Binomial
 
 ### Ejercicio 4: Lanzamientos de Moneda
 
-Lanzas una moneda justa 10 veces. X = número de caras.
+Lanzas una moneda justa 10 veces. X = nÃºmero de caras.
 
 **Preguntas:**
 
 - a) P(X = 5)?
-- b) P(X ≤ 3)?
+- b) P(X â¤ 3)?
 - c) E[X] y Var(X)?
 
-???+ example "Solución — Ejercicio 4"
+???+ example "SoluciÃ³n â Ejercicio 4"
 
     X ~ Binomial(n=10, p=0.5)
 
@@ -140,21 +140,21 @@ Lanzas una moneda justa 10 veces. X = número de caras.
 
     $$P(X=5) = \binom{10}{5} (0.5)^5 (0.5)^5 = 252 \times (0.5)^{10}$$
 
-    $$= 252 \times 0.00098 ≈ 0.246$$
+    $$= 252 \times 0.00098 â 0.246$$
 
-    **b) P(X ≤ 3):**
+    **b) P(X â¤ 3):**
 
     $$P(X \leq 3) = P(X=0) + P(X=1) + P(X=2) + P(X=3)$$
 
-    $$P(X=0) = \binom{10}{0}(0.5)^{10} ≈ 0.00098$$
+    $$P(X=0) = \binom{10}{0}(0.5)^{10} â 0.00098$$
 
-    $$P(X=1) = \binom{10}{1}(0.5)^{10} = 10 \times 0.00098 ≈ 0.00977$$
+    $$P(X=1) = \binom{10}{1}(0.5)^{10} = 10 \times 0.00098 â 0.00977$$
 
-    $$P(X=2) = \binom{10}{2}(0.5)^{10} = 45 \times 0.00098 ≈ 0.04395$$
+    $$P(X=2) = \binom{10}{2}(0.5)^{10} = 45 \times 0.00098 â 0.04395$$
 
-    $$P(X=3) = \binom{10}{3}(0.5)^{10} = 120 \times 0.00098 ≈ 0.11719$$
+    $$P(X=3) = \binom{10}{3}(0.5)^{10} = 120 \times 0.00098 â 0.11719$$
 
-    $$P(X \leq 3) ≈ 0.00098 + 0.00977 + 0.04395 + 0.11719 ≈ 0.172$$
+    $$P(X \leq 3) â 0.00098 + 0.00977 + 0.04395 + 0.11719 â 0.172$$
 
     **c) Momentos:**
 
@@ -166,15 +166,15 @@ Lanzas una moneda justa 10 veces. X = número de caras.
 
 ### Ejercicio 5: Control de Calidad
 
-En una fábrica, 3% de piezas salen defectuosas. Revisas un lote de 50 piezas.
+En una fÃ¡brica, 3% de piezas salen defectuosas. Revisas un lote de 50 piezas.
 
 **Preguntas:**
 
-- a) ¿Cuántos defectos esperas en promedio?
+- a) Â¿CuÃ¡ntos defectos esperas en promedio?
 - b) P(exactamente 2 defectos)?
 - c) P(al menos 1 defecto)?
 
-???+ example "Solución — Ejercicio 5"
+???+ example "SoluciÃ³n â Ejercicio 5"
 
     X ~ Binomial(n=50, p=0.03)
 
@@ -190,23 +190,23 @@ En una fábrica, 3% de piezas salen defectuosas. Revisas un lote de 50 piezas.
 
     $$= \frac{50 \times 49}{2} \times 0.0009 \times 0.2223$$
 
-    $$= 1225 \times 0.0009 \times 0.2223 ≈ 0.245$$
+    $$= 1225 \times 0.0009 \times 0.2223 â 0.245$$
 
-    **c) P(X ≥ 1):**
+    **c) P(X â¥ 1):**
 
     $$P(X \geq 1) = 1 - P(X=0)$$
 
-    $$P(X=0) = \binom{50}{0}(0.03)^0(0.97)^{50} = (0.97)^{50} ≈ 0.222$$
+    $$P(X=0) = \binom{50}{0}(0.03)^0(0.97)^{50} = (0.97)^{50} â 0.222$$
 
-    $$P(X \geq 1) ≈ 1 - 0.222 = 0.778$$
+    $$P(X \geq 1) â 1 - 0.222 = 0.778$$
 
 ---
 
-## Distribución Poisson
+## DistribuciÃ³n Poisson
 
-### Ejercicio 6: Llamadas Telefónicas
+### Ejercicio 6: Llamadas TelefÃ³nicas
 
-Un call center recibe en promedio 5 llamadas por minuto. X = número de llamadas en 1 minuto.
+Un call center recibe en promedio 5 llamadas por minuto. X = nÃºmero de llamadas en 1 minuto.
 
 **Preguntas:**
 
@@ -214,19 +214,19 @@ Un call center recibe en promedio 5 llamadas por minuto. X = número de llamadas
 - b) P(X = 0)?
 - c) P(X > 5)?
 
-???+ example "Solución — Ejercicio 6"
+???+ example "SoluciÃ³n â Ejercicio 6"
 
-    X ~ Poisson(λ = 5)
+    X ~ Poisson(Î» = 5)
 
     **a) P(X = 3):**
 
     $$P(X=3) = e^{-5} \frac{5^3}{3!} = e^{-5} \times \frac{125}{6}$$
 
-    $$= 0.0067 \times 20.83 ≈ 0.140$$
+    $$= 0.0067 \times 20.83 â 0.140$$
 
     **b) P(X = 0):**
 
-    $$P(X=0) = e^{-5} \times \frac{5^0}{0!} = e^{-5} ≈ 0.0067$$
+    $$P(X=0) = e^{-5} \times \frac{5^0}{0!} = e^{-5} â 0.0067$$
 
     Muy raro (0.67%) que no haya llamadas en 1 minuto.
 
@@ -234,58 +234,58 @@ Un call center recibe en promedio 5 llamadas por minuto. X = número de llamadas
 
     $$P(X > 5) = 1 - P(X \leq 5)$$
 
-    Calcular P(X ≤ 5) sumando P(0) + P(1) + ... + P(5):
-    - P(0) ≈ 0.0067
-    - P(1) = e^(-5) × 5 ≈ 0.0337
-    - P(2) = e^(-5) × 25/2 ≈ 0.0842
-    - P(3) ≈ 0.1404
-    - P(4) = e^(-5) × 625/24 ≈ 0.1755
-    - P(5) = e^(-5) × 3125/120 ≈ 0.1755
+    Calcular P(X â¤ 5) sumando P(0) + P(1) + ... + P(5):
+    - P(0) â 0.0067
+    - P(1) = e^(-5) Ã 5 â 0.0337
+    - P(2) = e^(-5) Ã 25/2 â 0.0842
+    - P(3) â 0.1404
+    - P(4) = e^(-5) Ã 625/24 â 0.1755
+    - P(5) = e^(-5) Ã 3125/120 â 0.1755
 
-    $$P(X \leq 5) ≈ 0.616$$
+    $$P(X \leq 5) â 0.616$$
     
-    $$P(X > 5) ≈ 0.384$$
+    $$P(X > 5) â 0.384$$
 
 ---
 
 ### Ejercicio 7: Defectos en Cable
 
-Un cable de 1000 metros tiene en promedio 2 defectos. ¿Cuál es la probabilidad de que un tramo de 100 metros tenga 0 defectos?
+Un cable de 1000 metros tiene en promedio 2 defectos. Â¿CuÃ¡l es la probabilidad de que un tramo de 100 metros tenga 0 defectos?
 
-???+ example "Solución — Ejercicio 7"
+???+ example "SoluciÃ³n â Ejercicio 7"
 
-    Si λ = 2 defectos por 1000 metros, entonces:
+    Si Î» = 2 defectos por 1000 metros, entonces:
     $$\lambda_{100} = 2 \times \frac{100}{1000} = 0.2$$
 
-    X ~ Poisson(λ = 0.2)
+    X ~ Poisson(Î» = 0.2)
 
-    $$P(X=0) = e^{-0.2} \times \frac{0.2^0}{0!} = e^{-0.2} ≈ 0.819$$
+    $$P(X=0) = e^{-0.2} \times \frac{0.2^0}{0!} = e^{-0.2} â 0.819$$
 
     Aproximadamente 82% de chance de no tener defectos.
 
 ---
 
-## Distribución Normal
+## DistribuciÃ³n Normal
 
 ### Ejercicio 8: Alturas de Estudiantes
 
-Las alturas en una universidad siguen N(170 cm, 8²).
+Las alturas en una universidad siguen N(170 cm, 8Â²).
 
 **Preguntas:**
 
 - a) P(altura < 170)?
 - b) P(160 < altura < 180)?
-- c) ¿Qué altura corresponde al percentil 90?
+- c) Â¿QuÃ© altura corresponde al percentil 90?
 
-???+ example "Solución — Ejercicio 8"
+???+ example "SoluciÃ³n â Ejercicio 8"
 
-    X ~ N(170, 64), μ = 170, σ = 8
+    X ~ N(170, 64), Î¼ = 170, Ï = 8
 
     **a) P(X < 170):**
     $$Z = \frac{170-170}{8} = 0$$
     $$P(X < 170) = P(Z < 0) = 0.5$$
 
-    50% de estudiantes mide menos de 170 cm (por simetría).
+    50% de estudiantes mide menos de 170 cm (por simetrÃ­a).
 
     **b) P(160 < X < 180):**
     $$Z_1 = \frac{160-170}{8} = -1.25$$
@@ -299,7 +299,7 @@ Las alturas en una universidad siguen N(170 cm, 8²).
 
     **c) Percentil 90 (z = 1.645):**
     $$x = \mu + z \times \sigma = 170 + 1.645 \times 8$$
-    $$= 170 + 13.16 ≈ 183.16 \text{ cm}$$
+    $$= 170 + 13.16 â 183.16 \text{ cm}$$
 
     El 90% de estudiantes mide menos de 183 cm.
 
@@ -307,16 +307,16 @@ Las alturas en una universidad siguen N(170 cm, 8²).
 
 ### Ejercicio 9: Pesos y Control de Calidad
 
-Pesos de cajas ~ N(500, 30²) gramos.
+Pesos de cajas ~ N(500, 30Â²) gramos.
 
 **Preguntas:**
 
 - a) P(peso > 550)?
 - b) P(450 < peso < 550)?
 
-???+ example "Solución — Ejercicio 9"
+???+ example "SoluciÃ³n â Ejercicio 9"
 
-    X ~ N(500, 900), μ = 500, σ = 30
+    X ~ N(500, 900), Î¼ = 500, Ï = 30
 
     **a) P(X > 550):**
     $$Z = \frac{550-500}{30} = \frac{50}{30} = 1.67$$
@@ -324,7 +324,7 @@ Pesos de cajas ~ N(500, 30²) gramos.
     P(X > 550) = P(Z > 1.67) = 1 - P(Z < 1.67)
                = 1 - 0.9525 = 0.0475
 
-    Aproximadamente 4.75% de cajas pesan más de 550 g.
+    Aproximadamente 4.75% de cajas pesan mÃ¡s de 550 g.
 
     **b) P(450 < X < 550):**
     $$Z_1 = \frac{450-500}{30} = -1.67$$
@@ -338,40 +338,99 @@ Pesos de cajas ~ N(500, 30²) gramos.
 
 ---
 
-## Síntesis y Checklist
+
+---
+
+## AnÃ¡lisis Bivariante
+
+### Ejercicio 7: Calcular CorrelaciÃ³n
+
+Datos de 5 estudiantes (Horas Estudiadas, CalificaciÃ³n):
+
+```
+X (Horas):     [2, 4, 6, 8, 10]
+Y (Notas):     [3, 5, 6, 8, 9]
+```
+
+**Pregunta:** Calcula la correlaciÃ³n de Pearson r.
+
+???+ example "SoluciÃ³n â Ejercicio 7"
+
+    **Paso 1:** Calcular medias
+    - $\bar{x} = 6$
+    - $\bar{y} = 6.2$
+
+    **Paso 2:** Calcular varianzas y covarianza
+    - $\sum (x_i - 6)^2 = 28$
+    - $\sum (y_i - 6.2)^2 = 23.37$
+    - $\sum (x_i - 6)(y_i - 6.2) = 30$
+
+    **Paso 3:** Calcular correlaciÃ³n
+    $$r = \frac{30}{\sqrt{28 \times 23.37}} = \frac{30}{25.58} â 0.852$$
+
+    **InterpretaciÃ³n:** r â 0.85 indica relaciÃ³n positiva fuerte.
+
+---
+
+### Ejercicio 8: RegresiÃ³n Lineal Simple
+
+Usando los datos del Ejercicio 7, estima la recta Y = Î²â + Î²âX y predice para 7 horas.
+
+???+ example "SoluciÃ³n â Ejercicio 8"
+
+    **Calcular pendiente:**
+    $$\hat{\beta}_1 = \frac{30/5}{28/5} = 1.071$$
+
+    **Calcula    **Calcula    **Calcula    **Calc 6.2 - 1    **Calcula    **Cal$
+
+    **EcuaciÃ³n:** $\hat{Y} = -0.23 + 1.    **EcuaciÃ³n:** $\hat{Y} = -0.23 + 1.    **EcuaciÃ³n.23 + 1.071 \times 7 = 7.27$$
+
+---
+
+### Ejercicio 9: Tabla de Contingencia y ÏÂ²
+
+Tabla GÃ©nero Ã Lenguaje (n=100):
+
+|       | |       | |       | |       | |       ----|       | |       | |      ombre|       | |        ||       | |        30  |       | |       | |       | |       | |    | 2|       | |       | |       ¿H|       | |       | |       | Î±=0.|       | |       | |       | |      rci|       | |       | |       | |adas:**
+    $$E_{HP} = \frac{50 \times 55}{100} = 27.5, \quad E_{HR} = 11, \quad E_{HJ} = 11.5$$
+
+    **Calcular ÏÂ²:**
+    $$\chi^2 = \frac{(25-27.5)^2}{27.5    $$\chi^2 = \frac{(25-27.5)^2}{271)(3-1)    $$\chi^2 = \frac{(25-27.5)^2}{27.5    $$\chi^2 = \frac{(25-27.5)^2}{271)(3-1)    $$\chitiva**.
+
+## SÃ­ntesis y Checklist
 
 !!! tip "Resumen de Estrategias"
 
     **Identifica el tipo de problema:**
 
-    - 🎲 ¿Probabilidad condicional? → Usa Bayes
-    - 📊 ¿Conteo de eventos, n fijo? → Binomial
-    - 📞 ¿Conteo en intervalo continuo? → Poisson
-    - 📏 ¿Variable continua, campana? → Normal
-    - ⏱️ ¿Tiempo hasta evento? → Exponencial
+    - ð² Â¿Probabilidad condicional? â Usa Bayes
+    - ð Â¿Conteo de eventos, n fijo? â Binomial
+    - ð Â¿Conteo en intervalo continuo? â Poisson
+    - ð Â¿Variable continua, campana? â Normal
+    - â±ï¸ Â¿Tiempo hasta evento? â Exponencial
 
-    **Checklist de cálculo:**
+    **Checklist de cÃ¡lculo:**
 
-    - [ ] Identifica la distribución (¿X ~ Binomial, Poisson, Normal?)
-    - [ ] Escribe los parámetros (n, p, λ, μ, σ)
-    - [ ] Aplica la fórmula correspondiente
+    - [ ] Identifica la distribuciÃ³n (Â¿X ~ Binomial, Poisson, Normal?)
+    - [ ] Escribe los parÃ¡metros (n, p, Î», Î¼, Ï)
+    - [ ] Aplica la fÃ³rmula correspondiente
     - [ ] Usa tabla Z (Normal) o calculadora
     - [ ] Interpreta el resultado en contexto
 
 ---
 
-## 📝 Ejercicios Propuestos
+## ð Ejercicios Propuestos
 
-!!! tip "Práctica Adicional"
+!!! tip "PrÃ¡ctica Adicional"
 
-    1. **Binomial:** 8 lanzamientos de dados. X = número de seises. P(X ≤ 2)?
+    1. **Binomial:** 8 lanzamientos de dados. X = nÃºmero de seises. P(X â¤ 2)?
     2. **Poisson:** Centro de ER recibe 10 llamadas/hora. P(>15 en una hora)?
-    3. **Normal:** Edad de población ~ N(45, 15²). P(20 < edad < 70)?
+    3. **Normal:** Edad de poblaciÃ³n ~ N(45, 15Â²). P(20 < edad < 70)?
     4. **Bayes:** Test tiene 85% sens, 90% esp, prev 5%. Si das positivo, P(realmente tengas)?
 
 ---
 
-## 📖 Enlaces Relacionados
+## ð Enlaces Relacionados
 
 - [Eventos y probabilidad](./eventos-y-probabilidad.md)
 - [Variables aleatorias](./variables-aleatorias.md)

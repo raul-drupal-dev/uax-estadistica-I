@@ -1,257 +1,285 @@
----
-title: "UD4 — Modelos de probabilidad: Distribuciones discretas"
+title: "Distribuciones discretas: Binomial y Poisson"
 slug: "ud4-distribuciones-discretas"
 date: "2026-01-14"
-authors: ["Profesor Ejemplo", "Raul Jimenez"]
-tags: ["ud4", "probabilidad", "discretas", "bernoulli", "binomial", "geometrica", "poisson", "definicion"]
-difficulty: "intro"
+authors: ["Profesor UAX"]
+tags: ["ud2", "binomial", "poisson", "distribuciones", "discretas"]
+difficulty: "intermedio"
 type: "definicion"
-prerequisitos: ["ud2/eventos-y-probabilidad.md", "ud2/distribuciones-discretas.md"]
+prerequisitos: ["ud2-eventos-probabilidad", "ud2-variables-aleatorias"]
+
 ---
 
 ## Objetivo
 
-✨ Dominar las cuatro distribuciones discretas fundamentales: **Bernoulli, Binomial, Geométrica y Poisson**. Entender su construcción, identificar cuándo usarlas y aplicarlas en cálculo de probabilidades y modelado de fenómenos reales.
+✨ Dominar las **dos distribuciones discretas más importantes** en estadística: binomial (intentos fijos) y Poisson (eventos raros en tiempo/espacio).
 
 ## Idea Clave 💡
 
-**Cada distribución discreta responde a un contexto diferente:** Bernoulli = 1 intento, Binomial = n intentos fijos, Geométrica = espera al primer éxito, Poisson = conteos en intervalo. Dominar estas distribuciones es esencial para inferencia estadística.
+**Distinguir entre "n intentos fijos" y "eventos raros en intervalo" es la clave.** Muchos errores vienen de confundir cuándo usar cada distribución. Una vez identificado el escenario, todo lo demás sigue de fórmulas estándar.
 
-### Árbol de Decisión: ¿Cuál Usar?
+---
+
+## Distribución Binomial
+
+### Definición y Caracterización
+
+**Modelo:** Repetir **n intentos independientes**, cada uno con **probabilidad p de éxito**, contar número total de éxitos.
+
+**Ejemplos:**
+
+- 🪙 Lanzar una moneda 10 veces, contar caras
+- ✅ En una muestra de 50, contar defectuosos (p=2%)
+- 🎯 En 20 disparos, contar blancos acertados (p=0.7)
+- 📊 En 100 clientes, contar satisfechos (p=0.8)
+
+**Condiciones (criterios MUST):**
+
+1. ✅ Número **fijo** de intentos (n)
+2. ✅ Cada intento: **éxito (p) o fracaso (1-p)**
+3. ✅ Intentos **independientes**
+4. ✅ Probabilidad **constante** en todos
+
+### Fórmula
+
+Si $X \sim \text{Binomial}(n, p)$:
+
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, n$$
+
+Donde $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ = número de formas de elegir k de n
+
+**Media y Varianza:**
+$$E[X] = np, \quad \text{Var}(X) = np(1-p)$$
+
+???+ example "Ejemplo 1: Moneda Justa"
+
+    Lanzar moneda 5 veces, X = número de caras
+
+    n = 5, p = 0.5
+
+    P(X = 3) = $\binom{5}{3}$ × 0.5³ × 0.5² = 10 × 0.03125 = 0.3125
+
+    E[X] = 5 × 0.5 = 2.5 (esperamos ~2-3 caras)
+
+    Var(X) = 5 × 0.5 × 0.5 = 1.25
+
+???+ example "Ejemplo 2: Control de Calidad"
+
+    Fábrica: 2% de piezas defectuosas
+
+    Revisar lote de 10 piezas, X = número defectuosas
+
+    n = 10, p = 0.02
+
+    P(X = 0) = $\binom{10}{0}$ × 0.02⁰ × 0.98¹⁰ ≈ 0.8171
+
+    P(X = 1) = $\binom{10}{1}$ × 0.02¹ × 0.98⁹ ≈ 0.1667
+
+    E[X] = 10 × 0.02 = 0.2 (esperamos ~0 defectos)
+
+---
+
+### Cuándo Usarla
+
+✅ **USA BINOMIAL SI:**
+
+- Hay **número fijo** de intentos
+- Cada intento es **sí/no** (binario)
+- Intentos son **independientes**
+- p es **constante**
+
+???+ warning "NO USES BINOMIAL SI:"
+
+    - ❌ El número de intentos NO es fijo ("hasta obtener 3 éxitos")
+    - ❌ p cambia entre intentos
+    - ❌ Los intentos no son independientes
+    - ❌ Habla de "tasa" o "eventos por unidad" (usa Poisson)
+
+---
+
+### Aproximación a Normal
+
+**Regla Práctica:** Si $n > 30$ y $0.1 < p < 0.9$:
+
+$$\text{Binomial}(n, p) \approx N(\mu = np, \sigma^2 = np(1-p))$$
+
+**Ventaja:** Calcular probabilidades sin números enormes (factoriales).
+
+???+ example "Ejemplo: Encuesta Grande"
+
+    n = 100, p = 0.6
+
+    X ~ Binomial(100, 0.6)
+
+    Aproximar a: X ~ N(60, 24)
+
+    P(X < 65) ≈ P(Z < (65-60)/√24) ≈ P(Z < 1.02)
+
+---
+
+## Distribución Poisson
+
+### Definición y Caracterización
+
+**Modelo:** Contar **eventos raros** que ocurren en un intervalo (tiempo, espacio, longitud) con **tasa constante λ**.
+
+**Ejemplos:**
+
+- 📞 Número de llamadas en 1 hora (λ = 3 llamadas/hora)
+- 🐛 Defectos en 10 metros de cable (λ = 0.5 defectos/metro)
+- 🚗 Accidentes en una carretera por mes (λ = 2 accidentes/mes)
+- 💻 Errores de servidor en 1 día (λ = 5 errores/día)
+
+**Condiciones:**
+
+1. ✅ Eventos ocurren con **tasa λ constante**
+2. ✅ Eventos **independientes**
+3. ✅ **No hay "simultaneidad"** (2+ eventos mismo instante improbable)
+4. ✅ Intervalo es **continuo** (tiempo/espacio)
+
+### Fórmula
+
+Si $X \sim \text{Poisson}(\lambda)$:
+
+$$P(X = k) = e^{-\lambda} \frac{\lambda^k}{k!}, \quad k = 0, 1, 2, \ldots$$
+
+**Nota:** e ≈ 2.71828
+
+**Media y Varianza (¡iguales!):**
+$$E[X] = \lambda, \quad \text{Var}(X) = \lambda$$
+
+**¡Característica unique!** En Poisson, media = varianza.
+
+???+ example "Ejemplo 1: Llamadas Telefónicas"
+
+    Tasa: λ = 3 llamadas/hora
+
+    ¿Probabilidad de 5 llamadas en una hora?
+
+    P(X = 5) = e⁻³ × 3⁵ / 5! = 0.0498 × 243 / 120 ≈ 0.1008
+
+    E[X] = 3, Var(X) = 3
+
+???+ example "Ejemplo 2: Defectos en Cable"
+
+    Tasa: λ = 2 defectos por 100 metros
+
+    ¿Probabilidad de 0 defectos en 100 metros?
+
+    P(X = 0) = e⁻² × 2⁰ / 0! = 0.1353 ≈ 13.53%
+
+---
+
+### Cuándo Usarla
+
+✅ **USA POISSON SI:**
+
+- Hay **tasa λ** (eventos por unidad: tiempo/espacio)
+- Eventos son **independientes**
+- Queremos contar eventos en **intervalo continuo**
+- Para **eventos raros** (p pequeño, n grande)
+
+???+ tip "Regla Rápida"
+
+    **Si el enunciado dice "por hora", "por metro", "por día"** → Piensa Poisson
+
+    **Si dice "en n intentos con prob p"** → Piensa Binomial
+
+!!! note "Poisson como Límite de Binomial"
+
+    Si n → ∞ y p → 0, pero np = λ es constante:
+
+    Binomial(n, p) → Poisson(λ)
+
+    **Práctica:** Usa Poisson si n > 100 y p < 0.01
+
+---
+
+## Tabla Comparativa: Binomial vs Poisson
+
+| **Aspecto**      | **Binomial**              | **Poisson**                   |
+| :--------------- | :------------------------ | :---------------------------- |
+| **Parámetros**   | n (intentos), p (prob)    | λ (tasa)                      |
+| **¿Qué modela?** | n intentos, contar éxitos | Eventos raros, contar eventos |
+| **Rango**        | 0 a n                     | 0 a ∞                         |
+| **Media**        | np                        | λ                             |
+| **Varianza**     | np(1-p)                   | λ                             |
+| **Cuándo**       | n fijo                    | Intervalo continuo            |
+| **Ejemplo**      | 10 lanzamientos           | Llamadas por hora             |
+
+---
+
+## Diagrama de Decisión: ¿Binomial o Poisson?
 
 ```mermaid
 graph TD
-    A["¿Cuántos ensayos Bernoulli?"] -->|1 intento| B["Bernoulli"]
-    A -->|n fijos| C["Binomial"]
-    A -->|esperamos al éxito| D["Geométrica"]
-    A -->|conteos en intervalo| E["Poisson"]
+    A["¿Cuál es el escenario?"] -->|Número fijo de intentos| B["¿Cada intento es<br/>éxito/fracaso?"]
+    A -->|Eventos en intervalo<br/>continuo| C["¿Tasa constante?"]
 
-    B --> F["P(X=x)=p^x(1-p)^(1-x)"]
-    C --> G["P(X=k)=C(n,k)p^k(1-p)^(n-k)"]
-    D --> H["P(X=k)=(1-p)^(k-1)p"]
-    E --> I["P(X=k)=λ^k*e^(-λ)/k!"]
+    B -->|SÍ| D["BINOMIAL<br/>Parámetros: n, p"]
+    B -->|NO| E["Otro modelo"]
+
+    C -->|SÍ| F["POISSON<br/>Parámetro: λ"]
+    C -->|NO| G["Otro modelo"]
 ```
-
----
-
-## 🎲 Distribución Bernoulli
-
-**Contexto:** Un único experimento con dos resultados: éxito (1) o fracaso (0), con probabilidad de éxito $p$.
-
-**Definición:** Si $X\sim\mathrm{Ber}(p)$, entonces para $x\in\{0,1\}$:
-
-$$P(X=x) = p^x(1-p)^{1-x}$$
-
-### Propiedades
-
-| Propiedad     | Valor           |
-| :------------ | :-------------- |
-| **Media**     | E[X] = p        |
-| **Varianza**  | Var(X) = p(1-p) |
-| **Rango**     | {0, 1}          |
-| **Parámetro** | p ∈ [0, 1]      |
-
-???+ example "Control de calidad"
-
-    Una pieza sale defectuosa con probabilidad p=0.08. Define X=1 si defectuosa, 0 si correcta.
-
-    $$P(X=1)=0.08, \quad P(X=0)=0.92$$
-
-    E[X]=0.08, Var(X)=0.08(0.92)=0.0736
-
----
-
-## 🎲 Distribución Binomial
-
-**Contexto:** Número de éxitos en $n$ ensayos de Bernoulli **independientes** con probabilidad de éxito constante $p$.
-
-**Definición:** Si $X\sim\mathrm{Bin}(n,p)$, entonces para $k=0,1,\dots,n$:
-
-$$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$$
-
-### Propiedades
-
-| Propiedad      | Valor             |
-| :------------- | :---------------- |
-| **Media**      | E[X] = np         |
-| **Varianza**   | Var(X) = np(1-p)  |
-| **Rango**      | {0, 1, ..., n}    |
-| **Parámetros** | n ≥ 1, p ∈ [0, 1] |
-
-**Supuestos:** Ensayos independientes, n fijo, p constante.
-
-???+ example "Inspección de lote"
-
-    En n=10 inspecciones con p=0.1 defectos, calcula P(X≤2).
-
-    $$P(X=0)=\binom{10}{0}0.1^0 0.9^{10}=0.3487$$
-    $$P(X=1)=\binom{10}{1}0.1^1 0.9^{9}=0.3874$$
-    $$P(X=2)=\binom{10}{2}0.1^2 0.9^{8}=0.1937$$
-
-    $$P(X\le2)=0.3487+0.3874+0.1937=0.9298$$
-
-!!! note "📊 Tabla de distribución Binomial"
-
-    Consulta valores precalculados:
-    [Ver tabla Binomial (PDF)](../ud4/tablas/TABLA_DISTRIBUCION_BINOMIAL.pdf){:target="_blank"}
-
----
-
-## 🎲 Distribución Geométrica
-
-**Contexto:** Número de ensayos necesarios hasta observar el **primer éxito** (o número de fracasos antes del primer éxito).
-
-**Definición:** Si $X\sim\mathrm{Geom}(p)$, entonces para $k=1,2,\dots$:
-
-$$P(X=k)=(1-p)^{k-1}p$$
-
-### Propiedades
-
-| Propiedad     | Valor                                      |
-| :------------ | :----------------------------------------- |
-| **Media**     | E[X] = 1/p                                 |
-| **Varianza**  | Var(X) = (1-p)/p²                          |
-| **Rango**     | {1, 2, 3, ...}                             |
-| **Parámetro** | p ∈ (0, 1]                                 |
-| **Propiedad** | Falta de memoria: P(X>n+m \| X>n) = P(X>m) |
-
-**Interpretación:** Si p es pequeña, esperas más intentos en promedio (E[X]=1/p grande).
-
-???+ example "Clics en anuncios"
-
-    Probabilidad de clic es p=0.2. ¿Probabilidad de primer clic en 3er intento?
-
-    $$P(X=3)=(1-0.2)^{2}\cdot0.2=0.64\cdot0.2=0.128$$
-
----
-
-## 🎲 Distribución Poisson
-
-**Contexto:** Número de eventos que ocurren en un intervalo de tiempo/espacio cuando la tasa media es constante ($\lambda$) y los eventos son independientes.
-
-**Definición:** Si $X\sim\mathrm{Poisson}(\lambda)$, entonces para $k=0,1,2,\dots$:
-
-$$P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}$$
-
-### Propiedades
-
-| Propiedad     | Valor          |
-| :------------ | :------------- |
-| **Media**     | E[X] = λ       |
-| **Varianza**  | Var(X) = λ     |
-| **Rango**     | {0, 1, 2, ...} |
-| **Parámetro** | λ > 0          |
-
-**Aproximación Binomial:** Si n≥30, p≤0.1 y np=λ<10, entonces $\mathrm{Bin}(n,p)\approx\mathrm{Poisson}(\lambda)$
-
-???+ example "Peticiones API"
-
-    Una API recibe en promedio λ=4 peticiones/minuto. ¿Probabilidad de ≥3 peticiones?
-
-    $$P(X\ge 3)=1-P(X\le 2)$$
-    $$=1-\left[\frac{4^0e^{-4}}{0!}+\frac{4^1e^{-4}}{1!}+\frac{4^2e^{-4}}{2!}\right]$$
-    $$=1-(0.0183+0.0733+0.1465)=0.7619$$
-
-!!! note "📊 Tabla de distribución Poisson"
-
-    Consulta valores precalculados:
-    [Ver tabla Poisson (PDF)](../ud4/tablas/TABLA_DISTRIBUCION_POISSON.pdf){:target="_blank"}
-
----
-
-## 📊 Comparación: Bernoulli, Binomial, Geométrica, Poisson
-
-| Aspecto        | Bernoulli | Binomial               | Geométrica           | Poisson              |
-| :------------- | :-------- | :--------------------- | :------------------- | :------------------- |
-| **Contexto**   | 1 intento | n intentos fijos       | Intentos hasta éxito | Conteos en intervalo |
-| **Parámetros** | p         | n, p                   | p                    | λ                    |
-| **Rango**      | {0, 1}    | {0, 1, ..., n}         | {1, 2, 3, ...}       | {0, 1, 2, ...}       |
-| **Media**      | p         | np                     | 1/p                  | λ                    |
-| **Varianza**   | p(1-p)    | np(1-p)                | (1-p)/p²             | λ                    |
-| **Supuesto**   | 1 ensayo  | n fijo, independientes | p constante          | Tasa λ constante     |
 
 ---
 
 ## ⚠️ Trampas Comunes
 
-**Trampa 1: Confundir Binomial con Geométrica**
+### Trampa 1: Confundir "n intentos" con "tasa"
 
-- ❌ Incorrecto: Usar Binomial para "cuántos intentos hasta el éxito"
-- ✅ Correcto: Binomial = éxitos en n fijo; Geométrica = intentos hasta primer éxito
+❌ **INCORRECTO:** "Un servidor recibe 5 solicitudes. ¿Prob de 3 solicitudes?" → No está claro si son fijas o por unidad tiempo
 
-**Trampa 2: No verificar independencia**
+✅ **CORRECTO:** "Un servidor recibe 5 solicitudes/minuto (λ=5). ¿Prob de 3 en un minuto?" → Poisson
 
-- ❌ Incorrecto: Usar Binomial si los ensayos no son independientes o p cambia
-- ✅ Correcto: Verificar que cada ensayo sea igual (no es bola sin reemplazo)
+### Trampa 2: Asumir Poisson cuando hay n pequeño
 
-**Trampa 3: Confundir E[X]=1/p**
+❌ **INCORRECTO:** "5 lanzamientos de moneda, 1% de caras" → No es Poisson (n pequeño)
 
-- ❌ Incorrecto: En Geométrica pensar que 1/p es el número de fracasos
-- ✅ Correcto: 1/p es el número esperado de **intentos** hasta el éxito
+✅ **CORRECTO:** "1000 lanzamientos de moneda, 0.1% de caras" → Poisson aproximadamente
 
-**Trampa 4: Usar Poisson sin verificar condiciones**
+### Trampa 3: Olvidar que Var(X) = λ en Poisson
 
-- ❌ Incorrecto: Aproximar Bin(10, 0.5) con Poisson(5) (p no es pequeña)
-- ✅ Correcto: n≥30, p≤0.1, np<10 para buena aproximación
+Si observas **media ≈ varianza**, es fuerte indicador de Poisson.
 
-**Trampa 5: Confundir k en Geométrica**
-
-- ❌ Incorrecto: Usar k=número de fracasos directamente
-- ✅ Correcto: P(X=k) es para k=intentos (incluye el éxito final)
+Si observas **varianza >> media**, podría ser sobre-dispersión (binomial negativa u otro).
 
 ---
 
-## 💡 Checklist: Resolver Problemas de Distribuciones Discretas
+## 💡 Checklist: Identificar Distribución
 
-!!! tip "Paso a Paso"
+!!! tip "Antes de Calcular"
 
-    1. **Identifica el contexto:** ¿Cuál es el experimento aleatorio?
-    2. **¿Cuántos intentos?**
-       - 1 intento → Bernoulli
-       - n fijos → Binomial
-       - Hasta primer éxito → Geométrica
-       - Conteos en intervalo → Poisson
-    3. **Define parámetros:** p, n, o λ
-    4. **Verifica supuestos:**
-       - Binomial: independencia, p constante, n fijo
-       - Geométrica: p constante, independencia
-       - Poisson: tasa constante, eventos independientes
-    5. **Selecciona fórmula:** Escribe P(X=k) o P(X≤k) según necesites
-    6. **Calcula con cuidado:** Combinatorios, potencias, exponenciales
-    7. **Interpreta resultado:** ¿Tiene sentido (probabilidad entre 0 y 1)?
-    8. **Reporta:** Valor numérico + contexto
+    1. **¿Hay "n intentos"?**
+       - Sí → Binomial
+       - No → Poisson
+
+    2. **Si Binomial:**
+       - [ ] n es fijo
+       - [ ] p es constante
+       - [ ] Intentos independientes
+       - [ ] Cada intento es sí/no
+
+    3. **Si Poisson:**
+       - [ ] Hay tasa λ (eventos/unidad)
+       - [ ] Intervalo continuo (tiempo/espacio)
+       - [ ] Eventos independientes
+       - [ ] Sin simultaneidad probable
 
 ---
 
-## 📚 Ejercicios Rápidos
+## 📝 Ejercicios Prácticos
 
-???+ example "Ejercicio 1 — Binomial"
+!!! tip "Práctica"
 
-    En un lote, p=0.05 defectuosas. Para n=20, calcula P(X≤1).
-
-    $$P(X=0)=0.95^{20}=0.3585$$
-    $$P(X=1)=\binom{20}{1}0.05\cdot0.95^{19}=0.3774$$
-    $$P(X\le1)=0.3585+0.3774=0.7359$$
-
-???+ example "Ejercicio 2 — Geométrica"
-
-    Con p=0.3, calcula P(X≥4).
-
-    Usa P(X≥4) = P(X>3) = (1-p)³
-
-    $$P(X\ge4)=0.7^3=0.343$$
-
-???+ example "Ejercicio 3 — Poisson"
-
-    Llamadas a central: λ=2/hora. ¿P(X=0) en 1 hora?
-
-    $$P(X=0)=\frac{2^0 e^{-2}}{0!}=e^{-2}=0.1353$$
+    1. 20 monedas, P(X=10 caras)? → Binomial
+    2. Centro de llamadas recibe 4 llamadas/minuto, P(X>5)? → Poisson
+    3. 1000 emails, 2% spam, P(exactamente 20 spam)? → Binomial o Poisson (ambos aproximan)
 
 ---
 
 ## 📖 Enlaces Relacionados
 
-- **UD2:** [Eventos y Probabilidad](../../ud2/eventos-y-probabilidad.md) — Fundamentos
-- **UD2:** [Distribuciones Discretas (introducción)](../../ud2/distribuciones-discretas.md) — Repaso
-- **UD4:** [Distribuciones Continuas](./distribuciones-continuas.md) — Contrapartes continuas
-- **UD4:** [Derivadas de la Normal](./distribuciones-derivadas-normal.md) — χ², t, F
+- [Eventos y probabilidad](./eventos-y-probabilidad.md) — Fundamentos
+- [Variables aleatorias](./variables-aleatorias.md) — Conceptos base
+- [Distribuciones continuas](./distribuciones-continuas.md) — Normal y otras

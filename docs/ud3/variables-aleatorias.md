@@ -1,11 +1,11 @@
 title: "Variables aleatorias y esperanza matemática"
-slug: "ud2-variables-aleatorias"
+slug: "ud3-variables-aleatorias"
 date: "2026-01-14"
 authors: ["Profesor UAX"]
-tags: ["ud2", "variables", "esperanza", "varianza", "distribución"]
+tags: ["ud3", "variables", "esperanza", "varianza", "distribución"]
 difficulty: "intermedio"
 type: "definicion"
-prerequisitos: ["ud2-eventos-probabilidad"]
+prerequisitos: ["ud3-eventos-probabilidad"]
 
 ---
 

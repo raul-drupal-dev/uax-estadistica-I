@@ -89,12 +89,19 @@ nav:
       - Introducción: index.md
       - Temario: temario.md
       - UD1 - introducción a la Estadística: ud1/introduccion.md
-      - UD2 - Probabilidad y distribuciones: ud2/eventos-y-probabilidad.md
-      - UD3 - Inferencia y regresión: ud3/estimacion-y-intervalos.md
+      - UD2 - Probabilidad y análisis bivariante: ud2/bivariante-intro.md
+      - UD3 - Variables aleatorias: ud3/fundamentos-probabilidad.md
       - UD4 - Modelos de probabilidad: ud4/resumen.md
       - UD5 - Inferencia avanzada: ud5/resumen.md
       - UD6 - Contrastes de hipótesis: ud6/introduccion-contrastes-hipotesis.md
       - UD7 - Introducción a R y RStudio: ud7/introduccion.md
+      - Tablas PDF:
+          - Normal (Z): ud4/tablas/TABLA_DISTRIBUCION_NORMAL.pdf
+          - t de Student: ud4/tablas/Tabla_t_Student.pdf
+          - Chi-cuadrado: ud4/tablas/Tabla_Chi_Cuadrado.pdf
+          - F de Snedecor: ud4/tablas/Tabla_F_Snedecor.pdf
+          - Binomial: ud4/tablas/TABLA_DISTRIBUCION_BINOMIAL.pdf
+          - Poisson: ud4/tablas/TABLA_DISTRIBUCION_POISSON.pdf
       - Recursos: recursos/desc_div.md
       - Examenes: examenes/examen-guia-estudio.md
   - UD1 — Introducción a la Estadística:
@@ -111,20 +118,24 @@ nav:
       - Ejercicios — UD1: ud1/ejercicios.md
       - Resumen UD1: ud1/resumen.md
       - Examen UD1 (medio): ud1/examen-ud1-practica.md
-  - UD2 — Probabilidad y distribuciones:
-      - Eventos y probabilidad: ud2/eventos-y-probabilidad.md
-      - Variables aleatorias: ud2/variables-aleatorias.md
-      - Distribuciones discretas: ud2/distribuciones-discretas.md
-      - Distribuciones continuas: ud2/distribuciones-continuas.md
-      - Ejercicios — UD2: ud2/ejercicios.md
+  - UD2 — Probabilidad y análisis bivariante:
+      - Introducción bivariante: ud2/bivariante-intro.md
+      - Correlación y covarianza: ud2/correlacion-covarianza.md
+      - Regresión lineal simple: ud2/regresion-lineal-simple.md
+      - Datos categóricos y χ²: ud2/datos-categoricos.md
       - Resumen UD2: ud2/resumen.md
+      - Ejercicios — UD2: ud2/ejercicios.md
+      - Examen bivariante (completo): ud2/examen-bivariante.md
+      - Examen bivariante (preguntas): ud2/examen-bivariante-preguntas.md
       - Examen UD2 (medio): ud2/examen-ud2-practica.md
-  - UD3 — Inferencia y regresión:
-      - Estimación e intervalos: ud3/estimacion-y-intervalos.md
-      - Pruebas de hipótesis: ud3/pruebas-hipotesis.md
-      - Regresión lineal simple: ud3/regresion-simple.md
-      - Ejercicios — UD3: ud3/ejercicios.md
+  - UD3 — Variables aleatorias:
+      - Fundamentos de probabilidad: ud3/fundamentos-probabilidad.md
+      - Tipos de variables aleatorias: ud3/tipos-variables-aleatorias.md
+      - Funciones de distribución y probabilidad: ud3/funciones-distribucion.md
+      - Esperanza y varianza: ud3/esperanza-varianza.md
+      - Aplicaciones en IA: ud3/aplicaciones-ia.md
       - Resumen UD3: ud3/resumen.md
+      - Ejercicios — UD3: ud3/ejercicios.md
       - Examen UD3 (medio): ud3/examen-ud3-practica.md
   - UD4 — Modelos de probabilidad:
       - Resumen: ud4/resumen.md
@@ -166,3 +177,4 @@ nav:
       - Guía de Estudio: examenes/examen-guia-estudio.md
       - Examen Completo: examenes/examen-general-final.md
       - Examen Alternativo: examenes/examen-general-alternativo.md
+      - Propuesta 1 Profesor (medio): examenes/examen-propuesta-1-profesor.md

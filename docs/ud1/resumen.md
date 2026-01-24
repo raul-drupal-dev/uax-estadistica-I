@@ -120,7 +120,11 @@ graph LR
 | **IQR**             | $IQR = Q_3 - Q_1$                          | Rango del 50% central                   |
 | **Coef. Variación** | $CV = \frac{s}{\bar{x}} \times 100\%$      | Dispersión relativa (comparar datasets) |
 
-!!! warning "⚠️ Cuidado con la Varianza" - **Varianza poblacional:** divide por $n$ - **Varianza muestral:** divide por $n-1$ (corrección de Bessel) - Usa $n-1$ cuando calculas de una muestra para inferir sobre población
+!!! warning "⚠️ Cuidado con la Varianza" 
+
+   - **Varianza poblacional:** divide por $n$ 
+   - **Varianza muestral:** divide por $n-1$ (corrección de Bessel) 
+   - Usa $n-1$ cuando calculas de una muestra para inferir sobre población
 
 ---
 
