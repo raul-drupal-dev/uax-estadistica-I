@@ -1,372 +1,363 @@
 ---
-title: Examen práctica UD3 — Inferencia estadística y regresión (UD3) (medio)
+title: "Examen de Práctica: Variables Aleatorias"
+slug: "ud3-examen-practica"
+tags: ["examen", "variables aleatorias", "PMF", "PDF", "esperanza", "aplicaciones"]
+difficulty: "Intermedio-Avanzado"
 ---
 
-Duración estimada: 60 minutos.
+# 🧪 Examen de Práctica: UD3 - Variables Aleatorias
 
-**Instrucciones**
-
-- Responde marcando la opción correcta (a, b, c, d). Puede haber más de una correcta: marca todas las que correspondan.
-- En las preguntas de cálculo se pide elegir la(s) opción(es) correcta(s); debajo de cada pregunta se incluye la solución desarrollada para estudiar.
-
----
-
-<quiz>
-Se toma una muestra de n=25 observaciones con media muestral 100 y desviación típica poblacional σ=10 (conocida). ¿Cuál es el error estándar de la media?
-
-- [ ] 10
-- [x] 2
-- [ ] 5
-- [ ] 0.4
-
-Explicación: Error estándar = σ/√n = 10/√25 = 10/5 = 2.
-</quiz>
-
-<quiz>
-Con los datos del ejercicio anterior (n=25, x̄=100, σ=10), construye un intervalo de confianza al 95% para la media poblacional usando z₀.₉₇₅=1.96.
-
-- [ ] (96, 104)
-- [x] (96.08, 103.92)
-- [ ] (98, 102)
-- [ ] (90, 110)
-
-Explicación: IC = 100 ± 1.96×2 = 100 ± 3.92 → (96.08, 103.92).
-</quiz>
-
-<quiz>
-Una muestra de n=16 estudiantes tiene media 75 y desviación típica muestral s=8. Para construir un IC al 95% para la media, ¿qué distribución usamos?
-
-- [ ] Normal estándar (z)
-- [x] t de Student con 15 grados de libertad
-- [ ] Chi-cuadrado
-- [ ] Binomial
-
-Explicación: Con σ desconocida y muestra pequeña (n<30), se usa la distribución t con n-1=15 grados de libertad.
-</quiz>
-
-<quiz>
-Para la muestra anterior (n=16, x̄=75, s=8), calcula el IC al 95% usando t₀.₉₇₅,₁₅ ≈ 2.131.
-
-- [x] (70.74, 79.26)
-- [ ] (71, 79)
-- [ ] (73, 77)
-- [ ] (67, 83)
-
-Explicación: Error estándar = 8/√16 = 2; IC = 75 ± 2.131×2 = 75 ± 4.262 → (70.74, 79.26).
-</quiz>
-
-<quiz>
-En una prueba de hipótesis, el error tipo I consiste en:
-
-- [x] Rechazar H₀ cuando H₀ es verdadera
-- [ ] No rechazar H₀ cuando H₀ es falsa
-- [ ] Aceptar H₁ cuando H₁ es falsa
-- [ ] Calcular mal el estadístico de prueba
-
-Explicación: El error tipo I (con probabilidad α) es rechazar la hipótesis nula siendo verdadera.
-</quiz>
-
-<quiz>
-El error tipo II (probabilidad β) consiste en:
-
-- [ ] Rechazar H₀ cuando es verdadera
-- [x] No rechazar H₀ cuando H₁ es verdadera (H₀ es falsa)
-- [ ] Usar el nivel de significación incorrecto
-- [ ] Calcular mal el p-valor
-
-Explicación: El error tipo II es no detectar que H₀ es falsa cuando en realidad lo es (dejar pasar el efecto).
-</quiz>
-
-<quiz>
-Test bilateral: H₀: μ=50 vs H₁: μ≠50. Tenemos n=36, x̄=53, σ=6, α=0.05. Calcula el estadístico z.
-
-- [ ] 1.5
-- [ ] 2.0
-- [x] 3.0
-- [ ] 0.5
-
-Explicación: z = (x̄ - μ₀)/(σ/√n) = (53-50)/(6/√36) = 3/(6/6) = 3/1 = 3.
-</quiz>
-
-<quiz>
-Para el test anterior (z=3, bilateral con α=0.05), los valores críticos son ±1.96. ¿Qué decisión tomamos?
-
-- [x] Rechazamos H₀ al nivel 5%
-- [ ] No rechazamos H₀
-- [ ] Aceptamos H₁ sin restricciones
-- [ ] Necesitamos más datos
-
-Explicación: |z|=3 > 1.96, por tanto cae en la región crítica y rechazamos H₀.
-</quiz>
-
-<quiz>
-Test unilateral: H₀: μ≤50 vs H₁: μ>50. n=25, x̄=52, σ=5, α=0.05. Calcula el estadístico z.
-
-- [ ] 1.0
-- [x] 2.0
-- [ ] 2.5
-- [ ] 4.0
-
-Explicación: z = (52-50)/(5/√25) = 2/(5/5) = 2/1 = 2.
-</quiz>
-
-<quiz>
-Para el test anterior (z=2, unilateral superior, α=0.05), el valor crítico es z₀.₉₅=1.645. ¿Rechazamos H₀?
-
-- [x] Sí, porque z=2 > 1.645
-- [ ] No, porque z < 2.0
-- [ ] No podemos decidir sin el p-valor
-- [ ] Necesitamos usar la distribución t
-
-Explicación: z=2 supera el valor crítico 1.645, por tanto rechazamos H₀ al 5%.
-</quiz>
-
-<quiz>
-En regresión lineal simple Y = β₀ + β₁X + ε, dados los datos X: 1,2,3 e Y: 2,4,6, calcula la pendiente β̂₁.
-
-- [ ] 1
-- [x] 2
-- [ ] 3
-- [ ] 0.5
-
-Explicación: x̄=2, ȳ=4; Σ(xᵢ-x̄)(yᵢ-ȳ) = (-1)(-2)+0×0+1×2 = 2+0+2=4; Σ(xᵢ-x̄)² = 1+0+1=2; β̂₁=4/2=2.
-</quiz>
-
-<quiz>
-Para la misma regresión (X: 1,2,3 ; Y: 2,4,6), con β̂₁=2, calcula el intercepto β̂₀.
-
-- [x] 0
-- [ ] 1
-- [ ] 2
-- [ ] -1
-
-Explicación: β̂₀ = ȳ - β̂₁×x̄ = 4 - 2×2 = 4 - 4 = 0.
-</quiz>
+**Duración:** 90 minutos  
+**Preguntas:** 16 (8 conceptuales + 8 aplicadas)  
+**Puntuación:** 100 puntos total (6.25 pts por pregunta)
 
 ---
 
-<!-- mkdocs-quiz intro -->
+## BLOQUE I: Preguntas Conceptuales (8 puntos)
 
-<!-- mkdocs-quiz results -->
+### Pregunta 1
+
+Una variable aleatoria discreta $X$ tiene valores $\{0, 1, 2\}$ con probabilidades $\{0.2, 0.5, 0.3\}$.
+
+**a)** Verifica que sea una PMF válida.  
+**b)** Calcula $F_X(1.5)$ (CDF).
+
+??? example "Solución"
+
+    **a) Validación PMF:**
+    $$0.2 + 0.5 + 0.3 = 1.0 \text{ ✓}$$
+    Todas las probabilidades son no negativas ✓
+
+    **b) CDF:**
+    $$F_X(1.5) = P(X \leq 1.5) = P(X=0) + P(X=1) = 0.2 + 0.5 = 0.7$$
 
 ---
 
-## Soluciones desarrolladas
+### Pregunta 2
 
-???- details "Solución pregunta 1 — Error estándar"
+¿Cuál es la diferencia fundamental entre PMF y PDF?
 
-    El error estándar de la media muestral se calcula como:
+??? example "Solución"
 
-    $$SE = \frac{\sigma}{\sqrt{n}}$$
+    | Aspecto | PMF | PDF |
+    |--------|-----|-----|
+    | **Variable** | Discreta | Continua |
+    | **Salida** | Probabilidad (0-1) | Densidad (puede ser >1) |
+    | **P(X=x)** | Puede ser >0 | Siempre 0 |
+    | **Suma/Integral** | Σ = 1 | ∫ = 1 |
+    | **Cálculo prob.** | Valor directo | Integral en intervalo |
 
-    Con σ=10 y n=25:
+---
 
-    $$SE = \frac{10}{\sqrt{25}} = \frac{10}{5} = 2$$
+### Pregunta 3
 
-???- details "Solución pregunta 2 — Intervalo de confianza con z"
+**Verdadero/Falso** (justifica breve):
 
-    Para un IC al 95% con varianza conocida:
+a) En una distribución normal, $P(X = \mu) > 0$  
+b) La varianza siempre es positiva  
+c) $\text{Var}(2X) = 2 \cdot \text{Var}(X)$
 
-    $$IC = \bar{x} \pm z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}$$
+??? example "Solución"
 
-    Con x̄=100, σ=10, n=25, z₀.₉₇₅=1.96:
+    **a) Falso.** X es continua → P(X = μ) = 0 exactamente
 
-    Error estándar = 2 (calculado antes)
+    **b) Falso.** Var(X) = 0 si X es constante. Generalmente ≥ 0
 
-    Margen de error = 1.96 × 2 = 3.92
+    **c) Falso.** $\text{Var}(2X) = 2^2 \cdot \text{Var}(X) = 4 \cdot \text{Var}(X)$
 
-    $$IC = 100 \pm 3.92 = (96.08, 103.92)$$
+---
 
-    Interpretación: Con 95% de confianza, la media poblacional está entre 96.08 y 103.92.
+### Pregunta 4
 
-???- details "Solución pregunta 3 — Elección de distribución"
+Define "probabilidad condicional" $P(A|B)$ y da un ejemplo en el contexto de clasificación de imágenes.
 
-    Criterios para elegir:
+??? example "Solución"
 
-    - **Normal (z)**: σ conocida O muestra grande (n≥30)
-    - **t de Student**: σ desconocida (usamos s) Y muestra pequeña (n<30)
+    **Definición:**
+    $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 
-    En este caso:
-    - n=16 < 30 (muestra pequeña)
-    - s=8 (desviación muestral, σ desconocida)
+    **Ejemplo en clasificación:**
+    - $A$ = Modelo predice "Gato"
+    - $B$ = Imagen es realmente "Gato"
+    - $P(A|B)$ = Probabilidad de que prediga "Gato" dado que es realmente "Gato" = **Recall/Sensibilidad**
 
-    Por tanto, usamos t de Student con n-1=15 grados de libertad.
+---
 
-???- details "Solución pregunta 4 — IC con distribución t"
+### Pregunta 5
 
-    Fórmula para IC con t:
+¿Por qué es importante usar distribuciones normales en IA? Menciona 2 razones.
 
-    $$IC = \bar{x} \pm t_{1-\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}}$$
+??? example "Solución"
 
-    Datos: n=16, x̄=75, s=8, t₀.₉₇₅,₁₅ = 2.131
+    1. **Teorema del Límite Central:** Muchas distribuciones convergen a normal con muestras grandes
+    2. **Inicialización de pesos:** Redes neuronales se inicializan con $W \sim N(0, \sigma^2)$ para estabilidad
+    3. **Modelado de incertidumbre:** VAE y redes bayesianas usan normales para representar distribuciones
 
-    Error estándar:
+---
 
-    $$SE = \frac{8}{\sqrt{16}} = \frac{8}{4} = 2$$
+## BLOQUE II: Preguntas Aplicadas (8 puntos)
 
-    Margen de error:
+### Pregunta 6
 
-    $$ME = 2.131 \times 2 = 4.262$$
+Sea $X$ = número de aciertos en 5 preguntas de opción múltiple (4 opciones, respuestas aleatorias).
 
-    Intervalo:
+**a)** ¿Es discreta o continua? ¿Por qué?  
+**b)** ¿Cuál es P(X = 3)?  
+**c)** ¿Cuál es E[X]?
 
-    $$IC = 75 \pm 4.262 = (70.738, 79.262) \approx (70.74, 79.26)$$
+??? example "Solución"
 
-???- details "Solución pregunta 5 — Error tipo I"
+    **a) Discreta.** Toma valores finitos {0, 1, 2, 3, 4, 5}
 
-    En pruebas de hipótesis hay dos tipos de error:
+    **b) Binomial con n=5, p=0.25:**
+    $$P(X=3) = \binom{5}{3} (0.25)^3 (0.75)^2 = 10 \times 0.015625 \times 0.5625 = 0.0879$$
 
-    - **Error tipo I (α)**: Rechazar H₀ cuando H₀ es verdadera
-      - También llamado "falso positivo"
-      - Su probabilidad es el nivel de significación α (típicamente 0.05 o 5%)
+    **c) Esperanza:**
+    $$E[X] = n \cdot p = 5 \times 0.25 = 1.25 \text{ aciertos}$$
 
-    - **Error tipo II (β)**: No rechazar H₀ cuando H₀ es falsa
-      - También llamado "falso negativo"
+---
 
-    El error tipo I es más grave en muchos contextos porque implica afirmar algo que no es cierto.
+### Pregunta 7
 
-???- details "Solución pregunta 6 — Error tipo II"
+Un modelo de regresión predice precio con $X \sim N(\mu = 250, \sigma = 40)$ miles de euros.
 
-    El error tipo II (β) ocurre cuando:
+**a)** ¿Cuál es P(X > 300)?  
+**b)** ¿Cuál es el percentil 75?  
+**c)** Interpreta Var(X) = 1600
 
-    - La hipótesis nula H₀ es falsa (es decir, H₁ es verdadera)
-    - Pero NO rechazamos H₀ (no detectamos el efecto)
+??? example "Solución"
 
-    Consecuencias:
-    
-    - "Falso negativo": perdemos la oportunidad de detectar un efecto real
-    - La potencia del test (1-β) mide la probabilidad de detectar correctamente un efecto
+    **a) P(X > 300):**
+    $$Z = \frac{300 - 250}{40} = \frac{50}{40} = 1.25$$
+    $$P(X > 300) = P(Z > 1.25) = 1 - 0.8944 = 0.1056 \approx 10.56\%$$
 
-    Para reducir β: aumentar n, aumentar α (con precaución), o buscar efectos más grandes.
+    **b) Percentil 75:**
+    Busca en tabla normal: Z = 0.674 para 75%
+    $$X_{75} = 250 + 0.674 \times 40 = 250 + 26.96 = 276.96 \text{ mil euros}$$
 
-???- details "Solución pregunta 7 — Estadístico z bilateral"
+    **c) Interpretación:**
+    $$\text{Var}(X) = 1600 = 40^2$$
+    Las predicciones varían tipicamente ±40 mil euros respecto a la media
 
-    Test para la media con varianza conocida:
+---
 
-    $$z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$$
+### Pregunta 8
 
-    Datos: x̄=53, μ₀=50, σ=6, n=36
+Una red neuronal usa dropout 50% en entrenamiento.
 
-    Cálculo del denominador (error estándar):
+**a)** ¿Cuál es la variable aleatoria involucrada?  
+**b)** ¿Qué distribución tiene?  
+**c)** ¿Por qué NO se usa dropout en predicción?
 
-    $$SE = \frac{6}{\sqrt{36}} = \frac{6}{6} = 1$$
+??? example "Solución"
 
-    Estadístico z:
+    **a) Variable:** Indicador de si cada neurona está activa
 
-    $$z = \frac{53 - 50}{1} = \frac{3}{1} = 3$$
+    **b) Distribución:** Bernoulli(p=0.5)
+    - Valor 0: neurona apagada (50%)
+    - Valor 1: neurona activa (50%)
 
-???- details "Solución pregunta 8 — Decisión test bilateral"
+    **c) Sin dropout en predicción:** Porque queremos predicciones **consistentes**. El dropout es solo para **regularizar** el entrenamiento. En predicción usamos todos los pesos.
 
-    Test bilateral H₀: μ=50 vs H₁: μ≠50, α=0.05
+---
 
-    Valores críticos: ±z₀.₉₇₅ = ±1.96
+### Pregunta 9
 
-    Región de rechazo: z < -1.96 O z > 1.96
+Se lanza un dado justo 3 veces. Sea $X$ = suma total.
 
-    Valor calculado: z = 3
+**a)** ¿Cuál es el rango de X?  
+**b)** ¿Cuál es P(X = 10)?  
+**c)** ¿Cuál es E[X]?
 
-    Decisión: Como 3 > 1.96, el estadístico cae en la región crítica.
+??? example "Solución"
 
-    **Conclusión**: Rechazamos H₀ al nivel 5%. Hay evidencia estadística suficiente para afirmar que la media poblacional es diferente de 50.
+    **a) Rango:** [3, 18] (mínimo 1+1+1=3, máximo 6+6+6=18)
 
-    P-valor: P(|Z| > 3) ≈ 0.0027 (muy pequeño, confirma el rechazo).
+    **b) P(X=10):** Combinaciones que suman 10:
+    - (2,2,6), (2,3,5), (2,4,4), (3,3,4) y permutaciones
+    - Total: 27 formas de 216 posibles
+    $$P(X=10) = \frac{27}{216} = 0.125$$
 
-???- details "Solución pregunta 9 — Estadístico z unilateral"
+    **c) E[X]:**
+    $$E[X] = E[X_1] + E[X_2] + E[X_3] = 3.5 + 3.5 + 3.5 = 10.5$$
 
-    Test unilateral superior: H₀: μ≤50 vs H₁: μ>50
+---
 
-    Estadístico z:
+### Pregunta 10
 
-    $$z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$$
+Una VCA continua $X$ tiene PDF:
+$$f_X(x) = 0.1 \text{ para } 0 \leq x \leq 10, \quad 0 \text{ en otro caso}$$
 
-    Con x̄=52, μ₀=50, σ=5, n=25:
+**a)** Verifica que sea PDF válida  
+**b)** Calcula $P(3 < X < 7)$  
+**c)** Calcula E[X]
 
-    $$SE = \frac{5}{\sqrt{25}} = \frac{5}{5} = 1$$
+??? example "Solución"
 
-    $$z = \frac{52 - 50}{1} = 2$$
+    **a) Validación:**
+    $$\int_0^{10} 0.1 \, dx = 0.1 \times 10 = 1 \text{ ✓}$$
 
-???- details "Solución pregunta 10 — Decisión test unilateral"
+    **b) Probabilidad:**
+    $$P(3 < X < 7) = \int_3^7 0.1 \, dx = 0.1 \times 4 = 0.4$$
 
-    Test unilateral superior con α=0.05
+    **c) Esperanza (uniforme):**
+    $$E[X] = \frac{0 + 10}{2} = 5$$
 
-    Valor crítico: z₀.₉₅ = 1.645 (cola superior)
+---
 
-    Región de rechazo: z > 1.645
+### Pregunta 11
 
-    Valor calculado: z = 2
+Inicialización Xavier para una red: entrada 512, salida 256.
 
-    Decisión: Como 2 > 1.645, rechazamos H₀.
+**a)** Calcula la varianza Xavier  
+**b)** Calcula la desviación típica  
+**c)** ¿Por qué es importante esto?
 
-    **Conclusión**: Hay evidencia estadística suficiente al 5% para afirmar que la media es mayor que 50.
+??? example "Solución"
 
-    P-valor: P(Z > 2) ≈ 0.0228 < 0.05, confirma el rechazo.
+    **a) Varianza:**
+    $$\sigma^2 = \frac{2}{512 + 256} = \frac{2}{768} = 0.002604$$
 
-???- details "Solución pregunta 11 — Pendiente regresión"
+    **b) Desviación típica:**
+    $$\sigma = \sqrt{0.002604} \approx 0.051$$
 
-    Modelo: Y = β₀ + β₁X + ε
+    **c) Importancia:**
+    Mantiene estable el flujo de activaciones y gradientes entre capas, evitando desaparición o explosión de gradientes
 
-    Datos: X: 1, 2, 3 ; Y: 2, 4, 6
+---
 
-    Fórmula para β̂₁:
+### Pregunta 12
 
-    $$\hat{\beta}_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$$
+Data augmentation aplica rotaciones uniformes Uniform(-30°, 30°).
 
-    Cálculos:
+**a)** Tipo de distribución y parámetros  
+**b)** E[ángulo]  
+**c)** Var[ángulo]
 
-    x̄ = (1+2+3)/3 = 2
+??? example "Solución"
 
-    ȳ = (2+4+6)/3 = 4
+    **a) Uniforme continua:**
+    $$f(x) = \frac{1}{60} \text{ para } x \in [-30°, 30°]$$
 
-    Numerador:
+    **b) Esperanza:**
+    $$E[X] = \frac{-30 + 30}{2} = 0°$$
 
-    | i | xᵢ | yᵢ | xᵢ-x̄ | yᵢ-ȳ | (xᵢ-x̄)(yᵢ-ȳ) |
-    |---|----|----|------|------|--------------|
-    | 1 | 1  | 2  | -1   | -2   | 2            |
-    | 2 | 2  | 4  | 0    | 0    | 0            |
-    | 3 | 3  | 6  | 1    | 2    | 2            |
+    **c) Varianza:**
+    $$\text{Var}(X) = \frac{60^2}{12} = \frac{3600}{12} = 300 \text{ }(\text{grados}^2)$$
 
-    Suma = 2 + 0 + 2 = 4
+---
 
-    Denominador:
+### Pregunta 13
 
-    | i | xᵢ-x̄ | (xᵢ-x̄)² |
-    |---|------|---------|
-    | 1 | -1   | 1       |
-    | 2 | 0    | 0       |
-    | 3 | 1    | 1       |
+Modelo bayesiano predice: $X \sim N(\mu(x), \sigma^2(x))$
 
-    Suma = 1 + 0 + 1 = 2
+**a)** ¿Qué representa $\mu(x)$?  
+**b)** ¿Qué representa $\sigma(x)$?  
+**c)** ¿Ventaja vs predicción puntual?
 
-    Pendiente:
+??? example "Solución"
 
-    $$\hat{\beta}_1 = \frac{4}{2} = 2$$
+    **a) μ(x):** Predicción de la media (valor esperado)
 
-    Interpretación: Por cada unidad que aumenta X, Y aumenta en promedio 2 unidades.
+    **b) σ(x):** Incertidumbre de la predicción (desviación típica)
 
-???- details "Solución pregunta 12 — Intercepto regresión"
+    **c) Ventaja:** Permite saber cuándo el modelo es "inseguro", facilitando:
+    - Active learning (pedir etiquetas en regiones inciertas)
+    - Detección de out-of-distribution samples
+    - Calibración de confianza
 
-    Fórmula para β̂₀:
+---
 
-    $$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$
+### Pregunta 14
 
-    Valores conocidos:
-    - ȳ = 4
-    - β̂₁ = 2
-    - x̄ = 2
+Variable $Y = 2X + 5$ donde $X$ tiene E[X]=10, Var(X)=16.
 
-    Cálculo:
+**a)** E[Y]  
+**b)** Var(Y)  
+**c)** σ_Y
 
-    $$\hat{\beta}_0 = 4 - 2 \times 2 = 4 - 4 = 0$$
+??? example "Solución"
 
-    Ecuación de regresión estimada:
+    **a) E[Y]:**
+    $$E[Y] = 2 \cdot 10 + 5 = 25$$
 
-    $$\hat{Y} = 0 + 2X = 2X$$
+    **b) Var(Y):**
+    $$\text{Var}(Y) = 2^2 \cdot 16 = 4 \times 16 = 64$$
 
-    Interpretación: La recta pasa por el origen. Cuando X=0, se predice Y=0.
+    **c) σ_Y:**
+    $$\sigma_Y = \sqrt{64} = 8$$
 
-    Comprobación con los datos:
-    - X=1 → Ŷ=2 (real: 2) ✓
-    - X=2 → Ŷ=4 (real: 4) ✓
-    - X=3 → Ŷ=6 (real: 6) ✓
+---
 
-    El ajuste es perfecto (R²=1) porque los puntos están exactamente sobre la recta.
+### Pregunta 15
+
+Clasif. multiclase con softmax produce: z = [3, 1, -2]
+
+**a)** Calcula probabilidades con softmax  
+**b)** ¿Cuál es la clase predicha?  
+**c)** ¿Qué distribución es esto?
+
+??? example "Solución"
+
+    **a) Softmax:**
+    $$e^3 = 20.09, \quad e^1 = 2.72, \quad e^{-2} = 0.135$$
+    $$\text{Sum} = 22.945$$
+    $$P_0 = \frac{20.09}{22.945} = 0.875$$
+    $$P_1 = \frac{2.72}{22.945} = 0.119$$
+    $$P_2 = \frac{0.135}{22.945} = 0.006$$
+
+    **b) Clase predicha:** Clase 0 (87.5%)
+
+    **c) Distribución:** Multinomial (distribución sobre 3 categorías)
+
+---
+
+### Pregunta 16 - Integrador
+
+Un sistema de ML tiene:
+
+- Predictor normal: $\hat{y} \sim N(100, 15^2)$
+- Aplicará softmax a 10 clases
+- Inicializará pesos con Xavier(784→128)
+- Usará dropout 0.3
+
+**Explica cómo se usa VA en cada componente.**
+
+??? example "Solución"
+
+    1. **Predictor normal:**
+       - Modelar incertidumbre
+       - PDF: $f(y) = \frac{1}{15\sqrt{2\pi}}e^{-(y-100)^2/450}$
+       - Permite: $P(y > 110)$, percentiles
+
+    2. **Softmax:**
+       - Convierte logits → Bernoulli/Categórica
+       - Cada clase: valor en [0,1] sumando 1
+
+    3. **Xavier inicialización:**
+       - $\sigma = \sqrt{2/(784+128)} \approx 0.048$
+       - $W \sim N(0, 0.048)$ para estabilidad
+
+    4. **Dropout:**
+       - Cada neurona: Bernoulli(0.7) en entrenamiento
+       - Desactiva 30% aleatoriamente
+       - Regularización contra sobreajuste
+
+---
+
+## 📊 Rúbrica de Evaluación
+
+| Criterio                        | Puntos |
+| ------------------------------- | ------ |
+| **Respuestas correctas**        | 50     |
+| **Justificación/procedimiento** | 30     |
+| **Interpretación**              | 20     |
+| **TOTAL**                       | 100    |
+
+**Escala:**
+
+- 90-100: Excelente
+- 80-89: Muy Bien
+- 70-79: Bien
+- 60-69: Aceptable
+- <60: Necesita mejorar

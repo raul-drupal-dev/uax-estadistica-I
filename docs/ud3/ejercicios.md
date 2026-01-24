@@ -1,319 +1,268 @@
-title: "UD3 — Ejercicios completos"
+---
+title: "Ejercicios: Variables Aleatorias"
 slug: "ud3-ejercicios"
-date: "2025-11-16"
-authors: ["Profesor Ejemplo"]
-tags: ["ud3","ejercicios"]
-difficulty: "intermedio"
-type: "ejercicio"
-prerequisitos: ["ud3-estimacion-intervalos","ud3-pruebas-hipotesis","ud3-regresion-simple"]
+tags: ["ejercicios", "variables aleatorias", "PMF", "PDF", "esperanza", "varianza"]
+difficulty: "Intermedio"
+---
+
+# 📝 Ejercicios: Variables Aleatorias
+
+## 🎯 Objetivo
+
+Practicar conceptos de variables aleatorias, distribuciones, esperanza y varianza mediante ejercicios completos resueltos.
 
 ---
 
-## Objetivo
+## Bloque 1: Conceptos Fundamentales
 
-:pushpin: Practicar estimación puntual, intervalos de confianza, pruebas de hipótesis y regresión lineal con ejercicios completos resueltos paso a paso.
+### Ej. 1 - Clasificación de Variables
+
+**Enunciado:** Identifica si las siguientes variables son discretas o continuas. Explica brevemente.
+
+1. Número de errores en clasificación de imágenes
+2. Tiempo de respuesta de un servidor (en ms)
+3. Puntuación de sentimiento (0-10)
+4. Temperatura promedio diaria
+5. Resultado de lanzar un dado
+
+???- example "Solución"
+
+    1. **Número de errores:** DISCRETA. Se cuenta (1, 2, 3, ...)
+    2. **Tiempo de respuesta:** CONTINUA. Se mide, puede ser 1.234ms, 1.235ms, etc.
+    3. **Puntuación (0-10):** DISCRETA. Aunque es "escala", típicamente toma valores enteros finitos
+    4. **Temperatura diaria:** CONTINUA. Se mide en rango real, ej. 23.4°C, 23.5°C
+    5. **Resultado dado:** DISCRETA. Valores finitos {1, 2, 3, 4, 5, 6}
 
 ---
 
-## Bloque 1 — Estimación e Intervalos de Confianza
+### Ej. 2 - Espacio Muestral y Sucesos
 
-### Ejercicio 1 — Intervalo con distribución t de Student
-
-**Enunciado:** En una muestra de $n=16$ observaciones, se obtiene $\bar{x}=50$ y $s=4$ (desviación estándar muestral). Construye un intervalo de confianza al 95% para la media poblacional $\mu$ (usa t de Student con $t_{0.975,15}\approx 2.131$).
+**Enunciado:** Define el espacio muestral y 3 sucesos para el experimento: "Lanzar una moneda 2 veces"
 
 ???- example "Solución"
 
-    ### Paso 1: Calcula el error estándar
+    **Espacio muestral:**
+    $$\Omega = \{CC, C+, +C, ++\}$$
 
-    $$
-    SE = \frac{s}{\sqrt{n}} = \frac{4}{\sqrt{16}} = \frac{4}{4} = 1.
-    $$
+    (donde C = cara, + = cruz)
 
-    ### Paso 2: Aplica la fórmula del IC
-
-    Dado que la varianza es desconocida y $n$ es pequeña, usamos:
-
-    $$
-    IC_{95\%} = \bar{x} \pm t_{0.975,n-1} \cdot SE = 50 \pm 2.131 \cdot 1 = 50 \pm 2.131.
-    $$
-
-    ### Paso 3: Interpreta el intervalo
-
-    $$
-    IC_{95\%} = (47.869, 52.131).
-    $$
-
-    **Interpretación:** estamos 95% confiados de que la verdadera media poblacional $\mu$ está entre 47.869 y 52.131.
-
-### Ejercicio 2 — Intervalo con varianza conocida
-
-**Enunciado:** Una muestra de $n=25$ observaciones de una población normal con $\sigma=15$ (conocida) da $\bar{x}=100$. Calcula el IC al 95% para $\mu$ (usa $z_{0.975}=1.96$).
-
-???- example "Solución"
-
-    ### Paso 1: Error estándar
-
-    $$
-    SE = \frac{\sigma}{\sqrt{n}} = \frac{15}{\sqrt{25}} = \frac{15}{5} = 3.
-    $$
-
-    ### Paso 2: Fórmula del IC con z
-
-    Cuando $\sigma$ es conocida:
-
-    $$
-    IC_{95\%} = \bar{x} \pm z_{0.975} \cdot SE = 100 \pm 1.96 \cdot 3 = 100 \pm 5.88.
-    $$
-
-    ### Paso 3: Resultado
-
-    $$
-    IC_{95\%} = (94.12, 105.88).
-    $$
-
-### Ejercicio 3 — Comparar anchos de IC
-
-**Enunciado:** Para el ejercicio 1 (varianza desconocida, $t$) y el ejercicio 2 (varianza conocida, $z$), ¿cuál es el ancho del IC? ¿Por qué es mayor el de t?
-
-???- example "Solución"
-
-    ### Ancho del IC del ejercicio 1
-
-    $$
-    \text{Ancho} = 2 \times 2.131 \times 1 = 4.262.
-    $$
-
-    ### Ancho del IC del ejercicio 2
-
-    $$
-    \text{Ancho} = 2 \times 1.96 \times 3 = 11.76.
-    $$
-
-    ### Comparación
-
-    El IC con $t$ es más estrecho en este caso porque el error estándar es menor ($SE=1$ vs $SE=3$). Sin embargo, **la distribución $t$ tiene colas más pesadas que $z$**, así que para el mismo $SE$ y confianza, el IC con $t$ sería más ancho. Esto refleja la mayor incertidumbre al estimar $\sigma$ con $s$.
+    **Sucesos posibles:**
+    - $A$ = "al menos una cara": $A = \{CC, C+, +C\}$
+    - $B$ = "exactamente 1 cara": $B = \{C+, +C\}$
+    - $C$ = "dos caras": $C = \{CC\}$
 
 ---
 
-## Bloque 2 — Pruebas de Hipótesis
+## Bloque 2: PMF y Probabilidad Discreta
 
-### Ejercicio 4 — Test unilateral derecho
+### Ej. 3 - Función de Masa de Probabilidad
 
-**Enunciado:** Un proceso de producción reporta una media de 50 unidades. Sospechamos que ha aumentado. Tomamos una muestra de $n=36$ con $\bar{x}=53$ y $\sigma=6$ (poblacional). Realiza un test con $\alpha=0.05$ para contrastar $H_0: \mu=50$ vs $H_1: \mu>50$.
+**Enunciado:** Sea $X$ = número de caras en 2 lanzamientos. Calcula:
 
-???- example "Solución"
-
-    ### Paso 1: Formulación
-
-    - $H_0: \mu = 50$ (no hay cambio).
-    - $H_1: \mu > 50$ (ha aumentado) — test unilateral derecho.
-    - Nivel de significación: $\alpha = 0.05$.
-
-    ### Paso 2: Calcula el estadístico
-
-    $$
-    z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{53 - 50}{6/\sqrt{36}} = \frac{3}{6/6} = \frac{3}{1} = 3.
-    $$
-
-    ### Paso 3: Compara con el valor crítico
-
-    Para un test unilateral derecho con $\alpha=0.05$: $z_{0.95} = 1.645$.
-
-    Como $z = 3 > 1.645$, **rechazamos $H_0$** al nivel 5%.
-
-    ### Paso 4: Interpretación
-
-    Hay evidencia estadística significativa de que la media ha aumentado por encima de 50 unidades.
-
-### Ejercicio 5 — Test bilateral
-
-**Enunciado:** Un medicamento tiene tiempo de efectividad medio de 8 horas. Una nueva fórmula se prueba en $n=64$ pacientes con $\bar{x}=8.5$ horas y $s=2$ horas. Contrasta $H_0: \mu=8$ vs $H_1: \mu\ne 8$ con $\alpha=0.05$ (usa $t_{0.975,63}\approx 2$).
+a) La PMF de $X$  
+b) $P(X \leq 1)$  
+c) $E[X]$
 
 ???- example "Solución"
 
-    ### Paso 1: Formulación
+    **a) PMF de X:**
 
-    - $H_0: \mu = 8$ (sin cambio en efectividad).
-    - $H_1: \mu \ne 8$ (ha cambiado) — test bilateral.
-    - $\alpha = 0.05 \Rightarrow \alpha/2 = 0.025$ por cola.
+    | $x$ | 0 | 1 | 2 |
+    |-----|---|---|---|
+    | $p_X(x)$ | 1/4 | 2/4 | 1/4 |
 
-    ### Paso 2: Estadístico
+    Cálculo:
+    - $P(X=0)$: solo ++ → 1/4
+    - $P(X=1)$: C+ o +C → 2/4
+    - $P(X=2)$: solo CC → 1/4
+    - Suma: 1/4 + 2/4 + 1/4 = 1 ✓
 
-    $$
-    t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{8.5 - 8}{2/\sqrt{64}} = \frac{0.5}{2/8} = \frac{0.5}{0.25} = 2.
-    $$
+    **b) $P(X \leq 1)$:**
+    $$P(X \leq 1) = P(X=0) + P(X=1) = 1/4 + 2/4 = 3/4 = 0.75$$
 
-    ### Paso 3: Comparación con valor crítico
-
-    Para bilateral con $\alpha=0.05$: $t_{0.975,63} \approx 2$.
-
-    Como $|t| = 2 \not> 2$, **no rechazamos $H_0$** (el test está justo en el límite).
-
-    ### Paso 4: Conclusión
-
-    No hay evidencia suficiente para afirmar que la nueva fórmula tiene diferente efectividad.
-
-### Ejercicio 6 — p-valor
-
-**Enunciado:** En el ejercicio 4, calcula el p-valor. ¿Qué conclusión sacas?
-
-???- example "Solución"
-
-    ### Paso 1: p-valor en test unilateral
-
-    El p-valor para un test unilateral derecho es:
-
-    $$
-    p\text{-valor} = P(Z > 3) \approx 0.00135.
-    $$
-
-    (Se obtiene de tablas normales o software.)
-
-    ### Paso 2: Interpretación
-
-    Como $p\text{-valor} = 0.00135 < \alpha = 0.05$, **rechazamos $H_0$**.
-
-    El p-valor muy pequeño indica que, bajo $H_0$, la probabilidad de observar una media tan extrema (o más) es muy baja (0.135%), reforzando el rechazo.
+    **c) $E[X]$:**
+    $$E[X] = 0 \cdot \frac{1}{4} + 1 \cdot \frac{2}{4} + 2 \cdot \frac{1}{4} = 0 + \frac{2}{4} + \frac{2}{4} = 1$$
 
 ---
 
-## Bloque 3 — Regresión Lineal Simple
+### Ej. 4 - CDF de Variable Discreta
 
-### Ejercicio 7 — MCO: cálculo de coeficientes
+**Enunciado:** Para el ejercicio anterior, dibuja la CDF $F_X(x) = P(X \leq x)$ y calcula:
 
-**Enunciado:** Usa los datos:
-
-- X: 1, 2, 3, 4
-- Y: 2, 4, 5, 7
-
-Calcula $\hat{\beta}_1$ y $\hat{\beta}_0$ por mínimos cuadrados ordinarios (MCO).
+a) $F_X(0.5)$  
+b) $F_X(1.5)$  
+c) $F_X(3)$
 
 ???- example "Solución"
 
-    ### Paso 1: Calcula medias
+    **CDF (función escalonada):**
 
-    $$
-    \bar{x} = \frac{1+2+3+4}{4} = 2.5, \quad \bar{y} = \frac{2+4+5+7}{4} = 4.5.
-    $$
+    $$F_X(x) = \begin{cases}
+    0 & \text{si } x < 0 \\
+    1/4 & \text{si } 0 \leq x < 1 \\
+    3/4 & \text{si } 1 \leq x < 2 \\
+    1 & \text{si } x \geq 2
+    \end{cases}$$
 
-    ### Paso 2: Calcula sumas de cuadrados
+    **Cálculos:**
+    - $F_X(0.5) = 1/4$ (solo valor $\leq 0.5$ es 0)
+    - $F_X(1.5) = 3/4$ (valores $\leq 1.5$ son 0 y 1)
+    - $F_X(3) = 1$ (todos los valores $\leq 3$)
 
-    Numerador:
-    $$
-    \sum (x_i - \bar{x})(y_i - \bar{y}) = (1-2.5)(2-4.5) + (2-2.5)(4-4.5) + (3-2.5)(5-4.5) + (4-2.5)(7-4.5)
-    $$
-    $$
-    = (-1.5)(-2.5) + (-0.5)(-0.5) + (0.5)(0.5) + (1.5)(2.5) = 3.75 + 0.25 + 0.25 + 3.75 = 8.
-    $$
+---
 
-    Denominador:
-    $$
-    \sum (x_i - \bar{x})^2 = (1-2.5)^2 + (2-2.5)^2 + (3-2.5)^2 + (4-2.5)^2 = 2.25 + 0.25 + 0.25 + 2.25 = 5.
-    $$
+## Bloque 3: PDF y Probabilidad Continua
 
-    ### Paso 3: Estima $\hat{\beta}_1$
+### Ej. 5 - Distribución Normal Estándar
 
-    $$
-    \hat{\beta}_1 = \frac{8}{5} = 1.6.
-    $$
+**Enunciado:** Sea $X \sim N(0, 1)$ (normal estándar). Usa tabla normal para calcular:
 
-    ### Paso 4: Estima $\hat{\beta}_0$
-
-    $$
-    \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} = 4.5 - 1.6 \times 2.5 = 4.5 - 4 = 0.5.
-    $$
-
-    ### Paso 5: Modelo ajustado
-
-    $$
-    \hat{Y} = 0.5 + 1.6X.
-    $$
-
-    **Interpretación:** por cada unidad que aumenta X, Y aumenta en 1.6 unidades en promedio.
-
-### Ejercicio 8 — Valores predichos y residuos
-
-**Enunciado:** Con el modelo $\hat{Y} = 0.5 + 1.6X$ del ejercicio 7, calcula los valores predichos y los residuos.
+a) $P(X \leq 0.5)$  
+b) $P(-1 < X < 1)$  
+c) $P(X > 2)$
 
 ???- example "Solución"
 
-    ### Paso 1: Valores predichos
+    De tabla normal estándar (Φ):
+    - $Φ(0.5) \approx 0.6915$
+    - $Φ(1) \approx 0.8413$
+    - $Φ(2) \approx 0.9772$
 
-    | $i$ | $X_i$ | $Y_i$ | $\hat{Y}_i = 0.5 + 1.6 X_i$ |
-    |-----|-------|-------|---------------------------|
-    | 1   | 1     | 2     | $0.5 + 1.6 = 2.1$         |
-    | 2   | 2     | 4     | $0.5 + 3.2 = 3.7$         |
-    | 3   | 3     | 5     | $0.5 + 4.8 = 5.3$         |
-    | 4   | 4     | 7     | $0.5 + 6.4 = 6.9$         |
+    **a) $P(X \leq 0.5)$:**
+    $$P(X \leq 0.5) = Φ(0.5) = 0.6915$$
 
-    ### Paso 2: Residuos $e_i = Y_i - \hat{Y}_i$
+    **b) $P(-1 < X < 1)$:**
+    $$P(-1 < X < 1) = Φ(1) - Φ(-1) = 0.8413 - 0.1587 = 0.6826 \approx 68\%$$
 
-    | $i$ | $e_i = Y_i - \hat{Y}_i$ |
-    |-----|----------------------|
-    | 1   | $2 - 2.1 = -0.1$     |
-    | 2   | $4 - 3.7 = 0.3$      |
-    | 3   | $5 - 5.3 = -0.3$     |
-    | 4   | $7 - 6.9 = 0.1$      |
+    (Regla empírica: 1σ contiene ~68%)
 
-    ### Paso 3: Suma de residuos (verificación)
+    **c) $P(X > 2)$:**
+    $$P(X > 2) = 1 - Φ(2) = 1 - 0.9772 = 0.0228 \approx 2.3\%$$
 
-    $$
-    \sum e_i = -0.1 + 0.3 - 0.3 + 0.1 = 0. \quad \checkmark
-    $$
+---
 
-    (Siempre debe sumar cero.)
+### Ej. 6 - PDF de Distribución Uniforme
 
-    ### Paso 4: Interpretación
+**Enunciado:** Sea $X \sim \text{Uniforme}(a=0, b=10)$. Calcula:
 
-    Los residuos pequeños indican buen ajuste. Los signos alternos sugieren que el modelo lineal es adecuado.
-
-### Ejercicio 9 — R² (coeficiente de determinación)
-
-**Enunciado:** Con los datos del ejercicio 7, calcula $R^2$ y explica su significado.
+a) La PDF $f_X(x)$  
+b) $P(2 < X < 7)$  
+c) $E[X]$ y $\text{Var}(X)$
 
 ???- example "Solución"
 
-    ### Paso 1: Suma de cuadrados total
+    **a) PDF:**
+    $$f_X(x) = \begin{cases}
+    \frac{1}{10} = 0.1 & \text{si } 0 \leq x \leq 10 \\
+    0 & \text{en otro caso}
+    \end{cases}$$
 
-    $$
-    SST = \sum (Y_i - \bar{Y})^2 = (2-4.5)^2 + (4-4.5)^2 + (5-4.5)^2 + (7-4.5)^2
-    $$
-    $$
-    = 6.25 + 0.25 + 0.25 + 6.25 = 13.
-    $$
+    **b) $P(2 < X < 7)$:**
+    $$P(2 < X < 7) = \int_2^7 0.1 \, dx = 0.1 \cdot (7-2) = 0.1 \cdot 5 = 0.5$$
 
-    ### Paso 2: Suma de cuadrados residual
+    **c) Medidas:**
+    $$E[X] = \frac{a+b}{2} = \frac{0+10}{2} = 5$$
+    $$\text{Var}(X) = \frac{(b-a)^2}{12} = \frac{100}{12} \approx 8.33$$
 
-    $$
-    SSE = \sum e_i^2 = (-0.1)^2 + (0.3)^2 + (-0.3)^2 + (0.1)^2 = 0.01 + 0.09 + 0.09 + 0.01 = 0.2.
-    $$
+---
 
-    ### Paso 3: Suma de cuadrados explicada
+## Bloque 4: Esperanza y Varianza
 
-    $$
-    SSR = SST - SSE = 13 - 0.2 = 12.8.
-    $$
+### Ej. 7 - Cálculo de Esperanza
 
-    ### Paso 4: Calcula $R^2$
-
-    $$
-    R^2 = \frac{SSR}{SST} = \frac{12.8}{13} \approx 0.985.
-    $$
-
-    ### Paso 5: Interpretación
-
-    **El 98.5% de la variabilidad en Y es explicada por el modelo lineal**, lo que indica un ajuste excelente.
-
-### Ejercicio 10 — Predicción puntual
-
-**Enunciado:** Con el modelo $\hat{Y} = 0.5 + 1.6X$, predice Y para $X = 5$.
+**Enunciado:** En un juego, ganas €10 con prob. 0.3 y pierdes €5 con prob. 0.7. Calcula $E[\text{Ganancia}]$.
 
 ???- example "Solución"
 
-    ### Predicción
+    $$E[X] = 10 \cdot 0.3 + (-5) \cdot 0.7 = 3 - 3.5 = -0.5 \text{ euros}$$
 
-    $$
-    \hat{Y}(5) = 0.5 + 1.6 \times 5 = 0.5 + 8 = 8.5.
-    $$
+    **Interpretación:** A largo plazo, pierdes €0.50 en promedio por partida. El juego es injusto (negativo para ti).
 
-    **Nota:** esta es una predicción puntual. Un intervalo de predicción sería más informativo (requiere estimar $\sigma^2$ residual).
+---
+
+### Ej. 8 - Cálculo de Varianza
+
+**Enunciado:** Para el ejercicio 7, calcula $\text{Var}(X)$ y $\sigma_X$.
+
+???- example "Solución"
+
+    **Primer momento:**
+    $$E[X^2] = 10^2 \cdot 0.3 + (-5)^2 \cdot 0.7 = 100 \cdot 0.3 + 25 \cdot 0.7 = 30 + 17.5 = 47.5$$
+
+    **Varianza:**
+    $$\text{Var}(X) = E[X^2] - (E[X])^2 = 47.5 - (-0.5)^2 = 47.5 - 0.25 = 47.25$$
+
+    **Desviación típica:**
+    $$\sigma_X = \sqrt{47.25} \approx 6.87 \text{ euros}$$
+
+    **Interpretación:** Aunque pierdes €0.50 en promedio, la variabilidad es alta (±€6.87), indicando riesgo significativo.
+
+---
+
+### Ej. 9 - Propiedades de Esperanza y Varianza
+
+**Enunciado:** Si $X$ tiene $E[X] = 50$ y $\text{Var}(X) = 16$, calcula para $Y = 3X + 10$:
+
+a) $E[Y]$  
+b) $\text{Var}(Y)$  
+c) $\sigma_Y$
+
+???- example "Solución"
+
+    **a) Esperanza de Y:**
+    $$E[Y] = E[3X + 10] = 3 \cdot E[X] + 10 = 3 \cdot 50 + 10 = 150 + 10 = 160$$
+
+    **b) Varianza de Y:**
+    $$\text{Var}(Y) = \text{Var}(3X + 10) = 3^2 \cdot \text{Var}(X) = 9 \cdot 16 = 144$$
+
+    (Nota: sumar constante no afecta varianza)
+
+    **c) Desviación típica:**
+    $$\sigma_Y = \sqrt{144} = 12$$
+
+---
+
+## 🎓 Ejercicios Integradores
+
+### Ej. 10 - Inicialización Xavier (Aplicación IA)
+
+**Enunciado:** Una red neuronal inicializa pesos entre capas 256 → 128 usando Xavier. Calcula:
+
+a) La varianza de inicialización  
+b) La desviación típica  
+c) Rango típico de pesos
+
+???- example "Solución"
+
+    **a) Varianza Xavier:**
+    $$\sigma^2 = \frac{2}{n_{in} + n_{out}} = \frac{2}{256 + 128} = \frac{2}{384} \approx 0.00521$$
+
+    **b) Desviación típica:**
+    $$\sigma = \sqrt{0.00521} \approx 0.0722$$
+
+    **c) Rango típico (±3σ):**
+    $$[-3 \cdot 0.0722, 3 \cdot 0.0722] = [-0.217, 0.217]$$
+
+    Los pesos se inicializan en este rango para garantizar flujo de gradientes estable.
+
+---
+
+## 📌 Consejos para Resolver Ejercicios
+
+✅ **Discretas (PMF):**
+
+- Enumera todos los valores posibles
+- Verifica que suma de probabilidades = 1
+- Calcula esperanza como suma ponderada
+
+✅ **Continuas (PDF):**
+
+- Integra para obtener probabilidades
+- Verifica que integral = 1
+- Esperanza es integral de $x \cdot f(x)$
+
+✅ **Varianza:**
+
+- Usa siempre $\text{Var}(X) = E[X^2] - (E[X])^2$
+- Recuerda: $\text{Var}(aX + b) = a^2 \cdot \text{Var}(X)$
+- Varianza de suma solo es aditiva si variables independientes

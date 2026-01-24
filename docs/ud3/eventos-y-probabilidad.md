@@ -1,8 +1,8 @@
-title: "UD2 — Eventos y probabilidad básica"
-slug: "ud2-eventos-probabilidad"
+title: "UD3 — Eventos y probabilidad básica"
+slug: "ud3-eventos-probabilidad"
 date: "2026-01-14"
 authors: ["Profesor UAX"]
-tags: ["ud2", "probabilidad", "eventos", "espacio-muestral", "condicional"]
+tags: ["ud3", "probabilidad", "eventos", "espacio-muestral", "condicional"]
 difficulty: "intro"
 type: "definicion"
 prerequisitos: ["ud1-introduccion"]
