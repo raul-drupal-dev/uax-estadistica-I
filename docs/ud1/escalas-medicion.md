@@ -26,6 +26,7 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Definición:** Categorías **sin orden** que funcionan como **etiquetas identificadoras**. El número asignado es solo un código.
 
 **Operaciones permitidas:**
+
 - ✅ Contar frecuencias (¿cuántos de cada categoría?)
 - ✅ Moda (categoría más frecuente)
 - ✅ Tablas de contingencia
@@ -33,6 +34,7 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 - ❌ Proporciones entre códigos
 
 **Ejemplos:**
+
 - 🎨 Color: Rojo=1, Azul=2, Verde=3 (los números son solo códigos)
 - 🌍 País: España=10, Francia=20, Alemania=30
 - 💼 Sector: Tecnología=A, Salud=B, Manufactura=C
@@ -40,6 +42,7 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Intuición:** Los números **no significan nada cuantitativamente**. No tiene sentido decir que "verde (3) es mayor que rojo (1)".
 
 ???+ example "Ejemplo Incorrecto"
+
     Codificas: Perro=1, Gato=2, Pájaro=3
     
     ❌ **INCORRECTO:** "Media = (1+2+3)/3 = 2" → No tiene significado
@@ -53,6 +56,7 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Definición:** Categorías **con orden significativo**, pero **distancias no cuantificadas** entre niveles.
 
 **Operaciones permitidas:**
+
 - ✅ Orden (ranking)
 - ✅ Mediana y percentiles
 - ✅ Pruebas no paramétricas
@@ -60,6 +64,7 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 - ❌ Diferencias proporcionadas
 
 **Ejemplos:**
+
 - 📚 Educación: 1=Primaria < 2=Secundaria < 3=Universidad < 4=Doctorado
 - ⭐ Satisfacción: 1=Muy Insatisfecho < 2=Insatisfecho < 3=Neutro < 4=Satisfecho < 5=Muy Satisfecho
 - 🏆 Talla: XS < S < M < L < XL
@@ -67,16 +72,20 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Intuición:** Sabemos que Doctorado > Universidad > Secundaria, pero **¿la diferencia entre Doctorado y Universidad es igual que entre Secundaria y Primaria?** No lo sabemos.
 
 ???+ example "Ejemplo: Escala de Satisfacción 1-5"
+
     Datos: 1, 2, 3, 4, 5
     
     **Análisis correcto:**
+
     - Mediana = 3 ✅
     - Moda = cada valor (poco informativo)
     
     **Análisis controversial:**
+
     - Media = 3 (✅ usado en práctica, pero ⚠️ asume distancias iguales)
     
     **Análisis incorrecto:**
+
     - Desviación típica (❌ requiere intervalos iguales)
 
 !!! warning "Cuidado: Escala Likert"
@@ -89,17 +98,20 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Definición:** Números con **diferencias significativas**, pero **cero arbitrario** (no representa ausencia).
 
 **Operaciones permitidas:**
+
 - ✅ Diferencias y sumas (20 - 10 = 10)
 - ✅ Media, mediana, desviación típica
 - ❌ Proporciones (20°C NO es "el doble" de 10°C)
 - ❌ Cero absoluto
 
 **Ejemplos:**
+
 - 🌡️ Temperatura en Celsius: 0°C ≠ ausencia de temperatura
 - 📅 Años (calendario): Año 2000 - Año 1000 = 1000 años ✅, pero Año 2000 "es el doble" que Año 1000 ❌
 - 🧠 Puntuación IQ: IQ=100 es "promedio", pero IQ=200 NO es "el doble de inteligencia"
 
 **¿Por qué no proporciones?**
+
 - 20°C es **10°C más caliente** que 10°C ✅
 - Pero 20°C **NO es "el doble de caliente"** porque 0°C no significa "sin calor"
 - Si usas Kelvin (cero absoluto): 20K/10K = 2 ✅
@@ -120,11 +132,13 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Definición:** Números con **diferencias, proporciones y cero absoluto**. Máxima información cuantitativa.
 
 **Operaciones permitidas:**
+
 - ✅ Todas: diferencias, proporciones, media, varianza, etc.
 - ✅ Cero representa ausencia
 - ✅ Proporciones significativas
 
 **Ejemplos:**
+
 - ⚖️ Peso en kg: 0 kg = sin peso; 20kg es el doble de 10kg ✅
 - 📏 Altura en cm: 0 cm = sin altura; 200cm es el doble de 100cm ✅
 - 💰 Salario en €: €0 = sin ingresos; €2000 es el doble de €1000 ✅
@@ -133,11 +147,12 @@ No todas las operaciones matemáticas son válidas para todos los datos. **La es
 **Intuición:** Todas las operaciones aritméticas tienen significado físico.
 
 ???+ example "Ejemplo: Pesos"
+
     Datos: 50kg, 100kg, 150kg
     
-    ✅ Media = 100kg (persona promedio pesa 100kg)
-    ✅ 100kg es el doble de 50kg (significativo físicamente)
-    ✅ Usar en cualquier análisis numérico estándar
+    - ✅ Media = 100kg (persona promedio pesa 100kg)
+    - ✅ 100kg es el doble de 50kg (significativo físicamente)
+    - ✅ Usar en cualquier análisis numérico estándar
 
 ---
 
@@ -220,16 +235,19 @@ graph TD
 ## 💼 Aplicaciones Prácticas
 
 ### En Análisis Estadístico
+
 - **Nominal:** Tablas de contingencia, chi-cuadrado
 - **Ordinal:** Pruebas de Mann-Whitney, Spearman
 - **Intervalo/Razón:** t-test, regresión, ANOVA
 
 ### En Machine Learning
+
 - **Nominal:** One-hot encoding (p. ej. color)
 - **Ordinal:** Label encoding (1, 2, 3...) con cuidado, o embeddings
 - **Intervalo/Razón:** Normalización/estandarización estándar
 
 ### En Visualización
+
 - **Nominal:** Gráfico de barras (sin orden)
 - **Ordinal:** Gráfico de barras (CON orden respetado)
 - **Intervalo/Razón:** Histograma, box-plot, scatter

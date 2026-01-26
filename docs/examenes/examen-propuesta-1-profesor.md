@@ -149,7 +149,7 @@ Un proceso genera errores de forma independiente con probabilidad constante $p =
 - [ ] Normal(2, 1.96).
 - [ ] Binomial(100, 0.02).
 - [ ] Poisson(2).
-- [x] Tanto B como C son aproximaciones válidas.
+- [x] Tanto Binomial como Poisson son aproximaciones válidas.
 
 Explicación: El número de errores sigue $X \sim Binomial(n=100, p=0.02)$. Como $n$ es grande (100) y $p$ es pequeño (0.02), se cumple $np = 100 \times 0.02 = 2$ es moderado. En estas condiciones, la distribución binomial se puede aproximar por Poisson con parámetro $\lambda = np = 2$. Ambas son válidas, aunque Poisson es más práctica computacionalmente.
 </quiz>
@@ -339,6 +339,7 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     - **Puntos aislados:** Posibles outliers
 
     En este problema:
+
     - Algoritmo A: caja ancha, mediana en posición M
     - Algoritmo B: caja estrecha, mediana en posición M (misma)
 
@@ -366,11 +367,13 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Clasificación de variables:**
 
-    1. **Cuantitativas (numéricas):**
+    1) **Cuantitativas (numéricas):**
+
        - **Discretas:** Valores enteros aislados (ej. número de errores, cantidad de usuarios)
        - **Continuas:** Cualquier valor en un rango (ej. tiempo, temperatura)
 
-    2. **Cualitativas (categóricas):**
+    2) **Cualitativas (categóricas):**
+
        - **Nominales:** Sin orden jerárquico (ej. color, género, país, **sistema operativo**)
        - **Ordinales:** Con orden jerárquico (ej. nivel educativo: primaria < secundaria < superior, satisfacción: bajo < medio < alto)
 
@@ -384,6 +387,7 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     **Por tanto:** Cualitativa nominal.
 
     **Contraste con ordinal:**
+
     - Nominal ≠ Ordinal
     - Nivel educativo SÍ es ordinal (hay clara jerarquía)
     - Sistema operativo NO es ordinal (no hay jerarquía)
@@ -398,19 +402,23 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Escalas de medida (Stevens, 1946):**
 
-    1. **Nominal:** Categorías sin orden (ej. color, género, región)
+    1) **Nominal:** Categorías sin orden (ej. color, género, región)
+
        - Operación: Igualdad/desigualdad
 
-    2. **Ordinal:** Categorías con orden (ej. satisfacción: bajo < medio < alto)
+    2) **Ordinal:** Categorías con orden (ej. satisfacción: bajo < medio < alto)
+
        - Operación: Comparación (<, >)
        - Ejemplo: ranking, posición
 
-    3. **De intervalo:** Valores numéricos con distancias significativas pero SIN cero natural
+    3) **De intervalo:** Valores numéricos con distancias significativas pero SIN cero natural
+
        - Operación: Suma, resta (diferencias significativas)
        - Ejemplo: Temperatura en Celsius (0°C ≠ ausencia de temperatura)
        - En -10°C, no hay "la mitad de temperatura" que en 20°C
 
-    4. **De razón:** Valores numéricos con cero natural y proporciones significativas
+    4) **De razón:** Valores numéricos con cero natural y proporciones significativas
+
        - Operación: Suma, resta, multiplicación, división (todas significativas)
        - Ejemplo: Tiempo, peso, velocidad, distancia, ingresos
        - 10 ms es "la mitad" de 20 ms
@@ -436,16 +444,21 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     **Relación entre media, mediana y asimetría:**
 
     1. **Distribución simétrica:**
-       $$\text{Media} \approx \text{Mediana} \approx \text{Moda}$$
+
+    $$\text{Media} \approx \text{Mediana} \approx \text{Moda}$$
 
     2. **Asimetría positiva (cola a la derecha):**
-       $$\text{Media} > \text{Mediana} > \text{Moda}$$
+
+    $$\text{Media} > \text{Mediana} > \text{Moda}$$
+
        - Hay algunos valores muy altos que tiran la media hacia la derecha
        - La mediana es más resistente a estos extremos
        - Gráficamente: distribución concentrada a la izquierda con cola hacia la derecha
 
     3. **Asimetría negativa (cola a la izquierda):**
-       $$\text{Media} < \text{Mediana} < \text{Moda}$$
+
+    $$\text{Media} < \text{Mediana} < \text{Moda}$$
+
        - Hay algunos valores muy bajos que tiran la media hacia la izquierda
        - Gráficamente: distribución concentrada a la derecha con cola hacia la izquierda
 
@@ -527,17 +540,21 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Limitaciones de la covarianza:**
 
-    1. **Depende de las unidades de medida:**
-       - Si X está en euros y se convierte a céntimos (×100), la covarianza se multiplica por 100
-       - El valor absoluto de la covarianza NO es comparable entre diferentes pares de variables
+    1) **Depende de las unidades de medida:**
 
-    2. **No indica fuerza de relación:**
-       - Covarianza = -45 podría indicar relación fuerte o débil, dependiendo de las varianzas de X e Y
+    - Si X está en euros y se convierte a céntimos (×100), la covarianza se multiplica por 100
+    - El valor absoluto de la covarianza NO es comparable entre diferentes pares de variables
 
-    3. **Para determinar la fuerza, usamos correlación de Pearson:**
-       $$r = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}, \quad r \in [-1, 1]$$
-       - r cerca de ±1: relación fuerte
-       - r cerca de 0: relación débil
+    2) **No indica fuerza de relación:**
+
+    - Covarianza = -45 podría indicar relación fuerte o débil, dependiendo de las varianzas de X e Y
+
+    3) **Para determinar la fuerza, usamos correlación de Pearson:**
+       
+    $$r = \frac{Cov(X,Y)}{\sigma_X \sigma_Y}, \quad r \in [-1, 1]$$
+    
+    - r cerca de ±1: relación fuerte
+    - r cerca de 0: relación débil
 
     **Análisis de opciones:**
 
@@ -562,6 +579,7 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     Sea $Y = aX + b$ donde $a, b$ son constantes.
 
     Entonces:
+
     $$\sigma_Y = |a| \cdot \sigma_X$$
 
     **Nota:** Solo la multiplicación afecta la desviación estándar, no la adición.
@@ -573,9 +591,11 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     $$Var(Y) = Var(3X) = 3^2 \cdot Var(X) = 9 \cdot Var(X)$$
 
     Porque:
+
     $$Var(aX) = a^2 \cdot Var(X)$$
 
     Entonces:
+
     $$\sigma_Y = \sqrt{Var(Y)} = \sqrt{9 \cdot Var(X)} = 3 \sqrt{Var(X)} = 3 \cdot \sigma_X$$
 
     **Aplicación numérica:**
@@ -593,6 +613,7 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     **Desarrollo:**
 
     **Definición:** La función de distribución acumulada (CDF) es:
+
     $$F(x) = P(X \leq x)$$
 
     **Propiedades que SÍ son correctas:**
@@ -1145,36 +1166,44 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
     **Ejemplos de estimadores insesgados:**
 
     1. **Media muestral:** $\bar{X} = \frac{1}{n}\sum X_i$ estima $\mu$
-    $$E[\bar{X}] = \mu$$ ✓ Insesgado
+
+    $$E[\bar{X}] = \mu \text{ ✓ Insesgado}$$
 
     2. **Varianza muestral corregida:** $S^2 = \frac{1}{n-1}\sum(X_i - \bar{X})^2$ estima $\sigma^2$
-    $$E[S^2] = \sigma^2$$ ✓ Insesgado
+    
+    $$E[S^2] = \sigma^2 \text{ ✓ Insesgado}$$
+    
     (Nota: divisor es n-1, no n)
 
     3. **Proporción muestral:** $\hat{p} = \frac{k}{n}$ estima p
-    $$E[\hat{p}] = p$$ ✓ Insesgado
+    
+    $$E[\hat{p}] = p \text{ ✓ Insesgado}$$
 
     **Ejemplo de estimador sesgado:**
 
     Varianza muestral sin corregir: $S_0^2 = \frac{1}{n}\sum(X_i - \bar{X})^2$
 
-    $$E[S_0^2] = \frac{n-1}{n}\sigma^2 \neq \sigma^2$$ ✗ Sesgado
+    $$E[S_0^2] = \frac{n-1}{n}\sigma^2 \neq \sigma^2 \text{ ✗ Sesgado}$$ 
 
     **Análisis de opciones:**
 
-    - A) "Varianza mínima": FALSO
+    A) "Varianza mínima": FALSO
+
     - Eso es propiedad de **eficiencia**
     - Insesgadez y eficiencia son independientes
 
-    - B) "Valor esperado = parámetro": VERDADERO
+    B) "Valor esperado = parámetro": VERDADERO
+
     - Definición de insesgadez
 
-    - C) "Error cuadrático medio = 0": FALSO
+    C) "Error cuadrático medio = 0": FALSO
+
     - ECM = 0 sería demasiado restrictivo
     - No existe estimador con ECM = 0 (excepto trivial)
     - Insesgadez implica ECM = Var(θ̂), pero no necesariamente = 0
 
-    - D) "Converge a valor verdadero": FALSO
+    D) "Converge a valor verdadero": FALSO
+
     - Eso es propiedad de **consistencia**
     - Estimador puede ser insesgado sin ser consistente
 
@@ -1218,15 +1247,17 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Análisis de opciones:**
 
-    - A) "Rechazar definitivamente": FALSO (0.03 > 0.01, no rechazamos)
+    A) "Rechazar definitivamente": FALSO (0.03 > 0.01, no rechazamos)
 
-    - B) "No rechazar": VERDADERO (0.03 > 0.01)
+    B) "No rechazar": VERDADERO (0.03 > 0.01)
 
-    - C) "Rechazar solo si n > 30": FALSO
+    C) "Rechazar solo si n > 30": FALSO
+    
       - La regla no depende del tamaño muestral una vez calculado p
       - Aunque n pueda haber afectado el p-valor
 
-    - D) "No se puede determinar": FALSO
+    D) "No se puede determinar": FALSO
+    
       - La regla es clara: comparar p con α
 
     **Intuición:**
@@ -1264,19 +1295,23 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Características del test KS:**
 
-    1. **Aplicabilidad:**
+    1) **Aplicabilidad:**
+
     - Mejor para distribuciones **continuas**
     - Menos potente para distribuciones **discretas** (aunque existe versión ajustada)
 
-    2. **Estadístico:**
-    - Mide distancia máxima (supremo)
-    - NO es una suma de diferencias
+    2) **Estadístico:**
 
-    3. **Parámetros:**
+    - Mide distancia máxima (supremo)
+    - **NO es una suma de diferencias**
+
+    3) **Parámetros:**
+
     - Si los parámetros de F(x) son conocidos a priori: el test es directo
     - Si se estiman de los datos: el p-valor debe ajustarse (test de Kolmogorov-Smirnov modificado)
 
-    4. **Sensibilidad:**
+    4) **Sensibilidad:**
+
     - Es sensible a diferencias en **cualquier parte** de la distribución
     - Particularmente en el **centro** de la distribución
     - Menos sensible en las **colas** que en el centro
@@ -1288,18 +1323,22 @@ Explicación: Con $p = 0.06 > \alpha = 0.05$, no se rechaza $H_0$ según el crit
 
     **Análisis de opciones:**
 
-    - A) "Solo para distribuciones discretas": FALSO
+    A) "Solo para distribuciones discretas": FALSO
+    
     - Es mejor para continuas, aunque existe versión para discretas
 
-    - B) "Mide suma de diferencias": FALSO
+    B) "Mide suma de diferencias": FALSO
+    
     - Mide máxima diferencia vertical (supremo), no suma
     - La suma es característica del test $\chi^2$
 
-    - C) "Requiere parámetros conocidos a priori": FALSO/PARCIALMENTE VERDADERO
+    C) "Requiere parámetros conocidos a priori": FALSO/PARCIALMENTE VERDADERO
+    
     - Idealmente sí, pero existen versiones que estiman parámetros
     - No es un requisito absoluto (aunque afecta el p-valor)
 
-    - D) "Sensible a diferencias en cualquier parte": VERDADERO
+    D) "Sensible a diferencias en cualquier parte": VERDADERO
+    
     - Es la fortaleza del test KS
     - A diferencia de tests más locales
 
