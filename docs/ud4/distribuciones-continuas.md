@@ -132,11 +132,13 @@ $$Z = \frac{X - \mu}{\sigma}$$
 $$f(x) = \lambda e^{-\lambda x}, \quad x \geq 0$$
 
 **Media y Varianza:**
+
 $$E[X] = \frac{1}{\lambda}, \quad \text{Var}(X) = \frac{1}{\lambda^2}$$
 
 ### Característica Unique: Sin Memoria
 
 **Propiedad de Pérdida de Memoria:**
+
 $$P(X > s+t \mid X > s) = P(X > t)$$
 
 **Interpretación:** Si un evento no ha ocurrido en s unidades, la probabilidad de ocurrir en las próximas t unidades no depende de s.

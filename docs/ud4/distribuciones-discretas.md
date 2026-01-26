@@ -224,6 +224,46 @@ graph TD
 
 ---
 
+## Diagrama de Decisión de Aproximación
+
+```mermaid
+graph TB
+    B["<b>Binomial</b><br/>n, p"]
+    P["<b>Poisson</b><br/>λ"]
+    N["<b>Normal</b><br/>μ, σ"]
+
+    CB1{{"<b>Condición:</b><br/>n > 100<br/>p < 0.05<br/>np ≤ 5 (ó 10)"}}
+    AB1["<b>Usar:</b><br/>λ = np"]
+
+    CB2{{"<b>Condición:</b><br/>np > 5<br/>n(1-p) > 5"}}
+    AB2["<b>Usar:</b><br/>μ = np<br/>σ = √np(1-p)"]
+
+    CP{{"<b>Condición:</b><br/>λ > 5"}}
+    AP["<b>Usar:</b><br/>μ = λ<br/>σ = √λ"]
+
+    B --> CB1
+    CB1 -->|"✓ Se cumple"| AB1
+    AB1 --> P
+
+    B --> CB2
+    CB2 -->|"✓ Se cumple"| AB2
+    AB2 --> N
+
+    P --> CP
+    CP -->|"✓ Se cumple"| AP
+    AP --> N
+
+    style B fill:#90EE90,stroke:#333,stroke-width:2px
+    style P fill:#F5DEB3,stroke:#333,stroke-width:2px
+    style N fill:#87CEEB,stroke:#333,stroke-width:2px
+    style CB1 fill:#FFE4B5,stroke:#333,stroke-width:1px
+    style CB2 fill:#FFE4B5,stroke:#333,stroke-width:1px
+    style CP fill:#FFE4B5,stroke:#333,stroke-width:1px
+    style AB1 fill:#E0F7FA,stroke:#333,stroke-width:1px
+    style AB2 fill:#E0F7FA,stroke:#333,stroke-width:1px
+    style AP fill:#E0F7FA,stroke:#333,stroke-width:1px
+```
+
 ## ⚠️ Trampas Comunes
 
 ### Trampa 1: Confundir "n intentos" con "tasa"
@@ -251,16 +291,19 @@ Si observas **varianza >> media**, podría ser sobre-dispersión (binomial negat
 !!! tip "Antes de Calcular"
 
     1. **¿Hay "n intentos"?**
+
        - Sí → Binomial
        - No → Poisson
 
     2. **Si Binomial:**
+
        - [ ] n es fijo
        - [ ] p es constante
        - [ ] Intentos independientes
        - [ ] Cada intento es sí/no
 
     3. **Si Poisson:**
+    
        - [ ] Hay tasa λ (eventos/unidad)
        - [ ] Intervalo continuo (tiempo/espacio)
        - [ ] Eventos independientes
@@ -283,3 +326,4 @@ Si observas **varianza >> media**, podría ser sobre-dispersión (binomial negat
 - [Eventos y probabilidad](./eventos-y-probabilidad.md) — Fundamentos
 - [Variables aleatorias](./variables-aleatorias.md) — Conceptos base
 - [Distribuciones continuas](./distribuciones-continuas.md) — Normal y otras
+```

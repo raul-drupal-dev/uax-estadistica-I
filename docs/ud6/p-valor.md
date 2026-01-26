@@ -17,7 +17,9 @@ Entender qué es el p-valor, cómo interpretarlo y cómo usarlo para tomar decis
 
 ## Definición: P-valor
 
-El **p-valor** es la **probabilidad, bajo H₀, de obtener un estadístico de prueba tan extremo o más extremo que el observado**.
+!!! danger "Pregunta de exámen"
+
+    El **p-valor** es la **probabilidad, bajo H₀, de obtener un estadístico de prueba tan extremo o más extremo que el observado**.
 
 En otras palabras:
 

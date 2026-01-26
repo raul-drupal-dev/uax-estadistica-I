@@ -22,7 +22,7 @@ prerequisitos: ["ud1-introduccion"]
 ## El Workflow Completo: 6 Etapas
 
 ```mermaid
-graph LR
+graph TD
     A["📊 RECOGIDA<br/>Muestreo"] --> B["📝 REGISTRO<br/>Captura datos"]
     B --> C["🧹 LIMPIEZA<br/>Validación"]
     C --> D["📈 EXPLORACIÓN<br/>EDA"]

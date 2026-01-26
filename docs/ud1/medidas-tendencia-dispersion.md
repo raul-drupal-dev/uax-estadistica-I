@@ -32,6 +32,7 @@ $$
 **Intuición:** Es el "punto de equilibrio" de los datos. Si cada valor fuera un peso, la media es donde se equilibraría una balanza.
 
 **Propiedades:**
+
 - ✅ Usa **toda** la información de los datos
 - ✅ Fácil de interpretar y calcular
 - ⚠️ **Muy sensible a valores extremos** (outliers)
@@ -59,6 +60,7 @@ $$
 **Intuición:** Divide los datos en dos partes iguales: 50% por debajo, 50% por encima.
 
 **Propiedades:**
+
 - ✅ **Robusta ante outliers** (valores extremos no la afectan)
 - ✅ Mejor que media con datos sesgados
 - ⚠️ No usa toda la información disponible
@@ -120,6 +122,7 @@ $$
 **Intuición:** Mide cuánto los datos se "dispersan" alrededor de la media. Valores altos = datos muy dispersos.
 
 **Propiedades:**
+
 - ✅ Cuantifica la dispersión numéricamente
 - ⚠️ Unidades al cuadrado (difícil interpretación)
 - ⚠️ Sensible a outliers
@@ -161,6 +164,7 @@ $$
 **Muestra:** 5, 7, 8, 10, 20
 
 ### Paso 1: Media
+
 $$\bar{x} = \frac{5+7+8+10+20}{5} = \frac{50}{5} = 10$$
 
 ### Paso 2: Mediana
@@ -172,6 +176,7 @@ Desviaciones: $(5-10)^2=25$, $(7-10)^2=9$, $(8-10)^2=4$, $(10-10)^2=0$, $(20-10)
 $$s^2 = \frac{25+9+4+0+100}{5-1} = \frac{138}{4} = 34.5$$
 
 ### Paso 4: Desviación Típica
+
 $$s = \sqrt{34.5} \approx 5.87$$
 
 **Interpretación:** Los datos varían típicamente 5.87 unidades respecto a la media (10).
