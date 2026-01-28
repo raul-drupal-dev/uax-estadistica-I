@@ -1236,7 +1236,6 @@ Explicación: p = 0.001 ≪ α = 0.05 indica evidencia muy fuerte contra H₀. U
 
     **Conclusión:** Var(2X + 5) = 4 × Var(X) = 4 × 9 = 36. La constante +5 no afecta la varianza, solo el multiplicador 2.
 
-(Continuaré con las soluciones restantes en el siguiente mensaje debido a la longitud...)
 
 ???- details "Solución pregunta 11 — Función característica vs MGF"
 
