@@ -1,0 +1,5761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Una guía completa para aprender estadística en la Universidad Alfonso X el Sabio.">
+      
+      
+      
+        <link rel="canonical" href="https://raul-drupal-dev.github.io/uax_estadistica_I/ud6/examen-ud6-practica/">
+      
+      
+        <link rel="prev" href="../resumen/">
+      
+      
+        <link rel="next" href="../../ud7/introduccion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/img/theme/raul.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Examen Práctica — Contrastes de Hipótesis (UD6) (medio) - Guia de aprendizaje de estadística UAX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#soluciones-desarrolladas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Guia de aprendizaje de estadística UAX" class="md-header__button md-logo" aria-label="Guia de aprendizaje de estadística UAX" data-md-component="logo">
+      
+  <img src="../../assets/img/theme/raul.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia de aprendizaje de estadística UAX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examen Práctica — Contrastes de Hipótesis (UD6) (medio)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+  
+  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+    <!-- mkdocs-quiz progress sidebar (mobile) -->
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+    </div>
+    <div data-md-component="quiz-progress">
+        <div class="quiz-correct-reset">
+          <span class="md-ellipsis">
+            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+          </span>
+          <span class="md-ellipsis">
+            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+          </span>
+          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+            <span data-quiz-translate="Reset">Reset</span>
+          </a>
+        </div>
+    </div>
+  </nav>
+
+  
+  
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud1/introduccion/" class="md-tabs__link">
+          
+  
+  
+  UD1 — Introducción a la Estadística
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud2/bivariante-intro/" class="md-tabs__link">
+          
+  
+  
+  UD2 — Probabilidad y análisis bivariante
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud3/fundamentos-probabilidad/" class="md-tabs__link">
+          
+  
+  
+  UD3 — Variables aleatorias
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud4/resumen/" class="md-tabs__link">
+          
+  
+  
+  UD4 — Modelos de probabilidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud5/resumen/" class="md-tabs__link">
+          
+  
+  
+  UD5 — Inferencia avanzada
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduccion-contrastes-hipotesis/" class="md-tabs__link">
+          
+  
+  
+  UD6 — Contrastes de hipótesis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ud7/introduccion/" class="md-tabs__link">
+          
+  
+  
+  UD7 — Introducción a R y RStudio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recursos/desc_div/" class="md-tabs__link">
+          
+  
+  
+  Recursos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examenes/examen-guia-estudio/" class="md-tabs__link">
+          
+  
+  
+  Examen General Final
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+  
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guia de aprendizaje de estadística UAX" class="md-nav__button md-logo" aria-label="Guia de aprendizaje de estadística UAX" data-md-component="logo">
+      
+  <img src="../../assets/img/theme/raul.png" alt="logo">
+
+    </a>
+    Guia de aprendizaje de estadística UAX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Inicio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../temario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 - introducción a la Estadística
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/bivariante-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 - Probabilidad y análisis bivariante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/fundamentos-probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 - Variables aleatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 - Modelos de probabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 - Inferencia avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion-contrastes-hipotesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD6 - Contrastes de hipótesis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD7 - Introducción a R y RStudio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tablas PDF
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tablas PDF
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/TABLA_DISTRIBUCION_NORMAL.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal (Z)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/Tabla_t_Student.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t de Student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/Tabla_Chi_Cuadrado.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi-cuadrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/Tabla_F_Snedecor.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F de Snedecor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/TABLA_DISTRIBUCION_BINOMIAL.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Binomial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/tablas/TABLA_DISTRIBUCION_POISSON.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poisson
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/desc_div/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-guia-estudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 — Introducción a la Estadística
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD1 — Introducción a la Estadística
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 - introducción a la Estadística
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/tipos-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/escalas-medicion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escalas de medición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/observacion-registro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observación / Registro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/limpieza-de-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limpieza de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/proceso-analisis-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proceso estándar de análisis de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/muestra-representativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Muestra representativa (muestreo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/medidas-tendencia-dispersion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medidas de tendencia y dispersión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/medias-geometricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medias: geométrica y armónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/representacion-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representación gráfica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen UD1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud1/examen-ud1-practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD1 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 — Probabilidad y análisis bivariante
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD2 — Probabilidad y análisis bivariante
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/bivariante-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 - Probabilidad y análisis bivariante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/correlacion-covarianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correlación y covarianza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/regresion-lineal-simple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regresión lineal simple
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/datos-categoricos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos categóricos y χ²
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen UD2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/examen-bivariante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen bivariante (completo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/examen-bivariante-preguntas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen bivariante (preguntas)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud2/examen-ud2-practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD2 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 — Variables aleatorias
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD3 — Variables aleatorias
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/fundamentos-probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 - Variables aleatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/tipos-variables-aleatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos de variables aleatorias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/funciones-distribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones de distribución y probabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/esperanza-varianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esperanza y varianza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/aplicaciones-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplicaciones en IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen UD3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud3/examen-ud3-practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD3 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 — Modelos de probabilidad
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD4 — Modelos de probabilidad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 - Modelos de probabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/distribuciones-discretas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distribuciones discretas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/distribuciones-continuas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distribuciones continuas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/distribuciones-derivadas-normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivadas de la normal (χ², t, F)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud4/examen-ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD4 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 — Inferencia avanzada
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD5 — Inferencia avanzada
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 - Inferencia avanzada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/estimacion-puntual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estimación puntual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/metodos-estimacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos de estimación (MLE y momentos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/intervalos-confianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intervalos de confianza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/contrastes-hipotesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrastes de hipótesis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud5/examen-ud5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD5 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD6 — Contrastes de hipótesis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD6 — Contrastes de hipótesis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion-contrastes-hipotesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD6 - Contrastes de hipótesis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipotesis-nula-alternativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hipótesis nula y alternativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errores-nivel-significacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errores y nivel de significación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-valor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P-valor y regla de decisión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contrastes-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrastes para la media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contrastes-varianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrastes para la varianza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios — UD6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen UD6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD6 (medio)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD6 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soluciones-desarrolladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soluciones desarrolladas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD7 — Introducción a R y RStudio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD7 — Introducción a R y RStudio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD7 - Introducción a R y RStudio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/instalacion-configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación y configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/comandos-basicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios prácticos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/comandos-avanzados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos avanzados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen UD7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud7/examen-ud7-practica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen UD7 (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recursos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/desc_div/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/examen1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen General Final
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examen General Final
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-guia-estudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-general-final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen Completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-general-alternativo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen Alternativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-propuesta-1-profesor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta 1 Profesor (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-practica-2-variante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2 Variante (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-practica-3-variante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 3 Variante (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/examen-practica-4-variante.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4 Variante (medio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soluciones-desarrolladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soluciones desarrolladas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+
+  
+  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+    <!-- mkdocs-quiz progress sidebar (desktop) -->
+    <label class="md-nav__title">
+      <span class="md-nav__icon md-icon"></span>
+      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
+    </label>
+    <ul class="md-nav__list" data-md-component="quiz-progress">
+      <li class="md-nav__item">
+        <div class="md-nav__link">
+          <span class="md-ellipsis">
+            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+          </span>
+        </div>
+      </li>
+      <li class="md-nav__item">
+        <div class="md-nav__link">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+          </div>
+        </div>
+      </li>
+      <li class="md-nav__item">
+        <div class="md-nav__link quiz-correct-reset">
+          <span class="md-ellipsis">
+            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+          </span>
+          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+            <span data-quiz-translate="Reset">Reset</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Examen UD6 (medio)</h1>
+
+<div><p>Duración estimada: 90 minutos. Lee con atención y marca la(s) respuesta(s) correcta(s). Algunas preguntas pueden tener más de una respuesta válida.</p>
+<p><strong>Instrucciones</strong></p>
+<ul>
+<li>Responde marcando la opción correcta (a, b, c, d). Puede haber más de una correcta: marca todas las que correspondan.</li>
+<li>En las preguntas de cálculo se pide elegir la(s) opción(es) correcta(s); debajo de cada pregunta se incluye la solución desarrollada para estudiar.</li>
+</ul>
+<hr>
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-0">
+    <a href="#quiz-0" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 1</h4>
+    <div class="quiz-question">
+        <p>Una investigadora quiere demostrar que un nuevo tratamiento es más efectivo que el actual. ¿Cuál debe ser su hipótesis alternativa?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0"><span class="arithmatex">\(H_1: \mu = \mu_0\)</span> (el nuevo tratamiento tiene igual efectividad)</label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" correct><label for="quiz-0-1"><span class="arithmatex">\(H_1: \mu &gt; \mu_0\)</span> (el nuevo tratamiento es más efectivo)</label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" ><label for="quiz-0-2"><span class="arithmatex">\(H_1: \mu &lt; \mu_0\)</span> (el nuevo tratamiento es menos efectivo)</label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3"><span class="arithmatex">\(H_1: \mu \ne \mu_0\)</span> (el nuevo tratamiento difiere en efectividad)</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: El investigador busca demostrar una mejora específica (aumento), no solo diferencia. Esto es un contraste unilateral derecha, donde H₁ es lo que se espera demostrar.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-1">
+    <a href="#quiz-1" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 2</h4>
+    <div class="quiz-question">
+        <p>¿Cuál es la diferencia fundamental entre la hipótesis nula (H₀) y la alternativa (H₁) en el enfoque frecuentista?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">H₀ es siempre verdadera y H₁ es siempre falsa</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" correct><label for="quiz-1-1">H₀ es lo que asumimos por defecto ("no hay efecto"); H₁ es lo que esperamos demostrar</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" ><label for="quiz-1-2">No hay diferencia; son equivalentes</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">H₀ contiene el símbolo "&gt;" y H₁ contiene "="</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En el enfoque frecuentista, H₀ es la afirmación inicial que se asume cierta hasta que encontremos evidencia en contra. H₁ es lo que el investigador espera demostrar.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-2">
+    <a href="#quiz-2" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 3</h4>
+    <div class="quiz-question">
+        <p>Un desarrollador realiza un contraste para verificar que la precisión de un algoritmo no es menor que 0.90. ¿Cuál es el planteamiento correcto de las hipótesis?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-2-0" correct><label for="quiz-2-0"><span class="arithmatex">\(H_0: \mu = 0.90\)</span> ; <span class="arithmatex">\(H_1: \mu &gt; 0.90\)</span> (unilateral derecha)</label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1"><span class="arithmatex">\(H_0: \mu = 0.90\)</span> ; <span class="arithmatex">\(H_1: \mu &lt; 0.90\)</span> (unilateral izquierda)</label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" ><label for="quiz-2-2"><span class="arithmatex">\(H_0: \mu &gt; 0.90\)</span> ; <span class="arithmatex">\(H_1: \mu \le 0.90\)</span> (unilateral izquierda)</label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3"><span class="arithmatex">\(H_0: \mu \ne 0.90\)</span> ; <span class="arithmatex">\(H_1: \mu = 0.90\)</span> (bilateral)</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: La frase "no es menor que 0.90" significa que esperamos que sea <span class="arithmatex">\(\ge 0.90\)</span>. Por tanto, H₀ es la igualdad (0.90) y H₁ es que supera ese valor (&gt;0.90). <strong>Trampa pedagógica</strong>: nótese que "no menor" se traduce a "mayor o igual", pero en hipótesis la alternativa es estrictamente "&gt;", no "&gt;=".</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-3">
+    <a href="#quiz-3" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 4</h4>
+    <div class="quiz-question">
+        <p>¿Qué es el Error Tipo I en un contraste de hipótesis?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-3-0" correct><label for="quiz-3-0">Rechazar H₀ siendo verdadera (falso positivo)</label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" ><label for="quiz-3-1">No rechazar H₀ siendo falsa (falso negativo)</label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2">Aceptar H₀ siendo verdadera (decisión correcta)</label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3">Aceptar H₁ siendo falsa (decisión correcta)</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Error Tipo I es el "falso positivo": decimos que hay efecto cuando en realidad no lo hay. Se controla mediante el nivel de significación α.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-4">
+    <a href="#quiz-4" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 5</h4>
+    <div class="quiz-question">
+        <p>¿Qué es el Error Tipo II en un contraste de hipótesis?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0">Rechazar H₀ siendo verdadera</label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" correct><label for="quiz-4-1">No rechazar H₀ siendo falsa (falso negativo)</label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" ><label for="quiz-4-2">Rechazar H₁ siendo verdadera</label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3">Calcular mal el estadístico de prueba</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Error Tipo II es el "falso negativo": no detectamos un efecto que realmente existe. Se denota β y está relacionado con la potencia mediante: Potencia = 1 - β.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-5">
+    <a href="#quiz-5" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 6</h4>
+    <div class="quiz-question">
+        <p>¿Cuál es la relación correcta entre el nivel de significación (α) y el Error Tipo I?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-5-0" correct><label for="quiz-5-0">α es la probabilidad máxima de cometer Error Tipo I que estamos dispuestos a tolerar</label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" ><label for="quiz-5-1">α es la probabilidad segura de que no cometeremos Error Tipo I</label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" ><label for="quiz-5-2">α y Error Tipo I son conceptos completamente independientes</label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3">α mide la potencia del contraste</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: El nivel de significación (α = 0.05 típicamente) es exactamente el <strong>umbral de control</strong> para la probabilidad de falsos positivos. Si repetimos el experimento muchas veces con H₀ verdadera, cometemos Error Tipo I en aproximadamente el α% de las ocasiones.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-6">
+    <a href="#quiz-6" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 7</h4>
+    <div class="quiz-question">
+        <p>¿Qué es la potencia de un contraste?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-6-0" ><label for="quiz-6-0">La probabilidad de cometer Error Tipo I</label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1">La probabilidad de no rechazar H₀ siendo verdadera</label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" correct><label for="quiz-6-2">La probabilidad de rechazar H₀ cuando esta es falsa (detectar un efecto real)</label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3">El valor p-valor del estadístico</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Potencia = 1 - β, donde β es la probabilidad de Error Tipo II. Una potencia alta (p.ej. 0.80 u 0.90) significa que es probable detectar efectos reales.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-7">
+    <a href="#quiz-7" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 8</h4>
+    <div class="quiz-question">
+        <p>¿Cuál de los siguientes factores NO aumenta la potencia de un contraste?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0">Aumentar el tamaño muestral (n)</label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" ><label for="quiz-7-1">Aumentar el nivel de significación (α)</label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" correct><label for="quiz-7-2">Aumentar la variabilidad de los datos (desviación típica)</label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3">Aumentar el tamaño del efecto (diferencia entre el verdadero valor y el hipotético)</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Mayor variabilidad hace más difícil detectar efectos (la dispersión "enmascarar" la señal). Los otros factores sí aumentan la potencia.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-8">
+    <a href="#quiz-8" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 9</h4>
+    <div class="quiz-question">
+        <p>Un investigador realiza un contraste y obtiene un p-valor de 0.12. Fijó α = 0.05. ¿Cuál es la decisión correcta?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-8-0" ><label for="quiz-8-0">Rechazar H₀ porque p-valor &gt; α</label></div><div><input type="radio" name="answer" value="1" id="quiz-8-1" correct><label for="quiz-8-1">NO rechazar H₀ porque p-valor ≥ α</label></div><div><input type="radio" name="answer" value="2" id="quiz-8-2" ><label for="quiz-8-2">La decisión depende de si el contraste es bilateral o unilateral</label></div><div><input type="radio" name="answer" value="3" id="quiz-8-3" ><label for="quiz-8-3">Rechazar H₁ porque p-valor &gt; 0.10</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: La regla es: si p-valor &lt; α, rechazamos H₀. Aquí, 0.12 ≥ 0.05, así que <strong>no hay evidencia suficiente</strong> para rechazar H₀. <strong>Trampa pedagógica</strong>: Confundir p &gt; α con "aceptamos H₀" (error común). Recordar que "no rechazar" ≠ "aceptar como verdadero".</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-9">
+    <a href="#quiz-9" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 10</h4>
+    <div class="quiz-question">
+        <p>Interpreta correctamente: "Un test produce p-valor = 0.03 con α = 0.05". ¿Cuál es la afirmación más precisa?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-9-0" ><label for="quiz-9-0">Hay 97% de probabilidad de que H₀ sea verdadera</label></div><div><input type="radio" name="answer" value="1" id="quiz-9-1" correct><label for="quiz-9-1">Si H₀ fuera verdadera, la probabilidad de observar datos tan extremos o más es del 3%</label></div><div><input type="radio" name="answer" value="2" id="quiz-9-2" ><label for="quiz-9-2">Hay 97% de probabilidad de que H₁ sea verdadera</label></div><div><input type="radio" name="answer" value="3" id="quiz-9-3" ><label for="quiz-9-3">El resultado es definitivamente correcto</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: El p-valor es P(datos tan extremos | H₀ verdadera), NO P(H₀ verdadera | datos). <strong>Trampa pedagógica crítica</strong>: Esta es la interpretación más común (y errónea) del p-valor. Cuidado con confundir direcciones en el teorema de Bayes.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-10">
+    <a href="#quiz-10" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 11</h4>
+    <div class="quiz-question">
+        <p>Un desarrollador prueba dos algoritmos con muestras grandes (n₁ = 100, n₂ = 100). Los datos tienen distribución aproximadamente normal pero con varianzas desconocidas e iguales. ¿Cuál es el contraste más apropiado?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-10-0" ><label for="quiz-10-0">Contraste Z (porque n es grande)</label></div><div><input type="radio" name="answer" value="1" id="quiz-10-1" correct><label for="quiz-10-1">Contraste t de Student para dos muestras independientes</label></div><div><input type="radio" name="answer" value="2" id="quiz-10-2" ><label for="quiz-10-2">Contraste F para varianzas</label></div><div><input type="radio" name="answer" value="3" id="quiz-10-3" ><label for="quiz-10-3">Contraste χ² para una varianza</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Aunque n es grande, como σ es desconocida usamos t, no Z. Con muestras grandes, la distribución t se aproxima a Z, pero el procedimiento formal es t. El contraste F se usa para contrastar varianzas, no medias.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-11">
+    <a href="#quiz-11" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 12</h4>
+    <div class="quiz-question">
+        <p>¿Cuándo usamos un contraste Z en lugar de un contraste t para la media?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-11-0" correct><label for="quiz-11-0">Cuando σ (desviación típica poblacional) es conocida</label></div><div><input type="radio" name="answer" value="1" id="quiz-11-1" ><label for="quiz-11-1">Cuando la muestra es pequeña (n &lt; 30)</label></div><div><input type="radio" name="answer" value="2" id="quiz-11-2" ><label for="quiz-11-2">Cuando queremos mayor potencia</label></div><div><input type="radio" name="answer" value="3" id="quiz-11-3" ><label for="quiz-11-3">Cuando sospechamos que los datos no son normales</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: El contraste Z requiere que σ sea <strong>conocida</strong> (o que n sea muy grande y tengamos una buena estimación). Si σ es desconocida, usamos t incluso con n grande.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-12">
+    <a href="#quiz-12" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 13</h4>
+    <div class="quiz-question">
+        <p>¿Cuál es la diferencia clave entre un contraste t para dos muestras independientes y uno para muestras pareadas?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-12-0" correct><label for="quiz-12-0">Muestras independientes: dos grupos distintos; Pareadas: medidas repetidas en los mismos sujetos</label></div><div><input type="radio" name="answer" value="1" id="quiz-12-1" ><label for="quiz-12-1">Muestras independientes usan Z; Pareadas usan t</label></div><div><input type="radio" name="answer" value="2" id="quiz-12-2" ><label for="quiz-12-2">Muestras independientes requieren igual varianza; Pareadas no</label></div><div><input type="radio" name="answer" value="3" id="quiz-12-3" ><label for="quiz-12-3">No hay diferencia, es solo terminología</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En muestras pareadas (antes/después, método 1 vs método 2 en el mismo sujeto), calculamos diferencias para cada par. En independientes, comparamos directamente las medias de dos grupos distintos. El procedimiento es completamente distinto.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-13">
+    <a href="#quiz-13" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 14</h4>
+    <div class="quiz-question">
+        <p>Se comparan los tiempos de respuesta de dos servidores con muestras de n₁ = 12 y n₂ = 15 mediciones. Las varianzas muestrales son <span class="arithmatex">\(s_1^2 = 25\)</span> ms² y <span class="arithmatex">\(s_2^2 = 9\)</span> ms². ¿Es razonable asumir varianzas iguales en el contraste t?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-13-0" ><label for="quiz-13-0">Sí, porque ambas muestras son menores a 30</label></div><div><input type="radio" name="answer" value="1" id="quiz-13-1" correct><label for="quiz-13-1">Probablemente no, porque la razón <span class="arithmatex">\(s_1^2 / s_2^2 ≈ 2.78\)</span> es relativamente grande</label></div><div><input type="radio" name="answer" value="2" id="quiz-13-2" ><label for="quiz-13-2">Sí, porque 25 y 9 son números manejables</label></div><div><input type="radio" name="answer" value="3" id="quiz-13-3" ><label for="quiz-13-3">No se puede decidir sin más información</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: Una regla práctica es que si una varianza es más de 3-4 veces la otra, es dudoso asumir igualdad. Aquí, 25/9 ≈ 2.78, que está en la frontera. Sería prudente considerar una variante de Welch (varianzas desiguales).</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-14">
+    <a href="#quiz-14" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 15</h4>
+    <div class="quiz-question">
+        <p>Un contraste para verificar si la consistencia (varianza) de dos procesos es igual da F = 0.45 con g.l. = (29, 24) y α = 0.05. ¿Cuál es la decisión?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-14-0" ><label for="quiz-14-0">Rechazar H₀ porque F &lt; 1</label></div><div><input type="radio" name="answer" value="1" id="quiz-14-1" correct><label for="quiz-14-1">NO rechazar H₀ porque F es menor que el valor crítico (típicamente F &gt; 2.0 para rechazar)</label></div><div><input type="radio" name="answer" value="2" id="quiz-14-2" ><label for="quiz-14-2">Rechazar H₀ porque F está lejos de 1</label></div><div><input type="radio" name="answer" value="3" id="quiz-14-3" ><label for="quiz-14-3">Aceptar H₀ porque F = 0.45 es un número válido</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En un contraste F bilateral, típicamente rechazamos si F &gt; F<em 1-α_2="1-α/2">{α/2} (cola derecha) o F &lt; F</em> (cola izquierda, menos común). Un F = 0.45 (muy cercano a 0) sí sugeriría poca dispersión en el numerador, pero el valor crítico para rechazar a la izquierda es mucho menor (cerca de 0.3). <strong>Trampa pedagógica</strong>: Confundir "F &lt; 1" con "rechazar"; necesitamos comparar con el valor crítico.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-15">
+    <a href="#quiz-15" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 16</h4>
+    <div class="quiz-question">
+        <p>Para contrastar si la varianza de un proceso es menor o igual a 0.04 mm², se usa H₀: σ² = 0.04 con n = 25 mediciones y s² = 0.062. El estadístico calculado es χ² ≈ 37.2. Con α = 0.05 (unilateral derecha) y valor crítico χ²_{0.05;24} = 36.42, ¿cuál es la conclusión?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-15-0" ><label for="quiz-15-0">No rechazar H₀ porque 37.2 &gt; 36.42 ligeramente</label></div><div><input type="radio" name="answer" value="1" id="quiz-15-1" correct><label for="quiz-15-1">Rechazar H₀ porque 37.2 &gt; 36.42 (el proceso tiene varianza mayor que la permitida)</label></div><div><input type="radio" name="answer" value="2" id="quiz-15-2" ><label for="quiz-15-2">Rechazar H₁ porque la varianza observada es grande</label></div><div><input type="radio" name="answer" value="3" id="quiz-15-3" ><label for="quiz-15-3">Aceptar H₀ porque χ² &gt; 0</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En un contraste χ² unilateral derecha, rechazamos si χ² &gt; χ²_α. Aquí, 37.2 &gt; 36.42, así que rechazamos H₀. Conclusión: la varianza del proceso <strong>excede</strong> el límite especificado 0.04. Este es un problema de <strong>control de calidad</strong>, donde detectamos que la variabilidad es intolerablemente alta.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-16">
+    <a href="#quiz-16" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 17</h4>
+    <div class="quiz-question">
+        <p>¿Cuál es la región crítica correcta para un contraste bilateral con H₀: μ = 100, α = 0.05, usando distribución normal?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-16-0" ><label for="quiz-16-0">Z &gt; 1.645</label></div><div><input type="radio" name="answer" value="1" id="quiz-16-1" ><label for="quiz-16-1">Z &lt; -1.645</label></div><div><input type="radio" name="answer" value="2" id="quiz-16-2" correct><label for="quiz-16-2">|Z| &gt; 1.96 (equivalente a Z &gt; 1.96 o Z &lt; -1.96)</label></div><div><input type="radio" name="answer" value="3" id="quiz-16-3" ><label for="quiz-16-3">-1.96 &lt; Z &lt; 1.96</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En bilateral, α = 0.05 se divide en dos colas: 0.025 cada una. Los valores críticos son ±1.96. <strong>Trampa pedagógica</strong>: Confundir bilateral (dos colas) con unilateral (una cola). En bilateral, usamos z<em>{α/2}, no z</em>α.</p></section>
+</div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-17">
+                <a href="#quiz-17" class="quiz-header-link">#</a>
+                <h4 class="quiz-number">Pregunta 18</h4>
+                <div class="quiz-question">
+                    <p>Se realiza un contraste Z de media con los datos: <span class="arithmatex">\(\bar{x} = 52.3\)</span>, <span class="arithmatex">\(\mu_0 = 50\)</span>, <span class="arithmatex">\(\sigma = 4\)</span>, <span class="arithmatex">\(n = 64\)</span>. Calcula el estadístico Z.</p>
+                </div>
+                <form action="javascript:void(0);" onsubmit="return false;">
+                    <fieldset><div><input type="radio" name="answer" value="0" id="quiz-17-0" ><label for="quiz-17-0">Z ≈ 0.575</label></div><div><input type="radio" name="answer" value="1" id="quiz-17-1" correct><label for="quiz-17-1">Z ≈ 4.6 (o 4.6 exactamente)</label></div><div><input type="radio" name="answer" value="2" id="quiz-17-2" ><label for="quiz-17-2">Z ≈ 2.3</label></div><div><input type="radio" name="answer" value="3" id="quiz-17-3" ><label for="quiz-17-3">Z ≈ 13.075</label></div></fieldset>
+                    <div class="quiz-feedback hidden"></div>
+
+                </form>
+                <section class="content hidden"><p>Explicación:</p>
+<div class="arithmatex">\[Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{52.3 - 50}{4/\sqrt{64}} = \frac{2.3}{4/8} = \frac{2.3}{0.5} = 4.6\]</div>
+<p>Este Z = 4.6 es muy alto (z_{0.05} = 1.96), así que rechazaríamos H₀ en un test bilateral.</p></section>
+            </div>
+
+<div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" data-shuffle-answers="true" id="quiz-18">
+    <a href="#quiz-18" class="quiz-header-link">#</a>
+    <h4 class="quiz-number">Pregunta 19</h4>
+    <div class="quiz-question">
+        <p>Un contraste t de una muestra produce t = -1.50 con g.l. = 19 y α = 0.05 (bilateral). Valor crítico: t_{19, 0.025} = 2.093. ¿Cuál es la decisión?</p>
+    </div>
+    <form action="javascript:void(0);" onsubmit="return false;">
+        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-18-0" ><label for="quiz-18-0">Rechazar H₀ porque t &lt; 0</label></div><div><input type="radio" name="answer" value="1" id="quiz-18-1" correct><label for="quiz-18-1">NO rechazar H₀ porque |-1.50| &lt; 2.093</label></div><div><input type="radio" name="answer" value="2" id="quiz-18-2" ><label for="quiz-18-2">Rechazar H₀ porque el signo es negativo</label></div><div><input type="radio" name="answer" value="3" id="quiz-18-3" ><label for="quiz-18-3">Rechazar H₁ porque t es pequeño</label></div></fieldset>
+        <div class="quiz-feedback hidden"></div>
+
+    </form>
+    <section class="content hidden"><p>Explicación: En bilateral, la región crítica es |t| &gt; 2.093. Aquí, |-1.50| = 1.50 &lt; 2.093, así que no rechazamos H₀. El signo negativo no afecta la decisión en bilateral; solo importa la magnitud relativa al valor crítico.</p></section>
+</div>
+
+<hr>
+<div class="quiz-intro">
+    <p>Los resultados del cuestionario se guardan en el almacenamiento local de tu navegador y persistirán entre sesiones.</p>
+    <button type="button" class="md-button quiz-intro-reset">Reiniciar cuestionario</button>
+</div>
+
+<div id="quiz-results" class="quiz-results">
+    <div class="quiz-results-progress">
+        <h3>Progreso del cuestionario</h3>
+        <p class="quiz-results-stats">
+            <span class="quiz-results-answered">0</span> / <span class="quiz-results-total">0</span> preguntas respondidas
+            (<span class="quiz-results-percentage">0%</span>)
+        </p>
+        <p class="quiz-results-correct-stats">
+            <span class="quiz-results-correct">0</span> correctas
+        </p>
+    </div>
+    <div class="quiz-results-complete hidden">
+        <h2 class="quiz-results-title">¡Cuestionario completado!</h2>
+        <div class="quiz-results-score-display">
+            <span class="quiz-results-score-value">0%</span>
+        </div>
+        <p class="quiz-results-message"></p>
+        <button type="button" class="md-button md-button--primary quiz-results-reset">Reiniciar cuestionario</button>
+    </div>
+</div>
+
+<hr>
+<h2 id="soluciones-desarrolladas">Soluciones desarrolladas</h2>
+<details class="- details">
+<summary>Solución pregunta 1 — Hipótesis alternativa para demostrar mejora</summary>
+</details>
+<p><strong>Enunciado</strong>: Una investigadora quiere demostrar que un nuevo tratamiento es más efectivo que el actual.</p>
+<p><strong>Razonamiento</strong>:</p>
+<ul>
+<li>El investigador <strong>espera una mejora específica</strong> (aumento en efectividad).</li>
+<li>Esto corresponde a un <strong>contraste unilateral derecha</strong>.</li>
+<li>H₀ (por defecto): no hay mejora, μ = μ₀</li>
+<li>H₁ (lo que se quiere demostrar): hay mejora, μ &gt; μ₀</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: <span class="arithmatex">\(H_1: \mu &gt; \mu_0\)</span></p>
+<details class="- details">
+<summary>Solución pregunta 2 — Diferencia entre H₀ y H₁</summary>
+</details>
+<p><strong>Concepto fundamental</strong>:</p>
+<ul>
+<li><strong>H₀ (hipótesis nula)</strong>: Es la afirmación que asumimos <strong>por defecto</strong> hasta tener evidencia en contra. Típicamente representa "no hay efecto" o "no hay cambio".</li>
+<li><strong>H₁ (hipótesis alternativa)</strong>: Es lo que el investigador <strong>espera demostrar</strong>. Representa el efecto o cambio que buscamos detectar.</li>
+</ul>
+<p><strong>Propiedades</strong>:</p>
+<ul>
+<li>H₀ siempre contiene "=" (p.ej. μ = μ₀)</li>
+<li>H₁ contiene "&lt;", "&gt;" o "≠" según el tipo de contraste</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: H₀ es lo que asumimos por defecto; H₁ es lo que esperamos demostrar.</p>
+<details class="- details">
+<summary>Solución pregunta 3 — Planteamiento de hipótesis: 'no menor que 0.90'</summary>
+</details>
+<p><strong>Análisis cuidadoso del enunciado</strong>:</p>
+<ul>
+<li>"No es <strong>menor</strong> que 0.90" = "es ≥ 0.90"</li>
+<li>El desarrollador quiere <strong>verificar/garantizar</strong> que la precisión no cae por debajo de 0.90</li>
+<li>Esto es un objetivo de <strong>control de calidad</strong>: asegurar un mínimo</li>
+</ul>
+<p><strong>Planteo correcto</strong>:</p>
+<ul>
+<li>H₀: μ = 0.90 (hipótesis de referencia)</li>
+<li>H₁: μ &gt; 0.90 (buscamos evidencia de que <strong>supera</strong> el mínimo)</li>
+<li>Tipo: <strong>Unilateral derecha</strong></li>
+</ul>
+<p><strong>Trampa pedagógica evitada</strong>:</p>
+<ul>
+<li>Confundir "no menor" con "menor o igual" en la alternativa</li>
+<li>En hipótesis, H₁ es estrictamente "&gt;", no "≥"</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: <span class="arithmatex">\(H_0: \mu = 0.90\)</span> ; <span class="arithmatex">\(H_1: \mu &gt; 0.90\)</span> (unilateral derecha)</p>
+<details class="- details">
+<summary>Solución pregunta 4 — Error Tipo I</summary>
+</details>
+<p><strong>Definición</strong>:
+$<span class="arithmatex">\(\text{Error Tipo I} = P(\text{Rechazar } H_0 \mid H_0 \text{ es verdadera})\)</span>$</p>
+<p>Es decir, decimos que hay un efecto cuando en realidad <strong>no lo hay</strong>.</p>
+<p><strong>Contexto</strong>:</p>
+<ul>
+<li>Se controla mediante el <strong>nivel de significación α</strong>.</li>
+<li>Típicamente α = 0.05 (permitimos 5% de falsos positivos a largo plazo).</li>
+<li>Si repetimos muchas veces un experimento con H₀ verdadera, cometemos Error Tipo I en aproximadamente el 5% de las ocasiones.</li>
+</ul>
+<p><strong>Alternativas incorrectas</strong>:</p>
+<ul>
+<li>"No rechazar H₀ siendo falsa" → Eso es <strong>Error Tipo II (β)</strong></li>
+<li>"Aceptar H₀ siendo verdadera" → Decisión <strong>correcta</strong>, no error</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Rechazar H₀ siendo verdadera (falso positivo)</p>
+<details class="- details">
+<summary>Solución pregunta 5 — Error Tipo II</summary>
+</details>
+<p><strong>Definición</strong>:
+$<span class="arithmatex">\(\text{Error Tipo II} = P(\text{No rechazar } H_0 \mid H_0 \text{ es falsa})\)</span>$</p>
+<p>Es decir, <strong>no detectamos</strong> un efecto que realmente existe.</p>
+<p><strong>Relación con la potencia</strong>:
+$<span class="arithmatex">\(\text{Potencia} = 1 - \beta\)</span>$</p>
+<ul>
+<li>Si β = 0.20, la potencia = 0.80 (80% de probabilidad de detectar un efecto real)</li>
+<li>Una potencia baja (&lt; 0.70) es preocupante: fácil pasamos por alto efectos reales</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: No rechazar H₀ siendo falsa (falso negativo)</p>
+<details class="- details">
+<summary>Solución pregunta 6 — Relación entre α y Error Tipo I</summary>
+</details>
+<p><strong>Concepto clave</strong>:</p>
+<p>El <strong>nivel de significación (α)</strong> es la <strong>probabilidad máxima</strong> de cometer Error Tipo I que estamos dispuestos a tolerar.</p>
+<p><strong>Interpretación frecuentista</strong>:</p>
+<ul>
+<li>Fijamos α ANTES de analizar datos (típicamente 0.05 o 0.01)</li>
+<li>Si repetimos el experimento 1000 veces con H₀ verdadera:</li>
+<li>En ~950 ocasiones, NO rechazamos H₀ (decisión correcta)</li>
+<li>En ~50 ocasiones, rechazamos H₀ falsamente (Error Tipo I)</li>
+</ul>
+<p><strong>α NO es</strong>:</p>
+<ul>
+<li>La probabilidad de error en ESTE experimento específico</li>
+<li>Una garantía de que no cometeremos Error Tipo I</li>
+<li>Un control de Error Tipo II</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: α es la probabilidad máxima de cometer Error Tipo I que toleramos.</p>
+<details class="- details">
+<summary>Solución pregunta 7 — Potencia del contraste</summary>
+</details>
+<p><strong>Definición formal</strong>:
+$<span class="arithmatex">\(\text{Potencia} = P(\text{Rechazar } H_0 \mid H_0 \text{ es falsa}) = 1 - \beta\)</span>$</p>
+<p>donde β = probabilidad de Error Tipo II.</p>
+<p><strong>Interpretación práctica</strong>:</p>
+<ul>
+<li><strong>Alta potencia</strong> (p.ej. 0.80 o 0.90): Si hay un efecto real, lo detectaremos con alta probabilidad</li>
+<li><strong>Baja potencia</strong> (p.ej. 0.50): Es probable que pasemos por alto efectos reales</li>
+</ul>
+<p><strong>Relación con tamaño muestral</strong>:</p>
+<ul>
+<li>Potencia ↑ cuando aumenta n (más datos = más precisión)</li>
+<li>Potencia ↓ cuando aumenta la variabilidad de los datos</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Probabilidad de rechazar H₀ cuando es falsa.</p>
+<details class="- details">
+<summary>Solución pregunta 8 — Factor que NO aumenta potencia</summary>
+</details>
+<p><strong>Factores que SÍ aumentan potencia</strong>:</p>
+<ol>
+<li>↑ Tamaño muestral (n) → Mejor estimación</li>
+<li>↑ Nivel de significación (α) → Región crítica más ancha, más fácil rechazar</li>
+<li>↑ Tamaño del efecto → Diferencia mayor entre verdadero valor e hipotético</li>
+<li>↓ Variabilidad (σ) → Datos menos dispersos, detectamos patrones mejor</li>
+</ol>
+<p><strong>Factor que NO aumenta (empeora) potencia</strong>:</p>
+<ul>
+<li>↑ Variabilidad → Los datos son más "ruidosos", es más difícil detectar el efecto</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Aumentar la variabilidad de los datos.</p>
+<details class="- details">
+<summary>Solución pregunta 9 — Decisión con p-valor = 0.12, α = 0.05</summary>
+</details>
+<p><strong>Regla de decisión fundamental</strong>:
+$<span class="arithmatex">\(\text{Si } p\text{-valor} &lt; \alpha \Rightarrow \text{Rechazamos } H_0\)</span>$
+$<span class="arithmatex">\(\text{Si } p\text{-valor} \ge \alpha \Rightarrow \text{NO rechazamos } H_0\)</span>$</p>
+<p><strong>Aplicación</strong>:</p>
+<ul>
+<li>p-valor = 0.12</li>
+<li>α = 0.05</li>
+<li>0.12 ≥ 0.05 ✓</li>
+</ul>
+<p><strong>Conclusión</strong>:
+No hay <strong>evidencia suficiente</strong> para rechazar H₀. Los datos observados son consistentes con H₀ (si H₀ fuera verdadera, hay 12% de probabilidad de ver datos tan extremos o más).</p>
+<p><strong>Aclaración importante</strong>:</p>
+<ul>
+<li>"No rechazar H₀" ≠ "Aceptar H₀"</li>
+<li>"No rechazar H₀" ≠ "H₀ es verdadera"</li>
+<li>Solo significa: no hay evidencia suficiente en contra</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: NO rechazar H₀ porque p-valor ≥ α.</p>
+<details class="- details">
+<summary>Solución pregunta 10 — Interpretación correcta del p-valor</summary>
+</details>
+<p><strong>Definición precisa del p-valor</strong>:
+$<span class="arithmatex">\(p\text{-valor} = P(\text{datos tan extremos o más} \mid H_0 \text{ es verdadera})\)</span>$</p>
+<p>Es una <strong>probabilidad condicional</strong>: "¿Qué probabilidad hay de observar estos datos (o más extremos) SI H₀ fuera verdadera?"</p>
+<p><strong>Interpretación correcta (respuesta c)</strong>:
+Si H₀ fuera verdadera, la probabilidad de observar un estadístico tan extremo o más es del 3%.</p>
+<p><strong>Interpretaciones INCORRECTAS (trampas comunes)</strong>:</p>
+<ol>
+<li>
+<p>❌ "Hay 97% de probabilidad de que H₀ sea verdadera"</p>
+</li>
+<li>
+<p>Esto es P(H₀ | datos), no P(datos | H₀)</p>
+</li>
+<li>
+<p>Es el error más común al interpretar p-valores</p>
+</li>
+<li>
+<p>❌ "Hay 97% de probabilidad de que H₁ sea verdadera"</p>
+</li>
+<li>
+<p>Tampoco. El p-valor no nos dice sobre H₁</p>
+</li>
+<li>
+<p>❌ "El resultado es definitivamente correcto"</p>
+</li>
+<li>p-valor es un índice de rareza, no de certeza</li>
+</ol>
+<p><strong>Respuesta correcta</strong>: Si H₀ fuera verdadera, la probabilidad de observar datos tan extremos o más es del 3%.</p>
+<details class="- details">
+<summary>Solución pregunta 11 — Contraste apropiado (dos algoritmos, n grande, σ desconocida)</summary>
+</details>
+<p><strong>Análisis de la situación</strong>:</p>
+<ul>
+<li>Dos grupos independientes (dos algoritmos)</li>
+<li>n₁ = 100, n₂ = 100 (muestras <strong>grandes</strong>)</li>
+<li>Distribución aproximadamente normal</li>
+<li>Varianzas <strong>desconocidas</strong> pero <strong>iguales</strong></li>
+</ul>
+<p><strong>Opciones evaluadas</strong>:</p>
+<ol>
+<li>
+<p>✗ <strong>Contraste Z</strong>: Aunque n es grande, σ es desconocida</p>
+</li>
+<li>
+<p>Z requiere σ <strong>conocida</strong> (o n → ∞ con σ estimada)</p>
+</li>
+<li>
+<p>Formalmente usamos t incluso con n grande</p>
+</li>
+<li>
+<p>✓ <strong>Contraste t de Student (dos muestras)</strong>:</p>
+</li>
+<li>
+<p>Aplicable cuando σ es desconocida</p>
+</li>
+<li>Con muestras grandes, distribución t ≈ N(0,1)</li>
+<li>Pero el procedimiento formal es t, no Z</li>
+<li>
+<p>Usamos varianza combinada: <span class="arithmatex">\(S_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}\)</span></p>
+</li>
+<li>
+<p>✗ <strong>Contraste F</strong>: Se usa para contrastar si σ₁² = σ₂², no para medias</p>
+</li>
+<li>
+<p>✗ <strong>Contraste χ²</strong>: Se usa para una única varianza, no para comparar dos</p>
+</li>
+</ol>
+<p><strong>Respuesta correcta</strong>: Contraste t de Student para dos muestras independientes.</p>
+<details class="- details">
+<summary>Solución pregunta 12 — Cuándo usar contraste Z vs t</summary>
+</details>
+<p><strong>Criterio principal: ¿Se conoce σ (desv. típica poblacional)?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Conocemos σ</th>
+<th>Usamos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sí</strong></td>
+<td><strong>Contraste Z</strong></td>
+</tr>
+<tr>
+<td><strong>No</strong></td>
+<td><strong>Contraste t</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contraste Z</strong>:</p>
+<ul>
+<li>Requiere σ conocida o estimada de forma muy fiable</li>
+<li>Distribución: Normal estándar N(0, 1)</li>
+<li>Ejemplo: proceso industrial donde conocemos σ histórica</li>
+</ul>
+<p><strong>Contraste t</strong>:</p>
+<ul>
+<li>Cuando σ es desconocida y estimamos con s muestral</li>
+<li>Distribución: t de Student con (n-1) g.l.</li>
+<li><strong>Incluso con n &gt; 30</strong>, si σ es desconocida usamos t</li>
+<li>Con n grande, t ≈ Z (colas convergen)</li>
+</ul>
+<p><strong>Alternativas incorrectas</strong>:</p>
+<ul>
+<li>"n &lt; 30 → Z" ✗ (Falso, usamos t cuando σ desconocida)</li>
+<li>"Queremos mayor potencia → Z" ✗ (No podemos elegir; depende de los datos)</li>
+<li>"Datos no normales → Z" ✗ (TLC justifica normalidad con n grande, pero σ sigue desconocida)</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Cuando σ es conocida.</p>
+<details class="- details">
+<summary>Solución pregunta 13 — Diferencia: muestras independientes vs pareadas</summary>
+</details>
+<p><strong>Muestras Independientes</strong>:</p>
+<ul>
+<li>Dos <strong>grupos distintos</strong> (p.ej. algoritmo A y algoritmo B)</li>
+<li>Cada grupo tiene sus propios sujetos/observaciones</li>
+<li>Comparamos <span class="arithmatex">\(\bar{x}_1\)</span> vs <span class="arithmatex">\(\bar{x}_2\)</span></li>
+<li>Estadístico: <span class="arithmatex">\(t = \frac{\bar{x}_1 - \bar{x}_2}{S_p\sqrt{1/n_1 + 1/n_2}}\)</span></li>
+</ul>
+<p><strong>Muestras Pareadas</strong>:</p>
+<ul>
+<li><strong>Mismos sujetos</strong> medidos en dos ocasiones (antes/después, método 1/método 2)</li>
+<li>Calculamos diferencias <span class="arithmatex">\(d_i = x_{1i} - x_{2i}\)</span> para cada sujeto</li>
+<li>Comparamos si la media de diferencias es significativa</li>
+<li>Estadístico: <span class="arithmatex">\(t = \frac{\bar{d}}{s_d/\sqrt{n}}\)</span> (solo una variable: las diferencias)</li>
+</ul>
+<p><strong>Por qué es importante</strong>:</p>
+<ul>
+<li>Muestras pareadas tiene <strong>más potencia</strong> porque controla variabilidad entre sujetos</li>
+<li>Muestras independientes es más general pero requiere muestras mayores para igual potencia</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Muestras independientes = grupos distintos; Pareadas = medidas repetidas en los mismos sujetos.</p>
+<details class="- details">
+<summary>Solución pregunta 14 — Evaluación de igualdad de varianzas (F = 2.78)</summary>
+</details>
+<p><strong>Contexto</strong>:</p>
+<ul>
+<li>n₁ = 12, n₂ = 15</li>
+<li><span class="arithmatex">\(s_1^2 = 25\)</span> ms², <span class="arithmatex">\(s_2^2 = 9\)</span> ms²</li>
+<li>Razón: <span class="arithmatex">\(F = s_1^2 / s_2^2 = 25/9 ≈ 2.78\)</span></li>
+</ul>
+<p><strong>Regla práctica para asumir igualdad de varianzas</strong>:</p>
+<ul>
+<li>Razón &lt; 3: Probablemente razonable asumir igualdad</li>
+<li>Razón 3–4: Frontera, conviene ser cauto</li>
+<li>Razón &gt; 4: Definitivamente dudar de igualdad</li>
+</ul>
+<p><strong>Cálculo formal (Test F)</strong>:</p>
+<p>Si ejecutamos un contraste F formal:</p>
+<ul>
+<li>Estadístico observado: F = 2.78</li>
+<li>Valor crítico aprox.: F_{0.025; 11, 14} ≈ 3.0</li>
+<li>Decisión: 2.78 &lt; 3.0, así que <strong>no rechazamos</strong> igualdad de varianzas formalmente</li>
+</ul>
+<p>Pero <strong>prácticamente</strong>, una razón de 2.78 está en la zona gris.</p>
+<p><strong>Alternativa de Welch</strong>:
+Si dudamos, podemos usar la variante de Welch que NO asume igualdad (resulta en g.l. ajustados).</p>
+<p><strong>Respuesta correcta</strong>: Probablemente no, porque la razón es relativamente grande.</p>
+<details class="- details">
+<summary>Solución pregunta 15 — Contraste F de varianzas (F = 0.45)</summary>
+</details>
+<p><strong>Situación</strong>:</p>
+<ul>
+<li>H₀: σ₁² = σ₂²</li>
+<li>H₁: σ₁² ≠ σ₂² (bilateral)</li>
+<li>F = 0.45</li>
+<li>g.l. = (29, 24)</li>
+<li>α = 0.05</li>
+</ul>
+<p><strong>Región crítica para bilateral</strong>:</p>
+<ul>
+<li>Cola derecha: F &gt; F_{α/2; 29, 24}</li>
+<li>Cola izquierda: F &lt; F_{1-α/2; 29, 24} (menos común, pero posible)</li>
+</ul>
+<p><strong>Valor crítico típico</strong>:</p>
+<ul>
+<li>F_{0.025; 29, 24} ≈ 2.0 (tabla o software)</li>
+<li>F_{0.975; 29, 24} ≈ 0.4–0.5</li>
+</ul>
+<p><strong>Interpretación de F = 0.45</strong>:</p>
+<ul>
+<li>Es un valor <strong>muy bajo</strong>: sugiere que <span class="arithmatex">\(s_1^2 &lt;&lt; s_2^2\)</span></li>
+<li>Es consistente con rechazar cola izquierda IF el valor crítico permite</li>
+<li>Pero tipicamente, como F_{1-α/2} es cercano a 0.3–0.4 y F = 0.45 &gt; ese umbral, <strong>NO rechazamos</strong></li>
+</ul>
+<p><strong>Trampa pedagógica</strong>:</p>
+<ul>
+<li>Confundir "F &lt; 1" con "rechazamos"</li>
+<li>Necesitamos comparar con el valor crítico exacto, que depende de g.l.</li>
+<li>Un F = 0.45 es sospechoso (poca varianza en el numerador), pero no necesariamente en la región de rechazo</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: NO rechazar H₀ porque F es menor que el valor crítico (típicamente F &gt; 2.0 para rechazar en la cola derecha).</p>
+<details class="- details">
+<summary>Solución pregunta 16 — Contraste χ² de varianza (control de calidad)</summary>
+</details>
+<p><strong>Problema de control de calidad</strong>:</p>
+<ul>
+<li>Especificación: σ² ≤ 0.04 mm²</li>
+<li>H₀: σ² = 0.04 (el proceso está en especificación)</li>
+<li>H₁: σ² &gt; 0.04 (el proceso se ha descontrolado)</li>
+<li><strong>Tipo: Unilateral derecha</strong> (nos preocupa exceso de variabilidad)</li>
+</ul>
+<p><strong>Datos</strong>:</p>
+<ul>
+<li>n = 25</li>
+<li>s² = 0.062</li>
+<li>α = 0.05</li>
+</ul>
+<p><strong>Estadístico χ²</strong>:</p>
+<div class="arithmatex">\[\chi^2 = \frac{(n-1)s^2}{\sigma_0^2} = \frac{(25-1) \times 0.062}{0.04} = \frac{24 \times 0.062}{0.04} = \frac{1.488}{0.04} = 37.2\]</div>
+<p><strong>Decisión</strong>:</p>
+<ul>
+<li>Valor crítico: χ²_{0.05; 24} = 36.42</li>
+<li>Estadístico: 37.2</li>
+<li>37.2 &gt; 36.42 ✓</li>
+<li><strong>Rechazamos H₀</strong></li>
+</ul>
+<p><strong>Conclusión</strong>:
+Hay <strong>evidencia significativa</strong> de que la varianza del proceso <strong>excede</strong> la especificación 0.04 mm². El proceso está <strong>fuera de control</strong> en términos de variabilidad y requiere ajuste.</p>
+<p><strong>Interpretación práctica</strong>:</p>
+<ul>
+<li>Los componentes producidos tienen variabilidad inaceptablemente alta</li>
+<li>Necesario investigar y ajustar el proceso de fabricación</li>
+</ul>
+<details class="- details">
+<summary>Solución pregunta 17 — Región crítica bilateral</summary>
+</details>
+<p><strong>Contraste bilateral</strong>:</p>
+<ul>
+<li>H₀: μ = 100</li>
+<li>H₁: μ ≠ 100</li>
+<li>α = 0.05</li>
+<li>Distribución: N(0, 1)</li>
+</ul>
+<p><strong>División de α en dos colas</strong>:</p>
+<div class="arithmatex">\[\alpha = 0.05 \Rightarrow \alpha/2 = 0.025 \text{ cada cola}\]</div>
+<p><strong>Valores críticos</strong>:</p>
+<ul>
+<li>Función cuantil normal: P(Z ≤ z) = 0.025 → z ≈ -1.96</li>
+<li>P(Z ≥ z) = 0.025 → z ≈ +1.96</li>
+</ul>
+<p><strong>Región crítica</strong>:
+$<span class="arithmatex">\(|Z| &gt; 1.96 \quad \text{o equivalentemente} \quad Z &gt; 1.96 \text{ o } Z &lt; -1.96\)</span>$</p>
+<p><strong>Rechazo</strong>: Si el estadístico calculado cae en cualquiera de las dos colas extremas.</p>
+<p><strong>Trampa pedagógica</strong>:</p>
+<ul>
+<li>Confundir "bilateral" con "unilateral"</li>
+<li>En bilateral: z<em 0.025="0.025">{α/2} = z</em> = 1.96</li>
+<li>En unilateral derecha: z<em 0.05="0.05">{α} = z</em> = 1.645</li>
+<li>En unilateral izquierda: z<em 0.05="0.05">{α} = z</em> = -1.645</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: |Z| &gt; 1.96.</p>
+<details class="- details">
+<summary>Solución pregunta 18 — Cálculo del estadístico Z</summary>
+</details>
+<p><strong>Datos</strong>:</p>
+<ul>
+<li><span class="arithmatex">\(\bar{x} = 52.3\)</span></li>
+<li><span class="arithmatex">\(\mu_0 = 50\)</span> (bajo H₀)</li>
+<li>σ = 4 (desv. típica poblacional)</li>
+<li>n = 64</li>
+</ul>
+<p><strong>Fórmula del estadístico Z</strong>:</p>
+<div class="arithmatex">\[Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}\]</div>
+<p><strong>Sustitución paso a paso</strong>:</p>
+<div class="arithmatex">\[Z = \frac{52.3 - 50}{4/\sqrt{64}} = \frac{2.3}{4/8} = \frac{2.3}{0.5} = 4.6\]</div>
+<p><strong>Interpretación</strong>:</p>
+<ul>
+<li>Z = 4.6 es un valor <strong>muy alto</strong> (lejos del centro 0)</li>
+<li>Valor crítico bilateral: z_{0.025} = 1.96</li>
+<li>Como |4.6| &gt;&gt; 1.96, <strong>rechazaríamos H₀</strong></li>
+<li>Conclusión: hay diferencia significativa entre la media observada (52.3) y la hipotética (50)</li>
+</ul>
+<p><strong>Comprobación</strong>:</p>
+<ul>
+<li>Error estándar de la media: σ/√n = 4/8 = 0.5</li>
+<li>Diferencia observada: 52.3 - 50 = 2.3</li>
+<li>Número de errores estándar: 2.3 / 0.5 = 4.6</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: Z ≈ 4.6.</p>
+<details class="- details">
+<summary>Solución pregunta 19 — Decisión contraste t (t = -1.50, g.l. = 19)</summary>
+</details>
+<p><strong>Datos del contraste</strong>:</p>
+<ul>
+<li>Estadístico: t = -1.50</li>
+<li>Grados de libertad: g.l. = 19</li>
+<li>Tipo: <strong>Bilateral</strong></li>
+<li>α = 0.05</li>
+<li>Valor crítico: t_{19, 0.025} = 2.093</li>
+</ul>
+<p><strong>Región crítica bilateral</strong>:
+$<span class="arithmatex">\(|t| &gt; t_{α/2} \Rightarrow |t| &gt; 2.093\)</span>$</p>
+<p><strong>Evaluación</strong>:</p>
+<ul>
+<li>Estadístico observado: t = -1.50</li>
+<li>Valor absoluto: |-1.50| = 1.50</li>
+<li>Comparación: 1.50 &lt; 2.093 ✓</li>
+</ul>
+<p><strong>Decisión</strong>: <strong>NO RECHAZAMOS H₀</strong></p>
+<p><strong>Interpretación</strong>:</p>
+<ul>
+<li>No hay evidencia significativa para rechazar H₀</li>
+<li>La media muestral es consistente con el valor hipotético bajo H₀</li>
+<li>El signo negativo solo indica que <span class="arithmatex">\(\bar{x} &lt; \mu_0\)</span>, pero la diferencia no es significativa</li>
+</ul>
+<p><strong>Aclaración sobre el signo</strong>:</p>
+<ul>
+<li>En bilateral, el signo del estadístico indica dirección, pero la decisión depende de <strong>magnitud absoluta</strong></li>
+<li>Un t = -1.50 es equivalente a t = +1.50 en cuanto a magnitud de desvío</li>
+</ul>
+<p><strong>Respuesta correcta</strong>: NO rechazar H₀ porque |-1.50| &lt; 2.093.</p></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+}
+/* Set margin-top of first quiz child (skip the header link) */
+.quiz > .quiz-question:first-of-type {
+  margin-top: 0;
+}
+/* Remove top margin from first element inside quiz-question */
+.quiz-question > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
+}
+
+form button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+form button:disabled {
+  background-color: var(--md-default-fg-color--lighter, #ccc);
+  color: var(--md-default-fg-color--light, #666);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.wrong label,
+.wrong label * {
+  color: #dc3545;
+}
+.correct label,
+.correct label * {
+  color: #198754;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+input[type="radio"].correct {
+  accent-color: #198754;
+}
+input[type="radio"].wrong {
+  accent-color: #dc3545;
+}
+.content {
+  margin: 10px;
+}
+
+/* Quiz feedback message */
+.quiz-feedback {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.quiz-feedback.correct {
+  background-color: #d1e7dd;
+  border: 1px solid #a3cfbb;
+  color: #198754;
+}
+
+.quiz-feedback.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #f1aeb5;
+  color: #dc3545;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback.correct {
+  background-color: #051b11;
+  border: 1px solid #0f5132;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+  background-color: #2c0b0e;
+  border: 1px solid #842029;
+}
+
+/* Quiz header link styling - positioned in top right corner */
+.quiz-header-link {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--md-default-fg-color--light, #888);
+  transition: opacity 0.2s;
+  padding: 0.25rem 0.5rem;
+}
+.quiz:hover .quiz-header-link {
+  opacity: 1;
+}
+
+/* Quiz number header styling */
+.quiz-number {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Quiz Progress Sidebar - Progress bar styling */
+/* Most styling comes from Material's .md-nav classes */
+#quiz-progress-sidebar {
+  margin-top: 1.5rem;
+}
+/* if config progress_sidebar_position is top, need top padding instead of bottom */
+.md-nav--secondary > #quiz-progress-sidebar:first-child {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 59.9375em) {
+  #quiz-progress-sidebar .md-nav__list {
+    border-left: 3px solid var(--md-default-fg-color--lightest);
+  }
+}
+
+.quiz-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.07));
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0.2rem 0;
+  display: flex;
+}
+
+.quiz-progress-bar-incorrect {
+  height: 100%;
+  background: rgba(244, 67, 54, 0.8);
+  transition: width 0.3s ease;
+}
+
+.quiz-progress-bar-correct {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.quiz-correct-reset {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mobile Quiz Progress Tracker */
+/* Shows under navbar on mobile, hidden on desktop */
+.quiz-progress-mobile {
+  display: none; /* Hidden by default on desktop */
+  background-color: var(--md-default-bg-color);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.07));
+  padding: 0.8rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 48px;
+  z-index: 3; /* Below Material header (z-index: 4) but above page content */
+}
+
+/* Show mobile tracker only on small screens (mobile/tablet) */
+/* Material breakpoint: up to 76.1875em (1219px) */
+@media screen and (max-width: 76.1875em) {
+  .quiz-progress-mobile {
+    display: block;
+  }
+}
+
+/* Mobile tracker styling adjustments */
+.quiz-progress-mobile .md-nav__list {
+  padding: 0;
+  margin: 0;
+  max-width: 61rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.quiz-progress-mobile .md-nav__item {
+  margin: 0.3rem 0;
+}
+
+.quiz-progress-mobile .md-nav__link {
+  padding: 0.2rem 0;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quiz-progress-mobile .quiz-progress-bar {
+  margin: 0.3rem 0;
+}
+
+.quiz-progress-mobile .md-ellipsis {
+  flex: 1;
+}
+
+/* Quiz Intro */
+.quiz-intro {
+  margin: 1rem 0;
+}
+
+.quiz-intro p {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Quiz Results End Screen */
+.quiz-results {
+  border: 1px solid black;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background-color: var(--md-default-bg-color);
+  transition: all 0.3s ease;
+}
+
+/* Progress state - subtle styling */
+.quiz-results-progress {
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+}
+
+.quiz-results-progress h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-results-stats,
+.quiz-results-correct-stats {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.quiz-results-answered,
+.quiz-results-correct,
+.quiz-results-total,
+.quiz-results-percentage {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* Complete state - bold and prominent styling */
+.quiz-results-complete {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.quiz-results-complete.hidden {
+  display: none;
+}
+
+.quiz-results-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-results-score-display {
+  margin: 1.5rem 0;
+}
+
+.quiz-results-score-value {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Score color coding */
+.quiz-results-score-excellent {
+  color: #198754;
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+.quiz-results-score-good {
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.quiz-results-score-average {
+  color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.quiz-results-score-poor {
+  color: #fd7e14;
+  background-color: rgba(253, 126, 20, 0.1);
+}
+
+.quiz-results-score-fail {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.quiz-results-message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1rem 0 2rem 0;
+  color: var(--md-default-fg-color);
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .quiz-results-score-excellent {
+  color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.15);
+}
+
+[data-md-color-scheme="slate"] .quiz-results-score-good {
+  color: #66bb6a;
+  background-color: rgba(102, 187, 106, 0.15);
+}
+
+[data-md-color-scheme="slate"] .quiz-results-score-average {
+  color: #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.15);
+}
+
+[data-md-color-scheme="slate"] .quiz-results-score-poor {
+  color: #ff9800;
+  background-color: rgba(255, 152, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] .quiz-results-score-fail {
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.15);
+}
+</style><script type="text/javascript">var JSConfetti=function(){"use strict";function t(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function e(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function i(t,i,n){return i&&e(t.prototype,i),n&&e(t,n),t}function n(t){return+t.replace(/px/,"")}function s(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,n=Math.random()*(e-t)+t;return Math.floor(n*Math.pow(10,i))/Math.pow(10,i)}function o(t){return t[s(0,t.length)]}var a=["#fcf403","#62fc03","#f4fc03","#03e7fc","#03fca5","#a503fc","#fc03ad","#fc03c2"];function r(t){return Math.log(t)/Math.log(1920)}var h=function(){function e(i){t(this,e);var n=i.initialPosition,a=i.direction,h=i.confettiRadius,c=i.confettiColors,u=i.emojis,l=i.emojiSize,d=i.canvasWidth,f=s(.9,1.7,3)*r(d);this.confettiSpeed={x:f,y:f},this.finalConfettiSpeedX=s(.2,.6,3),this.rotationSpeed=u.length?.01:s(.03,.07,3)*r(d),this.dragForceCoefficient=s(5e-4,9e-4,6),this.radius={x:h,y:h},this.initialRadius=h,this.rotationAngle="left"===a?s(0,.2,3):s(-.2,0,3),this.emojiSize=l,this.emojiRotationAngle=s(0,2*Math.PI),this.radiusYUpdateDirection="down";var m="left"===a?s(82,15)*Math.PI/180:s(-15,-82)*Math.PI/180;this.absCos=Math.abs(Math.cos(m)),this.absSin=Math.abs(Math.sin(m));var v=s(-150,0),p={x:n.x+("left"===a?-v:v)*this.absCos,y:n.y-v*this.absSin};this.currentPosition=Object.assign({},p),this.initialPosition=Object.assign({},p),this.color=u.length?null:o(c),this.emoji=u.length?o(u):null,this.createdAt=(new Date).getTime(),this.direction=a}return i(e,[{key:"draw",value:function(t){var e=this.currentPosition,i=this.radius,n=this.color,s=this.emoji,o=this.rotationAngle,a=this.emojiRotationAngle,r=this.emojiSize,h=window.devicePixelRatio;n?(t.fillStyle=n,t.beginPath(),t.ellipse(e.x*h,e.y*h,i.x*h,i.y*h,o,0,2*Math.PI),t.fill()):s&&(t.font="".concat(r,"px serif"),t.save(),t.translate(h*e.x,h*e.y),t.rotate(a),t.textAlign="center",t.fillText(s,0,0),t.restore())}},{key:"updatePosition",value:function(t,e){var i=this.confettiSpeed,n=this.dragForceCoefficient,s=this.finalConfettiSpeedX,o=this.radiusYUpdateDirection,a=this.rotationSpeed,r=this.createdAt,h=this.direction,c=e-r;i.x>s&&(this.confettiSpeed.x-=n*t),this.currentPosition.x+=i.x*("left"===h?-this.absCos:this.absCos)*t,this.currentPosition.y=this.initialPosition.y-i.y*this.absSin*c+.00125*Math.pow(c,2)/2,this.rotationSpeed-=this.emoji?1e-4:1e-5*t,this.rotationSpeed<0&&(this.rotationSpeed=0),this.emoji?this.emojiRotationAngle+=this.rotationSpeed*t%(2*Math.PI):"down"===o?(this.radius.y-=t*a,this.radius.y<=0&&(this.radius.y=0,this.radiusYUpdateDirection="up")):(this.radius.y+=t*a,this.radius.y>=this.initialRadius&&(this.radius.y=this.initialRadius,this.radiusYUpdateDirection="down"))}},{key:"getIsVisibleOnCanvas",value:function(t){return this.currentPosition.y<t+100}}]),e}();function c(){var t=document.createElement("canvas");return t.style.position="fixed",t.style.width="100%",t.style.height="100%",t.style.top="0",t.style.left="0",t.style.zIndex="1000",t.style.pointerEvents="none",document.body.appendChild(t),t}function u(t){var e=t.confettiRadius,i=void 0===e?6:e,n=t.confettiNumber,s=void 0===n?t.confettiesNumber||(t.emojis?40:250):n,o=t.confettiColors,r=void 0===o?a:o,h=t.emojis,c=void 0===h?t.emojies||[]:h,u=t.emojiSize,l=void 0===u?80:u;return t.emojies&&console.error("emojies argument is deprecated, please use emojis instead"),t.confettiesNumber&&console.error("confettiesNumber argument is deprecated, please use confettiNumber instead"),{confettiRadius:i,confettiNumber:s,confettiColors:r,emojis:c,emojiSize:l}}var l=function(){function e(i){var n=this;t(this,e),this.canvasContext=i,this.shapes=[],this.promise=new Promise((function(t){return n.resolvePromise=t}))}return i(e,[{key:"getBatchCompletePromise",value:function(){return this.promise}},{key:"addShapes",value:function(){var t;(t=this.shapes).push.apply(t,arguments)}},{key:"complete",value:function(){var t;return!this.shapes.length&&(null===(t=this.resolvePromise)||void 0===t||t.call(this),!0)}},{key:"processShapes",value:function(t,e,i){var n=this,s=t.timeDelta,o=t.currentTime;this.shapes=this.shapes.filter((function(t){return t.updatePosition(s,o),t.draw(n.canvasContext),!i||t.getIsVisibleOnCanvas(e)}))}}]),e}();return function(){function e(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};t(this,e),this.activeConfettiBatches=[],this.canvas=i.canvas||c(),this.canvasContext=this.canvas.getContext("2d"),this.requestAnimationFrameRequested=!1,this.lastUpdated=(new Date).getTime(),this.iterationIndex=0,this.loop=this.loop.bind(this),requestAnimationFrame(this.loop)}return i(e,[{key:"loop",value:function(){var t,e,i,s,o;this.requestAnimationFrameRequested=!1,t=this.canvas,e=window.devicePixelRatio,i=getComputedStyle(t),s=n(i.getPropertyValue("width")),o=n(i.getPropertyValue("height")),t.setAttribute("width",(s*e).toString()),t.setAttribute("height",(o*e).toString());var a=(new Date).getTime(),r=a-this.lastUpdated,h=this.canvas.offsetHeight,c=this.iterationIndex%10==0;this.activeConfettiBatches=this.activeConfettiBatches.filter((function(t){return t.processShapes({timeDelta:r,currentTime:a},h,c),!c||!t.complete()})),this.iterationIndex++,this.queueAnimationFrameIfNeeded(a)}},{key:"queueAnimationFrameIfNeeded",value:function(t){this.requestAnimationFrameRequested||this.activeConfettiBatches.length<1||(this.requestAnimationFrameRequested=!0,this.lastUpdated=t||(new Date).getTime(),requestAnimationFrame(this.loop))}},{key:"addConfetti",value:function(){for(var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=u(t),i=e.confettiRadius,n=e.confettiNumber,s=e.confettiColors,o=e.emojis,a=e.emojiSize,r=this.canvas.getBoundingClientRect(),c=r.width,d=r.height,f=5*d/7,m={x:0,y:f},v={x:c,y:f},p=new l(this.canvasContext),y=0;y<n/2;y++){var g=new h({initialPosition:m,direction:"right",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c}),C=new h({initialPosition:v,direction:"left",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c});p.addShapes(g,C)}return this.activeConfettiBatches.push(p),this.queueAnimationFrameIfNeeded(),p.getBatchCompletePromise()}},{key:"clearCanvas",value:function(){this.activeConfettiBatches=[]}},{key:"destroyCanvas",value:function(){this.canvas.remove()}}]),e}()}();
+</script><script type="text/javascript">
+window.mkdocsQuizTranslations = {"Submit": "Enviar", "Question {n}": "Pregunta {n}", "Quiz Progress": "Progreso del cuestionario", "questions answered": "preguntas respondidas", "correct": "correctas", "Quiz Complete!": "¡Cuestionario completado!", "Reset quiz": "Reiniciar cuestionario", "Quiz results are saved to your browser's local storage and will persist between sessions.": "Los resultados del cuestionario se guardan en el almacenamiento local de tu navegador y persistirán entre sesiones.", "Outstanding! You aced it!": "¡Excepcional! ¡Lo has clavado!", "Great job! You really know your stuff!": "¡Buen trabajo! ¡Realmente conoces el tema!", "Good effort! Keep learning!": "¡Buen esfuerzo! ¡Sigue aprendiendo!", "Not bad, but there's room for improvement!": "¡No está mal, pero hay margen de mejora!", "Better luck next time! Keep trying!": "¡Mejor suerte la próxima vez! ¡Sigue intentándolo!", "Are you sure you want to reset the quiz? This will clear your progress.": "¿Estás seguro de que quieres reiniciar el cuestionario? Esto borrará tu progreso.", "Try Again": "Intentar de nuevo", "Correct answer!": "¡Respuesta correcta!", "Incorrect answer. Please try again.": "Respuesta incorrecta. Por favor, inténtalo de nuevo.", "Incorrect answer.": "Respuesta incorrecta.", "Answered:": "Respondidas:", "Correct:": "Correctas:", "Reset": "Reiniciar"};
+</script><script type="text/javascript">
+window.mkdocsQuizConfig = {
+  confetti: true,
+  showProgress: true,
+  progressSidebarPosition: "top"
+};
+</script><script type="text/javascript" defer>// Wrap everything in an IIFE to avoid variable redeclaration issues
+// when Material for MkDocs instant navigation reloads the page
+(function () {
+  // Constants
+  const STORAGE_KEY_PREFIX = "quiz_progress_";
+
+  // Translation helper function
+  function t(key, params = {}) {
+    let text = window.mkdocsQuizTranslations?.[key] || key;
+    // Simple template replacement for {n} and {key} style placeholders
+    return text.replace(/{(\w+)}/g, (_, k) => (params[k] !== undefined ? params[k] : `{${k}}`));
+  }
+
+  // Confetti instance (will be initialized if enabled)
+  let jsConfetti = null;
+
+  // Store event listeners for cleanup
+  let eventListeners = [];
+
+  // Initialize confetti if enabled
+  if (window.mkdocsQuizConfig && window.mkdocsQuizConfig.confetti) {
+    if (typeof JSConfetti !== "undefined") {
+      jsConfetti = new JSConfetti();
+    }
+  }
+
+  // Function to move quiz progress sidebar into TOC sidebar
+  // This needs to run on every page load for Material instant navigation
+  function repositionSidebar() {
+    // Use requestAnimationFrame to ensure DOM is ready
+    requestAnimationFrame(() => {
+      const sidebar = document.getElementById("quiz-progress-sidebar");
+      const tocSidebar = document.querySelector(".md-sidebar--secondary .md-sidebar__inner .md-nav--secondary");
+
+      if (sidebar && tocSidebar) {
+        // Check if sidebar is already in the correct position
+        // by seeing if it's already a child of tocSidebar
+        if (!tocSidebar.contains(sidebar)) {
+          // Get position from config (default: "top")
+          const position =
+            window.mkdocsQuizConfig && window.mkdocsQuizConfig.progressSidebarPosition
+              ? window.mkdocsQuizConfig.progressSidebarPosition
+              : "top";
+
+          // Move sidebar based on configured position
+          if (position === "bottom") {
+            // Append to the end (below TOC)
+            tocSidebar.appendChild(sidebar);
+          } else {
+            // Default: insert at the top (above TOC)
+            if (tocSidebar.firstChild) {
+              tocSidebar.insertBefore(sidebar, tocSidebar.firstChild);
+            } else {
+              tocSidebar.appendChild(sidebar);
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Cleanup function to remove event listeners and prevent memory leaks
+  function cleanup() {
+    eventListeners.forEach(({ element, event, handler }) => {
+      element.removeEventListener(event, handler);
+    });
+    eventListeners = [];
+  }
+
+  // Helper function to add tracked event listeners
+  function addTrackedEventListener(element, event, handler) {
+    element.addEventListener(event, handler);
+    eventListeners.push({ element, event, handler });
+  }
+
+  // Global quiz tracker
+  const quizTracker = {
+    quizzes: {},
+    totalQuizzes: 0,
+    answeredQuizzes: 0,
+    correctQuizzes: 0,
+
+    init: function () {
+      this.totalQuizzes = document.querySelectorAll(".quiz").length;
+      this.loadFromStorage();
+      // Initialize wasCompleted based on restored state to prevent confetti on page load
+      // Only fire confetti when completing quizzes in the current session, not from localStorage
+      const progress = this.getProgress();
+      this.wasCompleted = progress.answered === progress.total && progress.total > 0;
+      this.updateDisplay();
+    },
+
+    markQuiz: function (quizId, isCorrect, selectedValues = []) {
+      const wasAnswered = !!this.quizzes[quizId];
+      const wasCorrect = this.wasPreviouslyCorrect(quizId);
+
+      if (!wasAnswered) {
+        this.answeredQuizzes++;
+      }
+
+      this.quizzes[quizId] = {
+        answered: true,
+        correct: isCorrect,
+        selectedValues: selectedValues,
+      };
+
+      if (isCorrect && !wasCorrect) {
+        this.correctQuizzes++;
+      } else if (!isCorrect && wasCorrect) {
+        this.correctQuizzes--;
+      }
+
+      this.saveToStorage();
+      this.updateDisplay();
+    },
+
+    wasPreviouslyCorrect: function (quizId) {
+      return this.quizzes[quizId] && this.quizzes[quizId].correct;
+    },
+
+    resetQuiz: function (quizId) {
+      if (this.quizzes[quizId]) {
+        if (this.quizzes[quizId].correct) {
+          this.correctQuizzes--;
+        }
+        this.answeredQuizzes--;
+        delete this.quizzes[quizId];
+        this.saveToStorage();
+        this.updateDisplay();
+      }
+    },
+
+    resetAllQuiz: function () {
+      this.quizzes = {};
+      this.answeredQuizzes = 0;
+      this.correctQuizzes = 0;
+      this.saveToStorage();
+      this.updateDisplay();
+
+      // Reset all quiz forms on the page
+      document.querySelectorAll(".quiz").forEach((quiz) => {
+        const form = quiz.querySelector("form");
+        const fieldset = form.querySelector("fieldset");
+        const submitButton = form.querySelector('button[type="submit"]');
+        const resetButton = form.querySelector(".quiz-reset-button");
+        const feedbackDiv = form.querySelector(".quiz-feedback");
+        const section = quiz.querySelector("section");
+
+        // Clear all selections
+        const allInputs = fieldset.querySelectorAll('input[name="answer"]');
+        allInputs.forEach((input) => {
+          input.checked = false;
+          input.disabled = false;
+        });
+
+        // Reset colors
+        resetFieldset(fieldset);
+
+        // Hide content section
+        if (section) {
+          section.classList.add("hidden");
+        }
+
+        // Hide feedback message
+        feedbackDiv.classList.add("hidden");
+        feedbackDiv.classList.remove("correct", "incorrect");
+        feedbackDiv.textContent = "";
+
+        // Show submit button, hide reset button
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove("hidden");
+        }
+        if (resetButton) {
+          resetButton.classList.add("hidden");
+        }
+      });
+    },
+
+    getProgress: function () {
+      return {
+        total: this.totalQuizzes,
+        answered: this.answeredQuizzes,
+        correct: this.correctQuizzes,
+        percentage: this.totalQuizzes > 0 ? Math.round((this.answeredQuizzes / this.totalQuizzes) * 100) : 0,
+        score: this.totalQuizzes > 0 ? Math.round((this.correctQuizzes / this.totalQuizzes) * 100) : 0,
+      };
+    },
+
+    saveToStorage: function () {
+      try {
+        const pageKey = STORAGE_KEY_PREFIX + window.location.pathname;
+        const data = JSON.stringify(this.quizzes);
+
+        // Check size limit (50KB max to prevent quota issues)
+        if (data.length > 50000) {
+          console.warn("Quiz progress data exceeds size limit, not saving to localStorage");
+          this.showStorageWarning("Quiz progress is too large to save");
+          return;
+        }
+
+        localStorage.setItem(pageKey, data);
+      } catch (e) {
+        // Handle quota exceeded or localStorage disabled
+        console.error("Failed to save quiz progress:", e);
+        this.showStorageWarning(
+          "Unable to save quiz progress. Your browser may have storage disabled or quota exceeded.",
+        );
+      }
+    },
+
+    loadFromStorage: function () {
+      try {
+        const pageKey = STORAGE_KEY_PREFIX + window.location.pathname;
+        const stored = localStorage.getItem(pageKey);
+
+        if (stored) {
+          // Validate size before parsing (50KB max)
+          if (stored.length > 50000) {
+            console.warn("Stored quiz data exceeds size limit, clearing corrupted data");
+            localStorage.removeItem(pageKey);
+            return;
+          }
+
+          const parsed = JSON.parse(stored);
+
+          // Validate structure: should be an object
+          if (typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) {
+            console.warn("Invalid quiz data structure, clearing corrupted data");
+            localStorage.removeItem(pageKey);
+            return;
+          }
+
+          this.quizzes = parsed;
+
+          // Recalculate counts and validate quiz data structure
+          this.answeredQuizzes = 0;
+          this.correctQuizzes = 0;
+          for (let key in this.quizzes) {
+            const quiz = this.quizzes[key];
+            // Validate each quiz entry has expected structure
+            if (typeof quiz !== "object" || typeof quiz.answered !== "boolean" || typeof quiz.correct !== "boolean") {
+              console.warn("Invalid quiz entry structure, clearing corrupted data");
+              this.quizzes = {};
+              localStorage.removeItem(pageKey);
+              return;
+            }
+
+            if (quiz.answered) {
+              this.answeredQuizzes++;
+            }
+            if (quiz.correct) {
+              this.correctQuizzes++;
+            }
+          }
+        }
+      } catch (e) {
+        // Handle parsing errors or localStorage unavailable
+        console.error("Failed to load quiz progress:", e);
+        const pageKey = STORAGE_KEY_PREFIX + window.location.pathname;
+        try {
+          localStorage.removeItem(pageKey); // Clear corrupted data
+        } catch (cleanupError) {
+          // localStorage might be completely unavailable
+        }
+      }
+    },
+
+    updateDisplay: function () {
+      const progress = this.getProgress();
+      const wasComplete = this.wasCompleted;
+      const isComplete = progress.answered === progress.total && progress.total > 0;
+
+      // Dispatch custom event for sidebar/other UI components
+      window.dispatchEvent(
+        new CustomEvent("quizProgressUpdate", {
+          detail: progress,
+        }),
+      );
+      // Update sidebar if it exists
+      this.updateSidebar();
+      // Update results div if it exists
+      this.updateResultsDiv(progress, isComplete, wasComplete);
+
+      // Track completion state
+      this.wasCompleted = isComplete;
+    },
+
+    updateResultsDiv: function (progress, isComplete, wasComplete) {
+      const resultsDiv = document.getElementById("quiz-results");
+      if (!resultsDiv) return;
+
+      // Update progress section
+      const answeredEl = resultsDiv.querySelector(".quiz-results-answered");
+      const totalEl = resultsDiv.querySelector(".quiz-results-total");
+      const percentageEl = resultsDiv.querySelector(".quiz-results-percentage");
+      const correctEl = resultsDiv.querySelector(".quiz-results-correct");
+
+      if (answeredEl) answeredEl.textContent = progress.answered;
+      if (totalEl) totalEl.textContent = progress.total;
+      if (percentageEl) percentageEl.textContent = progress.percentage + "%";
+      if (correctEl) correctEl.textContent = progress.correct;
+
+      // Handle completion state
+      const progressSection = resultsDiv.querySelector(".quiz-results-progress");
+      const completeSection = resultsDiv.querySelector(".quiz-results-complete");
+
+      if (isComplete) {
+        // Hide progress, show complete
+        if (progressSection) progressSection.classList.add("hidden");
+        if (completeSection) {
+          completeSection.classList.remove("hidden");
+
+          // Update score display
+          const scoreValue = resultsDiv.querySelector(".quiz-results-score-value");
+          const scoreMessage = resultsDiv.querySelector(".quiz-results-message");
+
+          if (scoreValue) {
+            scoreValue.textContent = progress.score + "%";
+
+            // Remove all score classes
+            scoreValue.classList.remove(
+              "quiz-results-score-excellent",
+              "quiz-results-score-good",
+              "quiz-results-score-average",
+              "quiz-results-score-poor",
+              "quiz-results-score-fail",
+            );
+
+            // Add appropriate score class and message
+            let message = "";
+            if (progress.score >= 90) {
+              scoreValue.classList.add("quiz-results-score-excellent");
+              message = t("Outstanding! You aced it!");
+            } else if (progress.score >= 75) {
+              scoreValue.classList.add("quiz-results-score-good");
+              message = t("Great job! You really know your stuff!");
+            } else if (progress.score >= 60) {
+              scoreValue.classList.add("quiz-results-score-average");
+              message = t("Good effort! Keep learning!");
+            } else if (progress.score >= 40) {
+              scoreValue.classList.add("quiz-results-score-poor");
+              message = t("Not bad, but there's room for improvement!");
+            } else {
+              scoreValue.classList.add("quiz-results-score-fail");
+              message = t("Better luck next time! Keep trying!");
+            }
+
+            if (scoreMessage) scoreMessage.textContent = message;
+          }
+
+          // Trigger confetti and scroll on first completion
+          if (!wasComplete) {
+            // Scroll to results div
+            resultsDiv.scrollIntoView({ behavior: "smooth", block: "center" });
+
+            // Fire confetti if enabled and score is good
+            if (jsConfetti && progress.score >= 10) {
+              setTimeout(() => {
+                jsConfetti.addConfetti();
+              }, 500);
+            }
+          }
+        }
+      } else {
+        // Show progress, hide complete
+        if (progressSection) progressSection.classList.remove("hidden");
+        if (completeSection) completeSection.classList.add("hidden");
+      }
+    },
+
+    updateSidebar: function () {
+      // Update both desktop and mobile sidebars
+      const sidebars = [
+        document.getElementById("quiz-progress-sidebar"),
+        document.getElementById("quiz-progress-mobile"),
+      ];
+
+      sidebars.forEach((sidebar) => {
+        if (sidebar) {
+          const progress = this.getProgress();
+
+          // Update answered count
+          const answeredEl = sidebar.querySelector(".quiz-progress-answered");
+          if (answeredEl) {
+            answeredEl.textContent = progress.answered;
+          }
+
+          // Update answered percentage - desktop only
+          const answeredPercentageEl = sidebar.querySelector(".quiz-progress-answered-percentage");
+          if (answeredPercentageEl && sidebar.id == "quiz-progress-sidebar") {
+            answeredPercentageEl.textContent = progress.percentage + "%";
+          }
+
+          // Update all .quiz-progress-total elements
+          const totalElements = sidebar.querySelectorAll(".quiz-progress-total");
+          totalElements.forEach((el) => {
+            el.textContent = progress.total;
+          });
+
+          // Update correct count
+          const scoreEl = sidebar.querySelector(".quiz-progress-score");
+          if (scoreEl) {
+            scoreEl.textContent = progress.correct;
+          }
+
+          // Update correct denominator (answered count)
+          const scoreTotalEl = sidebar.querySelector(".quiz-progress-score-total");
+          if (scoreTotalEl) {
+            scoreTotalEl.textContent = progress.answered;
+          }
+
+          // Update correct percentage (based on answered quizzes, not total) - desktop only
+          const scorePercentageEl = sidebar.querySelector(".quiz-progress-score-percentage");
+          if (scorePercentageEl && sidebar.id == "quiz-progress-sidebar") {
+            const scorePercentage =
+              progress.answered > 0 ? Math.round((progress.correct / progress.answered) * 100) : 0;
+            scorePercentageEl.textContent = scorePercentage + "%";
+          }
+
+          // Update progress bars (incorrect and correct)
+          const correctBar = sidebar.querySelector(".quiz-progress-bar-correct");
+          const incorrectBar = sidebar.querySelector(".quiz-progress-bar-incorrect");
+
+          if (correctBar && incorrectBar) {
+            const incorrectCount = progress.answered - progress.correct;
+            const correctPercentage = progress.total > 0 ? (progress.correct / progress.total) * 100 : 0;
+            const incorrectPercentage = progress.total > 0 ? (incorrectCount / progress.total) * 100 : 0;
+
+            incorrectBar.style.width = incorrectPercentage + "%";
+            correctBar.style.width = correctPercentage + "%";
+          }
+        }
+      });
+    },
+
+    createSidebar: function () {
+      // Check if progress tracking is enabled
+      const showProgress = window.mkdocsQuizConfig && window.mkdocsQuizConfig.showProgress !== false;
+
+      // Only show sidebar if progress tracking is enabled and there are quizzes
+      if (!showProgress || this.totalQuizzes === 0) {
+        return;
+      }
+
+      // Show both desktop and mobile sidebars
+      const desktopSidebar = document.getElementById("quiz-progress-sidebar");
+      const mobileSidebar = document.getElementById("quiz-progress-mobile");
+
+      if (desktopSidebar) {
+        desktopSidebar.style.display = "";
+      }
+      if (mobileSidebar) {
+        mobileSidebar.style.display = "";
+      }
+
+      // Initialize reset button event listeners
+      const resetLinks = document.querySelectorAll(".quiz-reset-all-link");
+      resetLinks.forEach((resetLink) => {
+        const handler = (e) => {
+          e.preventDefault();
+          if (confirm(t("Are you sure you want to reset the quiz? This will clear your progress."))) {
+            quizTracker.resetAllQuiz();
+          }
+        };
+        addTrackedEventListener(resetLink, "click", handler);
+      });
+
+      // Update the sidebar with initial values
+      this.updateSidebar();
+    },
+
+    showStorageWarning: function (message) {
+      // Show a warning banner in the progress tracker if it exists
+      const progressSidebar = document.getElementById("quiz-progress-sidebar");
+      if (progressSidebar) {
+        // Check if warning already exists
+        let warningEl = progressSidebar.querySelector(".quiz-storage-warning");
+        if (!warningEl) {
+          warningEl = document.createElement("div");
+          warningEl.className = "quiz-storage-warning";
+          warningEl.style.cssText =
+            "background: #fff3cd; color: #856404; padding: 8px; margin: 8px 0; border-radius: 4px; font-size: 12px; border: 1px solid #ffeaa7;";
+          progressSidebar.insertBefore(warningEl, progressSidebar.firstChild);
+        }
+        warningEl.textContent = message;
+      }
+    },
+  };
+
+  // Translate template elements with data-quiz-translate attributes
+  function translateTemplateElements() {
+    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
+      const key = element.getAttribute("data-quiz-translate");
+      if (key) {
+        element.textContent = t(key);
+      }
+    });
+  }
+
+  // Initialize results div reset button
+  function initializeResultsDiv() {
+    const resultsDiv = document.getElementById("quiz-results");
+    if (!resultsDiv) return;
+
+    const resetButton = resultsDiv.querySelector(".quiz-results-reset");
+    if (resetButton) {
+      const handler = () => {
+        if (confirm(t("Are you sure you want to reset the quiz? This will clear your progress."))) {
+          quizTracker.resetAllQuiz();
+        }
+      };
+      addTrackedEventListener(resetButton, "click", handler);
+    }
+  }
+
+  // Initialize intro reset buttons
+  function initializeIntroResetButtons() {
+    const introResetButtons = document.querySelectorAll(".quiz-intro-reset");
+    introResetButtons.forEach((button) => {
+      const handler = () => {
+        if (confirm(t("Are you sure you want to reset the quiz? This will clear your progress."))) {
+          quizTracker.resetAllQuiz();
+        }
+      };
+      addTrackedEventListener(button, "click", handler);
+    });
+  }
+
+  // Shuffle an array using Fisher-Yates algorithm
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Shuffle the answer elements in a fieldset
+  function shuffleAnswers(fieldset) {
+    const answerDivs = Array.from(fieldset.querySelectorAll(":scope > div"));
+    if (answerDivs.length <= 1) return;
+
+    // Shuffle the array of elements
+    shuffleArray(answerDivs);
+
+    // Re-append elements in shuffled order
+    answerDivs.forEach((div) => fieldset.appendChild(div));
+  }
+
+  // Initialize all quiz elements on the page
+  function initializeQuizzes() {
+    document.querySelectorAll(".quiz").forEach((quiz) => {
+      let form = quiz.querySelector("form");
+      let fieldset = form.querySelector("fieldset");
+      let submitButton = form.querySelector('button[type="submit"]');
+      let feedbackDiv = form.querySelector(".quiz-feedback");
+
+      // Shuffle answers if enabled (before any state restoration)
+      if (quiz.hasAttribute("data-shuffle-answers")) {
+        shuffleAnswers(fieldset);
+      }
+
+      // Get quiz ID from the quiz div itself
+      const quizId = quiz.id;
+
+      // Prevent anchor link from triggering page navigation/reload
+      const headerLink = quiz.querySelector(".quiz-header-link");
+      if (headerLink) {
+        const handler = (e) => {
+          // Let the browser handle the anchor navigation normally
+          // This prevents Material for MkDocs from intercepting it as a page navigation
+          e.stopPropagation();
+        };
+        addTrackedEventListener(headerLink, "click", handler);
+      }
+
+      // Create reset button (initially hidden)
+      let resetButton = document.createElement("button");
+      resetButton.type = "button";
+      resetButton.className = "quiz-button quiz-reset-button hidden";
+      resetButton.textContent = t("Try Again");
+      if (submitButton) {
+        submitButton.parentNode.insertBefore(resetButton, submitButton.nextSibling);
+      } else {
+        form.appendChild(resetButton);
+      }
+
+      // Restore quiz state from localStorage if available
+      if (quizId && quizTracker.quizzes[quizId]) {
+        const savedState = quizTracker.quizzes[quizId];
+        const section = quiz.querySelector("section");
+        const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+        const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+
+        if (savedState.answered) {
+          // Restore selected answers based on saved values
+          if (savedState.selectedValues && savedState.selectedValues.length > 0) {
+            allAnswers.forEach((input) => {
+              if (savedState.selectedValues.includes(input.value)) {
+                input.checked = true;
+              }
+            });
+          }
+
+          if (savedState.correct) {
+            // Show the content section
+            section.classList.remove("hidden");
+
+            // Only mark the correct answers in green (don't highlight wrong answers)
+            allAnswers.forEach((input) => {
+              if (input.hasAttribute("correct")) {
+                input.parentElement.classList.add("correct");
+              }
+            });
+
+            // Show correct feedback
+            feedbackDiv.classList.remove("hidden", "incorrect");
+            feedbackDiv.classList.add("correct");
+            feedbackDiv.textContent = t("Correct answer!");
+
+            // Disable inputs if disable-after-submit is enabled
+            if (quiz.hasAttribute("data-disable-after-submit")) {
+              allAnswers.forEach((input) => {
+                input.disabled = true;
+              });
+              if (submitButton) {
+                submitButton.disabled = true;
+              }
+              resetButton.classList.add("hidden");
+            } else {
+              // Show reset button, hide submit button
+              resetButton.classList.remove("hidden");
+              if (submitButton) {
+                submitButton.classList.add("hidden");
+              }
+            }
+          } else {
+            // Restore incorrect answer state
+            const selectedInputs = Array.from(allAnswers).filter((input) =>
+              savedState.selectedValues.includes(input.value),
+            );
+
+            // Show the content section for incorrect answers too
+            section.classList.remove("hidden");
+
+            // Mark selected answers
+            selectedInputs.forEach((input) => {
+              if (input.hasAttribute("correct")) {
+                input.parentElement.classList.add("correct");
+              } else {
+                input.parentElement.classList.add("wrong");
+              }
+            });
+
+            // Show correct answers if show-correct is enabled
+            if (quiz.hasAttribute("data-show-correct")) {
+              correctAnswers.forEach((input) => {
+                input.parentElement.classList.add("correct");
+              });
+            }
+
+            // Show incorrect feedback
+            feedbackDiv.classList.remove("hidden", "correct");
+            feedbackDiv.classList.add("incorrect");
+            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
+            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+
+            // Disable inputs if disable-after-submit is enabled
+            if (quiz.hasAttribute("data-disable-after-submit")) {
+              allAnswers.forEach((input) => {
+                input.disabled = true;
+              });
+              if (submitButton) {
+                submitButton.disabled = true;
+              }
+              resetButton.classList.add("hidden");
+            } else {
+              // Show reset button, hide submit button
+              resetButton.classList.remove("hidden");
+              if (submitButton) {
+                submitButton.classList.add("hidden");
+              }
+            }
+          }
+        }
+      }
+
+      // Auto-submit on radio button change if enabled
+      if (quiz.hasAttribute("data-auto-submit")) {
+        let radioButtons = fieldset.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach((radio) => {
+          const handler = (e) => {
+            // Prevent any default behavior that might cause page scroll
+            e.preventDefault();
+            // Trigger form submission with a properly configured event
+            // cancelable: true allows preventDefault to work
+            // bubbles: true ensures proper event propagation
+            form.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+          };
+          addTrackedEventListener(radio, "change", handler);
+        });
+      }
+
+      // Reset button handler
+      const resetHandler = () => {
+        // Clear all selections
+        const allInputs = fieldset.querySelectorAll('input[name="answer"]');
+        allInputs.forEach((input) => {
+          input.checked = false;
+          input.disabled = false;
+        });
+        // Reset colors
+        resetFieldset(fieldset);
+        // Hide content section
+        let section = quiz.querySelector("section");
+        section.classList.add("hidden");
+        // Hide feedback message
+        feedbackDiv.classList.add("hidden");
+        feedbackDiv.classList.remove("correct", "incorrect");
+        feedbackDiv.textContent = "";
+        // Show submit button, hide reset button
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove("hidden");
+        }
+        resetButton.classList.add("hidden");
+        // Update tracker
+        if (quizId) {
+          quizTracker.resetQuiz(quizId);
+        }
+      };
+      addTrackedEventListener(resetButton, "click", resetHandler);
+
+      const submitHandler = (event) => {
+        // Prevent default form submission behavior
+        event.preventDefault();
+        // Stop propagation to prevent Material for MkDocs instant navigation from intercepting
+        event.stopPropagation();
+        let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+        let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+        // Check if all correct answers are selected
+        let is_correct = selectedAnswers.length === correctAnswers.length;
+        Array.from(selectedAnswers).forEach((answer) => {
+          if (!answer.hasAttribute("correct")) {
+            is_correct = false;
+          }
+        });
+        let section = quiz.querySelector("section");
+        // Always show the content section after submission
+        section.classList.remove("hidden");
+
+        if (is_correct) {
+          resetFieldset(fieldset);
+          // Only mark the correct answers in green (don't highlight wrong answers)
+          const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+          allAnswers.forEach((answer) => {
+            if (answer.hasAttribute("correct")) {
+              answer.parentElement.classList.add("correct");
+            }
+          });
+          // Show correct feedback
+          feedbackDiv.classList.remove("hidden", "incorrect");
+          feedbackDiv.classList.add("correct");
+          feedbackDiv.textContent = t("Correct answer!");
+        } else {
+          resetFieldset(fieldset);
+          // Mark wrong fields with colors
+          Array.from(selectedAnswers).forEach((answer) => {
+            if (!answer.hasAttribute("correct")) {
+              answer.parentElement.classList.add("wrong");
+            } else {
+              answer.parentElement.classList.add("correct");
+            }
+          });
+          // If show-correct is enabled, also show all correct answers
+          if (quiz.hasAttribute("data-show-correct")) {
+            correctAnswers.forEach((answer) => {
+              answer.parentElement.classList.add("correct");
+            });
+          }
+          // Show incorrect feedback
+          feedbackDiv.classList.remove("hidden", "correct");
+          feedbackDiv.classList.add("incorrect");
+          // Only show "Please try again" if the quiz is not disabled after submission
+          const canRetry = !quiz.hasAttribute("data-disable-after-submit");
+          feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+        }
+
+        // Update tracker
+        if (quizId) {
+          // Get selected values to save
+          const selectedValues = Array.from(selectedAnswers).map((input) => input.value);
+          quizTracker.markQuiz(quizId, is_correct, selectedValues);
+        }
+
+        // Disable quiz after submission if option is enabled
+        if (quiz.hasAttribute("data-disable-after-submit")) {
+          const allInputs = fieldset.querySelectorAll('input[name="answer"]');
+          allInputs.forEach((input) => {
+            input.disabled = true;
+          });
+          if (submitButton) {
+            submitButton.disabled = true;
+          }
+          // Hide reset button if disable-after-submit is enabled
+          resetButton.classList.add("hidden");
+        } else {
+          // Show reset button and hide submit button
+          resetButton.classList.remove("hidden");
+          if (submitButton) {
+            submitButton.classList.add("hidden");
+          }
+        }
+      };
+      addTrackedEventListener(form, "submit", submitHandler);
+    });
+  }
+
+  function resetFieldset(fieldset) {
+    Array.from(fieldset.children).forEach((child) => {
+      child.classList.remove("wrong", "correct");
+    });
+  }
+
+  // Main initialization function that sets up everything on a page
+  function initializePage() {
+    // Initialize tracker
+    quizTracker.init();
+
+    // Translate template elements
+    translateTemplateElements();
+
+    // Reposition sidebar for Material theme TOC integration
+    repositionSidebar();
+
+    // Create sidebar
+    quizTracker.createSidebar();
+
+    // Initialize results div and intro buttons
+    initializeResultsDiv();
+    initializeIntroResetButtons();
+
+    // Initialize all quiz elements
+    initializeQuizzes();
+  }
+
+  // Run initialization when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializePage);
+  } else {
+    initializePage();
+  }
+
+  // Material for MkDocs instant navigation support
+  // Cleanup and reinitialize when navigating between pages
+  if (typeof document$ !== "undefined") {
+    // Unsubscribe from any previous subscription to prevent duplicate handlers
+    // This is needed because the script re-runs on each page navigation,
+    // which would otherwise accumulate subscriptions
+    if (window._mkdocsQuizSubscription) {
+      window._mkdocsQuizSubscription.unsubscribe();
+    }
+
+    // Material theme with instant navigation is active
+    window._mkdocsQuizSubscription = document$.subscribe(() => {
+      cleanup(); // Remove old event listeners to prevent memory leaks
+      // Reinitialize everything for the new page
+      initializePage();
+    });
+  }
+})(); // End of IIFE
+</script><script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  var article = document.querySelector("article") || document.querySelector("main") || document.body;
+  article.classList.add("quiz-auto-number");
+});
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Creado por Raul Jimenez Morales.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand", "toc.follow", "content.tabs.link", "search.share", "search.highlight", "search.suggest", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
