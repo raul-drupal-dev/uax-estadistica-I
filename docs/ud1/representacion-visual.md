@@ -122,11 +122,37 @@ graph TD
 
 ---
 
-### Diagrama de Caja (Boxplot)
+### ✨ Diagrama de Caja (Boxplot)
 
-**Uso:** Visualizar **dispersión, tendencia central, y outliers**.
+**Objetivo:** Vamos a ver, paso a paso, qué muestra un boxplot y cómo calcular sus elementos (Q1, Q2, Q3, IQR, outliers). Esta sección sigue el estilo del proyecto: definiciones formales, intuición y un ejemplo resuelto.
 
-**Anatomía:**
+**Definición breve:** el boxplot resume la **mediana** y el **rango intercuartílico (IQR)** de una distribución, muestra la dispersión robusta y detecta observaciones atípicas (outliers).
+
+**Componentes (qué representan):**
+
+- **Línea central — mediana ($Q_2$):** posición del 50% central; robusta frente a extremos.
+- **Caja — de $Q_1$ a $Q_3$:** contiene el 50% central. Su altura es el IQR: $$\mathrm{IQR}=Q_3-Q_1.$$
+- **Bigotes (whiskers):** se suelen dibujar hasta el valor más extremo que no es outlier según Tukey: los valores dentro del intervalo
+
+  $$[Q_1-1.5\cdot\mathrm{IQR},\;Q_3+1.5\cdot\mathrm{IQR}]$$
+
+  son considerados no-outliers y marcan el extremo de los bigotes.
+- **Outliers:** puntos fuera de ese intervalo; a menudo se distinguen entre leves ($>$1.5·IQR) y extremos ($>$3·IQR).
+
+!!! tip "Anotación"
+
+    El ancho físico de la caja en el boxplot clásico no tiene significado estadístico. Algunas variantes usan el ancho para representar el tamaño muestral o la densidad.
+
+**Notches (opcional):** los "notches" marcan una aproximación del intervalo de confianza alrededor de la mediana; si dos notches no se solapan, se sugiere diferencia entre medianas.
+
+**Interpretación rápida:**
+
+- Mediana desplazada dentro de la caja → asimetría del 50% central.
+- Caja más alta (IQR mayor) → mayor dispersión robusta.
+- Bigote más largo a derecha → sesgo positivo; a izquierda → sesgo negativo.
+- Outliers → investigar: errores, subpoblaciones o valores informativos.
+
+**Diagrama ASCII (recuperando la versión visual intuitiva):**
 
 ```
         ↑ Máximo (sin outliers)
@@ -142,24 +168,65 @@ graph TD
     * = Outlier (fuera de 1.5×IQR)
 ```
 
-**Fórmulas:**
+En este esquema: la caja va de $Q_1$ a $Q_3$, la línea vertical interior es la mediana, los "bigotes" llegan hasta el máximo/mínimo no-outlier y los puntos separados son outliers.
 
-- IQR = Q3 - Q1
-- Outliers: Fuera de [Q1 - 1.5×IQR, Q3 + 1.5×IQR]
+**Ejemplo numérico (resuelto — necesario en examen):**
 
-**Ventajas:**
+Datos (ordenados, $n=11$): $3,4,5,7,8,9,10,12,14,18,50$.
 
-- ✅ Resumen completo de distribución
-- ✅ Outliers claramente visibles
-- ✅ Comparar múltiples grupos lado a lado
+Calculemos los cuartiles y detectemos outliers:
 
-???+ example "Ejemplo: Salarios por Sector"
+1. Mediana $Q_2=9$ (valor central).
+2. $Q_1=$ mediana de la mitad inferior $(3,4,5,7,8) \Rightarrow Q_1=5$.
+3. $Q_3=$ mediana de la mitad superior $(10,12,14,18,50) \Rightarrow Q_3=14$.
+4. $$\mathrm{IQR}=Q_3-Q_1=14-5=9.$$
+5. Límites de Tukey: 
 
-    Sector A: Mediana=40k, IQR=10k, sin outliers
+$$[Q_1-1.5\,\mathrm{IQR},\;Q_3+1.5\,\mathrm{IQR}]=[5-13.5,\;14+13.5]=[-8.5,\;27.5].$$
 
-    Sector B: Mediana=45k, IQR=15k, 1 outlier en 100k (CEO)
+6. Observaciones fuera de esos límites: $50>27.5$ → $50$ es outlier.
+7. Bigotes: mínimo no-outlier = 3, máximo no-outlier = 18; outlier = 50 (se representa como punto aislado).
 
-    **Boxplot:** Sector B más disperso y con CEO visible
+<details>
+<summary>Ver pasos detallados (clic)</summary>
+
+Ordenamos, tomamos la mediana y luego las medianas de las mitades. En muestras impares el procedimiento es directo (excluir la mediana para las mitades o incluirla según convención; aquí hemos excluido la mediana de las mitades para definir Q1 y Q3).
+
+</details>
+
+!!! warning "Cuidado en exámenes"
+
+    Explica siempre si has incluido o excluido la mediana al dividir en mitades para calcular Q1/Q3 (hay convenciones distintas). Muestra los pasos numéricos.
+
+
+**Preguntas típicas de examen sobre boxplots:**
+
+- Calcular Q1, Q2, Q3 e IQR para un conjunto de datos y determinar outliers usando 1.5·IQR.
+- Explicar qué indica la posición de la mediana dentro de la caja (asimetría del 50% central).
+- Interpretar la presencia de un outlier: causas posibles y acciones (verificar, transformar, mantener, separar).
+- Comparar dos grupos con boxplots: decidir cuál es más disperso, cuál tiene mayor sesgo, y si hay diferencias en medianas.
+- Explicar la diferencia entre la dispersión medida por la IQR y por la desviación típica (ventajas/desventajas).
+
+**Consejos para el examen y práctica:**
+
+- Siempre muestre los pasos numéricos (ordenar datos, calcular cuartiles, IQR, límites).
+- Al comparar grupos, comente mediana, IQR, longitud de bigotes y número/posición de outliers.
+- En caso de outliers, especifique si podrían deberse a errores, subpoblaciones o valores informativos.
+- Use notches con prudencia: son aproximaciones y dependen de tamaño muestral.
+
+**Ventajas (resumen):**
+
+- ✅ Resumen robusto (mediana + IQR)
+- ✅ Identificación visual de outliers
+- ✅ Comparación clara entre grupos
+
+**Ejemplo breve (aplicado):**
+
+Sector A: Mediana = 40k, IQR = 10k, sin outliers
+
+Sector B: Mediana = 45k, IQR = 15k, outlier en 100k (CEO)
+
+**Boxplot:** Sector B es más disperso y muestra un valor extremo claro (investigar).
 
 ---
 
@@ -250,7 +317,6 @@ graph TD
 1. **Histograma:** ¿Cómo se distribuyen edades?
    - Revela: mayoría entre 20-22 años, normal
 2. **Boxplot:** ¿Hay outliers?
-
    - Revela: un estudiante de 35 años (outlier positivo)
 
 3. **Estadísticas:** Media=21.5, Mediana=21, Desv=1.2

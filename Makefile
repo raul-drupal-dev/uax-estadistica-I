@@ -1,6 +1,7 @@
 .PHONY: docker-build serve-docker-run serve-docker-detach docker-stop compose-up compose-down clean
 
 docker-build:
+	find . -name "._*" -exec rm {} \;
 	docker build -t curso-base:latest .
 
 serve-docker-run: docker-build

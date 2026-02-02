@@ -37,6 +37,7 @@ theme:
 plugins:
   - search
   - mkdocs-pdf
+  - mermaid2
   - mkdocs_quiz:
       shuffle_questions: true
       shuffle_answers: true
@@ -79,8 +80,10 @@ markdown_extensions:
 extra_javascript:
   # MathJax v3 para renderizar LaTeX ($...$, $$...$$) en el sitio generado.
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Chart.js para gráficos interactivos
+  - https://cdn.jsdelivr.net/npm/chart.js
   # Mermaid para diagramas (flujos, árboles, etc.)
-  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  #- https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
 copyright: Copyright &copy; 2025 Creado por Raul Jimenez Morales.
 
@@ -137,6 +140,7 @@ nav:
       - Resumen UD3: ud3/resumen.md
       - Ejercicios — UD3: ud3/ejercicios.md
       - Examen UD3 (medio): ud3/examen-ud3-practica.md
+      - Examen UD3 (teoría): ud3/examen-ud3-teoria.md
   - UD4 — Modelos de probabilidad:
       - Resumen: ud4/resumen.md
       - Distribuciones discretas: ud4/distribuciones-discretas.md
@@ -144,6 +148,7 @@ nav:
       - Derivadas de la normal (χ², t, F): ud4/distribuciones-derivadas-normal.md
       - Ejercicios — UD4: ud4/ejercicios.md
       - Examen UD4 (medio): ud4/examen-ud4.md
+      - Examen UD4 (teoría): ud4/examen-ud4-teoria.md
   - UD5 — Inferencia avanzada:
       - Resumen: ud5/resumen.md
       - Estimación puntual: ud5/estimacion-puntual.md
@@ -152,6 +157,7 @@ nav:
       - Contrastes de hipótesis: ud5/contrastes-hipotesis.md
       - Ejercicios — UD5: ud5/ejercicios.md
       - Examen UD5 (medio): ud5/examen-ud5.md
+      - Examen UD5 (teoría): ud5/examen-ud5-teoria.md
   - UD6 — Contrastes de hipótesis:
       - Introducción a los contrastes: ud6/introduccion-contrastes-hipotesis.md
       - Hipótesis nula y alternativa: ud6/hipotesis-nula-alternativa.md
@@ -159,9 +165,11 @@ nav:
       - P-valor y regla de decisión: ud6/p-valor.md
       - Contrastes para la media: ud6/contrastes-media.md
       - Contrastes para la varianza: ud6/contrastes-varianza.md
+      - Ejercicio - Chi-cuadrado: ud6/ejercicio-chi-cuadrado.md
       - Ejercicios — UD6: ud6/ejercicios.md
       - Resumen UD6: ud6/resumen.md
       - Examen UD6 (medio): ud6/examen-ud6-practica.md
+      - Examen UD6 (teoria): ud6/examen-ud6-teoria.md
   - UD7 — Introducción a R y RStudio:
       - ¿Qué es R y por qué lo usamos?: ud7/introduccion.md
       - Instalación y configuración: ud7/instalacion-configuracion.md
@@ -181,3 +189,6 @@ nav:
       - Práctica 2 Variante (medio): examenes/examen-practica-2-variante.md
       - Práctica 3 Variante (medio): examenes/examen-practica-3-variante.md
       - Práctica 4 Variante (medio): examenes/examen-practica-4-variante.md
+      - Práctica 5 Variante v2 (UD1-6): examenes/examen-practica-5-variante-v2.md
+      - Práctica 6 Variante v2 (aplicado): examenes/examen-practica-6-variante-v2.md
+      - Práctica 7 Variante v2 (incl. R): examenes/examen-practica-7-variante-v2.md

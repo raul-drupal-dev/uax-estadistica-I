@@ -60,7 +60,7 @@ $$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$
     **Paso 1:** Calcular medias y varianzas
 
     - $\bar{x} = 6$, $\bar{y} = 6.2$
-    - $\sum (x_i - \bar{x})^2 = 4 + 4 + 0 + 4 + 16 = 28$
+    - $\sum (x_i - \bar{x})^2 = 16 + 4 + 0 + 4 + 16 = 40$
     - $$
       \begin{aligned}
       \sum (x_i - \bar{x})(y_i - \bar{y}) &= (-4)(-3.2) + (-2)(-1.2) + 0(-0.2) + 2(1.8) + 4(2.8) \\
@@ -71,17 +71,17 @@ $$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$
 
     **Paso 2:** Calcular pendiente e intercept
 
-    $$\hat{\beta}_1 = \frac{30}{28} = 1.071$$
+    $$\hat{\beta}_1 = \frac{30}{40} = 0.75$$
 
-    $$\hat{\beta}_0 = 6.2 - 1.071 \times 6 = 6.2 - 6.426 = -0.226 ≈ -0.23$$
+    $$\hat{\beta}_0 = 6.2 - 0.75 \times 6 = 6.2 - 4.5 = 1.7$$
 
     **Ecuación de la recta:**
 
-    $$\hat{Y} = -0.23 + 1.071 X$$
+    $$\hat{Y} = 1.7 + 0.75 X$$
 
     **Predicción:** Si estudias 7 horas, tu calificación predicha sería:
 
-    $$\hat{Y} = -0.23 + 1.071 \times 7 = 7.27 ≈ 7.3$$
+    $$\hat{Y} = 1.7 + 0.75 \times 7 = 6.95$$
 
 ---
 

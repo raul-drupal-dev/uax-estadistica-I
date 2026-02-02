@@ -4,3 +4,4 @@ watchdog
 watchdog[watchmedo]
 mkdocs_quiz
 mkdocs-pdf
+mkdocs-mermaid2-plugin
