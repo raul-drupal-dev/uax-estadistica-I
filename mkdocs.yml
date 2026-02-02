@@ -80,6 +80,8 @@ markdown_extensions:
 extra_javascript:
   # MathJax v3 para renderizar LaTeX ($...$, $$...$$) en el sitio generado.
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Chart.js para gráficos interactivos
+  - https://cdn.jsdelivr.net/npm/chart.js
   # Mermaid para diagramas (flujos, árboles, etc.)
   #- https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
@@ -163,9 +165,11 @@ nav:
       - P-valor y regla de decisión: ud6/p-valor.md
       - Contrastes para la media: ud6/contrastes-media.md
       - Contrastes para la varianza: ud6/contrastes-varianza.md
+      - Ejercicio - Chi-cuadrado: ud6/ejercicio-chi-cuadrado.md
       - Ejercicios — UD6: ud6/ejercicios.md
       - Resumen UD6: ud6/resumen.md
       - Examen UD6 (medio): ud6/examen-ud6-practica.md
+      - Examen UD6 (teoria): ud6/examen-ud6-teoria.md
   - UD7 — Introducción a R y RStudio:
       - ¿Qué es R y por qué lo usamos?: ud7/introduccion.md
       - Instalación y configuración: ud7/instalacion-configuracion.md
