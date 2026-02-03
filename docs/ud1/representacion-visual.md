@@ -65,6 +65,38 @@ graph TD
 
     **Gráfico:** Barras verticales, Azul es más alto (40)
 
+**Ejemplo visual (Chart.js):**
+
+<div style="height:280px; max-width:640px;">
+    <canvas id="bar-colores"></canvas>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function renderBarColores() {
+        if (typeof Chart === 'undefined') return setTimeout(renderBarColores, 100);
+        const ctx = document.getElementById('bar-colores').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Rojo','Azul','Verde','Negro'],
+                datasets: [{
+                    data: [25,40,18,30],
+                    backgroundColor: ['#e74c3c','#3498db','#2ecc71','#2c3e50']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } }
+            }
+        });
+    }
+    renderBarColores();
+});
+</script>
+
 ---
 
 ### Gráfico de Sectores (Pie Chart)
@@ -88,6 +120,33 @@ graph TD
     ```
 
     **Gráfico:** Sectores, Android y iOS dominan
+
+**Ejemplo visual (Chart.js):**
+
+<div style="height:280px; max-width:520px;">
+    <canvas id="pie-so"></canvas>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function renderPieSO() {
+        if (typeof Chart === 'undefined') return setTimeout(renderPieSO, 100);
+        const ctx = document.getElementById('pie-so').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['iOS','Android','Windows'],
+                datasets: [{
+                    data: [45,50,5],
+                    backgroundColor: ['#9b59b6','#2ecc71','#95a5a6']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    }
+    renderPieSO();
+});
+</script>
 
 ---
 
@@ -120,6 +179,41 @@ graph TD
 
     **Patrón:** Distribución aproximadamente normal, centrada en 170cm
 
+**Ejemplo visual (Chart.js):**
+
+<div style="height:280px; max-width:680px;">
+    <canvas id="histograma-alturas"></canvas>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function renderHistogramaAlturas() {
+        if (typeof Chart === 'undefined') return setTimeout(renderHistogramaAlturas, 100);
+        const ctx = document.getElementById('histograma-alturas').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['160-165','165-170','170-175','175-180','180-185'],
+                datasets: [{
+                    label: 'Frecuencia',
+                    data: [8,15,20,12,5],
+                    backgroundColor: 'rgba(52,152,219,0.7)',
+                    borderColor: 'rgba(52,152,219,1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } },
+                plugins: { legend: { display: false } }
+            }
+        });
+    }
+    renderHistogramaAlturas();
+});
+</script>
+
 ---
 
 ### ✨ Diagrama de Caja (Boxplot)
@@ -137,6 +231,7 @@ graph TD
   $$[Q_1-1.5\cdot\mathrm{IQR},\;Q_3+1.5\cdot\mathrm{IQR}]$$
 
   son considerados no-outliers y marcan el extremo de los bigotes.
+
 - **Outliers:** puntos fuera de ese intervalo; a menudo se distinguen entre leves ($>$1.5·IQR) y extremos ($>$3·IQR).
 
 !!! tip "Anotación"
@@ -170,6 +265,22 @@ graph TD
 
 En este esquema: la caja va de $Q_1$ a $Q_3$, la línea vertical interior es la mediana, los "bigotes" llegan hasta el máximo/mínimo no-outlier y los puntos separados son outliers.
 
+**Ejemplo visual (SVG):**
+
+<svg width="520" height="120" viewBox="0 0 520 120" role="img" aria-label="Boxplot simplificado">
+    <rect x="160" y="35" width="160" height="50" fill="#dfe6e9" stroke="#2d3436" />
+    <line x1="240" y1="35" x2="240" y2="85" stroke="#2d3436" stroke-width="2" />
+    <line x1="80" y1="60" x2="160" y2="60" stroke="#2d3436" stroke-width="2" />
+    <line x1="320" y1="60" x2="420" y2="60" stroke="#2d3436" stroke-width="2" />
+    <line x1="80" y1="50" x2="80" y2="70" stroke="#2d3436" stroke-width="2" />
+    <line x1="420" y1="50" x2="420" y2="70" stroke="#2d3436" stroke-width="2" />
+    <circle cx="470" cy="60" r="4" fill="#e74c3c" />
+    <text x="20" y="20" font-size="12" fill="#2d3436">Min</text>
+    <text x="210" y="20" font-size="12" fill="#2d3436">Mediana</text>
+    <text x="300" y="20" font-size="12" fill="#2d3436">Q3</text>
+    <text x="455" y="20" font-size="12" fill="#e74c3c">Outlier</text>
+</svg>
+
 **Ejemplo numérico (resuelto — necesario en examen):**
 
 Datos (ordenados, $n=11$): $3,4,5,7,8,9,10,12,14,18,50$.
@@ -180,7 +291,7 @@ Calculemos los cuartiles y detectemos outliers:
 2. $Q_1=$ mediana de la mitad inferior $(3,4,5,7,8) \Rightarrow Q_1=5$.
 3. $Q_3=$ mediana de la mitad superior $(10,12,14,18,50) \Rightarrow Q_3=14$.
 4. $$\mathrm{IQR}=Q_3-Q_1=14-5=9.$$
-5. Límites de Tukey: 
+5. Límites de Tukey:
 
 $$[Q_1-1.5\,\mathrm{IQR},\;Q_3+1.5\,\mathrm{IQR}]=[5-13.5,\;14+13.5]=[-8.5,\;27.5].$$
 
@@ -197,7 +308,6 @@ Ordenamos, tomamos la mediana y luego las medianas de las mitades. En muestras i
 !!! warning "Cuidado en exámenes"
 
     Explica siempre si has incluido o excluido la mediana al dividir en mitades para calcular Q1/Q3 (hay convenciones distintas). Muestra los pasos numéricos.
-
 
 **Preguntas típicas de examen sobre boxplots:**
 
@@ -240,6 +350,42 @@ Sector B: Mediana = 45k, IQR = 15k, outlier en 100k (CEO)
 - ✅ Fácil comparar múltiples distribuciones
 - ✅ Mejor para presentaciones
 
+**Ejemplo visual (Chart.js):**
+
+<div style="height:260px; max-width:680px;">
+    <canvas id="densidad-alturas"></canvas>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function renderDensidadAlturas() {
+        if (typeof Chart === 'undefined') return setTimeout(renderDensidadAlturas, 100);
+        const ctx = document.getElementById('densidad-alturas').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [160,165,170,175,180,185],
+                datasets: [{
+                    label: 'Densidad (aprox.)',
+                    data: [2,6,10,7,3,1],
+                    fill: true,
+                    tension: 0.35,
+                    backgroundColor: 'rgba(46,204,113,0.2)',
+                    borderColor: 'rgba(46,204,113,1)',
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+    }
+    renderDensidadAlturas();
+});
+</script>
+
 ---
 
 ## Gráficos para Variables Cuantitativas (Dos Variables)
@@ -265,6 +411,48 @@ Sector B: Mediana = 45k, IQR = 15k, outlier en 100k (CEO)
     Si alguien estudia más horas, típicamente obtiene mejor nota
 
     **Scatter:** Nube de puntos diagonal ascendente = correlación positiva
+
+**Ejemplo visual (Chart.js):**
+
+<div style="height:280px; max-width:680px;">
+    <canvas id="scatter-estudio-nota"></canvas>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function renderScatterEstudio() {
+        if (typeof Chart === 'undefined') return setTimeout(renderScatterEstudio, 100);
+        const ctx = document.getElementById('scatter-estudio-nota').getContext('2d');
+        new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Horas vs Nota',
+                    data: [
+                        { x: 1, y: 3 },
+                        { x: 2, y: 4 },
+                        { x: 3, y: 5 },
+                        { x: 4, y: 6 },
+                        { x: 5, y: 7 },
+                        { x: 6, y: 8 },
+                        { x: 7, y: 8.5 }
+                    ],
+                    backgroundColor: 'rgba(155,89,182,0.8)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: 'Horas de estudio' }, beginAtZero: true },
+                    y: { title: { display: true, text: 'Nota' }, beginAtZero: true, max: 10 }
+                }
+            }
+        });
+    }
+    renderScatterEstudio();
+});
+</script>
 
 ---
 
