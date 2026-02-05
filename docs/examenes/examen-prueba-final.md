@@ -21,12 +21,12 @@ Explicación: En una distribución normal simétrica la media, mediana y moda co
 </quiz>
 
 <quiz>
-Si $X \\sim N(\\mu, \\sigma^2)$, entonces la transformación $Z = (X - \\mu)/\\sigma$ siempre sigue una distribución $N(0, 1)$.
+Si $X \sim N(\mu, \sigma^2)$, entonces la transformación $Z = (X - \mu)/\sigma$ siempre sigue una distribución $N(0, 1)$.
 
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Esta es la estandarización clásica; transforma cualquier normal $N(\\mu,\\sigma^2)$ en $N(0,1)$.
+Explicación: Esta es la estandarización clásica; transforma cualquier normal $N(\mu,\sigma^2)$ en $N(0,1)$.
 </quiz>
 
 <quiz>
@@ -53,11 +53,11 @@ En la distribución de Poisson, la media es igual a la varianza.
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Para Poisson con parámetro $\\lambda$, la esperanza y la varianza son ambas $\\lambda$.
+Explicación: Para Poisson con parámetro $\lambda$, la esperanza y la varianza son ambas $\lambda$.
 </quiz>
 
 <quiz>
-Toda distribución binomial puede aproximarse razonablemente por una Poisson cuando $n \\geq 30$ y $p \\leq 0.05$.
+Toda distribución binomial puede aproximarse razonablemente por una Poisson cuando $n \geq 30$ y $p \leq 0.05$.
 
 - [x] Verdadero
 - [ ] Falso
@@ -66,12 +66,12 @@ Explicación: La aproximación binomial→Poisson es válida cuando $n$ grande y
 </quiz>
 
 <quiz>
-La distribución de Poisson puede aproximarse por una normal cuando $\\lambda > 10$.
+La distribución de Poisson puede aproximarse por una normal cuando $\lambda > 10$.
 
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Para valores grandes de $\\lambda$ la Poisson puede aproximarse por una normal con media y varianza $\\lambda$.
+Explicación: Para valores grandes de $\lambda$ la Poisson puede aproximarse por una normal con media y varianza $\lambda$.
 </quiz>
 
 <quiz>
@@ -84,12 +84,12 @@ Explicación: El p-valor es la probabilidad, bajo $H_0$, de obtener datos tan ex
 </quiz>
 
 <quiz>
-Si el p-valor es menor que el nivel de significación $\\alpha$, se rechaza la hipótesis nula.
+Si el p-valor es menor que el nivel de significación $\alpha$, se rechaza la hipótesis nula.
 
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Regla de decisión clásica: p-valor < $\\alpha$ implica rechazo de $H_0$.
+Explicación: Regla de decisión clásica: p-valor < $\alpha$ implica rechazo de $H_0$.
 </quiz>
 
 <quiz>
@@ -174,7 +174,7 @@ Explicación: Bernoulli es la distribución para una prueba con dos resultados (
 </quiz>
 
 <quiz>
-Toda distribución binomial puede aproximarse razonablemente por una Poisson cuando $n \\geq 30$ y $p \\leq 0.05$.
+Toda distribución binomial puede aproximarse razonablemente por una Poisson cuando $n \geq 30$ y $p \leq 0.05$.
 
 - [x] Verdadero
 - [ ] Falso
@@ -255,12 +255,12 @@ Explicación: IQR no determina la media; conjuntos distintos pueden compartir IQ
 </quiz>
 
 <quiz>
-El error de tipo I es rechazar $H_0$ cuando es verdadera; su probabilidad se controla con el nivel de significación $\\alpha$.
+El error de tipo I es rechazar $H_0$ cuando es verdadera; su probabilidad se controla con el nivel de significación $\alpha$.
 
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Definición de error tipo I y control mediante $\\alpha$ son correctos.
+Explicación: Definición de error tipo I y control mediante $\alpha$ son correctos.
 </quiz>
 
 <quiz>
@@ -269,7 +269,7 @@ El nivel de significación es la probabilidad de cometer error tipo I.
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Por definición, $\\alpha$ es la probabilidad de rechazar $H_0$ siendo verdadera (tipo I).
+Explicación: Por definición, $\alpha$ es la probabilidad de rechazar $H_0$ siendo verdadera (tipo I).
 </quiz>
 
 <quiz>
@@ -287,7 +287,7 @@ Un estimador insesgado tiene esperanza igual al parámetro que estima.
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Definición de insesgadez: $E[\\hat{\\theta}]=\\theta$.
+Explicación: Definición de insesgadez: $E[\hat{\theta}]=\theta$.
 </quiz>
 
 <quiz>
@@ -296,7 +296,7 @@ La consistencia implica que el estimador converge al parámetro cuando aumenta e
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Consistencia es convergencia en probabilidad del estimador al verdadero parámetro cuando $n\\to\\infty$.
+Explicación: Consistencia es convergencia en probabilidad del estimador al verdadero parámetro cuando $n\to\infty$.
 </quiz>
 
 <quiz>
@@ -314,16 +314,16 @@ La distribución exponencial tiene la propiedad de falta de memoria.
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Propiedad: $P(T> s+t\\mid T> s)=P(T>t)$ para exponencial; es falta de memoria.
+Explicación: Propiedad: $P(T> s+t\mid T> s)=P(T>t)$ para exponencial; es falta de memoria.
 </quiz>
 
 <quiz>
-El parámetro de tasa $\\lambda$ de una distribución exponencial es el inverso del tiempo medio entre eventos.
+El parámetro de tasa $\lambda$ de una distribución exponencial es el inverso del tiempo medio entre eventos.
 
 - [x] Verdadero
 - [ ] Falso
 
-Explicación: Si $T\\sim Exp(\\lambda)$ entonces $E[T]=1/\\lambda$, por tanto $\\lambda$ es inverso de la media.
+Explicación: Si $T\sim Exp(\lambda)$ entonces $E[T]=1/\lambda$, por tanto $\lambda$ es inverso de la media.
 </quiz>
 
 <quiz>
@@ -372,12 +372,12 @@ Explicación: En general estrechez indica mayor precisión, pero también puede 
 </quiz>
 
 <quiz>
-En estimación por intervalos, el nivel de confianza $1-\\alpha$ es la probabilidad de que el parámetro esté dentro del intervalo calculado.
+En estimación por intervalos, el nivel de confianza $1-\alpha$ es la probabilidad de que el parámetro esté dentro del intervalo calculado.
 
 - [ ] Verdadero
 - [x] Falso
 
-Explicación: No es correcto atribuir probabilidad al parámetro en sentido bayesiano; $1-\\alpha$ es la frecuencia de acierto a largo plazo.
+Explicación: No es correcto atribuir probabilidad al parámetro en sentido bayesiano; $1-\alpha$ es la frecuencia de acierto a largo plazo.
 </quiz>
 
 <quiz>
@@ -386,7 +386,7 @@ Si se reduce el nivel de confianza, el intervalo se hace más amplio.
 - [ ] Verdadero
 - [x] Falso
 
-Explicación: Contrario: reducir nivel de confianza (menor $1-\\alpha$) produce intervalos más estrechos; aumentar confianza los hace más amplios.
+Explicación: Contrario: reducir nivel de confianza (menor $1-\alpha$) produce intervalos más estrechos; aumentar confianza los hace más amplios.
 </quiz>
 
 <quiz>
