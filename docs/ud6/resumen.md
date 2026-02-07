@@ -119,7 +119,12 @@ graph TB
 | **Rechazar H₀**    | ❌ Error Tipo I (α) | ✅ Correcto (Potencia 1-β) |
 | **NO Rechazar H₀** | ✅ Correcto (1-α)   | ❌ Error Tipo II (β)       |
 
-!!! warning "Control de Errores" - **α:** Se fija previamente (0.05 o 0.01) - **β:** Depende de n y tamaño del efecto - **Potencia = 1-β:** Detectar efecto cuando existe - **Balance:** ↓α → ↑β (para ↓ambos → ↑n)
+!!! warning "Control de Errores" 
+
+    - **α:** Se fija previamente (0.05 o 0.01) 
+    - **β:** Depende de n y tamaño del efecto 
+    - **Potencia = 1-β:** Detectar efecto cuando existe 
+    - **Balance:** ↓α → ↑β (para ↓ambos → ↑n)
 
 ---
 
@@ -236,7 +241,10 @@ graph LR
 
 > "Si H₀ fuera cierta, la probabilidad de observar un resultado tan extremo o más es p-valor"
 
-!!! danger "❌ Interpretación INCORRECTA" - "P(H₀ es cierta) = p-valor" — **¡FALSO!** - "P(H₁ es cierta) = 1 - p-valor" — **¡FALSO!**
+!!! danger "❌ Interpretación INCORRECTA" 
+
+    - "P(H₀ es cierta) = p-valor" — **¡FALSO!** 
+    - "P(H₁ es cierta) = 1 - p-valor" — **¡FALSO!**
 
 ---
 

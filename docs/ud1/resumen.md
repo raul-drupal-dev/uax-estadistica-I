@@ -120,11 +120,11 @@ graph LR
 | **IQR**             | $IQR = Q_3 - Q_1$                          | Rango del 50% central                   |
 | **Coef. Variación** | $CV = \frac{s}{\bar{x}} \times 100\%$      | Dispersión relativa (comparar datasets) |
 
-!!! warning "⚠️ Cuidado con la Varianza" 
+!!! warning "⚠️ Cuidado con la Varianza"
 
-   - **Varianza poblacional:** divide por $n$ 
-   - **Varianza muestral:** divide por $n-1$ (corrección de Bessel) 
-   - Usa $n-1$ cuando calculas de una muestra para inferir sobre población
+- **Varianza poblacional:** divide por $n$
+- **Varianza muestral:** divide por $n-1$ (corrección de Bessel)
+- Usa $n-1$ cuando calculas de una muestra para inferir sobre población
 
 ---
 
@@ -148,6 +148,19 @@ graph TD
     G3 --> R3["Muestra Q1, Q2, Q3<br/>y outliers"]
     G4 --> R4["Muestra correlación<br/>o tendencia"]
 ```
+
+---
+
+[tabla de representacion grafica]
+
+| Nombre gráfica                  | Tipo de datos                      | Puntos claves                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| :------------------------------ | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Gráfico de barras               | Cualitativa (nominal / ordinal)    | <ul><li>Muestra frecuencias o porcentajes por categoría.</li><li>Útil para ≤10 categorías; ordenar por frecuencia mejora lectura.</li><li>Etiqueta ejes y muestra valores; eje Y debe empezar en 0.</li><li>No usar 3D; preferir barras horizontales para etiquetas largas.</li><li>Preguntas de examen: interpretar la categoría más frecuente; comparar proporciones.</li></ul>                                               |
+| Gráfico de sectores (pastel)    | Cualitativa (proporciones)         | <ul><li>Muestra proporciones relativas que suman 100%.</li><li>Adecuado para pocas categorías (≤5–6); difícil comparar valores similares.</li><li>Evitar si el objetivo es comparar tamaños parecidos; preferir barras.</li><li>Preguntas de examen: calcular proporción, justificar uso/limitaciones.</li></ul>                                                                                                                |
+| Histograma                      | Cuantitativa (continua / discreta) | <ul><li>Muestra la distribución: forma, simetría, cola y modas (unimodal, bimodal).</li><li>La elección de bins (anchura) afecta la apariencia; justificar la elección en exámenes.</li><li>Permite inferir si la media≈mediana (simetría) o hay sesgo (media arrastrada hacia la cola).</li><li>Revela colas, agrupamientos y posibles outliers (aunque no los cuantifica).</li></ul>                                          |
+| Boxplot (diagrama de caja)      | Cuantitativa                       | <ul><li>Muestra mediana (Q2), Q1, Q3 y IQR = Q3−Q1.</li><li>Bigotes según Tukey: límites en [Q1−1.5·IQR, Q3+1.5·IQR]; puntos fuera = outliers.</li><li>Robusto frente a outliers; útil para comparar grupos (boxplots lado a lado).</li><li>Interpretar posición de la mediana dentro de la caja para detectar asimetría central.</li><li>Preguntas de examen: calcular Q1,Q2,Q3,IQR y detectar outliers con 1.5·IQR.</li></ul> |
+| Gráfico de densidad (Kernel)    | Cuantitativa                       | <ul><li>Estimación suave de la distribución; útil para comparar múltiples grupos.</li><li>El parámetro de banda (bandwidth) controla suavizado; justificar su elección.</li><li>Puede mostrar multimodalidad más claramente que un histograma con bins pobres.</li><li>No es ideal para muestras muy pequeñas; área total normalmente = 1 (densidad).</li></ul>                                                                 |
+| Gráfico de dispersión (scatter) | Dos variables cuantitativas        | <ul><li>Muestra relación entre dos variables: dirección y fuerza aparente (correlación).</li><li>Revelar patrones: linealidad, clusters, heterocedasticidad y outliers bivariados.</li><li>Agregar línea de regresión/ajuste ayuda a interpretar tendencia; codificar color/tamaño para 3ª variable.</li><li>Preguntas de examen: describir relación (positiva/negativa/ninguna), identificar outliers y linealidad.</li></ul>  |
 
 ---
 
