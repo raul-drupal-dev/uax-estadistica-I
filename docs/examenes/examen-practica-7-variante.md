@@ -86,9 +86,9 @@ Explicación: Propiedades obligatorias: $\lim_{x \to -\infty} F(x)=0$, $\lim_{x 
 <quiz>
 Si $X$ es una variable aleatoria con $E[X] = 10$, ¿cuál es el valor esperado de la transformación $Y = 2X + 5$?
 
-- [ ] 25.
+- [x] 25.
 - [ ] 20.
-- [x] 15.
+- [ ] 15.
 - [ ] 10, porque la esperanza no cambia con constantes.
 
 Explicación: Por linealidad de esperanza: $E[2X+5] = 2 \cdot E[X] + 5 = 2(10) + 5 = 25$. Error común: confundir con que la esperanza "no cambia" (falso: sí cambia por la transformación lineal).
